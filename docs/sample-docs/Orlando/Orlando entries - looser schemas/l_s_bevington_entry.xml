@@ -1,0 +1,2949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schemas/orlando_bio_and_writing.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-stylesheet type="text/css" href="css/entry_style.css"?>
+
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+
+<ORLANDO-CWRC>
+  <BIOGRAPHY SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER TYPE="text">
+      <FILEDESC>
+        <TITLESTMT>
+          <DOCTITLE>L. S. Bevington: biography</DOCTITLE>
+        </TITLESTMT>
+        <PUBLICATIONSTMT>
+          <AUTHORITY>Orlando Project</AUTHORITY>
+        </PUBLICATIONSTMT>
+        <SOURCEDESC>Created from original research by members of the Orlando Project</SOURCEDESC>
+      </FILEDESC>
+      <REVISIONDESC>
+        <RESPONSIBILITY RESP="SJW" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>8 July 1998</DATE>
+          <ITEM>Initial document given to tagger.</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SIB" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>6 October 1998</DATE>
+          <ITEM>Updated for Sept 1998 Audit</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>21 December 1999</DATE>
+          <ITEM>BATCH CHANGE: primarily orgName and bibCit cleanup</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SLB" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>22 November 2000</DATE>
+          <ITEM>fixed standard name</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="DRG" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>1 February 2001</DATE>
+          <ITEM>converted textual apostrophes and quotation marks to entity references</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SLB" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>25 July 2001</DATE>
+          <ITEM>removed title tag(s) from workscited</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>14 April 2003</DATE>
+          <ITEM>BATCH CHANGE: primarily PLACE cleanup</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>16 June 2003</DATE>
+          <ITEM>BATCH CHANGE: primarily TGENRENAME cleanup, BIBCIT following P moved before P, BIBCITS TAG added</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>29 September 2003</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>22 March 2004</DATE>
+          <ITEM>changed position to birth position</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>08 April 2005</DATE>
+          <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name changes</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>10 November 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>11 November 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>21 November 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>4 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>11 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>13 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>16 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>18 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>19 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>20 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+          <DATE>21 December 2008</DATE>
+          <ITEM>rbv c</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="C">
+          <DATE>21 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="IMG" WORKSTATUS="CFT" WORKVALUE="P">
+          <DATE>12 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>19 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>20 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>21 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>22 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>23 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+          <DATE>26 January 2009</DATE>
+          <ITEM>reviewed added chronstruct</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="RBV" WORKVALUE="C">
+          <DATE>26 January 2009</DATE>
+          <ITEM>The document is almost ready. There are two sources that are not in file and couldn&apos;t find an electronic edition or a copy in Edmonton:55447: Quail, The Slow Burning FuseThe electronic edition does not show pages and isn&apos;t complete.55305: Oliver, The International Anarchist Movement in Victorian LondonPhotocopies do not include page vii.</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="RBV" WORKVALUE="C">
+          <DATE>26 January 2009</DATE>
+          <ITEM>Hi Susan,Added research notes to bevils-b: there is one source that isn&apos;t in file and couldn&apos;t find an electronic edition or a copy in Edmonton55305: Oliver, The International Anarchist Movement in Victorian LondonPhotocopies do not include page vii.Cheers,Mariana</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="RBV" WORKVALUE="C">
+          <DATE>27 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="I">
+          <DATE>4 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="I">
+          <DATE>6 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="BJA" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>8 February 2009</DATE>
+          <ITEM>sentence from oliver cas-c</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>10 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>11 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>12 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>12 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>19 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>20 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>3 March 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>25 March 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="C">
+          <DATE>26 March 2009</DATE>
+          <ITEM>Finally got to cft and cfb bevils*. The pair is cft and cfb p now, part of PILOT 38.I</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="C">
+          <DATE>1 May 2009</DATE>
+          <ITEM>Fixed bibcit not enclosed in bibcits</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="IMG" WORKSTATUS="PUB" WORKVALUE="I">
+          <DATE>31 May 2009</DATE>
+          <ITEM>pub i</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="PUB" WORKVALUE="C">
+          <DATE>17 June 2009</DATE>
+          <ITEM>pub c</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="PUB" WORKVALUE="C">
+          <DATE>19 June 2009</DATE>
+          <ITEM>fixed bibcits-placehoder agreement</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="PUB" WORKVALUE="C">
+          <DATE>23 June 2009</DATE>
+          <ITEM>fixed standard names</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MKD" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>31 May 2011</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY WORKSTATUS="REV" RESP="MPO" WORKVALUE="C">
+          <DATE>2 September 2011</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+      </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+      <HEADING>Biography</HEADING>
+      <STANDARD>Bevington, L. S.</STANDARD>
+      <DIV1>
+        <PERSONNAME>
+          <DIV2>
+            <DATASTRUCT>
+              <DATAITEM>
+                <BIRTHNAME WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" REG="Bevington, L. S.">
+                  <GIVEN REG="Bevington, L. S.">Louisa</GIVEN>
+                  <GIVEN>Sarah</GIVEN>
+                  <SURNAME>Bevington</SURNAME>
+                </BIRTHNAME>
+              </DATAITEM>
+              <DATAITEM>
+                <MARRIED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" REG="Louisa Sarah Guggenberger">Guggenberger</MARRIED>
+              </DATAITEM>
+              <DATAITEM>
+                <INDEXED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" REG="Louisa Sarah Guggenberger">Louisa S. Guggenberger</INDEXED>
+              </DATAITEM>
+              <DATAITEM>
+                <PSEUDONYM WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" NAMESIGNIFIER="CRYPTIC">Arbor Leigh</PSEUDONYM>
+              </DATAITEM>
+              <DATAITEM>
+                <SELFCONSTRUCTED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" NAMESIGNIFIER="CRYPTIC">L. S. B.</SELFCONSTRUCTED>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="FC" DBREF="107913">
+                  </BIBCIT>
+                  <BIBCIT PLACEHOLDER="Senaha 132" DBREF="55405">132</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 14, 125" DBREF="54705">14, 125</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Sherry 242" DBREF="55446">242</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Allibone Supplement 730" DBREF="7873">730</BIBCIT>
+                </BIBCITS>
+                <SCHOLARNOTE>
+                  <P>Though she used her married name on
+                    <TITLE TITLETYPE="ANALYTIC">Dogs in Germany</TITLE>
+                </SCHOLARNOTE>
+              </DATAITEM>
+            </DATASTRUCT>
+          </DIV2>
+        </PERSONNAME>
+      </DIV1>
+      <DIV1>
+        <HEADING>Birth and Family</HEADING>
+        <BIRTH>
+          <DIV2>
+            <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SJW">
+              <DATE VALUE="1845-05-14">14 May 1845</DATE>
+              <CHRONPROSE>
+                <BIRTHPOSITION POSITION="ELDEST">
+                  <NAME STANDARD="Bevington, L. S.">Louisa Sarah Bevington</NAME>
+                  <PLACE>
+                    <SETTLEMENT CURRENT="London" REG="London">Battersea</SETTLEMENT>
+                    <REGION REG="Surrey">
+                    </REGION>
+                    <GEOG REG="England">
+                    </GEOG>
+                  </PLACE>in South London, the eldest of eight children (of whom seven were girls).</BIRTHPOSITION>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 3" DBREF="54705">3</BIBCIT>
+                <BIBCIT PLACEHOLDER="FC" DBREF="107913">
+                </BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+          </DIV2>
+        </BIRTH>
+      </DIV1>
+      <DIV1>
+        <CULTURALFORMATION>
+          <DIV2>
+            <SHORTPROSE>
+              <P>She was born into a
+                <RACECOLOUR>white</RACECOLOUR>
+                <CLASS SOCIALRANK="GENTRY" SELF-DEFINED="SELFYES">
+                  <CLASS SOCIALRANK="PROFESSIONAL" SELF-DEFINED="SELFYES">wealthy</CLASS>
+                </CLASS>
+                <NATIONALITY>English</NATIONALITY>
+                <ORGNAME STANDARD="Society of Friends">
+                  <DENOMINATION REG="Society of Friends">Quaker</DENOMINATION>
+                </ORGNAME>roots on both sides, but there are questions about whether or not she was brought up in the Society of Friends. The
+                <TITLE TITLETYPE="MONOGRAPHIC" REG="ODNB">Oxford Dictionary of National Biography</TITLE>
+                <NAME>Jackie Dees Domingue</NAME>
+                <ORGNAME STANDARD="Anglican Church">
+                  <DENOMINATION REG="Anglican">Anglican</DENOMINATION>
+                </ORGNAME>. Domingue suggests that friction between the family&apos;s Quaker beliefs and new Anglican practices might have encouraged Bevington to choose
+                <DENOMINATION REG="atheist">atheism</DENOMINATION>
+                <TITLE TITLETYPE="JOURNAL">Friends&apos; Quarterly Examiner</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="ODNB" DBREF="29268">
+                  </BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 4" DBREF="54705">4</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </CULTURALFORMATION>
+      </DIV1>
+      <DIV1>
+        <FAMILY>
+          <MEMBER RELATION="MOTHER">
+            <DIV2>
+              <HEADING>Parents</HEADING>
+              <SHORTPROSE>
+                <P>LSB&apos;s mother was born
+                  <NAME STANDARD="Bevington, Louisa">Louisa De Horne</NAME>
+                  <PLACE>
+                    <PLACENAME>Stanway Hall</PLACENAME>
+                    <SETTLEMENT>Colchester</SETTLEMENT>
+                    <REGION REG="Essex">Essex</REGION>
+                    <GEOG REG="England">
+                    </GEOG>
+                  </PLACE>, an estate owned by her family.
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Burke, Landed Gentry" DBREF="26813">
+                    </BIBCIT>
+                  </BIBCITS>
+                  <SCHOLARNOTE>
+                    <P>Her birthplace is also given as
+                      <PLACE>
+                        <SEPARATION>Lexden</SEPARATION>
+                        <REGION REG="Essex">
+                        </REGION>
+                        <GEOG REG="England">
+                        </GEOG>
+                      </PLACE>, which is very close by, also on the borders of Colchester. The
+                      <TITLE TITLETYPE="JOURNAL">Feminist Companion</TITLE>
+                      <BIBCITS>
+                        <BIBCIT PLACEHOLDER="FC" DBREF="107913">
+                        </BIBCIT>
+                        <BIBCIT PLACEHOLDER="Senaha 131" DBREF="55405">131</BIBCIT>
+                        <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470">
+                        </BIBCIT>
+                      </BIBCITS>
+                    </P>
+                  </SCHOLARNOTE>She came from a mercantile family primarily involved in insurance. She married Alexander Bevington in 1844 at
+                  <PLACE>
+                    <PLACENAME>Stanway Hall</PLACENAME>
+                    <SETTLEMENT REG="Lexden">
+                    </SETTLEMENT>
+                    <REGION REG="Essex">
+                    </REGION>
+                    <GEOG REG="England">
+                    </GEOG>
+                  </PLACE>, at about the age of nineteen. She outlived her eldest daughter.
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 3" DBREF="54705">3</BIBCIT>
+                    <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470">
+                    </BIBCIT>
+                  </BIBCITS>
+                </P>
+              </SHORTPROSE>
+            </DIV2>
+          </MEMBER>
+          <MEMBER RELATION="FATHER">
+            <PLACE>
+              <GEOG REG="Canada">
+              </GEOG>
+            </PLACE>
+            <DIV2>
+              <SHORTPROSE>
+                <P>
+                  <NAME STANDARD="Bevington, Alexander,, 1814 - 1875">Alexander Bevington</NAME>
+                  <PLACE>
+                    <SETTLEMENT>Colchester</SETTLEMENT>
+                    <REGION REG="Essex">
+                    </REGION>
+                    <GEOG REG="England">
+                    </GEOG>
+                  </PLACE>, at
+                  <PLACE>
+                    <SETTLEMENT>Lexden</SETTLEMENT>
+                    <REGION REG="Essex">Essex</REGION>
+                    <GEOG REG="England">
+                    </GEOG>
+                  </PLACE>. His family had ties to
+                  <NAME STANDARD="Fox, George,, 1624 - 1691">George Fox</NAME>
+                  <ORGNAME STANDARD="Society of Friends">Society of Friends</ORGNAME>
+                  <SOCALLED>gentleman</SOCALLED>
+                  <ORGNAME STANDARD="Bevington,, Vaizey and Foster">Bevington, Vaizey, and Foster</ORGNAME>
+                  <JOB REG="insurance broker">broker</JOB>
+                  <ORGNAME>Lloyd&apos;s of London</ORGNAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Senaha 131" DBREF="55405">131</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Domingue 3" DBREF="54705">3</BIBCIT>
+                  </BIBCITS>Later in LSB&apos;s life her father&apos;s employment caused friction, as she came to see insurance companies as exploitative. She described Lloyd&apos;s as a
+                  <QUOTE DIRECT="Y">parasit[e],</QUOTE>
+                  <QUOTE DIRECT="Y">on the low moral vitality of the public, making profit at its expense.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 4" DBREF="54705" QTDIN="QTDINYES">4</BIBCIT>
+                  </BIBCITS>
+                </P>
+              </SHORTPROSE>
+            </DIV2>
+          </MEMBER>
+        </FAMILY>
+      </DIV1>
+      <DIV1>
+        <FAMILY>
+          <MEMBER RELATION="SISTER">
+            <DIV2>
+              <HEADING>Siblings</HEADING>
+              <SHORTPROSE>
+                <P>LSB&apos;s siblings seem to have been largely unsympathetic to her anarchist and atheist leanings. Little is known about her sisters
+                  <NAME STANDARD="Kemp Welch, Mary">Mary</NAME>
+                  <NAME STANDARD="Coupland, Alice">Alice</NAME>
+                  <NAME STANDARD="Robinson, Amy Gertrude">Amy Gertrude</NAME>
+                  <NAME STANDARD="Albott, Florence">Florence</NAME>
+                  <NAME STANDARD="Grahame, Ada Marion">Ada Marion</NAME>
+                  <NAME STANDARD="Barnes, Georgina">Georgina De Horne Bevington</NAME>
+                  <NAME>William Emery Barnes</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 3-4, 21n1" DBREF="54705">3-4, 21n1</BIBCIT>
+                    <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470">
+                    </BIBCIT>
+                  </BIBCITS>
+                </P>
+              </SHORTPROSE>
+            </DIV2>
+          </MEMBER>
+          <MEMBER RELATION="BROTHER">
+            <DIV2>
+              <SHORTPROSE>
+                <P>More is known about LSB&apos;s relationship with her brother,
+                  <NAME STANDARD="Bevington, Alexander">Alex</NAME>
+                  <NAME>Jackie Dees Domingue</NAME>
+                  <NAME>Robert Browning</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Domingue 10-11" DBREF="54705">10-11</BIBCIT>
+                  </BIBCITS>
+                </P>
+              </SHORTPROSE>
+            </DIV2>
+          </MEMBER>
+        </FAMILY>
+      </DIV1>
+      <DIV1>
+        <HEADING>Early Life</HEADING>
+        <LOCATION RELATIONTO="LIVED">
+          <DIV2>
+            <SHORTPROSE>
+              <P>LSB&apos;s childhood was spent in
+                <PLACE>
+                  <SETTLEMENT REG="London">London</SETTLEMENT>
+                  <REGION REG="Middlesex">
+                  </REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>.</P>
+            </SHORTPROSE>
+          </DIV2>
+        </LOCATION>
+      </DIV1>
+      <DIV1>
+        <CULTURALFORMATION>
+          <DIV2>
+            <SHORTPROSE>
+              <P>There she was
+                <QUOTE DIRECT="Y">reared in the lap of luxury.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 12" DBREF="54705" QTDIN="QTDINYES">12</BIBCIT>
+                </BIBCITS>By 1871 the family was
+                <CLASS SOCIALRANK="MANAGERIAL" SELF-DEFINED="SELFYES">wealthy enough to employ five servants</CLASS>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Armstrong, Bristow and Sharrock 678" DBREF="8746">678</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 12" DBREF="54705">12</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </CULTURALFORMATION>
+      </DIV1>
+      <DIV1>
+        <HEADING>Education</HEADING>
+        <EDUCATION MODE="DOMESTIC">
+          <DIV2>
+            <SHORTPROSE>
+              <P>LSB was probably educated at home by a
+                <INSTRUCTOR>governess</INSTRUCTOR>
+                <NAME STANDARD="Oliver, Hermia">Hermia Oliver</NAME>
+                <QUOTE DIRECT="Y">well educated</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Oliver 86" DBREF="55305">86</BIBCIT>
+                </BIBCITS>She had
+                <SUBJECT>dancing</SUBJECT>
+                <NAME STANDARD="Bevington, Alexander,, 1814 - 1875">Alexander Bevington</NAME>
+                <SUBJECT REG="nature study">observe nature seriously</SUBJECT>
+                <SUBJECT>German</SUBJECT>
+                <SUBJECT>French</SUBJECT>
+                <SUBJECT>Arabic</SUBJECT>
+                <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+                <TITLE TITLETYPE="ANALYTIC">Subh-I-Kazib</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Senaha 131" DBREF="55405">131</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 9-10" DBREF="54705">9-10</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Armstrong, Bristow and Sharrock 678" DBREF="8746">678</BIBCIT>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 15" DBREF="101292">15</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </EDUCATION>
+      </DIV1>
+      <DIV1>
+        <HEADING>Friendships with Scientists</HEADING>
+        <FRIENDSASSOCIATES>
+          <DIV2>
+            <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SIB">
+              <DATE VALUE="1877--" CERTAINTY="BY">1877</DATE>
+              <CHRONPROSE>By this year LSB had met and grown quite close to the social scientist and founder of social Darwinism,
+                <NAME>Herbert Spencer</NAME>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 14" DBREF="54705">14</BIBCIT>
+                <BIBCIT PLACEHOLDER="C19" DBREF="48826">
+                </BIBCIT>
+                <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>It is not clear how they met:
+                <NAME>Jackie Dees Domingue</NAME>
+                <TITLE TITLETYPE="JOURNAL">Popular Science Monthly</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 92n9, 14" DBREF="54705">14, 92n9</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                </BIBCITS>Domingue suggests that there may have been friction between them later in LSB&apos;s life, since by the 1890s she had rejected Spencer&apos;s philosophy of individualism (which saw society as one of
+                <QUOTE DIRECT="Y">competition of adults,</QUOTE>
+                <QUOTE DIRECT="Y">superiority has been perpetually fostered and further advances caused</QUOTE>
+                <QUOTE DIRECT="Y">survival of the fittest</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Spencer 5" DBREF="55705">5</BIBCIT>
+                </BIBCITS>and had become a proponent of the co-operative philosophy of anarchist communism.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 79" DBREF="54705">79</BIBCIT>
+                </BIBCITS>Nonetheless, they remained close friends until her death.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 81" DBREF="54705">81</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>LSB also corresponded with scientist and explorer
+                <NAME>Francis Galton</NAME>
+                <QUOTE DIRECT="Y">well known and thoughtful writer.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Galton 106" DBREF="55449">106</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </FRIENDSASSOCIATES>
+      </DIV1>
+      <DIV1>
+        <HEALTH ISSUE="MENTAL">
+          <DIV2>
+            <SHORTPROSE>
+              <P>Galton mentioned Bevington in his
+                <TITLE TITLETYPE="MONOGRAPHIC">Inquiries into Human Faculty and its Development</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Galton 106" DBREF="55449">106</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </HEALTH>
+      </DIV1>
+      <DIV1>
+        <HEADING>Travels to Germany: Marriage</HEADING>
+        <LOCATION RELATIONTO="TRAVELLED">
+          <DIV2>
+            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SIB">
+              <DATE VALUE="1882-08-" CERTAINTY="AFTER">Probably later 1882</DATE>
+              <CHRONPROSE>Shortly after publishing her second volume of poetry, LSB made a visit to
+                <PLACE>
+                  <GEOG REG="Germany">Germany</GEOG>
+                </PLACE>.</CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+          </DIV2>
+        </LOCATION>
+      </DIV1>
+      <DIV1>
+        <FAMILY>
+          <MEMBER RELATION="HUSBAND">
+            <MARRIAGE>
+              <DIV2>
+                <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SIB">
+                  <DATE VALUE="1883-05-">May 1883</DATE>
+                  <CHRONPROSE>LSB, aged about thirty-eight, married
+                    <NAME>Ignatz Felix Guggenberger</NAME>
+                    <JOB>artist</JOB>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="FC" DBREF="107913">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Senaha 132" DBREF="55405">132</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Domingue 13, 125" DBREF="54705">13, 125</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Sherry 242" DBREF="55446">242</BIBCIT>
+                  </BIBCITS>
+                </CHRONSTRUCT>
+                <SHORTPROSE>
+                  <P>She had already by this date published her best-known poetry. Family tradition suggests that her marriage was arranged by her brother-in-law
+                    <NAME STANDARD="Kemp Welch, Henry">Henry Kemp Welch</NAME>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 13" DBREF="54705">13</BIBCIT>
+                    </BIBCITS>Welch was present at the wedding, along with her brother
+                    <NAME STANDARD="Bevington, Alexander">Alex</NAME>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 13, 24n40" DBREF="54705">13, 24n40</BIBCIT>
+                    </BIBCITS>
+                  </P>
+                </SHORTPROSE>
+              </DIV2>
+            </MARRIAGE>
+          </MEMBER>
+        </FAMILY>
+      </DIV1>
+      <DIV1>
+        <CULTURALFORMATION>
+          <DIV2>
+            <HEADING>European Life</HEADING>
+            <SHORTPROSE>
+              <P>At this time LSB (who would be regarded by most people as having taken her husband&apos;s
+                <NATIONALITY REG="German">German</NATIONALITY>
+                <DENOMINATION REG="Protestant">Protestant</DENOMINATION>
+                <TITLE TITLETYPE="ANALYTIC">Modern Atheism and Mr. Mallock</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 13, 127" DBREF="54705">13, 127</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </CULTURALFORMATION>
+      </DIV1>
+      <DIV1>
+        <LOCATION RELATIONTO="LIVED">
+          <DIV2>
+            <SHORTPROSE>
+              <P>LSB began married life with her husband living with his parents; later they alternated between
+                <PLACE>
+                  <SETTLEMENT>London</SETTLEMENT>
+                </PLACE>and
+                <PLACE>
+                  <SETTLEMENT>Munich</SETTLEMENT>
+                  <REGION REG="Bavaria">
+                  </REGION>
+                  <GEOG CURRENT="Germany" REG="Germany">
+                  </GEOG>
+                </PLACE>.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 13" DBREF="54705">13</BIBCIT>
+                </BIBCITS>Little is known about their life together.
+                <NAME>Eijun Senaha</NAME>
+                <QUOTE DIRECT="Y">her attitudes toward marriage and man in her poems and essays are so dark that they may have reflected her private life.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Senaha 139-40" DBREF="55405">139-40</BIBCIT>
+                </BIBCITS>Nothing is known that would substantiate this claim, however.</P>
+            </SHORTPROSE>
+          </DIV2>
+        </LOCATION>
+      </DIV1>
+      <DIV1>
+        <POLITICS>
+          <DIV2>
+            <SHORTPROSE>
+              <P>
+                <NAME>Jackie Dees Domingue</NAME>
+                <PLACE>
+                  <GEOG REG="Germany">Germany</GEOG>
+                </PLACE>, where she was subjected to
+                <QUOTE DIRECT="Y">an inordinate amount of regulations, penalties, and endless errands to the police station.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 13" DBREF="54705" QTDIN="QTDINYES">13</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </POLITICS>
+      </DIV1>
+      <DIV1>
+        <FAMILY>
+          <MEMBER RELATION="HUSBAND">
+            <DIV2>
+              <HEADING>Separation</HEADING>
+              <SHORTPROSE>
+                <P>
+                  <SEPARATION>LSB&apos;s marriage was short. Although the couple never formally divorced, they parted ways after a few years, and thereafter always lived separately.
+                    <NAME>Jackie Dees Domingue</NAME>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 13, 18" DBREF="54705">13, 18</BIBCIT>
+                    </BIBCITS>
+                  </SEPARATION>
+                </P>
+              </SHORTPROSE>
+            </DIV2>
+          </MEMBER>
+        </FAMILY>
+      </DIV1>
+      <DIV1>
+        <LOCATION RELATIONTO="LIVED">
+          <DIV2>
+            <SHORTPROSE>
+              <P>After leaving her marriage LSB settled at
+                <PLACE>
+                  <SETTLEMENT>Merano</SETTLEMENT>
+                  <GEOG REG="Italy">Italy</GEOG>
+                </PLACE>for a while. During this time she travelled frequently between Italy and
+                <PLACE>
+                  <SETTLEMENT>London</SETTLEMENT>
+                  <REGION REG="Middlesex">
+                  </REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Armstrong, Bristow and Sharrock 678" DBREF="8746">678</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </LOCATION>
+      </DIV1>
+      <DIV1>
+        <HEADING>Back in London: Anarchism</HEADING>
+        <POLITICS>
+          <DIV2>
+            <SHORTPROSE>
+              <P>By the late 1880s Bevington had joined both local London and international
+                <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERNO" MEMBERSHIP="MEMBERSHIPYES" REG="anarchist">anarchist</POLITICALAFFILIATION>
+                <PLACE>
+                  <SETTLEMENT>London</SETTLEMENT>
+                  <REGION REG="Middlesex">
+                  </REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>was the
+                <QUOTE DIRECT="Y">headquarters of the Continental [anarchist] movement.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Oliver vii" DBREF="55305">vii</BIBCIT>
+                </BIBCITS>By 1893 she was regularly contributing to anarchist journals, and that same year she lectured on atheism and Christianity at the
+                <ORGNAME>Autonomie Club</ORGNAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Cunningham 881" DBREF="8745">881</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Piper 30" DBREF="55448">30</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Senaha 132, 140, 147" DBREF="55405">132, 140, 147</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Armstrong, Bristow and Sharrock 678" DBREF="8746">678</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 4" DBREF="54705">4</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>Her creed was unusual; she believed that
+                <POLITICALAFFILIATION REG="anti-property">no one ought to own anything beyond what was absolutely needed</POLITICALAFFILIATION>
+                <NAME>Jackie Dees Domingue</NAME>
+                <QUOTE DIRECT="Y">atypical and abstract,</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 26" DBREF="54705">26</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+          <DIV2>
+            <HEADING>The Greenwich Incident</HEADING>
+            <SHORTPROSE>
+              <P>In
+                <DATE VALUE="1894-02-15">February 15, 1894</DATE>
+                <NAME>Martial Bourdin</NAME>
+                <ORGNAME>Royal Observatory</ORGNAME>
+                <PLACE>
+                  <PLACENAME REG="Greenwich Park">Greenwich Park</PLACENAME>
+                  <SETTLEMENT CURRENT="London" REG="Greenwich">
+                  </SETTLEMENT>
+                  <REGION REG="Kent">
+                  </REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>. LSB likely had insider knowledge of this incident (which formed the basis for
+                <NAME>Joseph Conrad</NAME>
+                <TITLE TITLETYPE="MONOGRAPHIC">The Secret Agent</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Quail 162-8" DBREF="55447">162-8</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Senaha 141" DBREF="55405">141</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Cunningham 881" DBREF="8745">881</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Harkness, Intro to Secret Agent xxiv" DBREF="42746">xxiv</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+            <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="WRITINGCLIMATE" RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" CHRONCOLUMN2="SOCIALCLIMATE2" CHRONCOLUMN3="NATIONALINTERNATIONAL3" RELEVANCE1="DECADE1" RELEVANCE2="DECADE2" RELEVANCE3="DECADE3">
+              <DATE VALUE="1897--">1897</DATE>
+              <CHRONPROSE>LSB&apos;s fellow anarchist
+                <NAME>David Nicoll</NAME>
+                <TITLE TITLETYPE="MONOGRAPHIC">The Greenwich Mystery: Letters from the Dead</TITLE>
+                <NAME>Martial Bourdin</NAME>
+                <PLACE>
+                  <PLACENAME REG="Greenwich Park">Greenwich</PLACENAME>
+                  <SETTLEMENT CURRENT="London" REG="Greenwich">
+                  </SETTLEMENT>
+                  <REGION REG="Kent">
+                  </REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>
+                <ORGNAME STANDARD="Royal Observatory">Observatory</ORGNAME>
+                <NAME>H. B. Samuels</NAME>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Sherry 242-3" DBREF="55446">242-3</BIBCIT>
+                <BIBCIT PLACEHOLDER="Quail 168" DBREF="55447">168</BIBCIT>
+                <BIBCIT PLACEHOLDER="Domingue 66, 73n15" DBREF="54705" QTDIN="QTDINYES">66, 73n15</BIBCIT>
+                <BIBCIT PLACEHOLDER="Senaha 141" DBREF="55405">141</BIBCIT>
+                <BIBCIT PLACEHOLDER="Cunningham 881" DBREF="8745">881</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>Samuels was then editor of
+                <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal</TITLE>
+                <ORGNAME>Scotland Yard</ORGNAME>
+                <NAME STANDARD="Oliver, Hermia">Hermia Oliver</NAME>
+                <QUOTE DIRECT="Y">virtually worthless</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Oliver 106-7" DBREF="55305">106-7</BIBCIT>
+                </BIBCITS>given her own involvement in the anarchist movement, while others are convinced of its validity.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Quail 162" DBREF="55447">162</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Sherry 242-3" DBREF="55446">242-3</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </POLITICS>
+      </DIV1>
+      <DIV1>
+        <FRIENDSASSOCIATES>
+          <DIV2>
+            <HEADING>Anarchist Friends</HEADING>
+            <SHORTPROSE>
+              <P>LSB was a friend of many notable anarchist journalists, including
+                <NAME>Charlotte Wilson</NAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Senaha 140" DBREF="55405">140</BIBCIT>
+                </BIBCITS>(a leading member of the
+                <ORGNAME STANDARD="Fabian Society">Fabians</ORGNAME>
+                <TITLE TITLETYPE="JOURNAL" REG="Freedom">Freedom</TITLE>
+                <NAME STANDARD="Rossetti, Helen">Helen</NAME>
+                <NAME>Olivia Rossetti</NAME>
+                <TITLE TITLETYPE="JOURNAL">The Torch</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 14-15" DBREF="54705">14-15</BIBCIT>
+                </BIBCITS>
+                <NAME>David Nicoll</NAME>
+                <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal</TITLE>
+                <NAME>Max Nettlau</NAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 10" DBREF="54705">10</BIBCIT>
+                </BIBCITS>Among the most famous anarchists she knew well were the Parisian
+                <NAME STANDARD="Michel, Louise">Louise Michel</NAME>
+                <QUOTE DIRECT="Y">sincere and sympathetic</QUOTE>
+                <QUOTE DIRECT="Y">the leading exponent of European Anarchism,</QUOTE>
+                <NAME STANDARD="Kropotkin, Peter Alekseevich">Peter Kropotkin</NAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 14, 58" DBREF="54705">14, 58</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Senaha 132, 140" DBREF="55405">132, 140</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Quail 82-3" DBREF="55447">82-3</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </FRIENDSASSOCIATES>
+      </DIV1>
+      <DIV1>
+        <HEADING>Atheism and Gender Matters</HEADING>
+        <CULTURALFORMATION>
+          <RELIGION>
+            <DIV2>
+              <SHORTPROSE>
+                <P>Well before the 1890s LSB was also a committed
+                  <DENOMINATION SELF-DEFINED="SELFYES" REG="atheist">atheist</DENOMINATION>
+                  <TITLE TITLETYPE="JOURNAL">Friends&apos; Quarterly Examiner</TITLE>
+                  <QUOTE DIRECT="Y">Modern Atheism and Mr. Mallock</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha 132, 146-7" DBREF="55405">132, 146-7</BIBCIT>
+                  </BIBCITS>
+                  <NAME STANDARD="Domingue, Jackie Dees">Domingue</NAME>
+                  <TITLE TITLETYPE="ANALYTIC">The Moral Demerits of Orthodoxy</TITLE>
+                  <QUOTE DIRECT="Y">a corrupt and senile superstition</QUOTE>
+                  <QUOTE DIRECT="Y">dead Jew</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 85" DBREF="54705" QTDIN="QTDINYES">85</BIBCIT>
+                  </BIBCITS>
+                </P>
+              </SHORTPROSE>
+            </DIV2>
+          </RELIGION>
+        </CULTURALFORMATION>
+      </DIV1>
+      <DIV1>
+        <POLITICS>
+          <DIV2>
+            <SHORTPROSE>
+              <P>As an anarchist, LSB was primarily concerned with
+                <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERNO" REG="egalitarian">class inequality</POLITICALAFFILIATION>
+                <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERYES" INVOLVEMENT="INVOLVEMENTNO" REG="feminist">gender</POLITICALAFFILIATION>
+                <TITLE TITLETYPE="ANALYTIC">Bees in Clover</TITLE>
+                <TITLE TITLETYPE="ANALYTIC">One More Bruised Heart</TITLE>
+                <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+                <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERYES" INVOLVEMENT="INVOLVEMENTYES" REG="feminist">concern for gender inequality</POLITICALAFFILIATION>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Bloom 29" DBREF="8807">29</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 128" DBREF="54705">128</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </POLITICS>
+      </DIV1>
+      <DIV1>
+        <HEADING>Illness and Death</HEADING>
+        <HEALTH ISSUE="PHYSICAL">
+          <DIV2>
+            <SHORTPROSE>
+              <P>By
+                <DATE>3 May 1894</DATE>
+                <NAME>Max Nettlau</NAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Oliver 107" DBREF="55305">107</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 20" DBREF="54705">20</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </HEALTH>
+      </DIV1>
+      <DIV1>
+        <DEATH>
+          <DIV2>
+            <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SIB">
+              <DATE VALUE="1895-11-28" CERTAINTY="BY">By November 28 1895</DATE>
+              <CHRONPROSE>After a long illness, LSB died, aged fifty, at
+                <PLACE>
+                  <SETTLEMENT CURRENT="London" REG="Willesden">Willesden</SETTLEMENT>
+                  <REGION REG="Middlesex">Middlesex</REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>.
+                <CAUSE>The official cause of death was
+                  <CAUSE>heart disease and dropsy (edema)</CAUSE>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="ODNB" DBREF="29268">
+                </BIBCIT>
+                <BIBCIT PLACEHOLDER="Senaha 132" DBREF="55405">132</BIBCIT>
+                <BIBCIT PLACEHOLDER="Domingue 20, 25n55" DBREF="54705">20, 25n55</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <RESEARCHNOTE>eaq: lots of obits I didn&apos;t have time to get, would be very valuable to look at if poss (especially the one in the torch: that gets frequently cited). Liberty: A Journal of Anarchist Communism 2.24 (Dec 1895) 188-189, titled &quot;Death of L.S. Bevington&quot;. Freedom: A Journal of Anarchist Communism. 9.100 (Dec 1895): 58. Titled &quot;Death of Comrade L.S. Bevington&quot;. The Torch of Anarchy: A Monthly Revolutionary Journal. 2.7 (18 Dec 1895): 401. Titled &quot;Obituary&quot;</RESEARCHNOTE>
+                <TITLE TITLETYPE="JOURNAL" REG="Freedom">Freedom</TITLE>
+                <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                <TITLE TITLETYPE="JOURNAL">The Torch</TITLE>
+                <NAME STANDARD="Bevington, Alexander">Alex</NAME>
+                <PLACE>
+                  <PLACENAME>Finchley Cemetery</PLACENAME>
+                  <SETTLEMENT>London</SETTLEMENT>
+                  <REGION REG="Middlesex">
+                  </REGION>
+                  <GEOG REG="England">
+                  </GEOG>
+                </PLACE>, which was a non-religious event. She had requested that
+                <QUOTE DIRECT="Y">no cleric should profane the occasion of her burial.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 3" DBREF="54705" QTDIN="QTDINYES">3</BIBCIT>
+                </BIBCITS>A number of her anarchist friends were present, including
+                <NAME STANDARD="Rossetti, Helen">Helen</NAME>
+                <NAME>Olivia Rossetti</NAME>
+                <NAME STANDARD="Kropotkin, Peter Alekseevich">Peter Kropotkin</NAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 3, 14, 21n5, 25n47, 134, 137" DBREF="54705">3, 14, 21n5, 25n47, 134, 137</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Senaha 132" DBREF="55405">132</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </DIV2>
+        </DEATH>
+      </DIV1>
+      <WORKSCITED>
+        <SOURCE>Unless otherwise noted, all information is from the FC.</SOURCE>
+      </WORKSCITED>
+    </DIV0>
+  </BIOGRAPHY>
+  <WRITING SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER TYPE="text">
+      <FILEDESC>
+        <TITLESTMT>
+          <DOCTITLE>L. S. Bevington: writing</DOCTITLE>
+        </TITLESTMT>
+        <PUBLICATIONSTMT>
+          <AUTHORITY>Orlando Project</AUTHORITY>
+        </PUBLICATIONSTMT>
+        <SOURCEDESC>Based on original research by members of the Orlando Project.</SOURCEDESC>
+      </FILEDESC>
+      <REVISIONDESC>
+        <RESPONSIBILITY RESP="SJW" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>8 July 1998</DATE>
+          <ITEM>Initial document given to tagger.</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SIB" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>6 October 1998</DATE>
+          <ITEM>Updated for Sept 1998 Audit</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>21 December 1999</DATE>
+          <ITEM>BATCH CHANGE: primarily orgName and bibCit cleanup</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SLB" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>22 November 2000</DATE>
+          <ITEM>fixed standard name</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="DRG" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>1 February 2001</DATE>
+          <ITEM>converted textual apostrophes and quotation marks to entity references</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>30 October 2002</DATE>
+          <ITEM>removed title tag(s) from workscited</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>14 April 2003</DATE>
+          <ITEM>BATCH CHANGE: primarily PLACE cleanup</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="JES" WORKSTATUS="SUB" WORKVALUE="C">
+          <DATE>23 May 2003</DATE>
+          <ITEM>mangled from events db</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="LKD" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>3 June 2003</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>16 June 2003</DATE>
+          <ITEM>BATCH CHANGE: primarily TGENRENAME cleanup, BIBCIT following P moved before P, BIBCITS TAG added</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+          <DATE>08 April 2005</DATE>
+          <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name changes</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>10 November 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>11 November 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>21 November 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>4 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>5 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>10 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>13 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>15 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>16 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>17 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>18 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>19 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="I">
+          <DATE>20 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+          <DATE>21 December 2008</DATE>
+          <ITEM>rbv c</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="EAQ" WORKSTATUS="RWT" WORKVALUE="C">
+          <DATE>21 December 2008</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="IMG" WORKSTATUS="CFT" WORKVALUE="P">
+          <DATE>12 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>29 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>30 January 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>3 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>4 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>6 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="I">
+          <DATE>10 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="C">
+          <DATE>11 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="C">
+          <DATE>12 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="C">
+          <DATE>12 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="C">
+          <DATE>19 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CAS" WORKVALUE="C">
+          <DATE>20 February 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>3 March 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFT" WORKVALUE="C">
+          <DATE>25 March 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="C">
+          <DATE>26 March 2009</DATE>
+          <ITEM>Finally got to cft and cfb bevils*. The pair is cft and cfb p now, part of PILOT 38.I</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="C">
+          <DATE>27 March 2009</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="C">
+          <DATE>1 May 2009</DATE>
+          <ITEM>Fixed bibcit not enclosed in bibcits</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="IMG" WORKSTATUS="PUB" WORKVALUE="I">
+          <DATE>31 May 2009</DATE>
+          <ITEM>pub i</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="PUB" WORKVALUE="C">
+          <DATE>17 June 2009</DATE>
+          <ITEM>pub c</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="PUB" WORKVALUE="C">
+          <DATE>19 June 2009</DATE>
+          <ITEM>fixed bibcits-placehoder agreement</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MPO" WORKSTATUS="PUB" WORKVALUE="C">
+          <DATE>23 June 2009</DATE>
+          <ITEM>fixed standard names</ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="CSK" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>26 July 2010</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MKD" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>30 May 2011</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY RESP="MKD" WORKSTATUS="REV" WORKVALUE="C">
+          <DATE>31 May 2011</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+        <RESPONSIBILITY WORKSTATUS="REV" RESP="LSW" WORKVALUE="C">
+          <DATE>8 June 2011</DATE>
+          <ITEM>
+          </ITEM>
+        </RESPONSIBILITY>
+      </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+      <HEADING>Writing</HEADING>
+      <STANDARD>Bevington, L. S.</STANDARD>
+      <AUTHORSUMMARY>
+        <SHORTPROSE>
+          <P>
+            <GENERICRANGE>LSB was an essayist, philosopher and poet, one of a very small handful of publishing
+              <TGENRE GENRENAME="POLITICALWRITING">anarcho-communist women</TGENRE>
+              <TGENRE GENRENAME="POETRY">poetry</TGENRE>
+              <TGENRE GENRENAME="ESSAY">essays</TGENRE>
+              <TGENRE GENRENAME="TRANSLATION">translations</TGENRE>
+            <BIBCITS>
+              <BIBCIT PLACEHOLDER="Domingue 1, 27" DBREF="54705">1, 27</BIBCIT>
+            </BIBCITS>
+          </P>
+        </SHORTPROSE>
+      </AUTHORSUMMARY>
+      <DIV1>
+        <HEADING>Early Poetry</HEADING>
+        <DIV2>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>
+                <PINFLUENCESHER INFLUENCETYPE="FAMILIAL">From an early age LSB wrote
+                  <TGENRE GENRENAME="POETRY">nature poetry</TGENRE>
+                  <NAME STANDARD="Bevington, Alexander,, 1814 - 1875">father</NAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Senaha 131" DBREF="55405">131</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Armstrong, Bristow and Sharrock 678" DBREF="8746">678</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+        </DIV2>
+        <DIV2>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="SELECTIVE">
+              <DATE VALUE="1871-10-">October 1871</DATE>
+              <CHRONPROSE>
+                <PFIRSTLITERARYACTIVITY>
+                  <PPERIODICALPUBLICATION>LSB probably first reached print with two
+                    <TGENRE GENRENAME="SONNET">sonnets</TGENRE>
+                    <ORGNAME STANDARD="Society of Friends">Quaker</ORGNAME>
+                    <TITLE TITLETYPE="JOURNAL">Friends&apos; Quarterly Examiner</TITLE>
+                    <TITLE TITLETYPE="ANALYTIC">Sonnet</TITLE>
+                    <TITLE TITLETYPE="ANALYTIC">A Double Sonnet</TITLE>
+                </PFIRSTLITERARYACTIVITY>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 130, 415, 420, 428" DBREF="54705">130, 415, 420, 428</BIBCIT>
+                <BIBCIT PLACEHOLDER="Miles 9: 227" DBREF="109492">9: 227</BIBCIT>
+                <BIBCIT PLACEHOLDER="Senaha 133" DBREF="55405">133</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>In strong contrast to her later works, these early poems are
+                <TGENRE GENRENAME="RELIGIOUS">religious</TGENRE>
+                <TTHEMETOPIC>resignation to the will of God</TTHEMETOPIC>
+                <TITLE TITLETYPE="ANALYTIC">A Double Sonnet</TITLE>
+                <QUOTE DIRECT="Y">do the duty of the hour / Leaving results to time, and God&apos;s unfettered power.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 420" DBREF="54705" QTDIN="QTDINYES">420</BIBCIT>
+                </BIBCITS>
+                <TITLE TITLETYPE="ANALYTIC" REG="L. S. Bevington, Sonnet, 1871">Sonnet</TITLE>
+                <QUOTE DIRECT="Y">climb the Cloud that doth thy Christ conceal / And look beyond, to where He lives and loves thee yet.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 428" DBREF="54705" QTDIN="QTDINYES">428</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>Scholar
+                <NAME>Jackie Dees Domingue</NAME>
+                <QUOTE DIRECT="Y">Bevington may have been influenced by her father&apos;s living presence and so could have felt it necessary to veil her true perspective.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 5" DBREF="54705">5</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>Poetry Collections</HEADING>
+        <DIV2>
+          <HEADING>First Book:
+            <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+          </HEADING>
+          <TEXTSCOPE DBREF="101291" PLACEHOLDER="LSB, Key Notes, 1876">
+          </TEXTSCOPE>
+          <TEXTSCOPE DBREF="101289" PLACEHOLDER="LSB, Key-Notes, 1879">
+          </TEXTSCOPE>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="SELECTIVE">
+              <DATE CALENDAR="NEWSTYLE" VALUE="1876-12-18" CERTAINTY="CERT">18 December 1876</DATE>
+              <CHRONPROSE>
+                <PMODEOFPUBLICATION PUBLICATIONMODE="PRIVATELYPRINTED">
+                  <PAUTHORSHIP AUTHORNAMETYPE="PSEUDONYMOUS">LSB privately printed
+                    <TITLE TITLETYPE="MONOGRAPHIC" REG="Key-Notes">Key Notes</TITLE>
+                    <TGENRE GENRENAME="POETRY">verses</TGENRE>
+                    <SOCALLED>Arbor Leigh</SOCALLED>
+                    <TGENRE GENRENAME="PHILOSOPHICAL">philosophical</TGENRE>
+                    <TTHEMETOPIC>evolution</TTHEMETOPIC>
+                </PMODEOFPUBLICATION>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 5" DBREF="54705">5</BIBCIT>
+                <BIBCIT PLACEHOLDER="Senaha 146" DBREF="55405">146</BIBCIT>
+                <BIBCIT PLACEHOLDER="OCLC" DBREF="1709">
+                </BIBCIT>
+              </BIBCITS>
+              <SCHOLARNOTE>
+                <P>
+                  <PINFLUENCESHER INFLUENCETYPE="LITERARY">The pseudonym is probably a nod to
+                    <NAME>Elizabeth Barrett Browning</NAME>
+                    <TITLE TITLETYPE="MONOGRAPHIC">Aurora Leigh</TITLE>
+                  <NAME>Jackie Dees Domingue</NAME>
+                  <PINFLUENCESHER INFLUENCETYPE="INTELLECTUAL">
+                    <SOCALLED>Arbor</SOCALLED>
+                    <NAME>Charles Darwin</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Bloom 28" DBREF="8807">28</BIBCIT>
+                  </BIBCITS>
+                </P>
+              </SCHOLARNOTE>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>Four of these poems were reprinted in
+                  <TITLE TITLETYPE="JOURNAL">Popular Science Monthly</TITLE>
+                  <NAME>Herbert Spencer</NAME>
+                <PEDITIONS>The original publisher of
+                  <TITLE TITLETYPE="MONOGRAPHIC" REG="Key-Notes">Key Notes</TITLE>
+                  <ORGNAME>Thomas Scott</ORGNAME>
+                  <PAUTHORSHIP>and then LSB sought a wider circulation by re-issuing the collection through
+                    <ORGNAME>Kegan Paul</ORGNAME>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                  <TINTERTEXTUALITY INTERTEXTTYPE="QUOTATION" GENDEROFAUTHOR="MALE">and an epigraph by
+                    <NAME>Ralph Waldo Emerson</NAME>
+                    <TITLE TITLETYPE="ANALYTIC">Swedenborg; or, the Mystic</TITLE>
+                    <TITLE TITLETYPE="MONOGRAPHIC">Representative Men: Seven Lectures</TITLE>
+                </PEDITIONS>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="OCLC" DBREF="1709">
+                  </BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 5-6" DBREF="54705">5-6</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                </BIBCITS>
+                <TINTERTEXTUALITY INTERTEXTTYPE="QUOTATION" GENDEROFAUTHOR="MALE">This epigraph provides the key to LSB&apos;s title: she quotes a reflection from
+                  <NAME STANDARD="Emerson, Ralph Waldo">Emerson</NAME>
+                  <QUOTE DIRECT="Y">hoarse as street ballads when once the penetrating Key-Note of nature and spirit is sounded.</QUOTE>
+                </TINTERTEXTUALITY>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Key-Notes front matter" DBREF="101289" QTDIN="QTDINYES">front matter</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>
+                <PDEDICATION>The 1879 edition contains an extensive verse
+                  <TGENRE GENRENAME="DEDICATION">dedication</TGENRE>
+                  <SOCALLED>A. W.</SOCALLED>
+                  <RSELFDESCRIPTION>She admits the poems are marked by many different subjects and a breath of inconsistency, but she claims the whole collection together makes
+                    <QUOTE DIRECT="Y">just one questioning dissonance, such chord / As symbolises best unfinished life / Unanswered askings, and unyielding hope.</QUOTE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="LSB, Key-Notes vi" DBREF="101289">vi</BIBCIT>
+                    </BIBCITS>
+                  </RSELFDESCRIPTION>
+                </PDEDICATION>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>The poems in
+                <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                <TTHEMETOPIC>the origins of the universe, and of the Earth in particular</TTHEMETOPIC>
+                <TTHEMETOPIC>
+                  <NAME STANDARD="Darwin, Charles">Darwinian</NAME>
+                <NAME>Eijun Senaha</NAME>
+                <PINFLUENCESHER INFLUENCETYPE="INTELLECTUAL">they also reflect
+                  <NAME STANDARD="Emerson, Ralph Waldo">Emerson</NAME>
+                  <TTHEMETOPIC>transcendentalism</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Senaha 134" DBREF="55405">134</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>
+                <TITLE TITLETYPE="ANALYTIC">Unto this Present</TITLE>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ALLUSIONUNACKNOWLEDGED" GENDEROFAUTHOR="MALE">perhaps an allustion to
+                  <NAME>John Ruskin</NAME>
+                  <TITLE TITLETYPE="ANALYTIC">Unto this Last</TITLE>
+                <TTHEMETOPIC>origins of earth</TTHEMETOPIC>
+                <TTHEMETOPIC>philosophy as against religious belief</TTHEMETOPIC>
+                <TTHEMETOPIC>planetary formation; how the solar system</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">
+                  <L>&nbsp;&nbsp;&nbsp;&nbsp;glimmering, gassy nuclei. So, anon,</L>
+                  <L>These, settling into fluid balls of fire,</L>
+                  <L>Flung forth, all wildly spinning into space,</L>
+                  <L>Planets; and these, all spinning, flung their moons,</L>
+                  <L>Until, among an unguessed myriad more,</L>
+                  <L>This little thing we live to call our world</L>
+                  <L>Grew individual . . . .</L>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Key Notes 5" DBREF="101291">5</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>Unlike her earlier sonnets this poem has hints of
+                <TTHEMETOPIC>atheist sentiment</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">Man&apos;s spirit . . . the father of his God,</QUOTE>
+                <TTHEMETOPIC>idea of God is created by humankind&apos;s ignorance</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Key Notes 11" DBREF="101291">11</BIBCIT>
+                </BIBCITS>In God&apos;s place she would establish
+                <SOCALLED>Philosophy</SOCALLED>
+                <TTECHNIQUES TECHNIQUETYPE="IMAGERY">Her prose evokes the
+                  <PLITERARYSCHOOLS REG="Transcendentalism">transcendentalist</PLITERARYSCHOOLS>
+                  <QUOTE DIRECT="Y">the Universe / Is pivoted upon a molecule / . . . The softest dimple on a baby&apos;s smile / Springs from the whole of past Eternity.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Key Notes 8" DBREF="101291">8</BIBCIT>
+                  </BIBCITS>
+                </TTECHNIQUES>
+              </P>
+              <P>The four poems that were later reprinted in
+                <TITLE TITLETYPE="JOURNAL">Popular Science Monthly</TITLE>
+                <QUOTE DIRECT="Y">the mellow shining daylight,</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Key Notes 15" DBREF="101291">15</BIBCIT>
+                </BIBCITS>then concludes that the only theological meaning to be found in the world is that
+                <QUOTE DIRECT="Y">There will be more life to-morrow / And of life, more life that knows / Though the sum of Force be constant / Yet the Living ever grows.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Key Notes 17" DBREF="101291">17</BIBCIT>
+                </BIBCITS>
+                <TTECHNIQUES TECHNIQUETYPE="IMAGERY">In these and other poems LSB&apos;s extensive use of
+                  <TTHEMETOPIC>nature</TTHEMETOPIC>
+                  <TITLE TITLETYPE="ANALYTIC">March</TITLE>
+                  <QUOTE DIRECT="Y">in the wind.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Key Notes 22" DBREF="101291">22</BIBCIT>
+                  </BIBCITS>
+                </TTECHNIQUES>
+              </P>
+              <P>The poems in the 1879 edition are divided into twelve sections according to the months of the year, and reflect a more ambivalent viewpoint than before about the Christian god. Poems like
+                <TITLE TITLETYPE="ANALYTIC">A Modern Moral</TITLE>
+                <QUOTE DIRECT="Y">Christ-voice</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Key-Notes 81" DBREF="101289">81</BIBCIT>
+                </BIBCITS>but only to argue in favour of valuing present life rather than eternal life. In this edition LSB returns to the theme addressed by her poems in the
+                <TITLE TITLETYPE="JOURNAL">Friends&apos; Quarterly Examiner</TITLE>
+                <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                <QUOTE DIRECT="Y">heaven, . . . hidden all the while</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Key Notes 89" DBREF="101289">89</BIBCIT>
+                </BIBCITS>by dark clouds, but this cheer is more closely linked to the inevitability of planetary rotation than to the presence of God.</P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="INFORMAL" GENDEREDRESPONSE="GENDEREDNO">The collection enjoyed great success in scientific circles.
+                  <RRECOGNITIONS>
+                    <NAME>Charles Darwin</NAME>
+                    <QUOTE DIRECT="Y">opened a volume of verse for fifteen years.</QUOTE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                    </BIBCITS>
+                  </RRECOGNITIONS>
+                </RRESPONSES>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="FORMAL" GENDEREDRESPONSE="GENDEREDYES">Its reception in literary circles was more equivocal:
+                  <TITLE TITLETYPE="JOURNAL">The Academy</TITLE>
+                  <QUOTE DIRECT="Y">the Poetess Laureate of spiritual indigestion,</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Academy 537 (19 Aug 1882): 133" DBREF="38128">133</BIBCIT>
+                  </BIBCITS>The
+                  <TITLE TITLETYPE="JOURNAL">Athen&aelig;um</TITLE>
+                  <QUOTE DIRECT="Y">a remarkable if crude performance.</QUOTE>
+                </RRESPONSES>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Athen&aelig;um 2858 (5 Aug 1882): 173" DBREF="2043">173</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+        <DIV2>
+          <HEADING>
+            <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+          </HEADING>
+          <TEXTSCOPE DBREF="101292" PLACEHOLDER="LSB, Poems, Lyrics, and Sonnets, 1882">
+          </TEXTSCOPE>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="SELECTIVE">
+              <DATE CALENDAR="NEWSTYLE" VALUE="1882-08-05" CERTAINTY="BY">By 5 August 1882</DATE>
+              <CHRONPROSE>
+                <RBESTKNOWNWORK>LSB published her second and probably best-known volume,
+                  <TITLE TITLETYPE="MONOGRAPHIC">
+                    <TGENRE GENRENAME="POETRY">Poems</TGENRE>
+                    <TGENRE GENRENAME="LYRIC">Lyrics</TGENRE>
+                    <TGENRE GENRENAME="SONNET">Sonnets</TGENRE>
+                  </TITLE>,
+                  <TTECHNIQUES TECHNIQUETYPE="VERSIFICATION">which is more metrically experimental than her earlier
+                    <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                  </TTECHNIQUES>and more explicitly grounded in
+                  <TTHEMETOPIC>non-Christian philosophy</TTHEMETOPIC>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Athen&aelig;um 2858 (5 Aug 1882): 173" DBREF="2043">173</BIBCIT>
+                <BIBCIT PLACEHOLDER="FC" DBREF="107913">
+                </BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <PCIRCULATION>She apparently sent a copy to
+                  <NAME>Robert Browning</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue, Unpublished Letter 38, 40n4" DBREF="55425">38, 40n4</BIBCIT>
+                  </BIBCITS>
+                </PCIRCULATION>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>
+                <TINTERTEXTUALITY INTERTEXTTYPE="QUOTATION" GENDEROFAUTHOR="MALE">Bevington again prefaces her collection with an epigraph from
+                  <NAME>Ralph Waldo Emerson</NAME>
+                  <TITLE TITLETYPE="ANALYTIC">Poetry and Imagination</TITLE>
+                  <QUOTE DIRECT="Y">When life is true to the poles of nature, the streams of truth will roll through us in song</QUOTE>
+                  <TTHEMETOPIC>evolution</TTHEMETOPIC>
+                <TINTERTEXTUALITY INTERTEXTTYPE="QUOTATION" GENDEROFAUTHOR="MALE">A second epigraph, from
+                  <NAME>Wathen Mark Wilks Call</NAME>
+                  <QUOTE DIRECT="Y">But now I let the aching splendour go, / I dare not call the crown&egrave;d angels peers, / Henceforth! I am content to dwell below, / &apos;Mid common joys, with humble smiles and tears.</QUOTE>
+                </TINTERTEXTUALITY>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 7" DBREF="101292" QTDIN="QTDINYES">7</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>The book is divided into two sections: first the poems and lyrics, secondly the sonnets. The opening poem is
+                <TITLE TITLETYPE="ANALYTIC">Subh-I-Kazib</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Burton 1: 76" DBREF="55825">1: 76</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Athen&aelig;um 257 (29 Sep 1832): 625" DBREF="2043">625</BIBCIT>
+                </BIBCITS>and refers to the
+                <QUOTE DIRECT="Y">transient light which appears in the east about an hour before the dawn</QUOTE>
+                <SOCALLED>false dawn</SOCALLED>
+                <QUOTE DIRECT="Y">gleam (
+                  <SOCALLED>zodiacal light</SOCALLED>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 15, 17" DBREF="101292">15, 17</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Balfour 748" DBREF="55885">748</BIBCIT>
+                </BIBCITS>The verse depicts a man (who stands in for humanity) waking from the
+                <QUOTE DIRECT="Y">glamour</QUOTE>
+                <TTHEMETOPIC>religion</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">the dark of a fathomless truth-time</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 16" DBREF="101292">16</BIBCIT>
+                </BIBCITS>of natural philosophy, which will restore a
+                <QUOTE DIRECT="Y">torn world</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 22" DBREF="101292">22</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ALLUSIONUNACKNOWLEDGED">
+                  <TITLE TITLETYPE="ANALYTIC">The Valley of Remorse</TITLE>
+                  <TITLE TITLETYPE="ANALYTIC" REG="Bible" REND="normal">Psalm 23</TITLE>
+                  <QUOTE DIRECT="Y">Yea, though I walk through the valley of the shadow of death, I will fear no evil: For thou [God] art with me,</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Bible Psalms 23: 4" DBREF="21948">23: 4</BIBCIT>
+                  </BIBCITS>and its ironic refrain,
+                  <QUOTE DIRECT="Y">Good Lord, deliver!</QUOTE>
+                <QUOTE DIRECT="Y">glittering cynic chain</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 24" DBREF="101292">24</BIBCIT>
+                </BIBCITS>that binds the human will and undermines any good in humankind. She soon introduces
+                <TTHEMETOPIC>human love</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">
+                  <L>Lo! Love comes wandering on the desert way.</L>
+                  <L>Oh, watch! oh, pray!</L>
+                  <L>Love with the rose-wreath red?</L>
+                  <L>Ay, love rose-bound!</L>
+                  <L>Ay, love thorn-crowned!</L>
+                  <L>Crowned&mdash;bound&mdash;with cruel rose-thorns round his head!</L>
+                  <L>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Good Lord, deliver!)</L>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Poems 30" DBREF="101292">30</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>
+                <TTECHNIQUES TECHNIQUETYPE="IMAGERY">This and the following stanza apply Jesus-imagery to human
+                  <TTHEMETOPIC>love</TTHEMETOPIC>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="FORMAL">The
+                  <TITLE TITLETYPE="JOURNAL">Athen&aelig;um</TITLE>
+                  <TITLE TITLETYPE="ANALYTIC">The Valley of Remorse</TITLE>
+                  <QUOTE DIRECT="Y">perhaps the most important poem in the collection.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="AthenÊum 2858 (5 Aug 1882): 173" DBREF="2043">173</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+              <P>
+                <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+                <TTHEMETOPIC>incompatibility of feminism and religion</TTHEMETOPIC>
+                <TTECHNIQUES TECHNIQUETYPE="IMAGERY">LSB likens
+                  <TMOTIF MOTIFNAME="marriage as slavery">marriage to slavery</TMOTIF>
+                  <TITLE TITLETYPE="ANALYTIC">Bees in Clover</TITLE>
+                  <TTECHNIQUES>She uses poetic repetition and synecdoche to associate marriage (along with the entire institution of Christianity) with bondage, saying:
+                    <QUOTE DIRECT="Y">What? A church-bell in the valley? / What? A wife-shriek in the alley? / Tune the bell a little better / Help the woman bear her fetter.</QUOTE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="LSB, Poems 35" DBREF="101292">35</BIBCIT>
+                    </BIBCITS>
+                  </TTECHNIQUES>Bevington here (and in other poems throughout the collection)
+                  <TTHEMETOPIC>represents humanity through nature imagery</TTHEMETOPIC>
+                  <TTHEMETOPIC>harmonious natural world</TTHEMETOPIC>
+                  <QUOTE DIRECT="Y">the bee suits the clover / and the clover suits the bee</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Poems 36" DBREF="101292">36</BIBCIT>
+                  </BIBCITS>as the ideal paradigm for human happiness.</TTECHNIQUES>
+                <TITLE TITLETYPE="ANALYTIC">One More Bruised Heart</TITLE>
+                <NAME>Kathleen Hickok</NAME>
+                <TTHEMETOPIC>sexual suffering inflicted on women in domestic relationships</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Hickok 67" DBREF="28900">67</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Senaha 138" DBREF="55405">138</BIBCIT>
+                </BIBCITS>There is some debate as to whether
+                <TITLE TITLETYPE="ANALYTIC">One More Bruised Heart</TITLE>
+                <NAME>Angela Leighton</NAME>
+                <NAME>Margaret Reynolds</NAME>
+                <TITLE TITLETYPE="ANALYTIC">Egoisme &agrave; Deux</TITLE>
+                <TTHEMETOPIC>divine will and cosmic theory</TTHEMETOPIC>
+                <TTECHNIQUES TECHNIQUETYPE="VERSIFICATION">
+                  <TGENREISSUE>Leighton and Reynolds highlight its use of
+                    <QUOTE DIRECT="Y">the traditionally courtly
+                      <TGENRE GENRENAME="SONNET">sonnet</TGENRE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Leighton and Reynolds" DBREF="7283">
+                      </BIBCIT>
+                    </BIBCITS>
+                  </TGENREISSUE>
+                </TTECHNIQUES>
+              </P>
+            </SHORTPROSE>
+            <SHORTPROSE>
+              <P>
+                <TTECHNIQUES TECHNIQUETYPE="IMAGERY">The final sonnet (and final poem) of
+                  <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+                  <TITLE TITLETYPE="ANALYTIC">For Freedom&apos;s Sake</TITLE>
+                  <TTHEMETOPIC>lament for Christianity</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">Perchance the tears will well up when I smile / In whispering your name, ere I forget you.</QUOTE>
+                <QUOTE DIRECT="Y">chosen freedom; so I make / Here,&mdash;as we part for weeks, for years, for life,&mdash;/ My promise: I will whet my will&apos;s keen knife / And one by one all memory&apos;s fetters break.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Poems 159" DBREF="101292">159</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>Unlike LSB&apos;s first volume of poetry, this achieved some success in literary circles while it was largely ignored by the scientific community.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                </BIBCITS>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="FORMAL">
+                  <TITLE TITLETYPE="JOURNAL">The Academy</TITLE>
+                  <QUOTE DIRECT="Y">flatulent trash</QUOTE>
+                  <QUOTE DIRECT="Y">unorthodox theolog[y]</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Academy 537 (19 Aug 1882): 133" DBREF="38128">133</BIBCIT>
+                  </BIBCITS>In contrast, the
+                  <TITLE TITLETYPE="JOURNAL">Athen&aelig;um</TITLE>
+                  <QUOTE DIRECT="Y">a great advance upon
+                    <SOCALLED>
+                      <TITLE TITLETYPE="MONOGRAPHIC" REND="normal">Key-Notes</TITLE>
+                    </SOCALLED>.</QUOTE>
+                  <QUOTE DIRECT="Y">poetic gift is of that uncommon order to be met with in
+                    <NAME STANDARD="Blake, William">Blake</NAME>
+                    <NAME STANDARD="Wilkinson, James John Garth">Garth Wilkinson</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="AthenÊum 2858 (5 Aug 1882): 173" DBREF="2043">173</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="INFORMAL">
+                  <NAME>Robert Browning</NAME>
+                  <QUOTE DIRECT="Y">much power and beauty of various kinds.</QUOTE>
+                  <QUOTE DIRECT="Y">I cannot come to the same conclusions that you seem arrived at on many points, but the care about arriving is the great thing. I sympathize with a stout walker, even when he is off on quite an opposite direction to that which my own face is turned towards.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue, Unpublished Letter 38" DBREF="55425" QTDIN="QTDINYES">38</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+              <P>
+                <RRESPONSES RESPONSETYPE="RECENT" FORMALITY="FORMAL">Recent evaluations have been equally positive:
+                  <NAME>Eijun Senaha</NAME>
+                  <QUOTE DIRECT="Y">more polished and literary</QUOTE>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha 137" DBREF="55405">137</BIBCIT>
+                  </BIBCITS>and
+                  <NAME>Kathleen Hickok</NAME>
+                  <QUOTE DIRECT="Y">metrical experimentation, the romantic theme, [and] the poetic diction</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Hickok 20" DBREF="27126">20</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+        <DIV2>
+          <HEADING>Final Poetry Collection:
+            <TITLE TITLETYPE="MONOGRAPHIC">Liberty Lyrics</TITLE>
+          </HEADING>
+          <TEXTSCOPE DBREF="101290" PLACEHOLDER="LSB, Liberty Lyrics, 1895">
+          </TEXTSCOPE>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="SELECTIVE">
+              <DATE CALENDAR="NEWSTYLE" VALUE="1895--" CERTAINTY="CERT">1895</DATE>
+              <CHRONPROSE>In the year of LSB&apos;s death, her final slim collection of
+                <TGENRE GENRENAME="POETRY">poetry</TGENRE>
+                <TTHEMETOPIC>anarchist</TTHEMETOPIC>
+                <TITLE TITLETYPE="MONOGRAPHIC">Liberty
+                  <TGENRE GENRENAME="LYRIC">Lyrics</TGENRE>
+                </TITLE>, appeared from the
+                <ORGNAME>Liberty Press</ORGNAME>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="OCLC" DBREF="1709">
+                </BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>Three of the fifteen poems had previously been published in anarchist journals.</PPERIODICALPUBLICATION>
+                <PADVERTISING>The front matter contained an advertisement for
+                  <TITLE TITLETYPE="JOURNAL">Liberty: a Journal of Anarchist Communism</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha 141" DBREF="55405">141</BIBCIT>
+                    <BIBCIT PLACEHOLDER="LSB, Liberty front matter" DBREF="101290">front matter</BIBCIT>
+                  </BIBCITS>
+                </PADVERTISING>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>Here LSB moves away from the metrical experimentation and aesthetic focus of
+                <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+                <QUOTE DIRECT="Y">a
+                  <TTHEMETOPIC>utopian vision of ideal society destined to be cultivated through revolutionary political change</TTHEMETOPIC>
+                  <TTHEMETOPIC>apocalyptic cleansing of society</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 88" DBREF="54705">88</BIBCIT>
+                </BIBCITS>
+                <TTECHNIQUES TECHNIQUETYPE="IMAGERY">
+                  <TITLE TITLETYPE="ANALYTIC">The Secret of the Bees</TITLE>
+                  <TITLE TITLETYPE="ANALYTIC">Bees in Clover</TITLE>
+                <QUOTE DIRECT="Y">
+                  <L>What man only talks of, the busy bee does;</L>
+                  <L>Shares food, and keeps order, with no waste of buzz.</L>
+                  <L>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</L>
+                  <L>No drones kept in honey to look on and prate,</L>
+                  <L>No property tyrants, no big-wigs of State.</L>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 6" DBREF="101290">6</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>Bevington poses and answers the question of how the bees maintain
+                <TTHEMETOPIC>social harmony</TTHEMETOPIC>
+                <TTHEMETOPIC>money or taxation</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">Mammon</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 7" DBREF="101290">7</BIBCIT>
+                </BIBCITS>(and the state institutions that serve it) the bane of mankind. The most overt didacticism surfaces in poems like
+                <TITLE TITLETYPE="ANALYTIC">Revolution</TITLE>
+                <QUOTE DIRECT="Y">Down with old Mammon! and range you / To aid Revolution!</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 7" DBREF="101290">7</BIBCIT>
+                </BIBCITS>The
+                <TITLE TITLETYPE="MONOGRAPHIC">Feminist Companion</TITLE>
+                <PINFLUENCESHER INFLUENCETYPE="LITERARY">LSB&apos;s poetic
+                  <TGENRE GENRENAME="FABLE">fables</TGENRE>
+                  <QUOTE DIRECT="Y">
+                    <NAME STANDARD="Browning, Robert">Browning</NAME>
+                  <QUOTE DIRECT="Y">a sharp critique of moral half-measures.</QUOTE>
+                </PINFLUENCESHER>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="FC" DBREF="107913">
+                  </BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>Some poems here are again strongly anti-religious. LSB excoriates
+                <TTHEMETOPIC>religious institutions</TTHEMETOPIC>
+                <TITLE TITLETYPE="ANALYTIC">In and Out of Church</TITLE>
+                <QUOTE DIRECT="Y">
+                  <L>
+                    <QUOTE DIRECT="N">Heaven to let</QUOTE>
+                  <L>Ah, you canting devil-dodger,</L>
+                  <L>Damn not us who spurn your Mammon,</L>
+                  <L>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Damn yourself!</L>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 12" DBREF="101290">12</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>Later on she exclaims:
+                <QUOTE DIRECT="Y">
+                  <L>Simple Jesus! See the old &apos;un!</L>
+                  <L>Why, his dinner-plates are golden!</L>
+                  <L>May the sight our hearts embolden</L>
+                  <L>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In our prayer.</L>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 12" DBREF="101290">12</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>Her very strong anti-religious sentiment does not extend to Jesus himself, though it does place him on an entirely human level. In
+                <TITLE TITLETYPE="ANALYTIC" REG="Dreamers?">&apos;Dreamers?&apos;</TITLE>
+                <QUOTE DIRECT="Y">our crucified brother,</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 8" DBREF="101290">8</BIBCIT>
+                </BIBCITS>and more pointedly, since this associates him with the anarchist movement,
+                <QUOTE DIRECT="Y">comrade</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 8" DBREF="101290">8</BIBCIT>
+                </BIBCITS>Here, instead of seeking to replace God with natural philosophy (as she did in
+                <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                <TITLE TITLETYPE="MONOGRAPHIC">Poems, Lyrics, and Sonnets</TITLE>
+                <NAME>Jesus</NAME>
+                <QUOTE DIRECT="Y">
+                  <L>That
+                    <SOCALLED>Kingdom</SOCALLED>
+                    <QUOTE DIRECT="N">within you,</QUOTE>
+                  </L>
+                  <L>&nbsp;&nbsp;The reign of sweet peace, and goodwill amongst men;</L>
+                  <L>&apos;Tis suffering
+                    <TMOTIF>violence</TMOTIF>
+                  <L>&nbsp;&nbsp;Yet, taken, there shall not be fighting again.</L>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 8" DBREF="101290">8</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>
+              </P>
+              <P>
+                <NAME>Eijun Senaha</NAME>
+                <TITLE TITLETYPE="ANALYTIC">Dinner</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Senaha 143-4" DBREF="55405">143-4</BIBCIT>
+                </BIBCITS>
+                <TVOICENARRATION>Certainly it is told in the first person (a rare occurrence in LSB&apos;s poetry)</TVOICENARRATION>
+                <QUOTE DIRECT="Y">quite
+                  <TTHEMETOPIC>incorrigible soul</TTHEMETOPIC>
+                <TTHEMETOPIC>harsh
+                  <QUOTE DIRECT="Y">demure and pious</QUOTE>
+                  <QUOTE DIRECT="Y">spiteful</QUOTE>
+                <TTHEMETOPIC>sensuous pleasure</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 15" DBREF="101290">15</BIBCIT>
+                </BIBCITS>The poem (and thus the collection) ends on a joyful note, celebrating the
+                <TTHEMETOPIC>life choices</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">No fences, right or left,</QUOTE>
+                <QUOTE DIRECT="Y">Hoist living Life&apos;s red flag for goal.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Liberty Lyrics 16" DBREF="101290">16</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>Compared with Bevington&apos;s other two collections, this little volume met with relatively little response (an omission which continues in current scholarship). Only one scholar,
+                <RRESPONSES RESPONSETYPE="RECENT" FORMALITY="FORMAL">
+                  <NAME>Eijun Senaha</NAME>
+                  <QUOTE DIRECT="Y">best balanced volume in terms of her representation of
+                    <TTHEMETOPIC>aestheticism</TTHEMETOPIC>
+                    <TTHEMETOPIC>religion</TTHEMETOPIC>
+                    <TTHEMETOPIC>evolutionism</TTHEMETOPIC>
+                    <TTHEMETOPIC>anarchism</TTHEMETOPIC>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha 141" DBREF="55405">141</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>Uncollected Poems</HEADING>
+        <DIV2>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>In addition to the poems in the
+                  <TITLE TITLETYPE="JOURNAL">Friends&apos; Quarterly Examiner</TITLE>
+                  <TGENRE GENRENAME="POLITICALWRITING">
+                    <TTHEMETOPIC>anarchist</TTHEMETOPIC>
+                    <TGENRE GENRENAME="POETRY">poems</TGENRE>
+                  </TGENRE>which she published in periodicals.</PPERIODICALPUBLICATION>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>One such poem,
+                  <TITLE TITLETYPE="ANALYTIC">An Anarchist&apos;s A. B. C.</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal: A Revolutionary Journal of Anarchist-Communism</TITLE>
+                  <TTHEMETOPIC>call for anarchist revolution</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">Get rid of Gods, Governments, and the Greed of Gold.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 416" DBREF="54705" QTDIN="QTDINYES">416</BIBCIT>
+                </BIBCITS>Another poem, titled
+                <TITLE TITLETYPE="ANALYTIC">How it&apos;s Done: A Peep at Life as Run on Respectable Lines</TITLE>
+                <TTHEMETOPIC>religious institutions</TTHEMETOPIC>
+                <TTHEMETOPIC>mainstream daily press</TTHEMETOPIC>
+                <PPERIODICALPUBLICATION>LSB published this poem in
+                  <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                <QUOTE DIRECT="Y">Dail[ies]</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 421" DBREF="54705" QTDIN="QTDINYES">421</BIBCIT>
+                </BIBCITS>for being supported by and complicit with hypocritical priests.</P>
+              <P>Possibly her most famous uncollected poem is
+                <TITLE TITLETYPE="ANALYTIC">The Reason of It</TITLE>
+                <TITLE TITLETYPE="JOURNAL">The Torch</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 128" DBREF="54705">128</BIBCIT>
+                </BIBCITS>It takes the form of a
+                <TGENRE GENRENAME="DIALOGUEORDEBATE">dialogue</TGENRE>
+                <TCHARACTERNAME>Mammon</TCHARACTERNAME>
+                <TCHARACTERNAME>Demos</TCHARACTERNAME>
+                <SOCALLED>the people</SOCALLED>
+                <TCHARACTERNAME>mother nature</TCHARACTERNAME>
+                <QUOTE DIRECT="Y">Demos! Where&apos;s our dynamite!</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 427" DBREF="54705" QTDIN="QTDINYES">427</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>Early Essays</HEADING>
+        <DIV2>
+          <TEXTSCOPE DBREF="55845" PLACEHOLDER="LSB, The Personal Aspect of Responsibility, 1879">
+          </TEXTSCOPE>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="PERIOD">
+              <DATE VALUE="1879-04-">April 1879</DATE>
+              <CHRONPROSE>
+                <PPERIODICALPUBLICATION>In the year of her revised
+                  <TITLE TITLETYPE="MONOGRAPHIC">Key-Notes</TITLE>
+                  <PMOTIVES MOTIVETYPE="ASCRIBED">
+                    <PINFLUENCESHER INFLUENCETYPE="INTELLECTUAL">and at the urging of
+                      <NAME>Herbert Spencer</NAME>
+                  </PMOTIVES>LSB contributed to
+                  <TITLE TITLETYPE="JOURNAL">Mind</TITLE>
+                  <TGENRE GENRENAME="ESSAY">
+                    <TGENRE GENRENAME="SCIENTIFICWRITING">scientific</TGENRE>
+                    <TGENRE GENRENAME="PHILOSOPHICAL">philosophical</TGENRE>
+                  <TITLE TITLETYPE="ANALYTIC">The Personal Aspect of
+                    <TTHEMETOPIC>Responsibility</TTHEMETOPIC>
+                  </TITLE>.</PPERIODICALPUBLICATION>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                <BIBCIT PLACEHOLDER="Domingue 7, 127" DBREF="54705">7, 127</BIBCIT>
+                <BIBCIT PLACEHOLDER="Senaha 136" DBREF="55405">136</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>This essay addresses the
+                <TTHEMETOPIC>morality of evolution</TTHEMETOPIC>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ANSWER">She calls it a response to those
+                  <QUOTE DIRECT="Y">somewhat querulous discussions with which the air is rife, touching
+                    <SOCALLED>mechanical</SOCALLED>
+                </TINTERTEXTUALITY>To this end she debates
+                <TTHEMETOPIC>the nature of morality and the conscience</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">ethical standards based on freedom of the will,</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, &quot;Personal Aspects&quot; 245" DBREF="55845">245</BIBCIT>
+                </BIBCITS>but by the issue of what will
+                <TTHEMETOPIC>advance the human species</TTHEMETOPIC>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="FORMAL">This article inspired a review even before its publication, which criticized LSB&apos;s argument as
+                  <QUOTE DIRECT="Y">strangely silent as to the greater issues which flow from her doctrine, and constitute the real issues to be got over, though these form professedly the subject of her paper.</QUOTE>
+                <RRESPONSES RESPONSETYPE="RECENT" FORMALITY="FORMAL">though
+                  <NAME>Jackie Dees Domingue</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 81" DBREF="54705">81</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+        <DIV2>
+          <TEXTSCOPE DBREF="56135" PLACEHOLDER="LSB, Modern Atheism and Mr. Mallock, 1879">
+          </TEXTSCOPE>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="IMG" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="SELECTIVE">
+              <DATERANGE CERTAINTY="ROUGHLYDATED" FROM="1879-10-" TO="1879-12-" EXACT="BOTH">October-December 1879</DATERANGE>
+              <CHRONPROSE>
+                <PPERIODICALPUBLICATION>
+                  <RBESTKNOWNWORK>LSB followed
+                    <TITLE TITLETYPE="ANALYTIC">The Personal Aspect of Responsibility</TITLE>
+                    <TGENRE GENRENAME="ESSAY">
+                      <TGENRE GENRENAME="SCIENTIFICWRITING">scientific</TGENRE>
+                      <TGENRE GENRENAME="PHILOSOPHICAL">philosophical</TGENRE>
+                    <TITLE TITLETYPE="JOURNAL">Nineteenth Century</TITLE>
+                    <TITLE TITLETYPE="ANALYTIC">Modern
+                      <TTHEMETOPIC>Atheism</TTHEMETOPIC>
+                      <NAME STANDARD="Mallock, W. H.">Mr. Mallock</NAME>
+                    </TITLE>. It remains her best-known essay.</RBESTKNOWNWORK>
+                </PPERIODICALPUBLICATION>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                <BIBCIT PLACEHOLDER="Domingue 8, 127" DBREF="54705">8, 127</BIBCIT>
+                <BIBCIT PLACEHOLDER="Senaha 136" DBREF="55405">136</BIBCIT>
+                <BIBCIT PLACEHOLDER="C19" DBREF="48826">
+                </BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <PMOTIVES>
+                  <TINTERTEXTUALITY INTERTEXTTYPE="ANSWER" GENDEROFAUTHOR="MALE">
+                    <TITLE TITLETYPE="ANALYTIC">Modern Atheism and Mr. Mallock</TITLE>
+                    <TGENRE GENRENAME="ANSWER">response</TGENRE>
+                    <NAME>W. H. Mallock</NAME>
+                    <QUOTE DIRECT="Y">clever but thoroughly unscientific young writer,</QUOTE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 260" DBREF="54705" QTDIN="QTDINYES">260</BIBCIT>
+                    </BIBCITS>who had asserted that without a belief in God and immortality, virtue would cease to exist.</TINTERTEXTUALITY>
+                </PMOTIVES>
+                <PANTHOLOGIZATION>The essay was popular, and was reprinted in part in 1951 in
+                  <TITLE TITLETYPE="MONOGRAPHIC">Nineteenth-Century Opinion: An Anthology of Extracts from the First Fifty Volumes of
+                    <TITLE TITLETYPE="JOURNAL" REG="Nineteenth Century">The Nineteenth Century</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 127" DBREF="54705">127</BIBCIT>
+                  </BIBCITS>
+                </PANTHOLOGIZATION>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>LSB seeks to make her case against Mallock by demanding (among other things) why
+                <SOCALLED>virtu[ous]</SOCALLED>
+                <QUOTE DIRECT="Y">valuable</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 262" DBREF="54705" QTDIN="QTDINYES">262</BIBCIT>
+                </BIBCITS>She claims that Mallock is confusing cause (
+                <FOREIGN LANG="la">viz.</FOREIGN>
+                <TTHEMETOPIC>advance the human race</TTHEMETOPIC>
+                <TTHEMETOPIC>disappearance of religious belief</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">man who is capable of making a difficult exertion, restraining a furious passion, or patiently enduring a painful experience, for the sake of a loved and ideal God or a vague and distant heavenly reward, is equally capable of doing so for the sake of a fellow-creature, or for the reward he receives through the exercise of his
+                  <TTHEMETOPIC>sympathetic affections</TTHEMETOPIC>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 267" DBREF="54705" QTDIN="QTDINYES">267</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>She concludes that an
+                <TTHEMETOPIC>atheist</TTHEMETOPIC>
+                <SOCALLED>moral</SOCALLED>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="FORMAL">
+                  <TITLE TITLETYPE="ANALYTIC">Modern Atheism and Mr. Mallock</TITLE>
+                  <NAME>W. H. Mallock</NAME>
+                  <TITLE TITLETYPE="ANALYTIC">Atheistic Methodism</TITLE>
+                  <NAME>Charles B. Upton</NAME>
+                  <NAME>Alexander H. G. Craufurd</NAME>
+                <PLACE>
+                  <GEOG>America</GEOG>
+                </PLACE>.
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 8, 77" DBREF="54705">8, 77</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+        <DIV2>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="SELECTIVE">
+              <DATE VALUE="1880-01-" CERTAINTY="AFTER">From January 1880</DATE>
+              <CHRONPROSE>
+                <PPERIODICALPUBLICATION>After the success of her first two essays, LSB continued for seven years to write
+                  <TGENRE GENRENAME="POLEMIC">provocative</TGENRE>
+                  <TGENRE GENRENAME="PHILOSOPHICAL">philosophical</TGENRE>
+                  <TGENRE GENRENAME="ESSAY">pieces</TGENRE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Fortnightly Review">Fortnightly Review</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Nineteenth Century">Nineteenth Century</TITLE>
+                  <TITLE TITLETYPE="JOURNAL">Modern Review</TITLE>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 125-7" DBREF="54705">125-7</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>Between this month and August 1887 she issued six more essays on the
+                <TTHEMETOPIC>ethics of atheism and evolution</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 15-6" DBREF="54705">15-6</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>Most of them, such as
+                <TITLE TITLETYPE="ANALYTIC">
+                  <TTHEMETOPIC>
+                    <TTHEMETOPIC>Determinism</TTHEMETOPIC>
+                </TITLE>(published in
+                <TITLE TITLETYPE="JOURNAL">Mind</TITLE>
+                <DATE VALUE="1880-01-">January 1880</DATE>
+                <TITLE TITLETYPE="ANALYTIC">The Moral Colour of
+                  <TTHEMETOPIC>Rationalism</TTHEMETOPIC>
+                </TITLE>(published in the
+                <TITLE TITLETYPE="JOURNAL" REG="Fortnightly Review">Fortnightly Review</TITLE>
+                <DATE VALUE="1881-08-01">1 August 1881</DATE>
+                <TITLE TITLETYPE="ANALYTIC">The Moral Demerits of
+                  <TTHEMETOPIC>Orthodoxy</TTHEMETOPIC>
+                </TITLE>(published in
+                <TITLE TITLETYPE="JOURNAL">Progress</TITLE>
+                <DATE VALUE="1884-09-">September 1884</DATE>
+                <SOCALLED>virtuously</SOCALLED>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 125, 127" DBREF="54705">125, 127</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ANSWER" GENDEROFAUTHOR="MALE">
+                  <TITLE TITLETYPE="ANALYTIC">The Moral Colour of
+                    <TTHEMETOPIC>Rationalism</TTHEMETOPIC>
+                  </TITLE>, in which LSB attacked a number of
+                  <TTHEMETOPIC>
+                    <NAME>Goldwin Smith</NAME>
+                  <TTHEMETOPIC>evolutionist view of human morality</TTHEMETOPIC>
+                <RRESPONSES RESPONSETYPE="INITIAL" FORMALITY="FORMAL">provoked an angry response.
+                  <NAME STANDARD="Smith, Goldwin">Smith</NAME>
+                  <QUOTE DIRECT="Y">as complete a misrepresentation of the purport of those articles, of their spirit, and above all, of the attitude of their writer towards science and scientific men as angry prejudice could produce.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Smith 336n" DBREF="55450">336n</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>Two other pieces,
+                  <TITLE TITLETYPE="ANALYTIC">How to Eat Bread</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Nineteenth Century">Nineteenth Century</TITLE>
+                  <DATE VALUE="1881-09-">September 1881</DATE>
+                  <TITLE TITLETYPE="ANALYTIC">Dogs in
+                    <PLACE>
+                      <GEOG REG="Germany">Germany</GEOG>
+                    </PLACE>
+                  </TITLE>(first under her married name of Guggenberger, also in
+                  <TITLE TITLETYPE="JOURNAL" REG="Nineteenth Century">Nineteenth Century</TITLE>
+                  <DATE VALUE="1887-08-">August 1887</DATE>
+                  <TTHEMETOPIC>economics</TTHEMETOPIC>
+                <NAME>Jackie Dees Domingue</NAME>
+                <TTHEMETOPIC>class issues</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 55-6" DBREF="54705">55-6</BIBCIT>
+                </BIBCITS>Addressing the topic of
+                <TTHEMETOPIC>nutrition</TTHEMETOPIC>
+                <TITLE TITLETYPE="ANALYTIC">How to Eat Bread</TITLE>
+                <TTHEMETOPIC>change in the way bread flour is typically made in England</TTHEMETOPIC>
+                <TTHEMETOPIC>milling the flour</TTHEMETOPIC>
+                <TTHEMETOPIC>health of working-class children</TTHEMETOPIC>
+                <TTHEMETOPIC>rickets</TTHEMETOPIC>
+                <TTHEMETOPIC>poverty</TTHEMETOPIC>
+              <P>
+                <TITLE TITLETYPE="ANALYTIC">Dogs in Germany</TITLE>
+                <TTHEMETOPIC>eradication of rabies</TTHEMETOPIC>
+                <DATE>20 August 1867</DATE>
+                <TTHEMETOPIC>government intervention</TTHEMETOPIC>
+                <TTHEMETOPIC>overabundance of regulations in
+                  <PLACE>
+                    <GEOG REG="Germany">Germany</GEOG>
+                  </PLACE>
+                </TTHEMETOPIC>, and claims that they have a bad effect on the lives of its citizens.</P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>Pamphlets and Book Chapter</HEADING>
+        <DIV2>
+          <HEADING>First Pamphlet:
+            <TITLE TITLETYPE="MONOGRAPHIC">Dame Nature&apos;s Dumb Sermon</TITLE>
+          </HEADING>
+          <TEXTSCOPE DBREF="56136" PLACEHOLDER="LSB, Dame Nature&apos;s Dumb Sermon, 1891">
+          </TEXTSCOPE>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="DECADE">
+              <DATE VALUE="1891--">1891</DATE>
+              <CHRONPROSE>Almost ten years after its composition, LSB published her
+                <TGENRE GENRENAME="PHILOSOPHICAL">
+                  <TGENRE GENRENAME="TRACTPAMPHLET">pamphlet</TGENRE>
+                </TGENRE>
+                <TITLE TITLETYPE="MONOGRAPHIC">Dame Nature&apos;s Dumb
+                  <TGENRE GENRENAME="SERMON">Sermon</TGENRE>
+                </TITLE>through
+                <ORGNAME>Gee and Company</ORGNAME>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="OCLC" DBREF="1709">
+                </BIBCIT>
+                <BIBCIT PLACEHOLDER="Domingue 7, 125" DBREF="54705">7, 125</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>The piece is a reflection on the phrase
+                <QUOTE DIRECT="Y">
+                  <TTHEMETOPIC>survival of the fittest</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 339" DBREF="54705" QTDIN="QTDINYES">339</BIBCIT>
+                </BIBCITS>Here LSB returns to the
+                <TTHEMETOPIC>idea of
+                  <SOCALLED>virtue</SOCALLED>
+                </TTHEMETOPIC>from an evolutionary standpoint. Unlike her earlier articles, however, this one does not argue that humanity favours the virtuous as the best method for its own propagation, but rather argues for doing away with the idea of virtue altogether. LSB maintains here that the only measure of success is survival, and that virtue is contextual.
+                <QUOTE DIRECT="Y">Fitness is not usefulness, it is adaptedness. Where there is mud, gills beat lungs; where there is air, lungs beat gills; where there is despair, brutality mocks culture; where there is comfort, there is no discontent, noble or ignoble.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 340-1" DBREF="54705" QTDIN="QTDINYES">340-1</BIBCIT>
+                </BIBCITS>Fitness therefore, according to her argument, defines what is
+                <QUOTE DIRECT="Y">right</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 343" DBREF="54705" QTDIN="QTDINYES">343</BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ANSWER" GENDEROFAUTHOR="MALE">This essay embodies moments of what today would be called racism as it makes reference to
+                  <TTHEMETOPIC>social Darwinism</TTHEMETOPIC>
+                  <NAME>Herbert Spencer</NAME>
+                  <NAME STANDARD="Darwin, Charles">Darwinian</NAME>
+                  <SOCALLED>hierarchy of civilizations</SOCALLED>
+                  <QUOTE DIRECT="Y">[t]he sun, say what one will, favours a vigorous maggot at the expense of an ill-fed rosebud, and is so cruel a respecter of persons that he will slay with
+                    <TTHEMETOPIC>sunstroke</TTHEMETOPIC>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 344" DBREF="54705" QTDIN="QTDINYES">344</BIBCIT>
+                  </BIBCITS>This argument refutes social Darwinism: Bevington&apos;s idea of fitness validates (in terms of survival in its
+                  <SOCALLED>natural</SOCALLED>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+        <DIV2>
+          <HEADING>Contribution to
+            <TITLE TITLETYPE="MONOGRAPHIC">Religious Systems of the World</TITLE>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>
+                <PANTHOLOGIZATION>In either 1891 or 1892 LSB contributed a chapter on
+                  <TTHEMETOPIC>evolution</TTHEMETOPIC>
+                  <TITLE TITLETYPE="ANALYTIC">The Moral and Religious Bearings of Evolutionary Theory</TITLE>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Religious Systems of the World</TITLE>
+                  <ORGNAME>Ethical Society</ORGNAME>
+                  <ORGNAME STANDARD="Swan Sonnenschein">Swan Sonnenschein and Co.</ORGNAME>
+                  <TITLE TITLETYPE="MONOGRAPHIC" REG="Religious Systems of the World">Religious Systems of the World, National, Christian, and Philosophic. A collection of addresses delivered at
+                    <ORGNAME>South Place Institute</ORGNAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Miles 9: 228" DBREF="109492">9: 228</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Domingue 127" DBREF="54705">127</BIBCIT>
+                    <BIBCIT PLACEHOLDER="OCLC" DBREF="1709">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Religious Systems of the World, 1904, prelims" DBREF="56328">prelims</BIBCIT>
+                  </BIBCITS>
+                </PANTHOLOGIZATION>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+        </DIV2>
+        <DIV2>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>LSB issued two further
+                <TGENRE GENRENAME="TRACTPAMPHLET">pamphlets</TGENRE>
+                <TITLE TITLETYPE="MONOGRAPHIC">Chiefly a Dialogue: Concerning Some Difficulties of a Dunce</TITLE>
+                <PPERIODICALPUBLICATION>includes both
+                  <TGENRE GENRENAME="POETRY">poetry</TGENRE>
+                  <TGENRE GENRENAME="ESSAY">short prose pieces</TGENRE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Freedom">Freedom</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                  <TINTERTEXTUALITY INTERTEXTTYPE="PARODY" GENDEROFAUTHOR="MALE">such as
+                    <TITLE TITLETYPE="ANALYTIC" REG="Anathemasian Creed, The">The
+                      <TTHEMETOPIC>Anathemasian Creed</TTHEMETOPIC>
+                    </TITLE>, which is titled in mockery of one of the official creeds of Christianity.</TINTERTEXTUALITY>
+                </PPERIODICALPUBLICATION>
+                <PAUTHORSHIP AUTHORNAMETYPE="ANONYMOUS">The other pamphlet,
+                  <TITLE TITLETYPE="MONOGRAPHIC">An Anarchist
+                    <TGENRE GENRENAME="MANIFESTO">Manifesto</TGENRE>
+                  </TITLE>, was published anonymously,</PAUTHORSHIP>
+                <PEDITIONS>
+                  <PPLACEOFPUBLICATION>and a
+                    <PLACE>
+                      <SETTLEMENT REG="New York City">New York</SETTLEMENT>
+                      <REGION REG="New York">
+                      </REGION>
+                      <GEOG REG="USA">
+                      </GEOG>
+                    </PLACE>publisher reprinted it the same year.</PPLACEOFPUBLICATION>
+                </PEDITIONS>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 415, 125, 73n12" DBREF="54705">415, 125, 73n12</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>In the manifesto LSB sets out the principles of
+                <TTHEMETOPIC>anarcho-communism</TTHEMETOPIC>
+                <TTHEMETOPIC>capitalist society</TTHEMETOPIC>
+                <TTHEMETOPIC>human happiness</TTHEMETOPIC>
+                <TTHEMETOPIC>state apparatus</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">[b]elief in and
+                  <TTHEMETOPIC>submission to authority</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 217" DBREF="54705" QTDIN="QTDINYES">217</BIBCIT>
+                </BIBCITS>She recommends that anarchists should work with
+                <TTHEMETOPIC>Trade Unions</TTHEMETOPIC>
+                <TTHEMETOPIC>Middle-class reformers</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">meanest and most repulsive
+                  <SOCALLED>friends</SOCALLED>
+                  <TTHEMETOPIC>
+                    <SIC CORR="Teetotallers">Teetotalers</SIC>
+                  </TTHEMETOPIC>,
+                  <TTHEMETOPIC>
+                    <NAME STANDARD="Malthus, Thomas Robert">Malthus</NAME>
+                  <TTHEMETOPIC>advocates of thrift and saving</TTHEMETOPIC>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 225" DBREF="54705" QTDIN="QTDINYES">225</BIBCIT>
+                  </BIBCITS>
+                  <KEYWORDCLASS>Temperance</KEYWORDCLASS>
+                </QUOTE>Reform from within the current structure of governance she regards as useless. Instead, she counsels her readers to
+                <QUOTE DIRECT="Y">struggle unto death against all authority, whether it be that of physical force identical with the State or that of doctrine and theories, the product of ages of ignorance and superstition inculcated in the workers minds from their childhood&mdash;such as
+                  <TTHEMETOPIC>religion</TTHEMETOPIC>
+                  <TTHEMETOPIC>patriotism</TTHEMETOPIC>
+                  <TTHEMETOPIC>obedience to the law</TTHEMETOPIC>
+                  <TTHEMETOPIC>submission to the rich and titled</TTHEMETOPIC>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 217" DBREF="54705" QTDIN="QTDINYES">217</BIBCIT>
+                  </BIBCITS>
+                </QUOTE>She advocates the reorganization of society into
+                <TTHEMETOPIC>co-operative and voluntary units</TTHEMETOPIC>
+              <P>In a rare overlap between her feminist and anarchist principles, Bevington also touches briefly on the durability of
+                <TTHEMETOPIC>sexual relationships</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">a harmonious social life.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 223" DBREF="54705" QTDIN="QTDINYES">223</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>For Anarchist Periodicals; Translations</HEADING>
+        <DIV2>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="PERIOD">
+              <DATE VALUE="1892-09-">September 1892</DATE>
+              <CHRONPROSE>
+                <PPERIODICALPUBLICATION>LSB published
+                  <TITLE TITLETYPE="ANALYTIC">Leaden Instincts v. Golden Conduct</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Freedom">Freedom: A Journal of Anarchist Communism</TITLE>
+                  <TGENRE GENRENAME="ESSAY">article</TGENRE>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 54,126" DBREF="54705">54,126</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ANSWER" GENDEROFAUTHOR="MALE">In this essay she seeks to
+                  <TTHEMETOPIC>differentiate anarchist communism from individualism</TTHEMETOPIC>
+                  <NAME>Herbert Spencer</NAME>
+                  <TTHEMETOPIC>Socialism</TTHEMETOPIC>
+                  <QUOTE DIRECT="Y">there is no political alchemy by which you can get golden conduct out of leaden instincts,</QUOTE>
+                  <TTHEMETOPIC>corrupting institutions</TTHEMETOPIC>
+                  <SOCALLED>golden conduct</SOCALLED>
+                <TMOTIF MOTIFNAME="violence">defends the anarchist use of violent means</TMOTIF>
+                <QUOTE DIRECT="Y">[f]orce alone secures the thin semblance of peace; all but the minority whom the existing methods favour, know, or might know, that it is WAR, to the knife,&mdash;aye! war to the dynamite bomb!</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 366" DBREF="54705" QTDIN="QTDINYES">366</BIBCIT>
+                </BIBCITS>Bevington continued to advocate violence as a necessay evil in many of her later essays.</P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+        <DIV2>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="DECADE">
+              <DATERANGE CERTAINTY="ROUGHLYDATED" FROM="1893-05-27" TO="1895-08-11" EXACT="BOTH">Between 27 May 1893 and 11 August 1895</DATERANGE>
+              <CHRONPROSE>
+                <PMATERIALCONDITIONS>
+                  <PPERIODICALPUBLICATION>Although getting steadily sicker, LSB remained highly productive, contributing to anarchist periodicals many
+                    <TGENRE GENRENAME="ESSAY">essays</TGENRE>
+                    <TGENRE GENRENAME="JOURNALISM">articles</TGENRE>
+                    <TGENRE GENRENAME="REVIEW">reviews</TGENRE>
+                    <TGENRE GENRENAME="LETTER">letters to the editor</TGENRE>
+                </PMATERIALCONDITIONS>
+              </CHRONPROSE>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 127" DBREF="54705">127</BIBCIT>
+                <BIBCIT PLACEHOLDER="Harrison, Woolven and Duncan 284" DBREF="176">284</BIBCIT>
+                <BIBCIT PLACEHOLDER="DLB" DBREF="18329">
+                </BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>She wrote during these years for
+                  <TITLE TITLETYPE="JOURNAL" REG="Freedom">Freedom</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal</TITLE>
+                  <TITLE TITLETYPE="JOURNAL">The Torch</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>
+                <TINTERTEXTUALITY INTERTEXTTYPE="ANSWER">Many of these essays, such as
+                  <TITLE TITLETYPE="ANALYTIC">Mr.
+                    <NAME>Auberon Herbert</NAME>
+                    <TITLE TITLETYPE="ANALYTIC">Voluntary State</TITLE>
+                  </TITLE>(published in the issue of
+                  <TITLE TITLETYPE="JOURNAL" REG="Freedom">Freedom</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 127" DBREF="54705">127</BIBCIT>
+                  </BIBCITS>
+                </TINTERTEXTUALITY>
+              </P>
+              <P>One of the best-known of these articles is
+                <TITLE TITLETYPE="ANALYTIC">Dynamitism</TITLE>
+                <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal</TITLE>
+                <TTHEMETOPIC>advocates
+                  <TMOTIF>violence</TMOTIF>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 126" DBREF="54705">126</BIBCIT>
+                </BIBCITS>It relates an anecdote wherein a
+                <QUOTE DIRECT="Y">
+                  <SOCALLED>Christian</SOCALLED>
+                  <SOCALLED>silken sheen</SOCALLED>
+                </QUOTE>confronts a
+                <QUOTE DIRECT="Y">comrade</QUOTE>
+                <TINTERTEXTUALITY INTERTEXTTYPE="QUOTATION" GENDEROFAUTHOR="MALE">
+                  <TTECHNIQUES TECHNIQUETYPE="IMAGERY">She uses two of Christ&apos;s metaphors for the upheaval caused by new beliefs (taken from
+                    <TITLE TITLETYPE="ANALYTIC" REG="Bible" REND="normal">Matthew</TITLE>
+                    <QUOTE DIRECT="Y">Dynamitism means the bursting of rotten
+                      <SOCALLED>old bottles</SOCALLED>
+                      <SOCALLED>new wine</SOCALLED>
+                      <SOCALLED>not of peace but a sword</SOCALLED>
+                      <SOCALLED>scribes, pharisees and hypocrites</SOCALLED>
+                      <SOCALLED>peace, peace,</SOCALLED>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 212" DBREF="54705" QTDIN="QTDINYES">212</BIBCIT>
+                      <BIBCIT PLACEHOLDER="Oliver 86-7" DBREF="55305">86-7</BIBCIT>
+                    </BIBCITS>
+                  </TTECHNIQUES>
+                </TINTERTEXTUALITY>
+                <TTONESTYLE>This
+                  <QUOTE DIRECT="Y">inflammatory</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha 140" DBREF="55405">140</BIBCIT>
+                  </BIBCITS>article voices wholehearted approval of dynamite as the
+                  <QUOTE DIRECT="Y">last and very valuable resource</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 213" DBREF="54705" QTDIN="QTDINYES">213</BIBCIT>
+                  </BIBCITS>
+                </TTONESTYLE>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>Another essay,
+                <TITLE TITLETYPE="ANALYTIC">Why I am an
+                  <TTHEMETOPIC>Expropriationist</TTHEMETOPIC>
+                </TITLE>(
+                <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                <NAME>William Morris</NAME>
+                <ORGNAME>Liberty Press</ORGNAME>
+                <TITLE TITLETYPE="MONOGRAPHIC">The Why I Ams: Why I am a Communist. Why I am an Expropriationist</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 129" DBREF="54705">129</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>This essay voices the
+                <TTHEMETOPIC>hatred of property</TTHEMETOPIC>
+                <TITLE TITLETYPE="MONOGRAPHIC">Liberty Lyrics</TITLE>
+                <TTHEMETOPIC>redistribution of wealth</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">[t]here can be [n]o such thing as a natural title to what is after all an artifical and merely nominal relation between a man and his product.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 162" DBREF="54705" QTDIN="QTDINYES">162</BIBCIT>
+                </BIBCITS>The economic exploitation of material property is for her linked to the
+                <TTHEMETOPIC>institutional exploitation of capitalism</TTHEMETOPIC>
+                <QUOTE DIRECT="Y">
+                  <TTHEMETOPIC>Government</TTHEMETOPIC>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 163" DBREF="54705" QTDIN="QTDINYES">163</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+        <DIV2>
+          <HEADING>Translations</HEADING>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="SIB" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="PERIOD">
+              <DATE VALUE="1894-01-">January 1894</DATE>
+              <CHRONPROSE>LSB
+                <TGENRE GENRENAME="TRANSLATION">translated</TGENRE>
+                <TITLE TITLETYPE="ANALYTIC">International Song</TITLE>
+                <ORGNAME>Paris Commune</ORGNAME>
+                <NAME>Louise Michel</NAME>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Domingue 14, 126" DBREF="54705">14, 126</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>
+                <PPERIODICALPUBLICATION>Between October 1894 and November 1895 she also translated Michel&apos;s memoir
+                  <TITLE TITLETYPE="ANALYTIC">The Commune of Paris</TITLE>
+                  <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 14, 23n26, 125" DBREF="54705">14, 23n26, 125</BIBCIT>
+                  </BIBCITS>
+                </PPERIODICALPUBLICATION>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>Posthumous Publication</HEADING>
+        <DIV2>
+          <HEADING>Latest Periodical Pieces</HEADING>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>A handful of LSB&apos;s writings appeared after her death in November 1895.
+                <PLASTLITERARYACTIVITY>
+                  <PPERIODICALPUBLICATION>In
+                    <DATE>January 1896</DATE>
+                    <TGENRE GENRENAME="POETRY">poem</TGENRE>
+                    <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                    <TITLE TITLETYPE="ANALYTIC">Wishes</TITLE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Senaha 144, 147" DBREF="55405">144, 147</BIBCIT>
+                    </BIBCITS>
+                  </PPERIODICALPUBLICATION>In it she wished that everyone had the soul of a poet, who is in tune with society, for
+                  <QUOTE DIRECT="Y">then a brave
+                    <SOCALLED>new earth</SOCALLED>
+                    <EMPH>all were free</EMPH>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Domingue 429" DBREF="54705" QTDIN="QTDINYES">429</BIBCIT>
+                  </BIBCITS>Although the date of composition is not known, a note accompanying this poem calls it
+                  <QUOTE DIRECT="Y">among the last of the contributions received from our late comrade.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha 144" DBREF="55405" QTDIN="QTDINYES">144</BIBCIT>
+                  </BIBCITS>
+                  <PPERIODICALPUBLICATION>On 1 April this year
+                    <TITLE TITLETYPE="JOURNAL" REG="The Torch">The Torch of Anarchy</TITLE>
+                    <TITLE TITLETYPE="ANALYTIC">An Open Letter</TITLE>
+                    <DATE VALUE="1896-11-">November</DATE>
+                    <TITLE TITLETYPE="JOURNAL" REG="Liberty: a Journal of Anarchist Communism">Liberty</TITLE>
+                    <TITLE TITLETYPE="ANALYTIC">Anarchism and Violence</TITLE>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 125, 127" DBREF="54705">125, 127</BIBCIT>
+                    </BIBCITS>
+                  </PPERIODICALPUBLICATION>
+                </PLASTLITERARYACTIVITY>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+        </DIV2>
+        <DIV2>
+          <HEADING>Letter on the Greenwich Bombing</HEADING>
+          <PRODUCTION>
+            <CHRONSTRUCT RESP="IMG" CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="DECADE" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+              <DATE VALUE="1894-08-">August 1894</DATE>
+              <CHRONPROSE>Six months after the apparent
+                <TTHEMETOPIC>attempt by French anarchist
+                  <NAME>Martial Bourdin</NAME>
+                  <PLACE>
+                    <SETTLEMENT CURRENT="London" REG="Greenwich">Greenwich</SETTLEMENT>
+                    <REGION REG="Kent">
+                    </REGION>
+                    <GEOG REG="England">
+                    </GEOG>
+                  </PLACE>
+                  <ORGNAME STANDARD="Royal Observatory">Observatory</ORGNAME>
+                </TTHEMETOPIC>, LSB
+                <TGENRE GENRENAME="LETTER">wrote</TGENRE>
+                <TITLE TITLETYPE="JOURNAL">Commonweal</TITLE>
+                <NAME>David Nicoll</NAME>
+                <TGENRE GENRENAME="POLITICALWRITING">view</TGENRE>
+                <TTHEMETOPIC>police sting</TTHEMETOPIC>
+              <BIBCITS>
+                <BIBCIT PLACEHOLDER="Quail 162, 168, 172" DBREF="55447">162, 168, 172</BIBCIT>
+                <BIBCIT PLACEHOLDER="Domingue 66" DBREF="54705">66</BIBCIT>
+              </BIBCITS>
+            </CHRONSTRUCT>
+            <SHORTPROSE>
+              <P>LSB&apos;s allegation that the police had engineered this event was published by Nicoll in his pamphlet
+                <TITLE TITLETYPE="MONOGRAPHIC">The Greenwich Mystery: Letters from the Dead</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Quail 168, 172" DBREF="55447">168, 172</BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 66" DBREF="54705">66</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>On
+                <DATE VALUE="1894-02-15">15 February</DATE>
+                <NAME>H. B. Samuels</NAME>
+                <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal</TITLE>
+                <TITLE TITLETYPE="JOURNAL" REG="Commonweal">The Commonweal</TITLE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Quail, 144, 162, 167-8" DBREF="55447">144, 162, 167-8</BIBCIT>
+                </BIBCITS>of being a double agent working for the police, and accuses the police of planning to set up
+                <QUOTE DIRECT="Y">a big lucrative scare and scandal</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Sherry 242" DBREF="55446" QTDIN="QTDINYES">242</BIBCIT>
+                </BIBCITS>Scotland Yard, she says, working through Samuels, had set up Bourdin to attempt a bombing, fail, and die.
+                <RPENALTIES CENSORSHIP="CENSORSHIPYES">She also expresses a fear that her letter will be intercepted by the police (a valid concern, as the mail of known anarchists was being held by
+                  <ORGNAME>Scotland Yard</ORGNAME>
+                <QUOTE DIRECT="Y">send a postcard at once to let me know if this letter reaches you safely, the post gets increasingly uncertain.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Quail 172" DBREF="55447" QTDIN="QTDINYES">172</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+          <RECEPTION>
+            <SHORTPROSE>
+              <P>
+                <RRESPONSES RESPONSETYPE="RECENT" FORMALITY="FORMAL">The claims made in this letter are still disputed: scholar
+                  <NAME>Hermia Oliver</NAME>
+                  <QUOTE DIRECT="Y">virtually worthless</QUOTE>
+                  <NAME>Katharine McGowran</NAME>
+                  <TITLE TITLETYPE="MONOGRAPHIC" REG="ODNB">Oxford Dictionary of National Biography</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Oliver 106-7" DBREF="55305">106-7</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Senaha 141" DBREF="55405">141</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Domingue 66, 73n15" DBREF="54705">66, 73n15</BIBCIT>
+                    <BIBCIT PLACEHOLDER="ODNB" DBREF="29268">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Quail 162" DBREF="55447">162</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Sherry 242-3" DBREF="55446">242-3</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Cunningham 881" DBREF="8745">881</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+              </P>
+            </SHORTPROSE>
+          </RECEPTION>
+        </DIV2>
+        <DIV2>
+          <HEADING>Final Pamphlet:
+            <TITLE TITLETYPE="MONOGRAPHIC">Common-Sense Country</TITLE>
+          </HEADING>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>More than a year after her death, LSB&apos;s final free-standing publication, a
+                <TGENRE GENRENAME="TRACTPAMPHLET">pamphlet</TGENRE>
+                <TITLE TITLETYPE="MONOGRAPHIC">Common-Sense Country</TITLE>
+                <ORGNAME>Liberty Press</ORGNAME>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="OCLC" DBREF="1709">
+                  </BIBCIT>
+                  <BIBCIT PLACEHOLDER="Domingue 105, 125" DBREF="54705">105, 125</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+          <TEXTUALFEATURES>
+            <SHORTPROSE>
+              <P>In this work she lays out her vision of an
+                <TTHEMETOPIC>ideal anarchist world</TTHEMETOPIC>
+                <TTHEMETOPIC>inequality of wealth</TTHEMETOPIC>
+                <SOCALLED>Common-Sense Country</SOCALLED>
+                <TMOTIF>utopia</TMOTIF>
+                <QUOTE DIRECT="Y">[a]s there was no mammon, there were none of those dismal things which are eternal essentials where mammon reigns. There were no arsenals, no armies, no police, no spies: no banks, no prisons, no poorhouses: no brothels, no divorce courts, no nunneries, no confessionals: no
+                  <SOCALLED>rings</SOCALLED>
+                <QUOTE DIRECT="Y">old people, the little children, the animals and birds had a happy time of it; and there was free exchange of friendship and affection between the dumb and the human sharers of earthly life.</QUOTE>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="LSB, Common-Sense 8,12" DBREF="55865">8,12</BIBCIT>
+                  <BIBCIT PLACEHOLDER="VWWP" DBREF="8865" QTDIN="QTDINYES">
+                  </BIBCIT>
+                </BIBCITS>
+              </P>
+              <P>The pamphlet also includes a dig at
+                <ORGNAME>Lloyd&apos;s of London</ORGNAME>
+                <TTHEMETOPIC>insurance companies</TTHEMETOPIC>
+            </SHORTPROSE>
+          </TEXTUALFEATURES>
+        </DIV2>
+      </DIV1>
+      <DIV1>
+        <HEADING>Legacy</HEADING>
+        <DIV2>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>Until recently, comment on LSB has dealt exclusively with her poetry.
+                <RRESPONSES RESPONSETYPE="RE-EVALUATION" FORMALITY="FORMAL" GENDEREDRESPONSE="GENDEREDYES">About a decade after her death
+                  <NAME>Alfred H. Miles</NAME>
+                  <QUOTE DIRECT="Y">the poetess of evolutionary science.</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Miles 9: 229" DBREF="109492">9: 229</BIBCIT>
+                  </BIBCITS>While he tarred her with the gendered criticism of
+                  <QUOTE DIRECT="Y">over-facility</QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Miles 9: 230" DBREF="109492">9: 230</BIBCIT>
+                  </BIBCITS>he praised her ability to
+                  <QUOTE DIRECT="Y">discer[n] more accurately than many contemporaries, the immense poetical development which the acceptance of the evolutionary view has made possible for science.</QUOTE>
+                </RRESPONSES>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Miles 9: 229" DBREF="109492">9: 229</BIBCIT>
+                </BIBCITS>
+                <RRESPONSES RESPONSETYPE="RECENT" FORMALITY="FORMAL" GENDEREDRESPONSE="GENDEREDYES">More recently
+                  <NAME>Angela Leighton</NAME>
+                  <NAME>Margaret Reynolds</NAME>
+                  <QUOTE DIRECT="Y">her verse draws on evolutionary theory to decentre . . . the egocentric power of human passion. . . .
+                    <TTECHNIQUES TECHNIQUETYPE="IMAGERY">Darwinism, with its large-scale, natural, geological imagery, provide[s] a useful model for the idea of inevitable social change.</TTECHNIQUES>
+                  </QUOTE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Leighton and Reynolds 478" DBREF="7283">478</BIBCIT>
+                  </BIBCITS>
+                </RRESPONSES>
+                <RSHEINFLUENCED>In this respect, LSB&apos;s work seems to participate in the same intellectual stream as her contemporaries
+                  <NAME>Constance Naden</NAME>
+                  <NAME>Mathilde Blind</NAME>
+              </P>
+              <P>
+                <PANTHOLOGIZATION>LSB&apos;s poems have been widely anthologized, in such collections as
+                  <NAME>Alfred H. Miles</NAME>
+                  <TITLE TITLETYPE="MONOGRAPHIC">The Poets and the Poetry of the Nineteenth Century</TITLE>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Victorian Women Poets: An Anthology</TITLE>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Nineteenth-Century Women Poets</TITLE>
+                  <TITLE TITLETYPE="MONOGRAPHIC">The Victorians: An Anthology of Poetry and Poetics</TITLE>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Love&apos;s Witness: Five Centuries of Love Poetry by Women</TITLE>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Miles v. 9" DBREF="109492">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Leighton and Reynolds" DBREF="7283">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Armstrong, Bristow and Sharrock" DBREF="8746">
+                    </BIBCIT>
+                    <BIBCIT PLACEHOLDER="Cunningham 881" DBREF="8745">881</BIBCIT>
+                    <BIBCIT PLACEHOLDER="Hollis" DBREF="55451">
+                    </BIBCIT>
+                  </BIBCITS>
+                </PANTHOLOGIZATION>
+              </P>
+              <P>Her work as an essayist, however, has only recently been discussed in detail.
+                <RRESPONSES RESPONSETYPE="RE-EVALUATION" FORMALITY="FORMAL" GENDEREDRESPONSE="GENDEREDNO">
+                  <NAME>Eijun Senaha</NAME>
+                  <BIBCITS>
+                    <BIBCIT PLACEHOLDER="Senaha passim" DBREF="55405">passim</BIBCIT>
+                  </BIBCITS>while
+                  <NAME>Jackie Dees Domingue</NAME>
+                  <TITLE TITLETYPE="MONOGRAPHIC">Doctrine and Dynamite: an Edition of Louisa Sarah Bevington&apos;s Social and Political Essays</TITLE>
+                  <XREF RESP="SIB" URL="http://www.proquest.com/en-US/catalogs/databases/detail/pqdt.shtml">ProQuest Dissertations &amp; Theses Database</XREF>
+                  <QUOTE DIRECT="Y">Bevington&apos;s essays on property were characteristically iconoclastic, yet compared to other property essays at that time, they were distinctive in that they transcended the limits of prevailing radical arguments. Her serialized disputes with other anarchists, socialists, and communists over her abstruse definitions of concepts like
+                    <SOCALLED>ownership</SOCALLED>
+                    <BIBCITS>
+                      <BIBCIT PLACEHOLDER="Domingue 29" DBREF="54705">29</BIBCIT>
+                    </BIBCITS>
+                  </QUOTE>
+                </RRESPONSES>Outside Domingue&apos;s dissertation, Bevington&apos;s essays remain unanthologized.</P>
+            </SHORTPROSE>
+          </PRODUCTION>
+        </DIV2>
+        <DIV2>
+          <HEADING>Scant Literary Remains</HEADING>
+          <PRODUCTION>
+            <SHORTPROSE>
+              <P>
+                <RDESTRUCTIONOFWORK DESTROYEDBY="OTHER">Few of LSB&apos;s
+                  <TGENRE GENRENAME="LETTER">letters</TGENRE>
+                  <NAME STANDARD="Bevington, Alexander">Alex Bevington</NAME>
+                <PARCHIVALLOCATION>A few unpublished
+                  <TGENRE GENRENAME="POETRY">poems</TGENRE>
+                  <TGENRE GENRENAME="LETTER">letters</TGENRE>
+                  <NAME>Janet De Horne Bevington Bell</NAME>
+                  <TITLE TITLETYPE="ANALYTIC">A June Song</TITLE>
+                <PNONSURVIVAL TYPEOFNONSURVIVAL="UNKNOWN">None of her other manuscripts survive.</PNONSURVIVAL>
+                <BIBCITS>
+                  <BIBCIT PLACEHOLDER="Domingue 23n31, 126, 108n11" DBREF="54705">23n31, 126, 108n11</BIBCIT>
+                </BIBCITS>
+              </P>
+            </SHORTPROSE>
+          </PRODUCTION>
+        </DIV2>
+      </DIV1>
+      <WORKSCITED>
+        <SOURCE>Unless otherwise noted, all information is from the FC</SOURCE>
+      </WORKSCITED>
+      <BIOGPROSE>(Louisa Sarah, later Mrs Ignatz Guggenberger), 1845-?95, journalist and poet, b. Battersea, London, to Louisa (De Hermes?) and Alexander B., &apos;gentleman&apos;, probably of Quaker family. The eldest of eight (seven girls), LSB pub. her first book of poems as &apos;Arbor Leigh&apos; in 1876, followed by {FCabbrevTitle}Key-Notes{/FCabbrevTitle}, 1879 (as L. S. Bevington), which shows signs of querying established Christian codes. Her article on &apos;Atheism and Morality&apos; ({FCabbrevTitle}Nineteenth Century{/FCabbrevTitle}, Oct. 1879) provoked a clerical essay in reply. After {FCabbrevTitle}Poems, Lyrics and Sonnets{/FCabbrevTitle}, 1882, containing some interesting metrical experiments and laments for dead Christianity, in 1883 she m. Munich artist Ignatz G. By 1895 she was publishing with James Tochetti&apos;s &apos;Liberty&apos; Press (a journal of &apos;Anarchist Communism&apos;) poems which, in Browningesque fable guise, offer a {Running Head} 92 BIDDLE, HESTER&amp;#62; sharp critique of moral half-measures (e.g. &apos;The Spider and the Bee, A Tale for the Times&apos;).</BIOGPROSE>
+    </DIV0>
+  </WRITING>
+</ORLANDO-CWRC>

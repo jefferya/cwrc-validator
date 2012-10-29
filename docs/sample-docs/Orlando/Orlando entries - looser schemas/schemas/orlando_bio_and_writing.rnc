@@ -1,0 +1,66 @@
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+
+# 
+# orlando_bio_and_writing_.rnc
+# This schema combimes Biography and Writing elements within Entry root element (orlando_biograph_transitional_medium_rare_upper_v02.rnc, and orlando_writing_transitional_medium_rare_upper_v02.rnc) in the pattern:
+# ORLANDO > ENTRY > BIOGRAPHY > WRITING
+# the intent is to provide a schema for the
+# Canadian Writing and Research Collaboratory (CWRC) literary team
+# based in Orlando's SGML documents structure.
+# 
+# Written 2010-08 by Mariana Paredes-Olea
+# Copyright 2010 Mariana Paredes-Olea, The Orlando Project, and CWRC
+#
+
+# Future work - single definition of common element and attributes from Events, Biograph, and Writing schemas
+# common attributes / content patterns from common_10-07-16.rnc:
+#   ID
+#   reg
+#   dates' attributes (id, calendar, value, certainty) --> dateStruct, date, dateRange
+#   sex
+#   person
+#   calendar content
+#   certainty content
+#   resp content
+#   workstatus content
+#   workvalue content
+#   part content
+#   datestruct content
+#   placechild content
+#   chroncolumnrelevance content
+#   links content
+# check common attributes and values for writing schema
+# after common elements and attributes have been defined, replace below external ref with combine by choce or interleave if certain patters do not have identical contents. renaming certain definitions like included_* might be necessary
+#
+
+include "orlando_biograph_transitional_medium_rare_upper_v04.rnc"
+{
+    start = element ORLANDO-CWRC { attlist.OrlandoCWRC, entry* }
+}
+
+entry =
+    element ENTRY {
+        attlist.Entry,
+        OrlandoHeader,
+        (external "orlando_biograph_transitional_medium_rare_upper_v04.rnc" |
+        external "orlando_writing_transitional_medium_rare_upper_v04.rnc")+
+    }
+ 
+OrlandoHeader =
+    element ORLANDOHEADER {
+        attlist.OrlandoHeader,
+        fileDesc,
+        revisionDesc }
+    
+attlist.Entry &=
+    attribute ID{ xsd:ID }?,
+    attribute SEX { "FEMALE" | "MALE" | "UNKNOWN" | "TRANSGENDERED" },
+    attribute PERSON { "HISTORICALFIGURE" | "BRWWRITER" | "IBRWRITER" | "CWRITER" | "ICWRITER" | "WRITER"  }
+
+attlist.OrlandoCWRC &=
+    attribute ID {xsd:ID}?
+    
+attlist.OrlandoHeader &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "TEXT" ] attribute TYPE { text }?
+    

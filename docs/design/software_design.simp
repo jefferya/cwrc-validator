@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="4.97">
+  <meta>
+    <name>CWRC XML Validator</name>
+    <authors>Kamal Ranaweera</authors>
+    <description>Software design for the CWRC XML Validator project.</description>
+  </meta>
+  <management>
+    <persons />
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Void" name="Void" description="" />
+      <type id="CwrcValidator" name="CwrcValidator" description="" />
+    </custom-types>
+  </types>
+  <items>
+    <item id="di597426201933502531" cid="PKG001" type="package" name="cwrcxmlval" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <nestedItems />
+    </item>
+    <item id="di841305997445802797" cid="PKG002" type="package" name="Package2" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <nestedItems />
+    </item>
+    <item id="di466948966891854084" cid="PKG003" type="package" name="Package3" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <nestedItems />
+    </item>
+    <item id="di639099643535268198" cid="C001" type="class" name="WebServiceController" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="validate" type="Void" type-id="Void" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="@RequestParam String sch" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="@RequestParam String doc" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="@RequestParam String schType" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="Model model" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di114736596654324020" cid="C002" type="class" name="CwrcValidator" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="interface" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="Validate" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="String schemaUrl" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="String documentUrl" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di353228357281726071" cid="C003" type="class" name="CwrcJavaXmlValidator" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="Validate" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="String schemaUrl" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="String documentUrl" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di307984196119784526" cid="REA001" type="realization" name="realizes" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di313234919845403419" cid="C004" type="class" name="CwrcSunMsvValidator" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="Validate" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="String schemaUrl" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="String documentUrl" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di226829407991984800" cid="REA003" type="realization" name="realizes" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di543917862492503924" cid="C005" type="class" name="CwrcValidatorFactory" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="NewValidator" type="CwrcValidator" type-id="CwrcValidator" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="String schType" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di797712011981420336" cid="DEP001" type="dependency" name="" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="use" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di400472318924118391" cid="DEP002" type="dependency" name="" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="use" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di623126952589569269" cid="REL001" type="relationship" name="instantiates" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <relation from="di543917862492503924" to="di353228357281726071">
+        <start-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
+        <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
+      </relation>
+    </item>
+    <item id="di491150304881465633" cid="REL002" type="relationship" name="instantiates" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <relation from="di543917862492503924" to="di313234919845403419">
+        <start-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
+        <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
+      </relation>
+    </item>
+  </items>
+  <models>
+    <model id="p417460412918336279" name="Model 1" type="model" namespace="">
+      <documentation />
+      <sub-models />
+      <diagram type="uml-class" id="p570487521456912429" name="XML Validator Classes">
+        <meta>
+          <authors />
+          <description />
+          <creation-date>09/19/2011 12:05:41</creation-date>
+          <change-date>09/20/2011 14:30:41</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <documentation />
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di639099643535268198" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="184" ay="32" awidth="208" aheight="117" x="184" y="32" width="208" height="117" />
+            <class />
+          </item>
+          <item id="di114736596654324020" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="453" ay="32" awidth="282" aheight="100" x="453" y="32" width="282" height="100" />
+            <class />
+          </item>
+          <item id="di353228357281726071" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="188" ay="420" awidth="232" aheight="121" x="188" y="420" width="232" height="121" />
+            <class />
+          </item>
+          <item id="di307984196119784526" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="50,-21" x1="348" y1="420" x2="558" y2="132">
+              <points>
+                <point x="348" y="420" />
+                <point x="558" y="132" />
+              </points>
+            </layout>
+            <relation from="di353228357281726071" to="di114736596654324020" />
+          </item>
+          <item id="di313234919845403419" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="486" ay="424" awidth="233" aheight="118" x="486" y="424" width="233" height="118" />
+            <class />
+          </item>
+          <item id="di226829407991984800" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="-31,-9" x1="601" y1="424" x2="595" y2="132">
+              <points>
+                <point x="601" y="424" />
+                <point x="595" y="132" />
+              </points>
+            </layout>
+            <relation from="di313234919845403419" to="di114736596654324020" />
+          </item>
+          <item id="di543917862492503924" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="182" ay="225" awidth="225" aheight="72" x="182" y="225" width="225" height="72" />
+            <class />
+          </item>
+          <item id="di797712011981420336" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="16,-8" x1="290" y1="149" x2="293" y2="225">
+              <points>
+                <point x="290" y="149" />
+                <point x="293" y="225" />
+              </points>
+            </layout>
+            <relation from="di639099643535268198" to="di543917862492503924" />
+          </item>
+          <item id="di400472318924118391" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="-5,-16" x1="392" y1="87" x2="453" y2="86">
+              <points>
+                <point x="392" y="87" />
+                <point x="453" y="86" />
+              </points>
+            </layout>
+            <relation from="di639099643535268198" to="di114736596654324020" />
+          </item>
+          <item id="di623126952589569269" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="-41,-20" x1="296" y1="297" x2="301" y2="420">
+              <points>
+                <point x="296" y="297" />
+                <point x="301" y="420" />
+              </points>
+            </layout>
+            <relation from="di543917862492503924" to="di353228357281726071" />
+            <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
+          </item>
+          <item id="di491150304881465633" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="47,-2" x1="344" y1="297" x2="520" y2="424">
+              <points>
+                <point x="344" y="297" />
+                <point x="520" y="424" />
+              </points>
+            </layout>
+            <relation from="di543917862492503924" to="di313234919845403419" />
+            <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>

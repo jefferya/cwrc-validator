@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="css/bio_style.css"?>
+<?xml-model href="schemas/biography-test_10-07-16-CAPS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+<BIOGRAPHY SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER TYPE="text">
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>Gladys Henrietta Schütze: biography</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Orlando Project</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Created from original research by members of the Orlando Project</SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>2 August 1996</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;incomplete&quot; Initial document
+                    given to tagger.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>28 March 1996</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;complete&quot; Tagged initially with
+                    person group dtd.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>11 August 1996</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;complete&quot; Retagged with new bio
+                    dtd.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>27 July 1997</DATE>
+                <ITEM>Automatically generated to load Workflow Management System.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SRF" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>27 March 1998</DATE>
+                <ITEM>SRF: added missing titletpye attribute and fixed bad spacing</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PDC" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>6 October 1998</DATE>
+                <ITEM>Updated for Sept 1998 Audit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KNT" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>20 July 1999</DATE>
+                <ITEM>knt: fixed dates</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 December 1999</DATE>
+                <ITEM>BATCH CHANGE: primarily orgName and bibCit cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="DRG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>1 February 2001</DATE>
+                <ITEM>converted textual apostrophes and quotation marks to entity references</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>22 March 2002</DATE>
+                <ITEM>removed title tag(s) from workscited</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>31 January 2003</DATE>
+                <ITEM> fixed NAME</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>14 April 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily PLACE cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>16 June 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily TGENRENAME cleanup, BIBCIT following P moved before P, BIBCITS
+                    TAG added</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>08 April 2005</DATE>
+                <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name changes</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>5 July 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>11 July 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>16 July 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>23 July 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>4 August 2009</DATE>
+                <ITEM>rwt c, ready for cas, and for pilot99</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>1 September 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>30 September 2009</DATE>
+                <ITEM>Cas&apos;d Harlequin Set</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>1 October 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>2 October 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>7 October 2009</DATE>
+                <ITEM>Called ILL- Schugl bio/Hapence is on its way! (eta:4 weeks)</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>14 October 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>5 November 2009</DATE>
+                <ITEM>Cas&apos;ing biography More Ha&apos;pence than Kicks</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>9 November 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>12 November 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>13 November 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>16 November 2009</DATE>
+                <ITEM>CAS&apos;d More Ha&apos;pence than Kicks - returning to library.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>18 November 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="LJH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>18 November 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>22 November 2009</DATE>
+                <ITEM>cft c, rbv c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="PUB" WORKVALUE="I">
+                <DATE>30 November 2009</DATE>
+                <ITEM>pub i</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="MPO" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>7 December 2009</DATE>
+                <ITEM>cfb c / cft c (mariana), pilot 39</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY WORKSTATUS="PUB" RESP="MPO" WORKVALUE="C">
+                <DATE>23 December 2009</DATE>
+                <ITEM>pilot39 pub c</ITEM>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+        <HEADING>Biography</HEADING>
+        <STANDARD>Schütze, Gladys Henrietta</STANDARD>
+        <DIV1>
+            <PERSONNAME>
+                <DIV2>
+                    <DATASTRUCT>
+                        <DATAITEM>
+                            <BIRTHNAME>
+                                <GIVEN>Gladys</GIVEN>
+                                <GIVEN>Henrietta</GIVEN>
+                                <SURNAME>Raphael</SURNAME>
+                            </BIRTHNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <MARRIED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" REG="Mendl, Gladys"
+                                >Mendl</MARRIED>
+                            <SCHOLARNOTE>
+                                <P>During her first marriage she published as Gladys Mendl.</P>
+                            </SCHOLARNOTE>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <MARRIED>Schütze</MARRIED>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <PSEUDONYM WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" NAMESIGNIFIER="CRYPTIC"
+                                >Henrietta Leslie</PSEUDONYM>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="BLC" DBREF="2052"/>
+                                <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                            </BIBCITS>
+                        </DATAITEM>
+                    </DATASTRUCT>
+                    <SHORTPROSE>
+                        <P>The <TITLE TITLETYPE="MONOGRAPHIC">British Library Catalogue</TITLE> in 2009
+                            returned no results for GHS on a search for <SOCALLED>Schutze</SOCALLED> (which
+                            returns results for others bearing the name of <SOCALLED>Schütze</SOCALLED>) or
+                                <SOCALLED>Schuetze</SOCALLED>. It listed her works (except those published as
+                                <SOCALLED>Gladys Mendl</SOCALLED>) under the name of <SOCALLED>Henrietta
+                                Leslie</SOCALLED>, which she adopted as her pen-name in 1916.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </PERSONNAME>
+        </DIV1>
+        <DIV1>
+            <HEADING>Birth and Influences</HEADING>
+            <BIRTH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                        <DATE>6 July 1884</DATE>
+                        <CHRONPROSE><NAME STANDARD="Sch&uuml;tze, Gladys Henrietta">Gladys Henrietta Raphael
+                                (later Schütze)</NAME>, an only child, was born at
+                                        <PLACE><ADDRESS><ADDRLINE>42 Portland Place</ADDRLINE></ADDRESS>,
+                                    <SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </BIRTH>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Her family were <NATIONALITY SELF-DEFINED="SELFYES" REG="British"
+                                    >British</NATIONALITY> members of <QUOTE DIRECT="Y">prosperous,
+                                    successful <DENOMINATION REG="Judaism"><ETHNICITY
+                                            SELF-DEFINED="SELFYES" REG="Jewish"
+                                        >Jewry</ETHNICITY></DENOMINATION>.</QUOTE> In 1884 <QUOTE
+                                    DIRECT="Y"><NAME STANDARD="Disraeli, Benjamin"
+                                        >D&apos;Israeli</NAME> had only been dead four years and
+                                    tolerance was very much the order of the day. So that
+                                    anti-semitism was at a very low ebb. It was also an age of
+                                    prosperity, security and progress. A golden age.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 9"
+                                        DBREF="105924">9</BIBCIT>
+                                </BIBCITS> At least some of her relations were <DENOMINATION
+                                    REG="Judaism"><ORGNAME STANDARD="Judaism"
+                                    >Orthodox</ORGNAME></DENOMINATION>, but Gladys Henrietta
+                                rejected Orthodoxy for herself because she hated the prescribed wig
+                                which one of her married aunts wore over her shaved head. When,
+                                years later, she discovered the movement for <POLITICALAFFILIATION
+                                    ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                    REG="suffragist">women&apos;s suffrage</POLITICALAFFILIATION>,
+                                she straight away remembered the image of this aunt. In 1923,
+                                largely influenced by the <POLITICALAFFILIATION
+                                    ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                    REG="pacifist">pacifism</POLITICALAFFILIATION> of the Rev.
+                                    <NAME>Dick Sheppard</NAME>, Schütze became a convert to the
+                                    <DENOMINATION SELF-DEFINED="SELFYES" REG="Anglican"><ORGNAME
+                                        STANDARD="Anglican Church">Church of
+                                    England</ORGNAME></DENOMINATION>. As the persecution of European
+                                Jews escalated during the 1930s, however, she rediscovered her
+                                    <ETHNICITY SELF-DEFINED="SELFYES" REG="Jewish"
+                                    >Jewish</ETHNICITY> identity as something which, in solidarity,
+                                she needed to assert.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="FC" DBREF="107913"/>
+                                    <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS involved herself with the <POLITICALAFFILIATION INVOLVEMENT="INVOLVEMENTYES"
+                                REG="Liberal"><ORGNAME STANDARD="Liberal Party">Liberal
+                                Party</ORGNAME></POLITICALAFFILIATION> in about 1906, and the <ORGNAME
+                                STANDARD="Women&apos;s Social and Political Union">Women&apos;s Social and
+                                Political Union</ORGNAME> soon afterwards. She worked with the <NAME
+                                STANDARD="Pankhurst, Emmeline">Pankhursts</NAME> and <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES" REG="suffragist">militant
+                                suffragettes</POLITICALAFFILIATION>. During World War One, prejudice against
+                            her husband&apos;s <NATIONALITY>German</NATIONALITY> name caused her to be ejected
+                            from the <ORGNAME STANDARD="Society of Women Journalists">Society of Women
+                                Journalists</ORGNAME> even though she was, and painfully remained throughout
+                            the war, a <POLITICALAFFILIATION MEMBERSHIP="MEMBERSHIPYES" REG="pacifist"
+                                >pacifist</POLITICALAFFILIATION>. This commitment led her to persist for a
+                            long time in believing that a second world war could be avoided. When she realised
+                            at last that it could not, she sadly laid aside her pacifist beliefs for the
+                                <POLITICALAFFILIATION MEMBERSHIP="MEMBERSHIPYES" REG="anti-Nazi, anti-fascist"
+                                >conviction that armed resistance to Nazi and fascist regimes was right and
+                                necessary</POLITICALAFFILIATION>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="MOTHER">
+                    <DIV2>
+                        <HEADING>Mother</HEADING>
+                        <SHORTPROSE>
+                            <P>GHS&apos;s early memories of her mother, <NAME
+                                    STANDARD="Raphael, Marianna Florette (Moses)">Marianna Florette (Moses)
+                                    Raphael</NAME>, pictured a dazzling vision in a flame-red silk dress,
+                                coming to say good-night on her way to a party, beautiful and quick in mind,
+                                movement, and temper.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 10-11" DBREF="105924"
+                                        >10-11</BIBCIT></BIBCITS> Left a young widow, Marianna became a
+                                remarkably successful <SIGNIFICANTACTIVITY REG="artist"
+                                    >painter</SIGNIFICANTACTIVITY>, a friend of artists&mdash;and a
+                                    <SIGNIFICANTACTIVITY>bicyclist</SIGNIFICANTACTIVITY>. She was a strict
+                                parent (making lunch a purgatory, for instance, by insisting on speaking
+                                French one day and German the next). Her daughter felt she was being judged
+                                        inadequate.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 22-3, 34, 43" DBREF="105924"
+                                        >22-3, 34, 43</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="FATHER">
+                    <DIV2>
+                        <HEADING>Father</HEADING>
+                        <SHORTPROSE>
+                            <P>GHS&apos;s father, <NAME STANDARD="Raphael, Arthur Lewis">Arthur Lewis
+                                    Raphael</NAME>, was tall, kindly, musical, athletic, and unable to say
+                                        no.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 10-11"
+                                        DBREF="105924">10-11</BIBCIT></BIBCITS> When she was about six he lost
+                                his job with the <JOB FAMILYBUSINESS="FAMILYBUSINESSYES" REG="businessman"
+                                    >family firm</JOB> because of his heavy losses in <SIGNIFICANTACTIVITY
+                                    REG="gambler">betting on horses</SIGNIFICANTACTIVITY>. He was thus a
+                                family scandal when, very soon afterwards, he fell ill and suddenly died,
+                                leaving a rift between his widow and his own family which never fully
+                                        healed.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 20"
+                                        DBREF="105924">20</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="GRANDFATHER">
+                    <DIV2>
+                        <HEADING>Grandfathers</HEADING>
+                        <SHORTPROSE>
+                            <P>Gladys Henrietta&apos;s maternal grandfather, <NAME>Assur Moses</NAME>, who was
+                                widowed long before she was born, was <QUOTE DIRECT="Y">a most strictly
+                                    observing Jew of the old-fashioned type,</QUOTE> although he was
+                                progressive and open-minded in matters that did not concern
+                                        religion.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 13"
+                                        DBREF="105924">13</BIBCIT></BIBCITS> He was the grandparent she
+                                particularly cherished.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 23" DBREF="105924"
+                                        >23</BIBCIT></BIBCITS> His friends came from many countries and from
+                                different faiths. His family included German, Spanish, and Portuguese Jews,
+                                who <QUOTE DIRECT="Y">shared all the national characteristics of the countries
+                                    they inhabited,</QUOTE> and had done so for generations.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 14" DBREF="105924"
+                                        >14</BIBCIT></BIBCITS> They had no contact with the poor Jews of East
+                                        London.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 12-14" DBREF="105924"
+                                        >12-14</BIBCIT></BIBCITS></P>
+                            <P>GHS&apos;s paternal grandfather, on the other hand, invited her to occasional,
+                                formal lunches, without her mother, which she did not enjoy.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 24-5" DBREF="105924"
+                                        >24-5</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <HEADING>Early Life</HEADING>
+                    <SHORTPROSE>
+                        <P>Gladys Henrietta was never very strong. She nearly died of peritonitis at a few
+                            months old, and acquired a hip injury, which troubled her all her life, apparently
+                            from a fall out of her pram. It began to pain her a few years later, and she had
+                            to use a wheel-chair, then crutches, then sticks, with each of which she prided
+                            herself on moving faster than other crippled children.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 18, 25" DBREF="105924">18,
+                                    25</BIBCIT></BIBCITS> She fell seriously ill again just before she left
+                            her first marriage.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 83"
+                                    DBREF="105924">83</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Gladys Henrietta had her portrait painted as a child, probably about 1889, by
+                                <NAME>Solomon J. Solomon</NAME>. She sat again to <NAME>J. J. Shannon</NAME>
+                            during her engagement, by which time she had <SOCALLED>come out</SOCALLED> and
+                            been formally presented to the queen, finding the curtsey difficult in her
+                            therapeutic high boot. Despite her disability she was able to play golf and
+                            tennis, though ski-ing defeated her.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence frontispiece, 9, 47, 45, 59"
+                                    DBREF="105924">frontispiece, 9, 45, 47, 59</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In her earliest memories her family was wealthy. After her father died, she and her
+                            mother became comparatively poor.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 10-11, 20-1" DBREF="105924"
+                                    >10-11, 20-1</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Education</HEADING>
+            <EDUCATION MODE="DOMESTIC">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS was educated at home by <INSTRUCTOR>governesses</INSTRUCTOR> of several
+                            nationalities: <INSTRUCTOR><NAME>Mademoiselle Titsie</NAME></INSTRUCTOR>,
+                                    <INSTRUCTOR><NAME>Marie Girard</NAME></INSTRUCTOR>, <INSTRUCTOR><NAME>Rose
+                                    Frohnstein</NAME></INSTRUCTOR>, and the English M. L. J., on several of
+                            whom she lavished that warmth of temperament which her mother repressed.
+                            Influential among her early reading, and crucial in forming her pacifist beliefs,
+                            was <TEXT><TITLE TITLETYPE="MONOGRAPHIC">The Conquest of Mexico</TITLE> by <NAME
+                                    STANDARD="Prescott, William H.">William Hickling Prescott</NAME></TEXT>.
+                            She also read <TEXT><NAME STANDARD="Emerson, Ralph Waldo">Emerson</NAME>&apos;s
+                                essays</TEXT> and <TEXT><NAME>Walter Pater</NAME>&apos;s <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Marius the Epicurean</TITLE></TEXT>, but did not
+                            understand them. An old rabbi came to teach her <SUBJECT>Hebrew</SUBJECT> until
+                            she turned against Judaism over its treatment of women. Notwithstandng her forays
+                            into <SUBJECT>history</SUBJECT> and <SUBJECT>literature</SUBJECT>, she later
+                            judged that her middle-class schoolroom education had left her with yawning gaps
+                            in her knowledge.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 21, 28, 30-3" DBREF="105924">21,
+                                    28, 30-3</BIBCIT></BIBCITS></P>
+                        <P>Her formal teaching was dominated by <SUBJECT>music</SUBJECT>. For
+                                <SUBJECT>singing</SUBJECT> one of her teachers was one <INSTRUCTOR>de
+                                Soria</INSTRUCTOR> who was said to be the original of Glorioli in <NAME
+                                STANDARD="Du Maurier, George">Du Maurier</NAME>&apos;s <TITLE
+                                TITLETYPE="MONOGRAPHIC">Trilby</TITLE>; another was <NAME
+                                STANDARD="Tosti, Francesco Paolo">Paolo Tosti</NAME>. She learned
+                                <SUBJECT>piano</SUBJECT> from <INSTRUCTOR><NAME>Carlo
+                                Albanesi</NAME></INSTRUCTOR>. Such distinguished teachers, she said, were an
+                            index less of her talent than of her mother&apos;s ambition for
+                                    her.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 15-16, 36-7"
+                                    DBREF="105924">15-16, 36-7</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The Raphael family occupied a large house in <PLACE><ADDRESS><ADDRLINE>Portland
+                                        Place</ADDRLINE></ADDRESS><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE> till her father died. Then
+                            a smaller London house was necessary: first in <PLACE><ADDRESS><ADDRLINE>Hamilton
+                                        Terrace</ADDRLINE></ADDRESS><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>, then at
+                                        <PLACE><ADDRESS><ADDRLINE>2 Hanover Terrace</ADDRLINE></ADDRESS> in
+                                    <SETTLEMENT REG="London">Regent&apos;s Park</SETTLEMENT><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>While her father lived they spent their highly sociable summers at one or other
+                            rented house in the country.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 16" DBREF="105924"
+                                >16</BIBCIT></BIBCITS> Afterwards the child spent winters, for her health, at
+                            one or other seaside town, beginning with <PLACE><SETTLEMENT>St
+                                    Leonards</SETTLEMENT><REGION REG="Sussex"/><GEOG REG="England"/></PLACE>.
+                            Later again their holidays were divided between <PLACE><SETTLEMENT>Capel
+                                    Curig</SETTLEMENT><REGION CURRENT="Conwy" REG="Conwy"/> in
+                                    <GEOG>Wales</GEOG></PLACE> and <PLACE><SETTLEMENT>St Lawrence</SETTLEMENT>
+                                on the <REGION>Isle of Wight</REGION><GEOG REG="England"/></PLACE>, where they
+                            rented <PLACE><PLACENAME REG="Craigie Lodge">Craigie Lodge</PLACENAME><SETTLEMENT
+                                    REG="St Lawrence"/><REGION REG="Hampshire"/><GEOG REG="England"/></PLACE>
+                            from the parents of the woman writer <NAME>John Oliver
+                                    Hobbes</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 20-1, 27-8, 40-1" DBREF="105924"
+                                    >20-1, 27-8, 40-1</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>First Marriage; Discovering Politics and Friendship</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                RESP="SYS">
+                                <DATE>April 1902</DATE>
+                                <CHRONPROSE>Seventeen-year-old Henrietta Raphael (later GHS) married <NAME
+                                        STANDARD="Mendl, Louis">Louis Mendl</NAME> (a <JOB REG="merchant">corn
+                                        merchant</JOB> whose elder brother was her uncle by marriage) and
+                                        <QUOTE DIRECT="Y">discovered what it means to grow up in a
+                                        night,</QUOTE> as she put it later.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 48" DBREF="105924"
+                                        >48</BIBCIT>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>Their engagement of over a year was marked by formal visits to all their
+                                    relations (on Sunday for the orthodox, Saturday for the others). She and
+                                    her chaperone occupied one hansom cab, Louis another, since some family
+                                    members would have been scandalised if the couple had shared a cab before
+                                    their marriage.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 46" DBREF="105924"
+                                            >46</BIBCIT></BIBCITS> This was in many ways a traditional
+                                    wedding: within the family circle, with a young woman who was both
+                                    sexually and practically ignorant. <DIVORCE>Gladys Henrietta left her
+                                        husband in<DATE CERTAINTY="C">1910</DATE>, having rejected the belief
+                                        that <QUOTE DIRECT="Y">woman&apos;s place is in the
+                                                home.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="FC" DBREF="107913"
+                                            /></BIBCITS></DIVORCE></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MARRIAGE>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She, who had never left the house alone or paid a bill, was now
+                                <SIGNIFICANTACTIVITY REG="keeping accounts">responsible for her husband&apos;s
+                                finances as well as her own</SIGNIFICANTACTIVITY>, for <SIGNIFICANTACTIVITY
+                                REG="hostess"><SIGNIFICANTACTIVITY REG="housekeeper">entertaining lavishly
+                                    without running in debt</SIGNIFICANTACTIVITY></SIGNIFICANTACTIVITY>, and
+                            for <SIGNIFICANTACTIVITY REG="chaperone">chaperoning unmarried women older than
+                                she was</SIGNIFICANTACTIVITY>. She also branched out, <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="charity organiser"
+                                >running subscription dances</SIGNIFICANTACTIVITY> to <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="fundraiser">raise
+                                money</SIGNIFICANTACTIVITY> for the <PLACE><SETTLEMENT REG="London"
+                                    >Hoxton</SETTLEMENT><REGION REG="Middlesex"/><GEOG REG="England"/></PLACE>
+                            Babies&apos; Home founded by <NAME STANDARD="Pett Ridge, William">William Pett
+                                Ridge</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 58-9, 63" DBREF="105924">58-9,
+                                    63</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Gladys Henrietta Mendl (later GHS) began married life in a large house in
+                                        <PLACE><ADDRESS><ADDRLINE>Gloucester
+                                    Place</ADDRLINE></ADDRESS><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>, with five
+                                    maids.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 48"
+                                    DBREF="105924">48</BIBCIT></BIBCITS> She spent her first winter as a
+                            married woman, however, in the city of <PLACE><SETTLEMENT>Galatz</SETTLEMENT> in
+                                    <GEOG>Romania</GEOG></PLACE>, on the banks of the <PLACE><REGION
+                                    REG="River Danube">Danube</REGION><GEOG REG="Europe"/></PLACE>, where her
+                            husband was sent to help with the family business. Here she felt, despite wide
+                            European travels, that she had never known what it was to be a stranger before
+                            coming to this place where she knew nothing of the language and was shocked by the
+                            gulf between rich and poor.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 52-3" DBREF="105924"
+                                    >52-3</BIBCIT></BIBCITS> Their return to
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE> felt like the end of a holiday, as she struggled
+                            to get to grips with large-scale housekeeping.<BIBCITS><BIBCIT PLACEHOLDER="ODNB"
+                                    DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During her time at <PLACE><SETTLEMENT>Galatz</SETTLEMENT> in
+                                <GEOG>Romania</GEOG></PLACE>, she visited <PLACE><GEOG
+                                    CURRENT="Russian Federation" REG="Russia">Russia</GEOG></PLACE> by walking
+                            illicitly across the frozen <PLACE><REGION REG="River Danube">Danube</REGION><GEOG
+                                    REG="Europe"/></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 55" DBREF="105924"
+                                >55</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS became a <POLITICALAFFILIATION INVOLVEMENT="INVOLVEMENTYES" REG="pro-Boer"
+                                >pro-Boer</POLITICALAFFILIATION> when the Boer war was ending, having studied
+                            the <POLITICALAFFILIATION INVOLVEMENT="INVOLVEMENTYES" REG="anti-imperialist"
+                                >imperial project</POLITICALAFFILIATION> in <TITLE TITLETYPE="MONOGRAPHIC">The
+                                Conquest of Mexico</TITLE> by <NAME STANDARD="Prescott, William H.">William
+                                Hickling Prescott</NAME>. More broadly, this study and its application gave
+                            her a deep-rooted <POLITICALAFFILIATION INVOLVEMENT="INVOLVEMENTYES"
+                                REG="pacifism">horror of war</POLITICALAFFILIATION>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 33" DBREF="105924"
+                                >33</BIBCIT></BIBCITS> At this time she felt, however, that <QUOTE DIRECT="Y"
+                                >we never can have a war here, in England. People like us don&apos;t have
+                                wars, only savages.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 34" DBREF="105924"
+                                >34</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Women&apos;s Suffrage</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                        <DATE VALUE="1906-02-07" CERTAINTY="BY">Early 1906</DATE>
+                        <CHRONPROSE>Henrietta Mendl (later GHS) campaigned for the <POLITICALAFFILIATION
+                                MEMBERSHIP="MEMBERSHIPYES" REG="Liberal">Liberals</POLITICALAFFILIATION>
+                            before the general election held on 7 February, in which her brother-in-law <NAME
+                                STANDARD="Mendl, Sigismund">Sigi Mendl</NAME> was standing for the <ORGNAME
+                                STANDARD="Liberal Party">Liberals</ORGNAME> at
+                                    <PLACE><SETTLEMENT>Stockton-on-Tees</SETTLEMENT><REGION REG="Durham"
+                                    /><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 69-70" DBREF="105924"
+                                >69-70</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She already thought of herself as a <POLITICALAFFILIATION
+                                MEMBERSHIP="MEMBERSHIPYES" REG="Radical">Radical</POLITICALAFFILIATION> and
+                            was sorry when Sigi failed owing to the splitting of the progressive vote. Her
+                            work for him included holding a hostile crowd with her words while her relation
+                            the Liberal candidate failed to show up as promised (he had in fact been more or
+                            less kidnapped by people on the other side).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 70, 81" DBREF="105924">70,
+                                    81</BIBCIT></BIBCITS> After having been active for the Liberals, GHS began
+                            to work with the <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERYES"
+                                MEMBERSHIP="MEMBERSHIPYES" REG="suffragist"><ORGNAME
+                                    STANDARD="Women&apos;s Social and Political Union">Women&apos;s Social and
+                                    Political Union</ORGNAME></POLITICALAFFILIATION>. Convinced of the justice
+                            of the case for women&apos;s suffrage, she gradually came to accept the necessity
+                            of direct action and even the resort to violence.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="ODNB" DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P> She worked with <NAME STANDARD="Pankhurst, Emmeline">Emmeline</NAME> and
+                                <NAME>Christabel Pankhurst</NAME>, and became a militant suffragette. Like
+                                <NAME>Constance Lytton</NAME>, she overcame both natural timidity and physical
+                            frailty to take part in demonstrations which were often met with a violent
+                            response from police. She was once painfully ejected from a meeting after formally
+                            refusing, according to suffrage policy, to shake <NAME
+                                STANDARD="Asquith, Herbert Henry">Asquith</NAME>&apos;s hand <QUOTE DIRECT="Y"
+                                >till you give women the vote.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 71" DBREF="105924"
+                                >71</BIBCIT></BIBCITS> She was never arrested, partly through the good advice
+                            of a London policeman, <NAME>Donald Taylor</NAME>, who married one of her maids
+                            and lived in fear of having to take her into custody.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 48-9" DBREF="105924"
+                                    >48-9</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS&apos;s first suffrage meeting, in fact, became a deputation heading for the
+                                <ORGNAME STANDARD="House of Commons">House of Commons</ORGNAME>, where it was
+                            met by violence. She dreamed about the event that night and joined the WSPU next
+                            day. But for the next two years (while her first marriage was ending) she did
+                            little for the suffrage, being too unhappy and too much in need of distraction
+                            though pleasure-seeking.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 76, 78" DBREF="105924">76,
+                                    78</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>On the occasion of this deputation to the king, GHS received a kick from a police
+                            horse which caused her bad hip to flare up and from which she never entirely
+                                    recovered..<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 109-10" DBREF="105924"
+                                    >109-10</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The hip remained a source of pain and intermittent disability for the rest of her
+                            life.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Friends</HEADING>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Through her early mentor <NAME STANDARD="Pett Ridge, William">W. Pett Ridge</NAME>
+                            GHS met various literary men: <NAME>W. W. Jacobs</NAME>, <NAME>Barry Pain</NAME>,
+                                <NAME>Jerome K. Jerome</NAME>, <NAME>Hugh Walpole</NAME>, and <NAME>Ernest
+                                Temple Thurston</NAME>. Pett Ridge (<SOCALLED>P. R.</SOCALLED>) was generous
+                            with career advice as well as philanthropy, but was very difficult as a friend.
+                            She took it with equanimity when he dropped her flat and much later restarted the
+                            friendship equally unexpectedly.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 63-7" DBREF="105924"
+                                    >63-7</BIBCIT></BIBCITS> She met <NAME>Henry Nevinson</NAME> when her aunt
+                                <NAME>Betsy Raphael</NAME> (whose son <NAME STANDARD="Raphael, Jack"
+                                >Jack</NAME> was also her good friend) took her to her first suffrage
+                                    meeting.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 75"
+                                    DBREF="105924">75</BIBCIT></BIBCITS> She came to know <NAME>Emmeline
+                                Pankhurst</NAME> (whom she found <QUOTE DIRECT="Y">tender and
+                                    human</QUOTE>)<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 96" DBREF="105924"
+                                >96</BIBCIT></BIBCITS> and <NAME>Christabel Pankhurst</NAME> (the brains of
+                            the movement, but <QUOTE DIRECT="Y">hard and ruthless</QUOTE>).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 95" DBREF="105924"
+                                >95</BIBCIT></BIBCITS> Emmeline, having won the near hero-worship of GHS and
+                            her husband, lost it again after war broke out and suffrage was being put aside
+                            for patriotism, by making an unpleasant remark about <QUOTE DIRECT="Y">[p]eople
+                                with German names.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 110" DBREF="105924"
+                                >110</BIBCIT></BIBCITS> GHS contrasts her with <NAME>Emmeline
+                                Pethick-Lawrence</NAME>, who combined pacifism with her suffragism (though she
+                            was never bitter towards non-pacifists).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 110" DBREF="105924"
+                                >110</BIBCIT></BIBCITS></P>
+                        <P>GHS also knew and loved the <QUOTE DIRECT="Y">great</QUOTE>
+                            <NAME>Olive Schreiner</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 128-9" DBREF="105924"
+                                    >128-9</BIBCIT></BIBCITS>
+                            <NAME>Vernon Lee</NAME>, she said, was primarily a friend of her scientist
+                            husband; they both stayed with her several times. Schütze pondered the paradox of
+                            Lee&apos;s intellectual brilliance and colourless appearance. Her friendships with
+                            these two women influenced both her political thinking and her growing ambition to
+                            become a writer. The suffragist <NAME STANDARD="White, Florence,, 1886 - 1961"
+                                >Florence White</NAME> (sister of writer <NAME>Percy White</NAME>) became and
+                            remained a close friend.<SCHOLARNOTE><P>It is unlikely that the Florence White
+                                    mentioned by GHS is cookbook writer Florence Louisa White (1863-1940). She
+                                    is more probably the suffragist Florence White (1886-1961), daughter of
+                                    James and Caroline White, who founded the <ORGNAME>National
+                                        Spinsters&apos; Pension Association</ORGNAME> in 1935. In 1941, the
+                                    British government lowered the age of retirement for women to sixty as a
+                                    result of the successful lobbying of White and the NSPA about the
+                                    financial plight of older unmarried working women.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Hannam, Auchterlonie, and Holden" DBREF="33885"
+                                        /></BIBCITS></P></SCHOLARNOTE><NAME>St John Ervine</NAME> became a
+                            friend with whom GHA regrettably fell out in the end.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="FC" DBREF="107913"/><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 115-19, 51" DBREF="105924"
+                                    >115-19, 51</BIBCIT></BIBCITS> Later the pacifist leader the Rev.
+                                <NAME>Dick Sheppard</NAME>
+                            <QUOTE DIRECT="Y">became a great friend of mine, by which I mean someone who
+                                counted greatly in my life,</QUOTE> though she never really felt she knew
+                                    him.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 155"
+                                    DBREF="105924">155</BIBCIT></BIBCITS> She met <NAME>Isadora Duncan</NAME>
+                            as a journalist, and felt that the dancer was a spiritual force for
+                                    good.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 167-8"
+                                    DBREF="105924">167-8</BIBCIT></BIBCITS></P>
+                        <P>On her first attendance at <ORGNAME STANDARD="PEN International">PEN</ORGNAME>,
+                            taken there by an American friend, <NAME>Sarah MacConnell</NAME>, she met
+                                <NAME>Catharine Amy Dawson Scott</NAME> (whom she took to at once), <NAME
+                                STANDARD="Galsworthy, John">Galsworthy</NAME> (whose work she much admired),
+                                <NAME STANDARD="Wilson, Romer">Roma Wilson</NAME>, <NAME>Anna Wickham</NAME>,
+                            and <NAME>May Sinclair</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 213-16" DBREF="105924"
+                                    >213-16</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During these years GHS became a <JOB REG="journalist">journalist</JOB> and also
+                                <JOB REG="writer">published her first novels</JOB>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Second Marriage</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                RESP="SYS">
+                                <DATE>1913</DATE>
+                                <CHRONPROSE>After beginning her life in politics, GHS married Dr <NAME
+                                        STANDARD="Sch&uuml;tze, Harry Leslie">Harry Leslie Hugo Schütze</NAME>
+                                    (always known as Peter), whom she describes as <QUOTE DIRECT="Y">an
+                                        Australian <JOB REG="scientist"
+                                            >bacteriologist</JOB></QUOTE>.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 83" DBREF="105924"
+                                            >83</BIBCIT></BIBCITS> He was of German descent, and was only a
+                                    couple of years older than herself.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                                </BIBCITS>
+                                <SCHOLARNOTE>
+                                    <P>The <TITLE TITLETYPE="MONOGRAPHIC"
+                                            REG="Oxford Dictionary of National Biography">ODNB</TITLE> gives
+                                        this form of his name, but his wife addressed him in print by the
+                                        initials <SOCALLED>H. R. L. S.</SOCALLED></P>
+                                </SCHOLARNOTE>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>Born and educated through secondary school in
+                                        <PLACE><GEOG>Australia</GEOG></PLACE>, he had left at twenty-two to
+                                    travel and study in Europe. He then studied bacteriology at
+                                            <PLACE><SETTLEMENT>Würzburg</SETTLEMENT> in <GEOG REG="Germany"
+                                            >Germany</GEOG></PLACE> (his father&apos;s country of origin),
+                                    took his first job there, then after his mother died came to work at the
+                                        <ORGNAME>Lister Institute</ORGNAME> in Chelsea, and <JOB
+                                        REG="academic"><JOB REG="researcher">published research</JOB> in his
+                                        field</JOB>.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 85-6" DBREF="105924"
+                                            >85-6</BIBCIT><BIBCIT PLACEHOLDER="Harry Sch&uuml;tze"
+                                            DBREF="60246"/></BIBCITS> He was a
+                                        <SIGNIFICANTACTIVITY>suffragist</SIGNIFICANTACTIVITY> who supported
+                                    his wife&apos;s political activism and on one occasion intervened to
+                                    protect her from arrest. Both of them suffered from the anti-German
+                                    feeling in England during the First World War. <CHILDLESSNESS>The marriage
+                                        was childless; when GHS considered her mother&apos;s over-anxious
+                                        parentlng she sometimes felt that this might be a good
+                                        thing.</CHILDLESSNESS><BIBCITS><BIBCIT PLACEHOLDER="ODNB"
+                                            DBREF="29268"/><BIBCIT
+                                            PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 22-3" DBREF="105924"
+                                            >22-3</BIBCIT></BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MARRIAGE>
+                </MEMBER>
+                <MEMBER RELATION="OTHER">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Peter&apos;s brother Gus joined the second world war on the German side, and
+                                was eventually killed. This was one of the painful events that fed into <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Mrs. Fischer&apos;s War</TITLE>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 132" DBREF="105924"
+                                        >132</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <HEADING>Homes and Travel</HEADING>
+                    <SHORTPROSE>
+                        <P>The seventeenth-century <PLACE><PLACENAME>Glebe House</PLACENAME> in <SETTLEMENT
+                                    REG="London">Chelsea</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE> became GHS&apos;s home after her second marriage
+                            and remained so for the rest of her life. On moving in they painted the walls in
+                            strong, pure colours. She and her husband also had a country house. For a while
+                            during the suffrage struggle they rented <PLACE><PLACENAME>Stockenden</PLACENAME>
+                                near <SETTLEMENT>Oxted</SETTLEMENT> in <REGION REG="Surrey"
+                                    >Surrey</REGION><GEOG REG="England"/></PLACE>, a Tudor house close to that
+                            of the Macrae sisters (<NAME STANDARD="Macrae, Georgina">Georgie</NAME>, <NAME
+                                STANDARD="Macrae, Helen">Helen</NAME>, and <NAME STANDARD="Macrae, Elizabeth"
+                                >Betty</NAME>), who served the movement by offering a rest in the country to
+                            suffragettes worn down by campaigning. The Schützes were often at Stockenden
+                            during the first world war.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 88-90, 131" DBREF="105924">88-90,
+                                    131</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS later attended <ORGNAME STANDARD="PEN International">PEN</ORGNAME> conferences
+                            at <PLACE><SETTLEMENT>Barcelona</SETTLEMENT><REGION REG="Catalonia"/><GEOG
+                                    REG="Spain"/></PLACE> and <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG
+                                    REG="France"/></PLACE>, in <PLACE><GEOG>Hungary</GEOG></PLACE> and in
+                                    <PLACE><GEOG>Poland</GEOG></PLACE>. At Barcelona she was a joint delegate
+                            with <NAME>E. M. Delafield</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 219, 221, 223" DBREF="105924"
+                                    >219, 221, 223</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Further Suffrage Struggle</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><NAME STANDARD="Sch&uuml;tze, Harry Leslie"><SOCALLED>Peter</SOCALLED>
+                                Schütze</NAME>, being Australian, thought it natural for women to have the
+                            vote, and understood that the tactic of violence was chosen only in desperation
+                            when everything else had failed.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 93-4" DBREF="105924"
+                                    >93-4</BIBCIT></BIBCITS> GHS took an increasingly active role in the
+                                <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="suffragist">campaig</POLITICALAFFILIATION>n, and to her <QUOTE DIRECT="Y"
+                                >pride and terror</QUOTE> was selected as a courier to carry incriminating
+                            documents to <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG REG="France"/></PLACE>,
+                            secreted about her person (rolled up in her hair, and sewn into the seams of an
+                            overcoat which she felt to be all too obviously not her own). After a journey of
+                                <QUOTE DIRECT="Y">pure agony</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 96" DBREF="105924"
+                                >96</BIBCIT></BIBCITS> she arrived with her secrets undiscovered at
+                                <NAME>Christabel Pankhurst</NAME>&apos;s Paris flat, to be treated like a
+                            machine by Christabel though with human kindness by <NAME>Ethel Smyth</NAME> (who
+                            was also present), and sent back again with more secret documents the next
+                            morning. Another job she hated but was very good at was selling copies of <TITLE
+                                TITLETYPE="JOURNAL">The Suffragette</TITLE> while moving constantly forward so
+                            as not to be defined as causing an obstruction;<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 96-9" DBREF="105924"
+                                    >96-9</BIBCIT></BIBCITS> another was interrupting church services to
+                            insert an extra prayer in the Litany, <QUOTE DIRECT="Y">for those in prison,
+                                suffering for conscience sake.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 99" DBREF="105924"
+                                >99</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="IMG"
+                        CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>July 1914</DATE>
+                        <CHRONPROSE><NAME>Emmeline Pankhurst</NAME>, just released from prison under the Cat
+                            and Mouse Act because of her fragile condition, needed a place to hold a meeting
+                            without being arrested, and GHS&apos;s house was chosen.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 102-10" DBREF="105924"
+                                >102-10</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Schütze cancelled engagements at short notice, kept her servants indoors, and
+                            smuggled in food to feed a couple of dozen people who slept on her floors after
+                            the meeting. Mrs Pankhurst made her speech from the balcony, but because of the
+                            strong police presence had to stay a whole day longer than planned, before making
+                            a successful escape (after <NAME STANDARD="White, Florence,, 1886 - 1961">Florence
+                                White</NAME>, a near-double of Pankhurst, had tried to decoy police away, but
+                            failed). The Schützes were left shattered&mdash;but their suffragist cook,
+                                <NAME>Mrs Duckett</NAME>, was wildly exhilarated. Duckett went on to become
+                            the only woman besides Emmeline Pankhurst to succeed in getting through the gates
+                            of Buckingham Palace on a suffrage deputation to the king.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 102-10" DBREF="105924"
+                                    >102-10</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>First World War</HEADING>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="IMG">
+                        <DATE VALUE="1914-07-31" CERTAINTY="BY">Late July 1914</DATE>
+                        <CHRONPROSE>Sure that <QUOTE DIRECT="Y">the socialists of the world would never stand
+                                for war,</QUOTE> GHS, her <NAME STANDARD="Sch&uuml;tze, Harry Leslie"
+                                >husband</NAME>, her father-in-law, and <NAME
+                                STANDARD="White, Florence,, 1886 - 1961">Florence White</NAME>, set off for
+                            their planned holiday in <PLACE><GEOG REG="Netherlands">Holland</GEOG></PLACE>;
+                            hostile incidents multiplied and they beat an anxious retreat.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 119-25" DBREF="105924"
+                                >119-25</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She used their experience&mdash;and the later, small but painful episodes of
+                            anti-German prejudice in England&mdash;in <TITLE TITLETYPE="MONOGRAPHIC">Mrs.
+                                Fischer&apos;s War</TITLE>, where the protagonist&apos;s precarious situation
+                            makes such things more serious and threatening.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During World War One GHS became and remained a fully convinced
+                                <POLITICALAFFILIATION MEMBERSHIP="MEMBERSHIPYES" REG="pacifist"
+                                >pacifist</POLITICALAFFILIATION>, as did her husband. Years later, with
+                                <ORGNAME STANDARD="Nazis">Nazi</ORGNAME> Germany re-arming, she reluctantly
+                            ceased to be a pacifist. She resigned, painfully, from <NAME>Dick
+                            Sheppard</NAME>&apos;s <ORGNAME>Peace Pledge Union</ORGNAME>, sorry to hurt those
+                            of her friends who were still pacifists, but sure that <POLITICALAFFILIATION
+                                MEMBERSHIP="MEMBERSHIPYES" REG="anti-Nazi">pacifism was no longer a sane
+                                option</POLITICALAFFILIATION>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence  111-15, 125-7, 134-5"
+                                    DBREF="105924">111-15, 125-7, 134-5</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During the Schützes&apos; pacifist years it was only gradually that they began to
+                            find some support from like-minded people, like <NAME>Bertrand Russell</NAME> and
+                                <NAME STANDARD="MacDonald, James Ramsay">Ramsay MacDonald</NAME> (though GHS
+                            felt the latter was a fair-weather pacifist). On holiday in Italy she met the
+                            future Field-Marshal <NAME STANDARD="Montgomery, Bernard Law">Montgomery</NAME>
+                            and, greatly daring, tried to convert him to the idea of
+                                    disarmament.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 125-7, 233" DBREF="105924">125-7,
+                                    233</BIBCIT></BIBCITS></P>
+                        <P/>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS was ejected during the first world war from the professional associations which
+                            she belonged to as a <JOB REG="writer">writer</JOB> and <JOB REG="journalist"
+                                >journalist</JOB>, the <ORGNAME STANDARD="Society of Women Journalists"
+                                >Society of Women Journalists</ORGNAME> and the <ORGNAME
+                                STANDARD="Literary Club">Literary Club</ORGNAME>. This action resulted from
+                            her husband&apos;s German blood and name rather than from her pacifism, though at
+                            this time of xenophobic patriotism that too was an additional cause of suspicion.
+                            (The <TITLE TITLETYPE="MONOGRAPHIC" REG="Oxford Dictionary of National Biography"
+                                >ODNB</TITLE> points out that she and her husband shared with <NAME>Olive
+                                Schreiner</NAME> their ostracism for combining a German name with pacifist
+                                    principles.)<BIBCITS><BIBCIT PLACEHOLDER="ODNB" DBREF="29268"
+                            /></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Post-War Work and Politics</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After the war, in 1919, GHS pursued regular <JOB REG="journalist">journalistic
+                                work</JOB> as well as her own writing. For the socialist <EMPLOYER><TITLE
+                                    TITLETYPE="JOURNAL">Weekly Herald</TITLE></EMPLOYER> she worked at the
+                            invitation of <NAME STANDARD="Ewer, William Norman">W. N. Ewer</NAME>, combing
+                            European newspapers in German, French, and Italian for news-items which the
+                            non-socialist British press had overlooked. She found the paper&apos;s offices
+                            deafening and the cheap newsprint (especially of the German papers) blinding. She
+                            soon resigned and became instead a <JOB REG="reporter">newspaper reporter</JOB>
+                            for the sister <EMPLOYER><TITLE TITLETYPE="JOURNAL">Daily
+                                Herald</TITLE></EMPLOYER>, working for <NAME>Gerald Gould</NAME>. Despite some
+                            snubs and some painful experiences (for instance with the anti-feminist News
+                            Editor <NAME>William Mellor</NAME>), she loved this exciting work. Other
+                            contributors included <NAME>Evelyn Sharp</NAME> and <NAME>Eleanor Farjeon</NAME>.
+                            After Schütze gave up her regular work in journalism she continued to do freelance
+                                    jobs.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 136-44, 153, 155, 160-1"
+                                    DBREF="105924">136-44, 153, 155, 160-1</BIBCIT></BIBCITS></P>
+                        <P>When she ceased being a journalist, in 1923, she volunteered to her services to
+                                <NAME>Eglantyne Jebb</NAME>, joint-founder with her sister <NAME>Dorothy
+                                Buxton</NAME> of the <ORGNAME STANDARD="Save the Children">Save the Children
+                                Fund</ORGNAME>, as an <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="charity organizer"
+                                >honorary organizer</SIGNIFICANTACTIVITY>. She calls Jebb <QUOTE DIRECT="Y"
+                                >one of greatest spiritual forces that has taken human shape in the past
+                                nineteen hundred and forty-two years.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 189-90" DBREF="105924"
+                                    >189-90</BIBCIT></BIBCITS> She began working and travelling abroad for
+                                <ORGNAME STANDARD="Save the Children">Save the Children</ORGNAME>, and held
+                            her position with it for nine years. She <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="fundraiser">held
+                                fund-raising events, gathered donations from writers</SIGNIFICANTACTIVITY>,
+                            and worked with a fund to <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="humanitarian worker"
+                                >protect German children against the worst of the poverty and
+                                starvation</SIGNIFICANTACTIVITY> in that country under the terms of the peace
+                            treaty. This succouring of the recent enemy was controversial, but it made GHS
+                            aware of the needs generated by what today are called humanitarian
+                                    emergencies.<BIBCITS><BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 187, 176" DBREF="105924">187,
+                                    176</BIBCIT></BIBCITS></P>
+                        <P>Having, as a member from its early years of the <ORGNAME
+                                STANDARD="PEN International">P. E. N. Club</ORGNAME> (later PEN
+                            International), supported writers persecuted for their opinions, GHS began in the
+                            1930s to <SIGNIFICANTACTIVITY PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                REG="refugee worker">work for refugees</SIGNIFICANTACTIVITY> from <ORGNAME
+                                STANDARD="Nazis">Nazi</ORGNAME> Germany (mostly Jewish). She personally
+                            provided accommodation for many of them, both in London and at her country
+                                    home.<BIBCITS><BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>GHS later developed fresh trouble with her bad hip, which flared up painfully. She
+                            spent three months <QUOTE DIRECT="Y">in a so-called extension, with my head lower
+                                than my heels, and the three months after that, I devoted to learning to walk
+                                again.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 161"
+                                    DBREF="105924">161</BIBCIT></BIBCITS> Her disabiity, which made paid work
+                            difficult, encouraged her in her voluntary activities. Periods of intense and
+                            concentrated writing continued to be hard for her. In winter 1933 she <QUOTE
+                                DIRECT="Y">crocked up</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Go As 13" DBREF="58509">13</BIBCIT></BIBCITS>
+                            after working too hard to finish her book on Bulgaria.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Go As 12-13" DBREF="58509"
+                                >12-13</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>While working for the <TITLE TITLETYPE="JOURNAL">Daily Herald</TITLE> GHS
+                                developed the habit of dropping into <PLACE><PLACENAME
+                                        REG="St-Martin-in-the-Fields">St
+                                        Martin-in-the-Fields</PLACENAME><SETTLEMENT REG="London"/><REGION
+                                        REG="Middlesex"/><GEOG REG="England"/></PLACE> for the peace and
+                                quiet. Thus she met the Rev. <NAME>Dick Sheppard</NAME>, who was one influence
+                                towards her conversion to <ORGNAME STANDARD="Anglican Church"><DENOMINATION
+                                        SELF-DEFINED="SELFYES" REG="Anglican">Anglican
+                                        Christianity</DENOMINATION></ORGNAME>. She could give no answer to a
+                                friend who asked her why,<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 155-8" DBREF="105924"
+                                        >155-8</BIBCIT></BIBCITS> except: <QUOTE DIRECT="Y">The figure of
+                                    Christ.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 158" DBREF="105924"
+                                        >158</BIBCIT></BIBCITS> She was happy in her spiritual life for years,
+                                until the rise of <NAME STANDARD="Hitler, Adolf">Hitler</NAME> began <QUOTE
+                                    DIRECT="Y">turning the whole world race-conscious.</QUOTE> Then she began
+                                to feel <QUOTE DIRECT="Y">an overpowering urge to proclaim my <ETHNICITY
+                                        SELF-DEFINED="SELFYES" REG="Jewish">Jewish</ETHNICITY>
+                                        origin.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 159" DBREF="105924"
+                                        >159</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Bulgaria and Elsewhere</HEADING>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="IMG">
+                        <DATE VALUE="1928-05-" CERTAINTY="AFTER">After spring 1928</DATE>
+                        <CHRONPROSE>GHS travelled to <PLACE><GEOG>Bulgaria</GEOG></PLACE> to report for
+                                <ORGNAME STANDARD="Save the Children">Save the Children</ORGNAME> on the
+                            conditions there following a severe earthquake.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 205ff" DBREF="105924"
+                                >205ff</BIBCIT>
+                            <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She was twice in Bulgaria, once for this relief work and then again to gather
+                            material for a book about the country.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Harlequin viii" DBREF="58512"
+                                >viii</BIBCIT></BIBCITS></P>
+                        <P>She reported in another slight but delightful book some foreign holidays apart from
+                            humanitarian work, taken in <PLACE><GEOG>Italy</GEOG></PLACE>,
+                                    <PLACE><GEOG>Yugoslavia</GEOG></PLACE>,
+                                <PLACE><GEOG>Austria</GEOG></PLACE>, <PLACE><GEOG>Morocco</GEOG></PLACE>,
+                                    <PLACE><GEOG>Wales</GEOG></PLACE>, <PLACE><GEOG>Scotland</GEOG></PLACE>,
+                                    <PLACE><GEOG>Ireland</GEOG></PLACE>, <PLACE><GEOG REG="Netherlands"
+                                    >Holland</GEOG></PLACE>, islands in the
+                                    <PLACE><REGION>Mediterranean</REGION></PLACE>,
+                                <PLACE><GEOG>Norway</GEOG></PLACE>, <PLACE><GEOG>Sweden</GEOG></PLACE>,
+                                    <PLACE><GEOG REG="France"/><REGION>Corsica</REGION></PLACE>, and
+                                    <PLACE><GEOG CURRENT="Russian Federation"
+                                >Russia</GEOG></PLACE><PLACE><GEOG/></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Harlequin vii-viii" DBREF="58512"
+                                    >vii-viii</BIBCIT><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 240-1"
+                                    DBREF="105924">240-1</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The play based on <TITLE TITLETYPE="MONOGRAPHIC">Mrs. Fischer&apos;s War</TITLE>
+                            brought GHS an important friendship: that with a theatre business manager,
+                                <NAME>William Barry</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 235" DBREF="105924"
+                                >235</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>At <PLACE><PLACENAME>Glebe House</PLACENAME> in <SETTLEMENT REG="London"
+                                    >Chelsea</SETTLEMENT><REGION REG="Middlesex"/><GEOG REG="England"
+                                /></PLACE>, GHS and her husband kept several servants (some of whom became
+                            friends) and enjoyed giving dinner parties for eight people, which was considered
+                            a small gathering.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Harlequin 13-14"
+                                    DBREF="58512">13-14</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During <NAME>Storm Jameson</NAME>&apos;s presidency of the English branch of
+                                <ORGNAME STANDARD="PEN International">PEN International</ORGNAME> (which began
+                            early in 1938) the Schützes lent <PLACE><PLACENAME>Glebe
+                                    House</PLACENAME><SETTLEMENT REG="London"/><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE> for a two-day sale <POLITICALAFFILIATION
+                                MEMBERSHIP="MEMBERSHIPYES" REG="anti-Nazi">raising funds for refugees from the
+                                    <ORGNAME>Nazis</ORGNAME></POLITICALAFFILIATION>. GHS, who was the chief
+                            organizer, had to cope when the singer <NAME>Fritzi Massary</NAME> (with whom she
+                            had already had professional difficulties) reneged on an undertaking to speak, and
+                            then said she had not realised that the sale was to benefit
+                                    refugees.<BIBCITS><BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 239"
+                                    DBREF="105924">239</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="IMG"
+                        CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>June 1939</DATE>
+                        <CHRONPROSE>GHS and her <NAME STANDARD="Sch&uuml;tze, Harry Leslie">husband</NAME>
+                            travelled to <PLACE><SETTLEMENT REG="New York City">New York</SETTLEMENT><REGION
+                                    REG="New York"/><GEOG REG="USA"/></PLACE> to help represent <ORGNAME
+                                STANDARD="PEN International">PEN International</ORGNAME> at the World&apos;s
+                            Fair there, the largest ever held.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Sch&uuml;tze, Ha&apos;pence 242" DBREF="105924">242</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>When Britain and France declared war on Germany on <DATE>3 September 1939</DATE>,
+                            they were still in the USA. Friends at once suggested that it would be safer to
+                            stay. They did not, but headed straight back to
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>.<BIBCITS><BIBCIT PLACEHOLDER="ODNB" DBREF="29268"
+                                /></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Death</HEADING>
+            <DEATH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                        <DATE>19 July 1946</DATE>
+                        <CHRONPROSE>GHS died in <PLACE><GEOG>Switzerland</GEOG>, at the <PLACENAME
+                                    REG="Salem Hospital,, Bern">Salem Hospital</PLACENAME> in
+                                    <SETTLEMENT>Bern</SETTLEMENT></PLACE>, only three weeks before her <NAME
+                                STANDARD="Sch&uuml;tze, Harry Leslie">husband</NAME> followed
+                            her.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </DEATH>
+        </DIV1>
+        <WORKSCITED>
+            <SOURCE>Unless otherwise noted, all information is from the FC</SOURCE>
+            <SOURCE>ODNB.</SOURCE>
+        </WORKSCITED>
+    </DIV0>
+</BIOGRAPHY>

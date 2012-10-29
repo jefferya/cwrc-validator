@@ -1,0 +1,2014 @@
+# 
+# orlando_biograph_transitional_medium_rare:
+# A semi-useful schema for encoding Orlando biograph documents in XML
+# 
+# Written 2010-07 by Syd Bauman, based on biograph.dtd, as sent to me
+# in e-mail "Re: Orlando conversion to XML: summary and meeting" from
+# Susan Brown on 2010-06-21 20:19, and on
+# biography-test_10-07-16-CAPS.rng, common_10-07-16.rnc, and
+# events-test_10-07-16-CAPS.rnc sent to me in e-mail "Re: drafts of
+# schemas" from Mariana Paredes on 2010-07-16 12:37.
+# 
+# Copyright 2010 Syd Bauman, the Brown University Women Writers Project, and 
+# Licensed under the GNU General Public License version 3.
+# 
+# This schema is a representation of the Orlando SGML DTD biograph.dtd
+# in RELAX NG with exclusion exceptions represented in ISO Schematron.
+# It is not a particularly good representation, and to date is
+# untested. The intent is to represent every element that is does not
+# have exceptions faithfully. For exclusion exceptions, represent with
+# Schematron. So far, so good. For inclusion exceptions, use a
+# declaration that constrains the element's children (as per e-mail
+# exchange on ORLWWP-L), but permit *any* Biography element (except
+# <Biography>) anywhere inside the children. This seems on the face of
+# it to be a very reasonable approach. The schema should pretty much
+# duplicate the SGML DTD except for those elements that have
+# inclusions, which will still have their attributes and immediate
+# children validated, but deeper contents allow anything. The problem
+# is that <Div0>, one of the very top elements, has inclusion
+# exceptions. So the net result is not that far off from not
+# constraining element occurrence at all. Sigh.
+#
+
+# ----------------------------------
+# Version 02: case change by Jeffery Antoniuk, shcema changes by Mariana Paredes-Olea :
+# Added AREA element and attributes
+# Completed responsibility values
+# Fixed hyphenated attributes and value names; missing hyphens and substrings
+# Changed case of elements, attributes, and values names to test against Orlando data
+# ---------------------------------
+# Future work - single definition of common attributes
+# attributes defined in single location in common_10-07-16.rnc:
+#   ID
+#   reg
+#   dates' attributes (id, calendar, value, certainty) --> dateStruct, date, dateRange
+#   sex
+#   person
+#   calendar content
+#   certainty content
+#   resp content
+#   workstatus content
+#   workvalue content
+#   part content
+#   datestruct content
+#   placechild content
+#   chroncolumnrelevance content
+#   links content
+# attributes defined in single location in biography-test_10-07-16-CAPS.rng:
+#   wrotepublishedas
+#   nametype
+#   nameconnotation
+#   namesignifier
+#   forebear
+#   self-defined
+#   currentalternativeterm
+#   culturalformation content
+#
+
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+
+# 
+# Waterlooish pattern: matches *any* Orlando biography DTD element in
+# "INCLUSION" mode
+#
+anyBio =
+    (included_Div0
+     | included_Div1
+     | included_Div2
+     | included_Div3
+     | included_addrLine
+     | included_address
+     | included_area
+     | included_authority
+     | included_availability
+     | included_award
+     | included_bibCit
+     | included_bibCits
+     | included_biogProse
+     | included_birth
+     | included_birthPosition
+     | included_birthname
+     | included_cause
+     | included_childlessness
+     | included_children
+     | included_chronProse
+     | included_chronStruct
+     | included_class
+     | included_classIssue
+     | included_companion
+     | included_contestedBehaviour
+     | included_corr
+     | included_culturalFormation
+     | included_dataItem
+     | included_dataStruct
+     | included_date
+     | included_dateRange
+     | included_dateStruct
+     | included_day
+     | included_death
+     | included_degree
+     | included_denomination
+     | included_divorce
+     | included_docAuthor
+     | included_docEditor
+     | included_docExtent
+     | included_docTitle
+     | included_editorialDecl
+     | included_education
+     | included_emph
+     | included_employer
+     | included_ethnicity
+     | included_extendedProse
+     | included_family
+     | included_fileDesc
+     | included_foreign
+     | included_friendsAssociates
+     | included_geog
+     | included_geogHeritage
+     | included_given
+     | included_head
+     | included_heading
+     | included_health
+     | included_idno
+     | included_indexed
+     | included_instructor
+     | included_intimateRelationships
+     | included_item
+     | included_job
+     | included_keywordClass
+     | included_l
+     | included_language
+     | included_lb
+     | included_leisureAndSociety
+     | included_lg
+     | included_livesWith
+     | included_location
+     | included_marriage
+     | included_married
+     | included_member
+     | included_month
+     | included_name
+     | included_nationalHeritage
+     | included_nationality
+     | included_nationalityIssue
+     | included_nickname
+     | included_occasion
+     | included_occupation
+     | included_orgName
+     | included_otherLifeEvent
+     | included_p
+     | included_personName
+     | included_place
+     | included_placename
+     | included_politicalAffiliation
+     | included_politics
+     | included_projectDesc
+     | included_pseudonym
+     | included_pubPlace
+     | included_publicationStmt
+     | included_quote
+     | included_raceAndEthnicity
+     | included_raceColour
+     | included_region
+     | included_religion
+     | included_religiousName
+     | included_remuneration
+     | included_researchNote
+     | included_responsibility
+     | included_revisionDesc
+     | included_royal
+     | included_rs
+     | included_scholarNote
+     | included_school
+     | included_season
+     | included_selfConstructed
+     | included_separation
+     | included_settlement
+     | included_sexualIdentity
+     | included_sexuality
+     | included_shortProse
+     | included_sic
+     | included_significantActivity
+     | included_soCalled
+     | included_source
+     | included_sourceDesc
+     | included_standard
+     | included_styled
+     | included_subject
+     | included_surname
+     | included_text
+     | included_time
+     | included_title
+     | included_titleStmt
+     | included_titled
+     | included_topic
+     | included_violence
+     | included_wealth
+     | included_week
+     | included_worksCited
+     | included_xptr
+     | included_xref
+     | included_year)*
+# 
+# Declare an "INCLUSION" mode for each and every element (except the
+# root). These declare that the pattern must match the given element
+# and its attributes, but its content can consist of *any* combination
+# of *any* Orlando Biograph DTD elements, and also text nodes iff this
+# element had PCDATA per the biograph DTD.
+#
+included_Biography = element BIOGRAPHY { attlist.Biography, anyBio }
+included_Div0 = element DIV0 { attlist.Div0, anyBio }
+included_Div1 = element DIV1 { attlist.Div1, anyBio }
+included_Div2 = element DIV2 { attlist.Div2, anyBio }
+included_Div3 = element DIV3 { attlist.Div3, anyBio }
+
+included_addrLine =
+    element ADDRLINE {
+        attlist.addrLine,
+        mixed { anyBio }
+    }
+included_address = element ADDRESS { attlist.address, anyBio }
+included_area =
+    element AREA {
+        attlist.area,
+        mixed { anyBio }
+    }
+included_authority =
+    element AUTHORITY {
+        attlist.authority,
+        mixed { anyBio }
+    }
+included_availability = element AVAILABILITY { attlist.availability, anyBio }
+included_award =
+    element AWARD {
+        attlist.award,
+        mixed { anyBio }
+    }
+included_bibCit =
+    element BIBCIT {
+        attlist.bibCit,
+        mixed { anyBio }
+    }
+included_bibCits = element BIBCITS { attlist.bibCits, anyBio }
+included_biogProse =
+    element BIOGPROSE {
+        attlist.biogProse,
+        mixed { anyBio }
+    }
+included_birth = element BIRTH { attlist.birth, anyBio }
+included_birthPosition =
+    element BIRTHPOSITION {
+        attlist.birthPosition,
+        mixed { anyBio }
+    }
+included_birthname = element BIRTHNAME { attlist.birthname, anyBio }
+included_cause =
+    element CAUSE {
+        attlist.cause,
+        mixed { anyBio }
+    }
+included_childlessness =
+    element CHILDLESSNESS {
+        attlist.childlessness,
+        mixed { anyBio }
+    }
+included_children =
+    element CHILDREN {
+        attlist.children,
+        mixed { anyBio }
+    }
+included_chronProse =
+    element CHRONPROSE {
+        attlist.chronProse,
+        mixed { anyBio }
+    }
+included_chronStruct = element CHRONSTRUCT { attlist.chronStruct, anyBio }
+included_class =
+    element CLASS {
+        attlist.class,
+        mixed { anyBio }
+    }
+included_classIssue = element CLASSISSUE { attlist.classIssue, anyBio }
+included_companion =
+    element COMPANION {
+        attlist.companion,
+        mixed { anyBio }
+    }
+included_contestedBehaviour =
+    element CONTESTEDBEHAVIOUR {
+        attlist.contestedBehaviour,
+        mixed { anyBio }
+    }
+included_corr =
+    element CORR {
+        attlist.corr,
+        mixed { anyBio }
+    }
+included_culturalFormation = element CULTURALFORMATION { attlist.culturalFormation, anyBio }
+included_dataItem =
+    element DATAITEM {
+        attlist.dataItem,
+        mixed { anyBio }
+    }
+included_dataStruct = element DATASTRUCT { attlist.dataStruct, anyBio }
+included_date =
+    element DATE {
+        attlist.date,
+        mixed { anyBio }
+    }
+included_dateRange =
+    element DATERANGE {
+        attlist.dateRange,
+        mixed { anyBio }
+    }
+included_dateStruct =
+    element DATESTRUCT {
+        attlist.dateStruct,
+        mixed { anyBio }
+    }
+included_day =
+    element DAY {
+        attlist.day,
+        mixed { anyBio }
+    }
+included_death = element DEATH { attlist.death, anyBio }
+included_degree =
+    element DEGREE {
+        attlist.degree,
+        mixed { anyBio }
+    }
+included_denomination =
+    element DENOMINATION {
+        attlist.denomination,
+        mixed { anyBio }
+    }
+included_divorce =
+    element DIVORCE {
+        attlist.divorce,
+        mixed { anyBio }
+    }
+included_docAuthor =
+    element DOCAUTHOR {
+        attlist.docAuthor,
+        mixed { anyBio }
+    }
+included_docEditor =
+    element DOCEDITOR {
+        attlist.docEditor,
+        mixed { anyBio }
+    }
+included_docExtent =
+    element DOCEXTENT {
+        attlist.docExtent,
+        mixed { anyBio }
+    }
+included_docTitle =
+    element DOCTITLE {
+        attlist.docTitle,
+        mixed { anyBio }
+    }
+included_editorialDecl = element EDITORIALDECL { attlist.editorialDecl, anyBio }
+included_education = element EDUCATION { attlist.education, anyBio }
+included_emph =
+    element EMPH {
+        attlist.emph,
+        mixed { anyBio }
+    }
+included_employer =
+    element EMPLOYER {
+        attlist.employer,
+        mixed { anyBio }
+    }
+included_ethnicity =
+    element ETHNICITY {
+        attlist.ethnicity,
+        mixed { anyBio }
+    }
+included_extendedProse = element EXTENDEDPROSE { attlist.extendedProse, anyBio }
+included_family = element FAMILY { attlist.family, anyBio }
+included_fileDesc = element FILEDESC { attlist.fileDesc, anyBio }
+included_foreign =
+    element FOREIGN {
+        attlist.foreign,
+        mixed { anyBio }
+    }
+included_friendsAssociates = element FRIENDSASSOCIATES { attlist.friendsAssociates, anyBio }
+included_geog =
+    element GEOG {
+        attlist.geog,
+        mixed { anyBio }
+    }
+included_geogHeritage =
+    element GEOGHERITAGE {
+        attlist.geogHeritage,
+        mixed { anyBio }
+    }
+included_given =
+    element GIVEN {
+        attlist.given,
+        mixed { anyBio }
+    }
+included_head =
+    element HEAD {
+        attlist.head,
+        mixed { anyBio }
+    }
+included_heading =
+    element HEADING {
+        attlist.heading,
+        mixed { anyBio }
+    }
+included_health = element HEALTH { attlist.health, anyBio }
+included_idno =
+    element IDNO {
+        attlist.idno,
+        mixed { anyBio }
+    }
+included_indexed =
+    element INDEXED {
+        attlist.indexed,
+        mixed { anyBio }
+    }
+included_instructor =
+    element INSTRUCTOR {
+        attlist.instructor,
+        mixed { anyBio }
+    }
+included_intimateRelationships =
+    element INTIMATERELATIONSHIPS { attlist.intimateRelationships, anyBio }
+included_item =
+    element ITEM {
+        attlist.item,
+        mixed { anyBio }
+    }
+included_job =
+    element JOB {
+        attlist.job,
+        mixed { anyBio }
+    }
+included_keywordClass =
+    element KEYWORDCLASS {
+        attlist.keywordClass,
+        mixed { anyBio }
+    }
+included_l =
+    element L {
+        attlist.l,
+        mixed { anyBio }
+    }
+included_language =
+    element LANGUAGE {
+        attlist.language,
+        mixed { anyBio }
+    }
+included_lb =
+    element LB {
+        attlist.lb,
+        mixed { anyBio }
+    }
+included_leisureAndSociety = element LEISUREANDSOCIETY { attlist.leisureAndSociety, anyBio }
+included_lg = element LG { attlist.lg, anyBio }
+included_livesWith =
+    element LIVESWITH {
+        attlist.livesWith,
+        mixed { anyBio }
+    }
+included_location = element LOCATION { attlist.location, anyBio }
+included_marriage = element MARRIAGE { attlist.marriage, anyBio }
+included_married =
+    element MARRIED {
+        attlist.married,
+        mixed { anyBio }
+    }
+included_member = element MEMBER { attlist.member, anyBio }
+included_month =
+    element MONTH {
+        attlist.month,
+        mixed { anyBio }
+    }
+included_name =
+    element NAME {
+        attlist.name,
+        mixed { anyBio }
+    }
+included_nationalHeritage =
+    element NATIONALHERITAGE {
+        attlist.nationalHeritage,
+        mixed { anyBio }
+    }
+included_nationality =
+    element NATIONALITY {
+        attlist.nationality,
+        mixed { anyBio }
+    }
+included_nationalityIssue = element NATIONALITYISSUE { attlist.nationalityIssue, anyBio }
+included_nickname =
+    element NICKNAME {
+        attlist.nickname,
+        mixed { anyBio }
+    }
+included_occasion =
+    element OCCASION {
+        attlist.occasion,
+        mixed { anyBio }
+    }
+included_occupation = element OCCUPATION { attlist.occupation, anyBio }
+included_orgName =
+    element ORGNAME {
+        attlist.orgName,
+        mixed { anyBio }
+    }
+included_otherLifeEvent = element OTHERLIFEEVENT { attlist.otherLifeEvent, anyBio }
+included_p =
+    element P {
+        attlist.p,
+        mixed { anyBio }
+    }
+included_personName = element PERSONNAME { attlist.personName, anyBio }
+included_place =
+    element PLACE {
+        attlist.place,
+        mixed { anyBio }
+    }
+included_placename =
+    element PLACENAME {
+        attlist.placename,
+        mixed { anyBio }
+    }
+included_politicalAffiliation =
+    element POLITICALAFFILIATION {
+        attlist.politicalAffiliation,
+        mixed { anyBio }
+    }
+included_politics = element POLITICS { attlist.politics, anyBio }
+included_projectDesc = element PROJECTDESC { attlist.projectDesc, anyBio }
+included_pseudonym =
+    element PSEUDONYM {
+        attlist.pseudonym,
+        mixed { anyBio }
+    }
+included_pubPlace =
+    element PUBPLACE {
+        attlist.pubPlace,
+        mixed { anyBio }
+    }
+included_publicationStmt = element PUBLICATIONSTMT { attlist.publicationStmt, anyBio }
+included_quote =
+    element QUOTE {
+        attlist.quote,
+        mixed { anyBio }
+    }
+included_raceAndEthnicity = element RACEANDETHNICITY { attlist.raceAndEthnicity, anyBio }
+included_raceColour =
+    element RACECOLOUR {
+        attlist.raceColour,
+        mixed { anyBio }
+    }
+included_region =
+    element REGION {
+        attlist.region,
+        mixed { anyBio }
+    }
+included_religion = element RELIGION { attlist.religion, anyBio }
+included_religiousName =
+    element RELIGIOUSNAME {
+        attlist.religiousName,
+        mixed { anyBio }
+    }
+included_remuneration =
+    element REMUNERATION {
+        attlist.remuneration,
+        mixed { anyBio }
+    }
+included_researchNote =
+    element RESEARCHNOTE {
+        attlist.researchNote,
+        mixed { anyBio }
+    }
+included_responsibility = element RESPONSIBILITY { attlist.responsibility, anyBio }
+included_revisionDesc = element REVISIONDESC { attlist.revisionDesc, anyBio }
+included_royal =
+    element ROYAL {
+        attlist.royal,
+        mixed { anyBio }
+    }
+included_rs =
+    element RS {
+        attlist.rs,
+        mixed { anyBio }
+    }
+included_scholarNote = element SCHOLARNOTE { attlist.scholarNote, anyBio }
+included_school =
+    element SCHOOL {
+        attlist.school,
+        mixed { anyBio }
+    }
+included_season =
+    element SEASON {
+        attlist.season,
+        mixed { anyBio }
+    }
+included_selfConstructed =
+    element SELFCONSTRUCTED {
+        attlist.selfConstructed,
+        mixed { anyBio }
+    }
+included_separation =
+    element SEPARATION {
+        attlist.separation,
+        mixed { anyBio }
+    }
+included_settlement =
+    element SETTLEMENT {
+        attlist.settlement,
+        mixed { anyBio }
+    }
+included_sexualIdentity =
+    element SEXUALIDENTITY {
+        attlist.sexualIdentity,
+        mixed { anyBio }
+    }
+included_sexuality = element SEXUALITY { attlist.sexuality, anyBio }
+included_shortProse = element SHORTPROSE { attlist.shortProse, anyBio }
+included_sic =
+    element SIC {
+        attlist.sic,
+        mixed { anyBio }
+    }
+included_significantActivity =
+    element SIGNIFICANTACTIVITY {
+        attlist.significantActivity,
+        mixed { anyBio }
+    }
+included_soCalled =
+    element SOCALLED {
+        attlist.soCalled,
+        mixed { anyBio }
+    }
+included_source =
+    element SOURCE {
+        attlist.source,
+        mixed { anyBio }
+    }
+included_sourceDesc =
+    element SOURCEDESC {
+        attlist.sourceDesc,
+        mixed { anyBio }
+    }
+included_standard =
+    element STANDARD {
+        attlist.standard,
+        mixed { anyBio }
+    }
+included_styled =
+    element STYLED {
+        attlist.styled,
+        mixed { anyBio }
+    }
+included_subject =
+    element SUBJECT {
+        attlist.subject,
+        mixed { anyBio }
+    }
+included_surname =
+    element SURNAME {
+        attlist.surname,
+        mixed { anyBio }
+    }
+included_text =
+    element TEXT {
+        attlist.text,
+        mixed { anyBio }
+    }
+included_time =
+    element TIME {
+        attlist.time,
+        mixed { anyBio }
+    }
+included_title =
+    element TITLE {
+        attlist.title,
+        mixed { anyBio }
+    }
+included_titleStmt = element TITLESTMT { attlist.titleStmt, anyBio }
+included_titled =
+    element TITLED {
+        attlist.titled,
+        mixed { anyBio }
+    }
+included_topic =
+    element TOPIC {
+        attlist.topic,
+        mixed { anyBio }
+    }
+included_violence = element VIOLENCE { attlist.violence, anyBio }
+included_wealth = element WEALTH { attlist.wealth, anyBio }
+included_week =
+    element WEEK {
+        attlist.week,
+        mixed { anyBio }
+    }
+included_worksCited = element WORKSCITED { attlist.worksCited, anyBio }
+included_xptr = element XPTR { attlist.xptr, empty }
+included_xref =
+    element XREF {
+        attlist.xref,
+        mixed { anyBio }
+    }
+included_year =
+    element YEAR {
+        attlist.year,
+        mixed { anyBio }
+    }
+start = element BIOGRAPHY { attlist.Biography, Div0 }
+# Div0: +(bibCit , title , keywordClass , researchNote , scholarNote , bibCits , lb)
+Div0 =
+    element DIV0 {
+        attlist.Div0,
+        ( included_researchNote*
+        | included_heading?
+        | included_standard?
+        | included_Div1+
+        | included_worksCited?
+        | included_biogProse? ) +
+    }
+Div1 =
+    element DIV1 {
+        attlist.Div1,
+        included_heading?,
+        (included_personName
+         | included_birth
+         | included_death
+         | included_culturalFormation
+         | included_education*
+         | included_family
+         | included_friendsAssociates
+         | included_health*
+         | included_intimateRelationships*
+         | included_location*
+         | included_occupation
+         | included_politics
+         | included_leisureAndSociety
+         | included_violence
+         | included_wealth
+         | included_otherLifeEvent)
+    }
+Div2 = element DIV2 { attlist.Div2, heading?, (chronStruct | dataStruct | shortProse | Div3*)+ }
+Div3 =
+    element DIV3 {
+        attlist.Div3, heading?, (chronStruct | dataStruct | shortProse | extendedProse)+
+    }
+addrLine =
+    element ADDRLINE {
+        attlist.addrLine,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | topic)*
+    }
+address = element ADDRESS { attlist.address, addrLine+ }
+area = element AREA { attlist.area, text }
+authority =
+    element AUTHORITY {
+        attlist.authority, (text | address | date | name | emph | foreign | soCalled | topic)*
+    }
+availability = element AVAILABILITY { attlist.availability, p+ }
+award = element AWARD { attlist.award, text }
+bibCit = element BIBCIT { attlist.bibCit, text }
+bibCits = element BIBCITS { attlist.bibCits, bibCit+ }
+attlist.bibCits &= empty
+biogProse = element BIOGPROSE { attlist.biogProse, text }
+# birth: +(birthPosition)
+birth = element BIRTH { attlist.birth, (included_chronStruct | included_Div2)* }
+birthPosition = element BIRTHPOSITION { attlist.birthPosition, text }
+birthname =
+    element BIRTHNAME {
+        attlist.birthname,
+        ((surname*, given*) | (given*, surname*))
+    }
+cause = element CAUSE { attlist.cause, text }
+childlessness = element CHILDLESSNESS { attlist.childlessness, text }
+children = element CHILDREN { attlist.children, text }
+chronProse =
+    element CHRONPROSE {
+        attlist.chronProse,
+        (text | rs | time | corr | emph | foreign | soCalled | title | quote | l | lg)*
+    }
+chronStruct =
+    element CHRONSTRUCT { attlist.chronStruct, (dateRange | dateStruct | date), chronProse }
+class = element CLASS { attlist.class, text }
+classIssue = element CLASSISSUE { attlist.classIssue, (chronStruct* | Div2*)+ }
+companion = element COMPANION { attlist.companion, text }
+contestedBehaviour = element CONTESTEDBEHAVIOUR { attlist.contestedBehaviour, text }
+# element CORR (((l | lg | p) , (l | lg | p | quote)*) | (#PCDATA | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*)
+corr =
+    element CORR {
+        attlist.corr,
+        (text
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | quote
+         | topic
+         | l
+         | lg
+         | p)*
+    }
+# culturalFormation: +(raceColour , class , nationalHeritage , nationality , geogHeritage , ethnicity , denomination , language , politicalAffiliation , sexualIdentity)
+culturalFormation =
+    element CULTURALFORMATION {
+        attlist.culturalFormation,
+        (included_chronStruct
+         | included_Div2
+         | included_classIssue
+         | included_nationalityIssue
+         | included_raceAndEthnicity
+         | included_religion
+         | included_sexuality)*
+    }
+dataItem =
+    element DATAITEM {
+        attlist.dataItem,
+        (text | rs | time | corr | emph | foreign | soCalled | title | quote | l | lg)*
+    }
+dataStruct = element DATASTRUCT { attlist.dataStruct, dataItem+ }
+date = element DATE { attlist.date, text }
+dateRange = element DATERANGE { attlist.dateRange, text }
+# dateStruct: -(dateStruct , dateRange , keywordClass , name , orgName , date , place , scholarNote , topic)
+dateStruct =
+    element DATESTRUCT {
+        attlist.dateStruct, (text | year | season | month | week | day | time | occasion)*
+    }
+day = element DAY { attlist.day, text }
+# death: +(cause)
+death = element DEATH { attlist.death, (included_chronStruct | included_Div2)* }
+degree = element DEGREE { attlist.degree, text }
+denomination = element DENOMINATION { attlist.denomination, text }
+divorce = element DIVORCE { attlist.divorce, text }
+docAuthor = element DOCAUTHOR { attlist.docAuthor, text }
+docEditor = element DOCEDITOR { attlist.docEditor, text }
+docExtent = element DOCEXTENT { attlist.docExtent, (text | date)* }
+docTitle =
+    element DOCTITLE { attlist.docTitle, (text | date | emph | foreign | soCalled | quote | rs)* }
+editorialDecl = element EDITORIALDECL { attlist.editorialDecl, p+ }
+# education: +(award , companion , contestedBehaviour , degree , instructor , school , subject , text)
+education = element EDUCATION { attlist.education, (included_chronStruct | included_Div2)* }
+emph =
+    element EMPH {
+        attlist.emph,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*
+    }
+employer = element EMPLOYER { attlist.employer, text }
+ethnicity = element ETHNICITY { attlist.ethnicity, text }
+extendedProse = element EXTENDEDPROSE { attlist.extendedProse, p+ }
+# family: +(children , childlessness , separation , divorce)
+family =
+    element FAMILY { attlist.family, (included_member | included_chronStruct | included_Div2)* }
+fileDesc = element FILEDESC { attlist.fileDesc, titleStmt, docExtent?, publicationStmt, sourceDesc }
+foreign =
+    element FOREIGN {
+        attlist.foreign,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*
+    }
+# friendsAssociates: +(livesWith)
+friendsAssociates =
+    element FRIENDSASSOCIATES { attlist.friendsAssociates, (included_chronStruct | included_Div2)* }
+geog = element GEOG { attlist.geog, text }
+geogHeritage = element GEOGHERITAGE { attlist.geogHeritage, text }
+given = element GIVEN { attlist.given, text }
+head =
+    element HEAD {
+        attlist.head, (text | date | name | rs | corr | emph | foreign | soCalled | quote | topic)*
+    }
+heading = element HEADING { attlist.heading, text }
+health = element HEALTH { attlist.health, (chronStruct* | Div2*)+ }
+idno = element IDNO { attlist.idno, text }
+indexed = element INDEXED { attlist.indexed, text }
+instructor = element INSTRUCTOR { attlist.instructor, text }
+# intimateRelationships: +( sexualIdentity , livesWith)
+intimateRelationships =
+    element INTIMATERELATIONSHIPS {
+        attlist.intimateRelationships, (included_chronStruct | included_Div2)*
+    }
+# element ITEM (((l | lg | p) , (l | lg | p | quote)*) | (#PCDATA | date | name | rs | corr | emph | foreign | soCalled | quote | topic)*)
+item =
+    element ITEM {
+        attlist.item,
+        (text | date | name | rs | corr | emph | foreign | soCalled | quote | topic | l | lg | p)*
+    }
+job = element JOB { attlist.job, text }
+keywordClass = element KEYWORDCLASS { attlist.keywordClass, text }
+l =
+    element L {
+        attlist.l,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*
+    }
+language = element LANGUAGE { attlist.language, text }
+lb = element LB { attlist.lb, text }
+leisureAndSociety = element LEISUREANDSOCIETY { attlist.leisureAndSociety, (chronStruct* | Div2*)+ }
+lg = element LG { attlist.lg, head, (l | lg)+ }
+livesWith = element LIVESWITH { attlist.livesWith, text }
+location = element LOCATION { attlist.location, (chronStruct* | Div2*)+ }
+marriage = element MARRIAGE { attlist.marriage, (chronStruct* | Div2*)+ }
+married = element MARRIED { attlist.married, text }
+# member: +(job , significantActivity)
+member =
+    element MEMBER { attlist.member, (included_chronStruct | included_Div2 | included_marriage)* }
+month = element MONTH { attlist.month, text }
+name = element NAME { attlist.name, text }
+nationalHeritage = element NATIONALHERITAGE { attlist.nationalHeritage, text }
+nationality = element NATIONALITY { attlist.nationality, text }
+nationalityIssue = element NATIONALITYISSUE { attlist.nationalityIssue, (chronStruct* | Div2*)+ }
+nickname = element NICKNAME { attlist.nickname, text }
+occasion = element OCCASION { attlist.occasion, text }
+# occupation: +(job , employer , remuneration , significantActivity)
+occupation = element OCCUPATION { attlist.occupation, (included_chronStruct | included_Div2)* }
+orgName = element ORGNAME { attlist.orgName, text }
+otherLifeEvent = element OTHERLIFEEVENT { attlist.otherLifeEvent, (chronStruct* | Div2*)+ }
+p =
+    element P {
+        attlist.p, (text | emph | foreign | soCalled | quote | corr | rs | title | lg | l)*
+    }
+# personName: +(birthname , indexed , married , nickname , pseudonym , religiousName , royal , selfConstructed , styled , titled)
+personName = element PERSONNAME { attlist.personName, (included_chronStruct | included_Div2)* }
+# place: -(dateStruct , dateRange , date , keywordClass , name , orgName , place , scholarNote , topic)
+place =
+    element PLACE {
+        attlist.place, (text | placename | address | settlement | region | geog | area)*
+    }
+placename = element PLACENAME { attlist.placename, text }
+politicalAffiliation = element POLITICALAFFILIATION { attlist.politicalAffiliation, text }
+# politics: +(politicalAffiliation)
+politics = element POLITICS { attlist.politics, (included_chronStruct | included_Div2)* }
+projectDesc = element PROJECTDESC { attlist.projectDesc, p+ }
+pseudonym = element PSEUDONYM { attlist.pseudonym, text }
+pubPlace =
+    element PUBPLACE {
+        attlist.pubPlace,
+        (text
+         | address
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | docTitle
+         | topic)*
+    }
+publicationStmt =
+    element PUBLICATIONSTMT {
+        attlist.publicationStmt,
+        (p+
+         | (authority,
+            (pubPlace?, address?, idno*, availability?, projectDesc*, editorialDecl*, date?)+)+
+         | ((pubPlace?, address?, idno*, availability?, projectDesc*, editorialDecl*, date?)+,
+            authority)+)
+    }
+quote =
+    element QUOTE {
+        attlist.quote,
+        (text
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | quote
+         | topic
+         | l
+         | lg
+         | p)*
+    }
+raceAndEthnicity = element RACEANDETHNICITY { attlist.raceAndEthnicity, (chronStruct* | Div2*)+ }
+raceColour = element RACECOLOUR { attlist.raceColour, text }
+region = element REGION { attlist.region, text }
+religion = element RELIGION { attlist.religion, (chronStruct* | Div2*)+ }
+religiousName = element RELIGIOUSNAME { attlist.religiousName, text }
+remuneration = element REMUNERATION { attlist.remuneration, text }
+researchNote = element RESEARCHNOTE { attlist.researchNote, text }
+attlist.researchNote &= empty
+responsibility = element RESPONSIBILITY { attlist.responsibility, date, item* }
+revisionDesc = element REVISIONDESC { attlist.revisionDesc, responsibility+ }
+royal = element ROYAL { attlist.royal, text }
+rs =
+    element RS {
+        attlist.rs, (text | date | name | rs | time | corr | emph | foreign | soCalled | topic)*
+    }
+scholarNote = element SCHOLARNOTE { attlist.scholarNote, p+ }
+school = element SCHOOL { attlist.school, text }
+season = element SEASON { attlist.season, text }
+selfConstructed = element SELFCONSTRUCTED { attlist.selfConstructed, text }
+separation = element SEPARATION { attlist.separation, text }
+settlement = element SETTLEMENT { attlist.settlement, text }
+sexualIdentity = element SEXUALIDENTITY { attlist.sexualIdentity, text }
+sexuality = element SEXUALITY { attlist.sexuality, (chronStruct* | Div2*)+ }
+shortProse = element SHORTPROSE { attlist.shortProse, p+ }
+sic = element SIC { attlist.sic, text }
+significantActivity = element SIGNIFICANTACTIVITY { attlist.significantActivity, text }
+soCalled =
+    element SOCALLED {
+        attlist.soCalled,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | topic)*
+    }
+source = element SOURCE { attlist.source, text }
+sourceDesc = element SOURCEDESC { attlist.sourceDesc, text }
+standard = element STANDARD { attlist.standard, text }
+styled = element STYLED { attlist.styled, text }
+subject = element SUBJECT { attlist.subject, text }
+surname = element SURNAME { attlist.surname, text }
+\text = element TEXT { attlist.text, text }
+time = element TIME { attlist.time, text }
+title =
+    element TITLE {
+        attlist.title,
+        (text | title | date | name | emph | foreign | soCalled | quote | rs | topic)*
+    }
+titleStmt = element TITLESTMT { attlist.titleStmt, docTitle+, (docAuthor | docEditor)* }
+titled = element TITLED { attlist.titled, text }
+topic = element TOPIC { attlist.topic, text }
+violence = element VIOLENCE { attlist.violence, (chronStruct* | Div2*)+ }
+wealth = element WEALTH { attlist.wealth, (chronStruct* | Div2*)+ }
+week = element WEEK { attlist.week, text }
+worksCited = element WORKSCITED { attlist.worksCited, source+ }
+xptr = element XPTR { attlist.xptr, empty }
+xref =
+    element XREF {
+        attlist.xref,
+        (text
+         | address
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | docTitle
+         | xptr
+         | xref
+         | quote)*
+    }
+year = element YEAR { attlist.year, text }
+attlist.day &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.week &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.month &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.occasion &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.season &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.year &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.Biography &=
+    attribute ID { xsd:ID }?
+attlist.Div0 &= attribute ID { xsd:ID }?
+attlist.Div1 &= attribute ID { xsd:ID }?
+attlist.Div2 &= attribute ID { xsd:ID }?
+attlist.Div3 &= attribute ID { xsd:ID }?
+attlist.addrLine &= attribute ID { xsd:ID }?
+attlist.address &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.area &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.authority &= attribute ID { xsd:ID }?
+attlist.availability &=
+    attribute ID { xsd:ID }?,
+    attribute STATUS { "FREE" | "UNKNOWN" | "RESTRICTED" }?
+attlist.award &=
+    attribute ID { xsd:ID }?,
+    attribute AWARDTYPE { "SCHOLARSHIP" | "PRIZE" | "OTHER" }?,
+    attribute REG { text }?
+attlist.bibCit &=
+    attribute ID { xsd:ID }?,
+    attribute PLACEHOLDER { text }?,
+    attribute DBREF { xsd:NMTOKEN }?,
+    attribute QTDIN { "QTDINYES" }?
+attlist.biogProse &= attribute ID { xsd:ID }?
+attlist.birth &= attribute ID { xsd:ID }?
+attlist.birthPosition &=
+    attribute ID { xsd:ID }?,
+    attribute POSITION { "ELDEST" | "YOUNGEST" | "ONLY" }?
+attlist.birthname &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.cause &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.childlessness &= attribute ID { xsd:ID }?
+attlist.children &=
+    attribute ID { xsd:ID }?,
+    attribute NUMBER { xsd:NMTOKEN }?
+attlist.chronProse &= attribute ID { xsd:ID }?
+attlist.chronStruct &=
+    attribute ID { xsd:ID }?,
+    attribute RELEVANCE { "SELECTIVE" | "PERIOD" | "DECADE" | "COMPREHENSIVE" },
+    attribute CHRONCOLUMN {
+        "BRITISHWOMENWRITERS" | "SOCIALCLIMATE" | "WRITINGCLIMATE" | "NATIONALINTERNATIONAL"
+    },
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "TTC"
+        | "SLT"
+        | "CEL"
+        | "KAH"
+        | "JAW"
+        | "SMH"
+        | "SYS"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "JEB"
+        | "BAA"
+        | "CJH"
+        | "JDS"
+        | "MEB"
+        | "NLG"
+        | "CLC"
+        | "GCG"
+        | "KNT"
+        | "JEC"
+        | "RSC"
+        | "SIR"
+        | "ECG"
+        | "SLB"
+        | "CAG"
+        | "MKB"
+        | "OSM"
+        | "DBH"
+        | "KGH"
+        | "JJD"
+        | "DRG"
+        | "NCK"
+        | "DLK"
+        | "AFP"
+        | "KLH"
+        | "CEE"
+        | "TRN"
+        | "RJR"
+        | "LMS"
+        | "JCA"
+        | "JES"
+        | "JLT"
+        | "KGS"
+        | "RJB"
+        | "DMH"
+        | "MAM"
+        | "LKD"
+        | "ARP"
+        | "KDM"
+        | "BJA"
+        | "SEV"
+        | "AJF"
+        | "AGH"
+        | "RTM"
+        | "LM2"
+        | "MRS"
+        | "KEH"
+        | "CLJ"
+        | "JCR"
+        | "TCD"
+        | "EAQ"
+        | "DEK"
+        | "BHL"
+        | "ALR"
+        | "SWK"
+        | "JLP"
+        | "ACF"
+        | "JSE"
+        | "MPO"
+        | "KCS"
+        | "ARC"
+        | "AEG"
+        | "AVU"
+        | "LJH"
+        | "KSN"
+        | "EWD"
+        | "CSK"
+        | "JBB"
+        | "PAD"
+        | "CMD"
+        | "CJG"
+        | "JRW"
+        | "MCA"
+        | "AWI"
+        | "SKR"
+        | "DHA"
+        | "SDU"
+        | "PIH"
+        | "GRA"
+        | "KGL"
+        | "EMH"
+        | "AAC"
+        | "AJD"
+        | "KFA"
+        | "JMA"
+        | "CNO"
+        | "KSM"
+    },
+    attribute CHRONCOLUMN1 {
+        "NATIONALINTERNATIONAL1" | "BRITISHWOMENWRITERS1" | "WRITINGCLIMATE1" | "SOCIALCLIMATE1"
+    }?,
+    attribute CHRONCOLUMN2 {
+        "NATIONALINTERNATIONAL2" | "BRITISHWOMENWRITERS2" | "WRITINGCLIMATE2" | "SOCIALCLIMATE2"
+    }?,
+    attribute CHRONCOLUMN3 {
+        "NATIONALINTERNATIONAL3" | "BRITISHWOMENWRITERS3" | "WRITINGCLIMATE3" | "SOCIALCLIMATE3"
+    }?,
+    attribute RELEVANCE1 { "SELECTIVE1" | "PERIOD1" | "DECADE1" | "COMPREHENSIVE1" }?,
+    attribute RELEVANCE2 { "SELECTIVE2" | "PERIOD2" | "DECADE2" | "COMPREHENSIVE2" }?,
+    attribute RELEVANCE3 { "SELECTIVE3" | "PERIOD3" | "DECADE3" | "COMPREHENSIVE3" }?
+attlist.class &=
+    attribute ID { xsd:ID }?,
+    attribute SOCIALRANK {
+        "OTHER"
+        | "NOBILITY"
+        | "GENTRY"
+        | "MANAGERIAL"
+        | "PROFESSIONAL"
+        | "ENTREPRENEURIAL-INDUSTRIALIST"
+        | "SHOPKEEPERS"
+        | "LOWER-MIDDLECLASS"
+        | "YEOMAN-FARMER"
+        | "SKILLEDCRAFTPERSON-ARTISAN"
+        | "URBAN-INDUSTRIALUNSKILLED"
+        | "RURAL-UNSKILLED"
+        | "SERVANTS"
+        | "INDIGENT"
+    }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute REG { text }?
+attlist.classIssue &= attribute ID { xsd:ID }?
+attlist.companion &= attribute ID { xsd:ID }?
+attlist.contestedBehaviour &= attribute ID { xsd:ID }?
+attlist.corr &=
+    attribute ID { xsd:ID }?,
+    attribute SIC { text }?,
+    attribute CERT { text }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "TTC"
+        | "SLT"
+        | "CEL"
+        | "KAH"
+        | "JAW"
+        | "SMH"
+        | "SYS"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "JEB"
+        | "BAA"
+        | "CJH"
+        | "JDS"
+        | "MEB"
+        | "NLG"
+        | "CLC"
+        | "GCG"
+        | "KNT"
+        | "JEC"
+        | "RSC"
+        | "SIR"
+        | "ECG"
+        | "SLB"
+        | "CAG"
+        | "MKB"
+        | "OSM"
+        | "DBH"
+        | "KGH"
+        | "JJD"
+        | "DRG"
+        | "NCK"
+        | "DLK"
+        | "AFP"
+        | "KLH"
+        | "CEE"
+        | "TRN"
+        | "RJR"
+        | "LMS"
+        | "JCA"
+        | "JES"
+        | "JLT"
+        | "KGS"
+        | "RJB"
+        | "DMH"
+        | "MAM"
+        | "LKD"
+        | "ARP"
+        | "KDM"
+        | "BJA"
+        | "SEV"
+        | "AJF"
+        | "AGH"
+        | "RTM"
+        | "LM2"
+        | "MRS"
+        | "KEH"
+        | "CLJ"
+        | "JCR"
+        | "TCD"
+        | "EAQ"
+        | "DEK"
+        | "BHL"
+        | "ALR"
+        | "SWK"
+        | "JLP"
+        | "ACF"
+        | "JSE"
+        | "MPO"
+        | "KCS"
+        | "ARC"
+        | "AEG"
+        | "AVU"
+        | "LJH"
+        | "KSN"
+        | "EWD"
+        | "CSK"
+        | "JBB"
+        | "PAD"
+        | "CMD"
+        | "CJG"
+        | "JRW"
+        | "MCA"
+        | "AWI"
+        | "SKR"
+        | "DHA"
+        | "SDU"
+        | "PIH"
+        | "GRA"
+        | "KGL"
+        | "EMH"
+        | "AAC"
+        | "AJD"
+        | "KFA"
+        | "JMA"
+        | "CNO"
+        | "KSM"
+    }
+attlist.culturalFormation &= attribute ID { xsd:ID }?
+attlist.dataItem &= attribute ID { xsd:ID }?
+attlist.dataStruct &= attribute ID { xsd:ID }?
+attlist.date &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "NEWSTYLE" ] attribute CALENDAR { "NEWSTYLE" | "BC" }?,
+    attribute VALUE { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.dateRange &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "NEWSTYLE" ] attribute CALENDAR { "NEWSTYLE" | "BC" }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?,
+    attribute FROM { text }?,
+    attribute TO { text }?,
+    attribute EXACT { "TO" | "FROM" | "BOTH" | "NEITHER" }?
+attlist.dateStruct &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?,
+    [ a:defaultValue = "NEWSTYLE" ] attribute CALENDAR { "NEWSTYLE" | "BC" }?,
+    attribute VALUE { text }?
+attlist.death &= attribute ID { xsd:ID }?
+attlist.degree &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.denomination &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute CURRENTALTERNATIVETERM { text }?,
+    attribute REG { text }?
+attlist.divorce &= attribute ID { xsd:ID }?
+attlist.docAuthor &= attribute ID { xsd:ID }?
+attlist.docEditor &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "EDITOR" ] attribute ROLE { text }?
+attlist.docExtent &= attribute ID { xsd:ID }?
+attlist.docTitle &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text }?
+attlist.editorialDecl &= attribute ID { xsd:ID }?
+attlist.education &=
+    attribute ID { xsd:ID }?,
+    attribute MODE { "DOMESTIC" | "INSTITUTIONAL" | "SELF-TAUGHT" }?
+attlist.emph &= attribute ID { xsd:ID }?
+attlist.employer &= attribute ID { xsd:ID }?
+attlist.ethnicity &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    [ a:defaultValue = "FAMILY" ]
+    attribute FOREBEAR {
+        "FATHER"
+        | "MOTHER"
+        | "PARENTS"
+        | "GRANDFATHER"
+        | "GRANDMOTHER"
+        | "GRANDPARENTS"
+        | "AUNT"
+        | "UNCLE"
+        | "OTHER"
+        | "FAMILY"
+    }?,
+    attribute REG { text }?
+attlist.extendedProse &= attribute ID { xsd:ID }?
+attlist.family &= attribute ID { xsd:ID }?
+attlist.fileDesc &= attribute ID { xsd:ID }?
+attlist.foreign &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?,
+    attribute LANG { text }?
+attlist.friendsAssociates &= attribute ID { xsd:ID }?
+attlist.geog &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.geogHeritage &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "FAMILY" ]
+    attribute FOREBEAR {
+        "FATHER"
+        | "MOTHER"
+        | "PARENTS"
+        | "GRANDFATHER"
+        | "GRANDMOTHER"
+        | "GRANDPARENTS"
+        | "AUNT"
+        | "UNCLE"
+        | "OTHER"
+        | "FAMILY"
+    }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute REG { text }?
+attlist.given &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.head &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text }?
+attlist.heading &= attribute ID { xsd:ID }?
+attlist.health &=
+    attribute ID { xsd:ID }?,
+    attribute ISSUE { "PHYSICAL" | "MENTAL" | "FEMALEBODY" }?
+attlist.idno &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text }?
+attlist.indexed &=
+    attribute ID { xsd:ID }?,
+    attribute INDEXSOURCE { "LC" | "BL" }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.instructor &= attribute ID { xsd:ID }?
+attlist.intimateRelationships &=
+    attribute ID { xsd:ID }?,
+    attribute EROTIC { "EROTICYES" | "EROTICNO" | "EROTICPOSSIBLY" }?
+attlist.item &= attribute ID { xsd:ID }?
+attlist.job &=
+    attribute ID { xsd:ID }?,
+    attribute FAMILYBUSINESS { "FAMILYBUSINESSYES" }?,
+    attribute CURRENTALTERNATIVETERM { text }?,
+    attribute HISTORICALTERM { text }?,
+    attribute HISTORICALTERMCONTEXTDATE { text }?,
+    attribute REG { text }?
+attlist.keywordClass &=
+    attribute ID { xsd:ID }?,
+    attribute KEYWORDTYPE { text }?
+attlist.l &=
+    attribute ID { xsd:ID }?,
+    attribute enjamb { text }?,
+    attribute MET { text }?,
+    attribute REAL { text }?,
+    attribute RHYME { text }?,
+    [ a:defaultValue = "N" ] attribute PART { "Y" | "N" | "I" | "M" | "F" }?
+attlist.language &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "OTHER" ] attribute COMPETENCE { "MOTHER" | "OTHER" }?,
+    attribute REG { text }?
+attlist.lb &= attribute ID { xsd:ID }?
+attlist.leisureAndSociety &= attribute ID { xsd:ID }?
+attlist.lg &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text },
+    [ a:defaultValue = "UNIFORM" ] attribute ORG { "COMPOSITE" | "UNIFORM" }?,
+    [ a:defaultValue = "COMPLETE" ]
+    attribute SAMPLE { "INITIAL" | "MEDIAL" | "FINAL" | "UNKNOWN" | "COMPLETE" }?,
+    [ a:defaultValue = "N" ] attribute PART { "Y" | "N" | "I" | "M" | "F" }?,
+    attribute MET { text }?,
+    attribute REAL { text }?,
+    attribute RHYME { text }?
+attlist.livesWith &= attribute ID { xsd:ID }?
+attlist.location &=
+    attribute ID { xsd:Name }?,
+    # change back to xsd:ID
+    attribute RELATIONTO { "LIVED" | "VISITED" | "MOVED" | "UNKNOWN" | "TRAVELLED" | "MIGRATED" }
+attlist.marriage &= attribute ID { xsd:ID }?
+attlist.married &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.member &=
+    attribute ID { xsd:ID }?,
+    attribute RELATION {
+        "MOTHER"
+        | "FATHER"
+        | "SISTER"
+        | "BROTHER"
+        | "AUNT"
+        | "UNCLE"
+        | "GRANDFATHER"
+        | "GRANDMOTHER"
+        | "GRANDDAUGHTER"
+        | "GRANDSON"
+        | "NEPHEW"
+        | "STEPSISTER"
+        | "STEPBROTHER"
+        | "STEPFATHER"
+        | "STEPMOTHER"
+        | "COUSIN"
+        | "FOREBEAR"
+        | "OTHER"
+        | "SON"
+        | "DAUGHTER"
+        | "STEPSON"
+        | "STEPDAUGHTER"
+        | "GUARDIAN"
+        | "NIECE"
+        | "HUSBAND"
+        | "WIFE"
+        | "CHILD"
+        | "PARTNER"
+    }
+attlist.name &=
+    attribute ID { xsd:ID }?,
+    attribute STANDARD { text }?
+attlist.nationalHeritage &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENTALTERNATIVETERM { text }?,
+    [ a:defaultValue = "FAMILY" ]
+    attribute FOREBEAR {
+        "FATHER"
+        | "MOTHER"
+        | "PARENTS"
+        | "GRANDFATHER"
+        | "GRANDMOTHER"
+        | "GRANDPARENTS"
+        | "AUNT"
+        | "UNCLE"
+        | "OTHER"
+        | "FAMILY"
+    }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute REG { text }?
+attlist.nationality &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute CURRENTALTERNATIVETERM { text }?,
+    attribute REG { text }?
+attlist.nationalityIssue &= attribute ID { xsd:ID }?
+attlist.nickname &=
+    attribute ID { xsd:ID }?,
+    attribute NAMETYPE { "LITERARY" | "FAMILIAR" | "OTHER" }?,
+    attribute NAMECONNOTATION { "ABUSIVE" | "HONORIFIC" }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute NAMESIGNIFIER { "CRYPTIC" | "LOCAL" | "ROMANCE" }?,
+    attribute REG { text }?
+attlist.occupation &= attribute ID { xsd:ID }?
+attlist.orgName &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?,
+    attribute STANDARD { text }?,
+    attribute ORGTYPE { text }?
+attlist.otherLifeEvent &= attribute ID { xsd:ID }?
+attlist.p &= attribute ID { xsd:ID }?
+attlist.personName &= attribute ID { xsd:ID }?
+attlist.place &= attribute ID { xsd:ID }?
+attlist.placename &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.politicalAffiliation &=
+    attribute ID { xsd:ID }?,
+    attribute ACTIVISM { "ACTIVISTYES" | "ACTIVISTNO" }?,
+    attribute WOMAN-GENDERISSUE { "GENDERYES" | "GENDERNO" }?,
+    attribute MEMBERSHIP { "MEMBERSHIPYES" | "MEMBERSHIPNO" }?,
+    attribute INVOLVEMENT { "INVOLVEMENTYES" | "INVOLVEMENTNO" }?,
+    attribute CURRENTALTERNATIVETERM { text }?,
+    attribute REG { text }?
+attlist.politics &= attribute ID { xsd:ID }?
+attlist.projectDesc &= attribute ID { xsd:ID }?
+attlist.pseudonym &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute NAMESIGNIFIER { "CRYPTIC" | "LOCAL" | "ROMANCE" }?,
+    attribute REG { text }?
+attlist.pubPlace &=
+    attribute ID { xsd:ID }?,
+    attribute KEY { text }?,
+    attribute REG { text }?
+attlist.publicationStmt &= attribute ID { xsd:ID }?
+attlist.quote &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "UNSPECIFIED" ] attribute DIRECT { "Y" | "N" | "UNSPECIFIED" }?
+attlist.raceAndEthnicity &= attribute ID { xsd:ID }?
+attlist.raceColour &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "FAMILY" ]
+    attribute FOREBEAR {
+        "FATHER"
+        | "MOTHER"
+        | "PARENTS"
+        | "GRANDFATHER"
+        | "GRANDMOTHER"
+        | "GRANDPARENTS"
+        | "AUNT"
+        | "UNCLE"
+        | "OTHER"
+        | "FAMILY"
+    }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute REG { text }?
+attlist.region &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.religion &= attribute ID { xsd:ID }?
+attlist.religiousName &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.remuneration &= attribute ID { xsd:ID }?
+attlist.responsibility &=
+    attribute ID { xsd:ID }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "TTC"
+        | "SLT"
+        | "CEL"
+        | "KAH"
+        | "JAW"
+        | "SMH"
+        | "SYS"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "JEB"
+        | "BAA"
+        | "CJH"
+        | "JDS"
+        | "MEB"
+        | "NLG"
+        | "CLC"
+        | "GCG"
+        | "KNT"
+        | "JEC"
+        | "RSC"
+        | "SIR"
+        | "ECG"
+        | "SLB"
+        | "CAG"
+        | "MKB"
+        | "OSM"
+        | "DBH"
+        | "KGH"
+        | "JJD"
+        | "DRG"
+        | "NCK"
+        | "DLK"
+        | "AFP"
+        | "KLH"
+        | "CEE"
+        | "TRN"
+        | "RJR"
+        | "LMS"
+        | "JCA"
+        | "JES"
+        | "JLT"
+        | "KGS"
+        | "RJB"
+        | "DMH"
+        | "MAM"
+        | "LKD"
+        | "ARP"
+        | "KDM"
+        | "BJA"
+        | "SEV"
+        | "AJF"
+        | "AGH"
+        | "RTM"
+        | "LM2"
+        | "MRS"
+        | "KEH"
+        | "CLJ"
+        | "JCR"
+        | "TCD"
+        | "EAQ"
+        | "DEK"
+        | "BHL"
+        | "ALR"
+        | "SWK"
+        | "JLP"
+        | "ACF"
+        | "JSE"
+        | "MPO"
+        | "KCS"
+        | "ARC"
+        | "AEG"
+        | "AVU"
+        | "LJH"
+        | "KSN"
+        | "EWD"
+        | "CSK"
+        | "JBB"
+        | "PAD"
+        | "CMD"
+        | "CJG"
+        | "JRW"
+        | "MCA"
+        | "AWI"
+        | "SKR"
+        | "DHA"
+        | "SDU"
+        | "PIH"
+        | "GRA"
+        | "KGL"
+        | "EMH"
+        | "AAC"
+        | "AJD"
+        | "KFA"
+        | "JMA"
+        | "CNO"
+        | "KSM"
+    },
+    attribute WORKSTATUS {
+        "SUB" | "RWT" | "CAS" | "RBV" | "CFT" | "CFB" | "CFC" | "REV" | "OLD" | "PUB" | "ENH"
+    },
+    attribute WORKVALUE { "I" | "P" | "C" | "O" }
+attlist.revisionDesc &= attribute ID { xsd:ID }?
+attlist.royal &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.rs &=
+    attribute ID { xsd:ID }?,
+    attribute KEY { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?
+attlist.scholarNote &= attribute ID { xsd:ID }?
+attlist.school &=
+    attribute ID { xsd:ID }?,
+    attribute INSTITUTION {
+        "BOARDING"
+        | "GRAMMAR"
+        | "PRIVATE"
+        | "STATE"
+        | "DAMESCHOOL"
+        | "DAYSCHOOL"
+        | "COMPREHENSIVE"
+        | "SECONDARYMODERN"
+        | "TRADESCHOOL"
+        | "PREP"
+    }?,
+    attribute STUDENTBODY { "SINGLESEX" | "CO-ED" }?,
+    attribute RELIGIOUS { "RELIGIOUSYES" }?,
+    attribute INSTITUTIONLEVEL { "PRIMARY" | "SECONDARY" | "POST-SECONDARY" }?,
+    attribute REG { text }?
+attlist.selfConstructed &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute NAMESIGNIFIER { "CRYPTIC" | "LOCAL" | "ROMANCE" }?,
+    attribute REG { text }?
+attlist.separation &= attribute ID { xsd:ID }?
+attlist.settlement &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.sexualIdentity &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "SELFUNKNOWN" ]
+    attribute SELF-DEFINED { "SELFYES" | "SELFNO" | "SELFUNKNOWN" }?,
+    attribute CURRENTALTERNATIVETERM { text }?,
+    attribute REG { text }?
+attlist.sexuality &= attribute ID { xsd:ID }?
+attlist.shortProse &= attribute ID { xsd:ID }?
+attlist.sic &=
+    attribute ID { xsd:ID }?,
+    attribute CORR { text }?
+attlist.significantActivity &=
+    attribute ID { xsd:ID }?,
+    attribute PHILANTHROPYVOLUNTEER { "PHILANTHROPYVOLUNTEERYES" }?,
+    attribute REG { text }?
+attlist.soCalled &= attribute ID { xsd:ID }?
+attlist.source &= attribute ID { xsd:ID }?
+attlist.sourceDesc &= attribute ID { xsd:ID }?
+attlist.standard &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?
+attlist.styled &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.subject &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.surname &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.text &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.time &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute ZONE { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.title &=
+    attribute ID { xsd:ID }?,
+    attribute TITLETYPE { "MONOGRAPHIC" | "ANALYTIC" | "JOURNAL" | "SERIES" | "UNPUBLISHED" }?,
+    attribute REG { text }?,
+    attribute REND { text }?
+attlist.titleStmt &= attribute ID { xsd:ID }?
+attlist.titled &=
+    attribute ID { xsd:ID }?,
+    attribute WROTEORPUBLISHEDAS { "WROTEPUBLISHEDASYES" }?,
+    attribute REG { text }?
+attlist.topic &=
+    attribute ID { xsd:ID }?,
+    attribute STANDARD { text }?
+attlist.violence &= attribute ID { xsd:ID }?
+attlist.wealth &= attribute ID { xsd:ID }?
+attlist.worksCited &= attribute ID { xsd:ID }?
+attlist.xptr &=
+    attribute ID { xsd:ID }?,
+    attribute DATE { text }?,
+    attribute DOC { xsd:ENTITY }?,
+    [ a:defaultValue = "ROOT" ] attribute FROM { text }?,
+    [ a:defaultValue = "DITTO" ] attribute TO { text }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "SYS"
+        | "CEL"
+        | "KAH"
+        | "TTC"
+        | "SLT"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "SLB"
+    },
+    attribute URL { text }?
+attlist.xref &=
+    attribute ID { xsd:ID }?,
+    attribute DATE { text }?,
+    attribute DOC { xsd:ENTITY }?,
+    [ a:defaultValue = "ROOT" ] attribute FROM { text }?,
+    [ a:defaultValue = "DITTO" ] attribute TO { text }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "SYS"
+        | "CEL"
+        | "KAH"
+        | "TTC"
+        | "SLT"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "SLB"
+    },
+    attribute URL { text }?

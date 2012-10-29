@@ -1,0 +1,2272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="css/bio_style.css"?>
+<?xml-model href="schemas/biography-test_10-07-16-CAPS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+
+<BIOGRAPHY SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER TYPE="text">
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>Elinor Glyn: biography</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Orlando Project</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Created from original research by members of the Orlando
+                Project</SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="RSC" WORKSTATUS="SUB" WORKVALUE="I">
+                <DATE>17 June 2004</DATE>
+                <ITEM>Initial document given to tagger.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>24 March 2005</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>1 April 2005</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>5 April 2005</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>6 April 2005</DATE>
+                <ITEM>fixed name tag</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>08 April 2005</DATE>
+                <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name
+                    changes</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>8 April 2005</DATE>
+                <ITEM>added quote</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>17 May 2005</DATE>
+                <ITEM>added Hearst connection</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PDC" WORKSTATUS="RBV" WORKVALUE="P">
+                <DATE>3 July 2005</DATE>
+                <ITEM>rbv-p</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>7 July 2005</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>11 July 2005</DATE>
+                <ITEM>answered pdc researchnotes.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>19 July 2005</DATE>
+                <ITEM>fixed name attributes.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>31 August 2005</DATE>
+                <ITEM>rbv c (img for pdc), ready for cas, cft</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RJB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>31 August 2005</DATE>
+                <ITEM>fixed dbref number.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="AGH" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>4 October 2005</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="AGH" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>12 October 2005</DATE>
+                <ITEM>cas-c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="AGH" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>17 October 2005</DATE>
+                <ITEM>Fixed tag inconsistencies</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>17 January 2006</DATE>
+                <ITEM>cft c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>22 January 2006</DATE>
+                <ITEM>cfb c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="PUB" WORKVALUE="I">
+                <DATE>31 January 2006</DATE>
+                <ITEM>pub i</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>8 February 2006</DATE>
+                <ITEM>tag cleanup complete</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>9 February 2006</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>17 March 2006</DATE>
+                <ITEM>cfb revision</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>18 March 2006</DATE>
+                <ITEM>fixed title</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>18 March 2006</DATE>
+                <ITEM>fixed bibcit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="TCD" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>17 May 2006</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>20 July 2006</DATE>
+                <ITEM>fixed various orgnames</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>27 February 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>1 March 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+        <HEADING>Biography</HEADING>
+        <STANDARD>Glyn, Elinor</STANDARD>
+        <DIV1>
+            <PERSONNAME>
+                <DIV2>
+                    <DATASTRUCT>
+                        <DATAITEM>
+                            <BIRTHNAME>
+                                <GIVEN>Elinor</GIVEN>
+                                <SURNAME>Sutherland</SURNAME>
+                            </BIRTHNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <NICKNAME NAMETYPE="FAMILIAR" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"
+                                REG="Sutherland, Miss Nellie">Nellie</NICKNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <MARRIED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" REG="Glyn, Elinor"
+                                >Glyn</MARRIED>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <INDEXED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES">Mrs. Glyn</INDEXED>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <SELFCONSTRUCTED REG="Glyn, Elinor">Madame Glyn</SELFCONSTRUCTED>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Etherington-Smith and Pilcher 6" DBREF="32425"
+                                    >6</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Hardwick 221" DBREF="32059">221</BIBCIT>
+                            </BIBCITS>
+                        </DATAITEM>
+                    </DATASTRUCT>
+                </DIV2>
+            </PERSONNAME>
+        </DIV1>
+        <DIV1>
+            <HEADING>Birth and Family</HEADING>
+            <BIRTH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                        <DATE>17 October 1864</DATE>
+                        <CHRONPROSE><NAME STANDARD="Glyn, Elinor">Elinor Sutherland (later
+                                EG)</NAME> was born in <PLACE><REGION>Jersey</REGION><GEOG REG="UK"
+                                /></PLACE> (one of the <PLACE><REGION REG="Channel Islands">Channel
+                                    Islands</REGION><GEOG REG="UK"/></PLACE>), three months before
+                            her father died of typhoid in Italy.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 9" DBREF="32057">9</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 6" DBREF="32059">6</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>
+                            <BIRTHPOSITION POSITION="YOUNGEST">Her sister, Lucy Christiana, who was
+                                two years older, became a famous couturi&egrave;re under the name of
+                                    <NAME STANDARD="Duff Gordon, Lucy Christiana,,, Lady">Lucile,
+                                    later Lady Duff Gordon)</NAME>.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Hardwick 3" DBREF="32059">3</BIBCIT>
+                                    <BIBCIT
+                                        PLACEHOLDER="Oxford DNB under Lucy Christiana Duff Gordon"
+                                        DBREF="29268">under Lucy Christiana Duff Gordon</BIBCIT>
+                                </BIBCITS></BIRTHPOSITION>
+                        </P>
+                    </SHORTPROSE>
+                </DIV2>
+            </BIRTH>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <NATIONALITYISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>EG, though <NATIONALITY SELF-DEFINED="SELFYES" REG="English">born in
+                                    the Channel Islands</NATIONALITY>, was descended on both sides
+                                from recent immigrants to <NATIONALHERITAGE FOREBEAR="GRANDPARENTS"
+                                    SELF-DEFINED="SELFNO" REG="Canadian">Canada</NATIONALHERITAGE>.
+                                Her maternal grandparents brought her a mixed heritage (he being
+                                    <NATIONALHERITAGE FOREBEAR="GRANDFATHER" SELF-DEFINED="SELFYES"
+                                    REG="English">Anglo</NATIONALHERITAGE>-<NATIONALHERITAGE
+                                    FOREBEAR="GRANDFATHER">French</NATIONALHERITAGE> and she
+                                    <NATIONALHERITAGE FOREBEAR="GRANDMOTHER"
+                                    >Irish</NATIONALHERITAGE>). In Canada from about the mid
+                                nineteenth century, they <CLASS SOCIALRANK="GENTRY"
+                                    SELF-DEFINED="SELFYES">prospered as farmers and
+                                    land-owners</CLASS>. EG&apos;s father, who had emigrated to
+                                Canada from <NATIONALHERITAGE FOREBEAR="FATHER" REG="Scottish"
+                                    >Scotland</NATIONALHERITAGE>, seems to have been a modern
+                                cosmopolitan ready to settle in any country or continent where there
+                                was work that interested him.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </NATIONALITYISSUE>
+                <CLASSISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>EG&apos;s maternal grandmother believed in the importance of class
+                                distinction, and taught her grand-daughters to value the aristocracy
+                                and the aristocratic way of life.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 3-5" DBREF="32057"
+                                        >3-5</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 3" DBREF="32059"
+                                        >3</BIBCIT></BIBCITS> EG&apos;s father claimed descent from
+                                the Jacobite Dukes of Sutherland and the Earldom of Duffus. Though
+                                she was too young when he died to have heard it from his own lips,
+                                Elinor believed this claim all her life and, combined with her
+                                grandmother&apos;s teaching, it led her to build a strong sense of
+                                affiliation with the <CLASS SOCIALRANK="GENTRY"
+                                    SELF-DEFINED="SELFYES">upper social classes</CLASS>. Despite
+                                this subjective class status, she grew up in straitened
+                                circumstances because of her stepfather&apos;s poor investments. In
+                                adulthood, EG and her husband were under constant <CLASS
+                                    SOCIALRANK="PROFESSIONAL" SELF-DEFINED="SELFYES">financial
+                                    strain</CLASS> because he too was a bad manager of money and
+                                they both lived beyond their means.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 4, 6" DBREF="32057">4,
+                                        6</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 16, 39"
+                                        DBREF="32059">16, 39</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Anthony Glyn 22" DBREF="32421"
+                                    >22</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </CLASSISSUE>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Before the age of six, EG had renounced <DENOMINATION
+                                    SELF-DEFINED="SELFNO" REG="Anglican"><ORGNAME
+                                        REG="Anglican Church" STANDARD="Anglican Church">orthodox
+                                        Christianity</ORGNAME></DENOMINATION>; her grandmother had
+                                enlisted a clergyman to teach Elinor and her sister the catechism,
+                                but both girls rebelled against Christian dogma.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Glyn, Romantic 14-15" DBREF="32057"
+                                        >14-15</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Hardwick 17" DBREF="32059">17</BIBCIT>
+                                </BIBCITS> In adulthood, EG experimented with <DENOMINATION
+                                    SELF-DEFINED="SELFYES" REG="spiritualist"
+                                    >Spiritualism</DENOMINATION> (which she later denounced). She
+                                referred to herself as a <DENOMINATION SELF-DEFINED="SELFYES"
+                                    >Protestant</DENOMINATION>, but maintained a deep and devoted
+                                belief in <DENOMINATION SELF-DEFINED="SELFYES"
+                                    REG="believer in reincarnation">reincarnation</DENOMINATION> and
+                                in <DENOMINATION SELF-DEFINED="SELFYES" REG="fatalist"
+                                    >karma</DENOMINATION>.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Glyn, Romantic 185" DBREF="32057"
+                                        >185</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="MOTHER">
+                    <DIV2>
+                        <HEADING>Mother</HEADING>
+                        <SHORTPROSE>
+                            <P>EG&apos;s mother, <NAME STANDARD="Kennedy, Elinor,, 1840 - 1937"
+                                    >Elinor (Saunders) Sutherland, later Kennedy</NAME>, was married
+                                at nineteen and widowed at twenty-three. For the first six years of
+                                Elinor&apos;s life she played no active role in her children&apos;s
+                                upbringing. She remarried when Elinor was seven.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Hardwick 7, 18-19" DBREF="32059">7,
+                                        18-19</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Glyn, Romantic 6" DBREF="32057">6</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="FATHER">
+                    <DIV2>
+                        <HEADING>Father</HEADING>
+                        <SHORTPROSE>
+                            <P>EG&apos;s father, <NAME>Douglas Sutherland</NAME>, was a
+                                Scots-Canadian <JOB REG="engineer">civil engineer</JOB>. He
+                                    <SIGNIFICANTACTIVITY REG="musician">played the
+                                    violin</SIGNIFICANTACTIVITY>, <SIGNIFICANTACTIVITY REG="writer"
+                                    >wrote poetry</SIGNIFICANTACTIVITY>, and <SIGNIFICANTACTIVITY
+                                    REG="linguist">spoke a number of
+                                languages</SIGNIFICANTACTIVITY>. Shortly after he married EG&apos;s
+                                mother they moved to <PLACE><SETTLEMENT REG="New York City">New
+                                        York</SETTLEMENT><REGION REG="New York"/><GEOG REG="USA"
+                                    /></PLACE>, but when the American Civil War broke out he took a
+                                post in <PLACE><GEOG>Brazil</GEOG></PLACE>. When his contract
+                                expired he moved to <PLACE><GEOG>England</GEOG></PLACE> with his
+                                        wife.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 6-9"
+                                        DBREF="32057">6-9</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 4-6"
+                                        DBREF="32059">4-6</BIBCIT></BIBCITS> He contracted a fatal
+                                case of typhoid while he was working on a contract at
+                                        <PLACE><SETTLEMENT>Turin</SETTLEMENT> in
+                                    <GEOG>Italy</GEOG></PLACE>, and he died on <DATE>30 January
+                                    1865</DATE> while Elinor was a baby. His death left his widow in
+                                dire financial straits.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 6-7"
+                                        DBREF="32059">6-7</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="GRANDMOTHER">
+                    <DIV2>
+                        <HEADING>Maternal Grandparents</HEADING>
+                        <SHORTPROSE>
+                            <P>EG&apos;s maternal grandparents, particularly her grandmother, played
+                                a large role in her upbringing. Her grandmother, a severe, proud,
+                                and conservative matriarch, taught Elinor self-control by making her
+                                sit still and silent for long periods of time. Elinor greatly
+                                admired her grandmother, who taught her to respect and rely on
+                                hierarchical institutions and systems.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 12" DBREF="32057"
+                                        >12</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 14-15"
+                                        DBREF="32059">14-15</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="SISTER">
+                    <DIV2>
+                        <HEADING>Sister</HEADING>
+                        <SHORTPROSE>
+                            <P>In 1884 EG&apos;s sister, <NAME
+                                    STANDARD="Duff Gordon, Lucy Christiana,,, Lady">Lucy (later Lady
+                                    Duff Gordon)</NAME> (having left home at sixteen), married, at
+                                about twenty-two, a forty-year-old bachelor named <NAME>James
+                                    Wallace</NAME>.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 44-5"
+                                        DBREF="32059">44-5</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Oxford DNB under Lucy Christiana Duff Gordon"
+                                        DBREF="29268">under Lucy Christiana Duff
+                                    Gordon</BIBCIT></BIBCITS> The marriage quickly ended in
+                                divorce.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="STEPFATHER">
+                    <DIV2>
+                        <HEADING>Stepfather</HEADING>
+                        <SHORTPROSE>
+                            <P>EG&apos;s mother married as her second husband, in 1871, a
+                                well-to-do, sixty-three-year-old bachelor, <NAME>David
+                                    Kennedy</NAME>, a neighbour and long-time family friend (he had
+                                attended her first wedding). He had pursued her ceaselessly, but
+                                once they were married he began to doubt his decision, largely
+                                because he had no interest in bringing up two young children (he had
+                                been shielded from the girls while he courted their mother).
+                                Consequently, young Elinor and her sister saw their stepfather as
+                                tyrannical, demanding of their mother&apos;s full attention,
+                                selfish, domineering, and neglectful. He died in 1890, after having
+                                suffered from bronchitis and asthma for years.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Hardwick 18-19" DBREF="32059"
+                                        >18-19</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Glyn, Romantic 54" DBREF="32057"
+                                        >54</BIBCIT>
+                                    <BIBCIT
+                                        PLACEHOLDER="Oxford DNB under Lucy Christiana Duff Gordon"
+                                        DBREF="29268">under Lucy Christiana Duff Gordon</BIBCIT>
+                                    <RESEARCHNOTE>img: I trust odnb for death date tho its given
+                                        differently elsewhere.</RESEARCHNOTE>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After Elinor&apos;s father&apos;s early death left the family poor, her
+                            mother moved her two infant daughters to her parents&apos; estate at
+                                    <PLACE><PLACENAME>Summerhill</PLACENAME>, near
+                                    <SETTLEMENT>Guelph</SETTLEMENT>, <REGION>Ontario</REGION><GEOG
+                                    REG="Canada"/></PLACE>. They arrived in Canada on 25 August
+                                    1865.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 7" DBREF="32059"
+                                    >7</BIBCIT><BIBCIT PLACEHOLDER="Glyn, Romantic 10" DBREF="32057"
+                                    >10</BIBCIT><BIBCIT PLACEHOLDER="Anthony Glyn 28" DBREF="32421"
+                                    >28</BIBCIT></BIBCITS> Later in life, EG wrote that her six
+                            years at Summerhill <QUOTE DIRECT="Y">developed my character, moulded my
+                                tastes, and coloured my point of view for
+                                    life.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 11"
+                                    DBREF="32057">11</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="RJB">
+                        <DATE VALUE="1871-11-14" CERTAINTY="AFTER">About 1871</DATE>
+                        <CHRONPROSE>After the <NAME STANDARD="Kennedy, Elinor,, 1840 - 1937"
+                                >mother</NAME> of Elinor Sutherland (later EG) married <NAME>David
+                                Kennedy</NAME>, the new family moved from
+                                <PLACE><GEOG>Canada</GEOG></PLACE> back to Elinor&apos;s birthplace,
+                                    <PLACE><REGION>Jersey</REGION><GEOG REG="UK"/></PLACE> in the
+                                    <PLACE><REGION>Channel Islands</REGION><GEOG REG="UK"
+                                    /></PLACE>.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 20"
+                                    DBREF="32059">20</BIBCIT></BIBCITS></CHRONPROSE>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Education</HEADING>
+            <EDUCATION MODE="DOMESTIC">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>As a girl, the future EG loved to hear <TEXT><NAME
+                                    STANDARD="Tennyson, Alfred">Tennyson</NAME>&apos;s poetry,
+                                especially the <TITLE TITLETYPE="MONOGRAPHIC">Idylls of the
+                                    King</TITLE></TEXT> (published from 1859), many of which she
+                            learned by heart. She also adored <TEXT><NAME
+                                    STANDARD="MacDonald, George,, 1824 - 1905">George
+                                    MacDonald</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC">The
+                                    Princess and the Goblin</TITLE></TEXT> (1872), which she later
+                            described as a book that <QUOTE DIRECT="Y">provided a turning-point in
+                                my life, and influenced me more profoundly than any other which I
+                                have ever read.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 14, 12" DBREF="32057">14,
+                                    12</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 14" DBREF="32059"
+                                    >14</BIBCIT></BIBCITS><SCHOLARNOTE><P>EG&apos;s biographer
+                                        <NAME>Joan Hardwick</NAME> gives 1856 as the first
+                                    publication of <TITLE TITLETYPE="MONOGRAPHIC">Idylls of the
+                                        King</TITLE>, but the four earliest poems in the sequence
+                                    appeared in <DATE>June 1859</DATE>.</P></SCHOLARNOTE> Elinor
+                            became interested in Greek mythology after reading <TEXT><NAME
+                                    STANDARD="Kingsley, Charles,, 1819 - 1875">Charles
+                                    Kingsley</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC">The
+                                    Heroes</TITLE></TEXT> (1855), from which she turned to
+                            translations of Greek myths.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 24" DBREF="32057"
+                                >24</BIBCIT></BIBCITS></P>
+                        <P>As was usual for her time and class, Elinor&apos;s mother and stepfather
+                            employed a series of governesses to teach her and her sister. In later
+                            life Elinor wrote, <QUOTE DIRECT="Y">I cannot remember learning anything
+                                of value from any of them, except perhaps from the
+                                    <SUBJECT>French</SUBJECT> master.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 22" DBREF="32057"
+                                >22</BIBCIT></BIBCITS> Her other subjects were
+                                <SUBJECT>mathematics</SUBJECT>, <SUBJECT>geography</SUBJECT>, and
+                                <SUBJECT>spelling</SUBJECT>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+            <EDUCATION MODE="SELF-TAUGHT">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Since she abhorred her governesses, Elinor took her education into her
+                            own hands, reading every book she could in the library: <TEXT><NAME
+                                    STANDARD="Pepys, Samuel">Pepys</NAME>&apos;s diary</TEXT>,
+                                    <TEXT><NAME STANDARD="Cervantes, Miguel de"
+                                >Cervantes</NAME>&apos; <TITLE TITLETYPE="MONOGRAPHIC">Don
+                                    Quixote</TITLE> (an eighteenth-century French version)</TEXT>,
+                                    <TEXT><NAME STANDARD="Scott, Sir Walter">Scott</NAME></TEXT>,
+                                    <TEXT><NAME STANDARD="Strickland, Agnes">Agnes</NAME> [and <NAME
+                                    STANDARD="Strickland, Elizabeth">Elizabeth]
+                                Strickland</NAME></TEXT>, <NAME
+                                STANDARD="Blessington, Marguerite Gardiner,,, Countess of">Lady
+                                Blessington</NAME>, <NAME
+                                STANDARD="Byron, George Gordon,,, sixth Baron">Byron</NAME>, and the
+                            major French classics.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <DIV2>
+                        <HEADING>Religion: The Greek Pantheon vs Christianity</HEADING>
+                        <SHORTPROSE>
+                            <P>By the age of twelve, EG&apos;s reading of Greek myth (in
+                                translation) had brought her to believe <QUOTE DIRECT="Y">absolutely
+                                    in the reality of the Gods and Goddesses of ancient Greece, and
+                                    in the existence of Pan and his nymphs.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 24" DBREF="32057"
+                                    >24</BIBCIT></BIBCITS> Conversely, she found the Christianity
+                                that she knew puritanical, hypocritical, inhibitive, and repressive.
+                                Yet when she looked back as an adult she claimed that <QUOTE
+                                    DIRECT="Y">I never ceased to believe in the reality and love of
+                                    Christ.</QUOTE> Her refusal of Christianity was a matter of
+                                rebelling against institutional doctrines and
+                                        practices.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 25"
+                                        DBREF="32057">25</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Anthony Glyn 38" DBREF="32421"
+                                    >38</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <EDUCATION MODE="SELF-TAUGHT">
+                <DIV2>
+                    <HEADING>The Roots of Romanticism: Educating Herself</HEADING>
+                    <SHORTPROSE>
+                        <P>After Elinor Sutherland (later EG) turned fourteen she no longer had a
+                            governess. Eager for intellectual stimulation, she took it upon herself
+                            to read everything in her <NAME STANDARD="Kennedy, David"
+                                >stepfather</NAME>&apos;s book collection, which had recently
+                            reached Jersey and to which she had free access. At this stage her
+                            reading centred in the eighteenth century: <TEXT><NAME
+                                    STANDARD="Gibbon, Edward">Gibbon</NAME>&apos;s <TITLE
+                                    TITLETYPE="MONOGRAPHIC"
+                                    REG="The History of the Decline and Fall of the Roman Empire"
+                                    >Decline and Fall of the Roman Empire</TITLE></TEXT> (1776-88),
+                                    <TEXT><NAME STANDARD="Sterne, Laurence">Sterne</NAME>&apos;s
+                                    <TITLE TITLETYPE="MONOGRAPHIC">A Sentimental
+                                Journey</TITLE></TEXT> (<DATE VALUE="1768-02-">1768</DATE>),
+                                    <TEXT><NAME>Voltaire</NAME>&apos;s <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Zadig</TITLE></TEXT> (1748), <TEXT><NAME
+                                    STANDARD="La Rochefoucauld, Fran&ccedil;ois de Marsillac,,, duc de"
+                                    >La Rochefoucauld</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC"
+                                    REG="R&eacute;flexions; ou, Sentences et maximes morales"
+                                    >Maxims</TITLE></TEXT> (1665), and <TEXT><NAME
+                                    STANDARD="Chesterfield, Philip Dormer Stanhope,,, fourth Earl of"
+                                    >Chesterfield</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC"
+                                    REG="Letters Written by the late Right Honourable Philip Dormer Stanhope, Earl of Chesterfield"
+                                    >Letters to his Son</TITLE></TEXT> (<DATE VALUE="1774-04-"
+                                CERTAINTY="BY">1774</DATE>). The last two of these became <QUOTE
+                                DIRECT="Y">like Bibles</QUOTE> to her.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 36" DBREF="32057">36</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Anthony Glyn 43" DBREF="32421">43</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Hardwick 37" DBREF="32059">37</BIBCIT></BIBCITS>
+                            She later wrote that she became <QUOTE DIRECT="Y">saturated with Bourbon
+                                Court History, and the atmosphere of ancient Rome which I absorbed
+                                from Gibbon superposed itself upon my old love of all things
+                                Greek.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 37"
+                                    DBREF="32057">37</BIBCIT></BIBCITS> When she tired of the books
+                            in the library, she visited <PLACE><SETTLEMENT>St
+                                    Helier</SETTLEMENT>&apos;s<REGION REG="Jersey"/><GEOG REG="UK"
+                                /></PLACE> public library to read and memorise passages from the
+                                    encyclopaedia.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 39"
+                                    DBREF="32059">39</BIBCIT><BIBCIT PLACEHOLDER="Glyn, Romantic 37"
+                                    DBREF="32057">37</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During her adolescence EG travelled many times to
+                                    <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG REG="France"
+                                /></PLACE>. Like her contemporary <NAME
+                                STANDARD="Orczy, Emmuska,,, Baroness">Baroness Orczy</NAME> she
+                            loved its rich history of aristocracy rather than that of
+                                    revolution.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 40-1, 47-53" DBREF="32057">40-1,
+                                    47-53</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICNO">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>From an early age, EG developed a stubborn belief in a particular kind of
+                            romantic love. This, she believed, was the only kind of love worth
+                            marrying for; it was the love which, according to her mother, her
+                            parents had and her mother and stepfather did not. When in her late
+                            teenage years Elinor began to receive marriage proposals, including one
+                            from a duke and one from a millionaire, she turned them down because she
+                            was not romantically in love with these men. To her commitment to
+                            romance she added a realistic sense of the necessity of money: <QUOTE
+                                DIRECT="Y">I had no illusions about the joys of love in a cottage,
+                                and knew only too well the long struggle and misery of
+                                poverty.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 46"
+                                    DBREF="32057">46</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 51"
+                                    DBREF="32059">51</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Her Sister&apos;s Story</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="SISTER">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P><NAME>James Wallace</NAME>, husband of EG&apos;s sister <NAME
+                                    STANDARD="Duff Gordon, Lucy Christiana,,, Lady">Lucy</NAME>,
+                                gambled and drank their money away. Lucy finally divorced him in
+                                1889; her mother paid for the divorce with the little money that
+                                David Kennedy had left her at his death. To provide for herself and
+                                her daughter, Lucy established a <JOB REG="dressmaker">dressmaking
+                                    business</JOB>, launching what was to become a highly
+                                successful, international <JOB REG="fashion designer">career in
+                                    fashion design</JOB>. She opened her first business, <ORGNAME
+                                    REG="Maison Lucile" STANDARD="Maison Lucile">Lucile
+                                    Ltd</ORGNAME>, at the home she shared with her mother in
+                                            <PLACE><ADDRESS><ADDRLINE>Davies
+                                        Street</ADDRLINE></ADDRESS>, <SETTLEMENT REG="London"
+                                        >London</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                        REG="England"/></PLACE>. It had expanded so much that by
+                                1895 she needed a larger space, and she re-opened it at
+                                            <PLACE><ADDRESS><ADDRLINE>24 Old Burlington
+                                            Street</ADDRLINE></ADDRESS><SETTLEMENT REG="London"
+                                        /><REGION REG="Middlesex"/><GEOG REG="England"/></PLACE>.
+                                Within a few years, Lucy or Lucile was designing and selling dresses
+                                to well-known socialites and prominent figures, such as the <NAME
+                                    STANDARD="Alexandra of Denmark,, Queen of England">Princess of
+                                    Wales</NAME>, <NAME STANDARD="Asquith, Margot">Margot, Lady
+                                    Asquith</NAME>, and <NAME
+                                    STANDARD="Desborough, Ethel Grenfell,,, Lady">Lady
+                                    Desborough</NAME>. In 1897 Lucy expanded her business again, at
+                                the <ORGNAME>Maison Lucile</ORGNAME>, <PLACE><ADDRESS><ADDRLINE>17
+                                            Hanover Square</ADDRLINE></ADDRESS><SETTLEMENT
+                                        REG="London"/><REGION REG="Middlesex"/><GEOG REG="England"
+                                    /></PLACE>. She was by now a well-established <FOREIGN
+                                    REG="dressmaker" LANG="fr">couturi&egrave;re</FOREIGN>, and she
+                                promoted her business with cards advertising <QUOTE DIRECT="Y"
+                                    >Picture Frocks and Corsets.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 58" DBREF="32425"
+                                        >58</BIBCIT></BIBCITS> By the mid-1890s she had taken <NAME
+                                    STANDARD="Duff Gordon, Sir Cosmo">Sir Cosmo Duff Gordon</NAME>
+                                as a business partner; they married in <DATE VALUE="1900-05-24">May
+                                    1900</DATE>.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 54"
+                                        DBREF="32057">54</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Hardwick 58, 77, 91" DBREF="32059">58, 77,
+                                        91</BIBCIT><BIBCIT PLACEHOLDER="Anthony Glyn 57"
+                                        DBREF="32421">57</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 60, 85"
+                                        DBREF="32425">60, 85</BIBCIT></BIBCITS><SCHOLARNOTE><P>Sir
+                                        Cosmo was a nephew by marriage, not a descendant, of
+                                        translator and letter-writer <NAME
+                                            STANDARD="Duff Gordon, Lucie">Lucie Duff
+                                        Gordon</NAME>.</P></SCHOLARNOTE> Lucy&apos;s designs, when
+                                    <QUOTE DIRECT="Y">loosed upon a startled London, a London of
+                                    flannel underclothes, woollen stockings and voluminous
+                                    petticoats,</QUOTE> shocked her Edwardian customers. They <QUOTE
+                                    DIRECT="Y">showed the world that a woman&apos;s leg can be a
+                                    thing of beauty, instead of a <SOCALLED>limb</SOCALLED> . . .
+                                    which was only spoken of in the privacy of the
+                                    fitting-room.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 73" DBREF="32425"
+                                        QTDIN="QTDINYES">73</BIBCIT></BIBCITS> By the turn of the
+                                century she was generating almost &pound;40,000 a year in
+                                        profits.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 125"
+                                        DBREF="32425">125</BIBCIT></BIBCITS></P>
+                            <P>In 1910, after a lavish advertising campaign in the USA, Lucy took
+                                fifty new designs with her to <PLACE><SETTLEMENT REG="New York City"
+                                        >New York</SETTLEMENT><REGION REG="New York"/><GEOG
+                                        REG="USA"/></PLACE>, where she opened an American branch of
+                                her business and began to give <JOB REG="fashion consultant">private
+                                    fashion consultations to the wealthy</JOB>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 126-9"
+                                        DBREF="32425">126-9</BIBCIT></BIBCITS> In 1912 she set up
+                                shop in Paris, in the <PLACE><ADDRESS><ADDRLINE>rue de
+                                            Penthi&egrave;vres</ADDRLINE></ADDRESS><SETTLEMENT
+                                        REG="Paris"/><GEOG REG="France"/></PLACE>, and in the same
+                                year she and her husband went on the <RS TYPE="ship"
+                                >Titanic</RS>&apos;s <DATE VALUE="1912-04-10">maiden voyage</DATE>.
+                                They survived the sinking of the ship, though their names had
+                                mistakenly been printed on the list of the dead or
+                                        missing.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 176"
+                                        DBREF="32059">176</BIBCIT></BIBCITS> Lucy&apos;s success in
+                                America reached a pinnacle in 1917, when <ORGNAME>Sears
+                                    Roebuck</ORGNAME> contracted her to design dresses for their
+                                catalogue. But her career was soon to be ended, partly by the
+                                effects of the First World War on the London and Paris fashion
+                                industry. After the war she tried to initiate a new line of clothes
+                                in Paris, but was unsuccessful. Bankrupt in 1923, she returned to
+                                England where in 1932 she published her autobiography, <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Discretions and
+                                        Indiscretions</TITLE>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Hardwick 212" DBREF="32059">212</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 197, 226"
+                                        DBREF="32425">197, 226</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Duff Gordon title-page and prelims"
+                                        DBREF="32445">title-page and prelims</BIBCIT></BIBCITS> She
+                                died on <DATE>14 April 1935</DATE>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Hardwick 279" DBREF="32059"
+                                    >279</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Freedom at a Cost</HEADING>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In 1890, after the death of her oppressive stepfather, <NAME>David
+                                Kennedy</NAME>, Elinor Sutherland (later Glyn) moved with her <NAME
+                                STANDARD="Kennedy, Elinor,, 1840 - 1937">mother</NAME> from
+                                    <PLACE><REGION>Jersey</REGION><GEOG REG="UK"/></PLACE> to
+                            London. With Elinor&apos;s sister, Lucy, they rented a house at
+                                        <PLACE><ADDRESS><ADDRLINE>25 Davies
+                                    Street</ADDRLINE></ADDRESS><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>. Kennedy&apos;s
+                            death and Lucy&apos;s divorce left the family in serious financial
+                                    trouble.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 54"
+                                    DBREF="32057">54</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 58"
+                                    DBREF="32059">58</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Oxford DNB under Lucy Christiana Duff Gordon"
+                                    DBREF="29268">under Lucy Christiana Duff
+                                Gordon</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Marriage</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                RESP="RJB">
+                                <DATE>27 April 1892</DATE>
+                                <CHRONPROSE><NAME STANDARD="Glyn, Elinor">Elinor Sutherland</NAME>
+                                    married <NAME STANDARD="Glyn, Henry Clayton">Clayton
+                                    Glyn</NAME>, a well-established bachelor ten years her senior,
+                                    at <PLACE><PLACENAME
+                                            REG="St George&apos;s Church,, Hanover Square">St
+                                            George&apos;s</PLACENAME>, <ADDRESS><ADDRLINE>Hanover
+                                                Square</ADDRLINE></ADDRESS><SETTLEMENT REG="London"
+                                            /><REGION REG="Middlesex"/><GEOG REG="England"
+                                    /></PLACE>, already a fashionable church for
+                                    weddings.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Glyn, Romantic 58" DBREF="32057"
+                                        >58</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Hardwick 62" DBREF="32059">62</BIBCIT>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>Forty years later, Elinor wrote that her relationship with
+                                    Clayton <QUOTE DIRECT="Y">had the inevitability of Fate from the
+                                        very start.</QUOTE><BIBCITS><BIBCIT
+                                            PLACEHOLDER="Glyn, Romantic 57" DBREF="32057"
+                                            >57</BIBCIT></BIBCITS> She was attracted to him <QUOTE
+                                        DIRECT="Y">because I was unconsciously reminded of the
+                                        illustrations in my books of Cinderella&apos;s fairy
+                                        Prince.</QUOTE><BIBCITS><BIBCIT
+                                            PLACEHOLDER="Glyn, Romantic 57" DBREF="32057"
+                                            >57</BIBCIT></BIBCITS> Elinor&apos;s sister made her
+                                    bridal gown, as well as the dresses for all the
+                                            bridesmaids.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Glyn, Romantic 58" DBREF="32057"
+                                            >58</BIBCIT></BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MARRIAGE>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Elinor and Clayton Glyn moved into his three-hundred-year-old farmhouse,
+                                    <PLACE><PLACENAME>Sheering Hall</PLACENAME>, near <SETTLEMENT
+                                    REG="Harlow">Harlow</SETTLEMENT> in <REGION REG="Essex"
+                                    >Essex</REGION><GEOG REG="England"/></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 56, 59" DBREF="32057">56,
+                                    59</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The Glyns enjoyed an active social life, which included shooting parties
+                            in <PLACE><GEOG>Scotland</GEOG></PLACE>, and masquerades and fancy dress
+                            balls in not only in Europe&mdash;<PLACE><GEOG>England</GEOG></PLACE>,
+                                    <PLACE><GEOG>France</GEOG></PLACE>,
+                                <PLACE><GEOG>Italy</GEOG></PLACE>&mdash;but also in
+                                    <PLACE><GEOG>Egypt</GEOG></PLACE>, where Elinor mixed with
+                            English aristocrats and Egyptian nobles. She always put her social life
+                            first, taking care to see and be seen at the most fashionable
+                            gatherings. She was, says the <TITLE TITLETYPE="SERIES">Dictionary of
+                                Literary Biography</TITLE>, <QUOTE DIRECT="Y">an ostentatious
+                                fashion plate.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="DLB 153 online"
+                                    DBREF="18329">153</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 103-4, 126" DBREF="32057">103-4,
+                                    126</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 68-9, 75-7"
+                                    DBREF="32059">68-9, 75-7</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Class Attitudes</HEADING>
+            <CULTURALFORMATION>
+                <CLASSISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Having been convinced from childhood that she belonged to a superior
+                                class although her family was pushed for money, EG continued to
+                                suffer from financial instability as an adult. She consistently put
+                                up a fa&ccedil;ade of having more money than she actually did. She
+                                prized class status highly, abhorred poverty, and largely ignored
+                                its existence as a social problem. In later years she bracketed her
+                                confession of shame at her lack of sympathy for the less fortunate
+                                with another distancing gesture. <QUOTE DIRECT="Y">I feel ashamed
+                                    now when I look back at my blindness and my <CLASS
+                                        SOCIALRANK="GENTRY" SELF-DEFINED="SELFYES"
+                                        >superiority</CLASS>. . . . I had never had occasion to
+                                    ponder the problem of poverty.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 61" DBREF="32057"
+                                    >61</BIBCIT></BIBCITS> She asserted that when she lived in
+                                        <PLACE><REGION>Jersey</REGION><GEOG REG="UK"/></PLACE>,
+                                    <QUOTE DIRECT="Y">personal contact with any but one&apos;s own
+                                    class was unknown.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 61" DBREF="32057"
+                                    >61</BIBCIT></BIBCITS> She cited her adolescent experience in
+                                        <PLACE><GEOG>France</GEOG></PLACE> as confirming her
+                                understanding of the dominance of class distinction in the world,
+                                and her aversion to the lower classes.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 61-2" DBREF="32057"
+                                        >61-2</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </CLASSISSUE>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Two Daughters</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="DAUGHTER">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="RJB">
+                            <DATE>June 1893</DATE>
+                            <CHRONPROSE>
+                                <CHILDREN NUMBER="2">EG gave birth to her first child, a daughter
+                                    named <NAME STANDARD="Davson, Margot Glyn,,, Lady">Margot (later
+                                        Lady Davson)</NAME>.</CHILDREN>
+                            </CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Glyn, Romantic 86" DBREF="32057">86</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>EG and her husband exemplified later Victorian upper-class attitudes
+                                toward child-rearing: he built a new wing onto Sheering Hall so that
+                                the nursery and all its trappings would remain safely distanced from
+                                him. Elinor too found that she was <QUOTE DIRECT="Y">not very
+                                    interested in babies.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Hardwick 67" DBREF="32059"
+                                    >67</BIBCIT></BIBCITS> Her mother ended up playing a substantial
+                                role in raising EG&apos;s two daughters, as Elinor&apos;s
+                                grandmother had done in Elinor&apos;s upbringing.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="GRANDSON">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Margot&apos;s son <NAME STANDARD="Glyn, Anthony">Geoffrey Leo Simon
+                                    Davson</NAME> became a writer and assumed the name of Anthony
+                                Glyn in honour of his grandmother.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After Margot&apos;s birth EG fell ill, first with typhoid fever, then
+                            with a concussion sustained when she fell at the theatre in
+                                    <PLACE><SETTLEMENT>Edinburgh</SETTLEMENT><REGION
+                                    REG="Midlothian"/><GEOG REG="Scotland"/></PLACE>. It took her
+                            almost three years to recover fully.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 86-7" DBREF="32057"
+                                    >86-7</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 74" DBREF="32059"
+                                    >74</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Throughout their marriage, EG and her husband wintered in various warm
+                            locations, such as <PLACE><GEOG>Italy</GEOG></PLACE> and
+                                    <PLACE><GEOG>Egypt</GEOG></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 91, 99" DBREF="32057">91,
+                                    99</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="DAUGHTER">
+                    <DIV2>
+                        <HEADING>Dame Juliet Evangeline Rhys Williams</HEADING>
+                        <SHORTPROSE>
+                            <P><CHILDREN NUMBER="2">EG gave birth to her second daughter (<NAME
+                                        STANDARD="Rhys Williams, Dame Juliet Evangeline">Juliet,
+                                        later Rhys Williams</NAME>) on <DATE>15 December
+                                    1898</DATE>.</CHILDREN><BIBCITS><BIBCIT PLACEHOLDER="Oxford DNB"
+                                        DBREF="29268"/><BIBCIT PLACEHOLDER="Hardwick 78"
+                                        DBREF="32059">78</BIBCIT></BIBCITS> Juliet grew up to be
+                                most unlike her mother: a <JOB REG="economist">specialist in
+                                    economics</JOB>, politically active and devoted to public
+                                service, particularly in social and medical services for pregnant
+                                women and children. During the 1930s she acted as <JOB
+                                    REG="hospital department treasurer">treasurer</JOB> of
+                                    <ORGNAME>Queen Charlotte&apos;s Hospital</ORGNAME> Anaesthetic
+                                Fund, as <JOB REG="association secretary">secretary</JOB> for the
+                                    <ORGNAME>Joint Council of Midwifery</ORGNAME>, and as a
+                                    <SIGNIFICANTACTIVITY
+                                    PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                    REG="committee-woman"><QUOTE DIRECT="Y">member of the
+                                        interdepartmental committee on
+                                    abortion.</QUOTE></SIGNIFICANTACTIVITY><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Oxford DNB under Williams, Dame Juliet Evangeline Rhys"
+                                        DBREF="29268">under Williams, Dame Juliet Evangeline
+                                        Rhys</BIBCIT></BIBCITS> She was made a DBE in 1937 for her
+                                work on the Midwives&apos; Act of 1936 (which established directives
+                                for professional training and a salary scale for midwives working
+                                with local government), and was later appointed <QUOTE DIRECT="Y">a
+                                    dame of grace of the order of St John of
+                                        Jerusalem.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Oxford DNB under Williams" DBREF="29268">under
+                                        Williams, Dame Juliet Evangeline Rhys</BIBCIT></BIBCITS> She
+                                    <SIGNIFICANTACTIVITY>published</SIGNIFICANTACTIVITY> two books
+                                advocating welfare policies (<TITLE TITLETYPE="MONOGRAPHIC"
+                                    REG="Something to Look Forward to">Something to Look Forward to:
+                                    A Suggestion for a New Social Contract</TITLE>, 1943, and <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Family Allowances and Social
+                                    Security</TITLE>, 1944) as well as other titles both highly
+                                specialist (<TITLE TITLETYPE="MONOGRAPHIC">Taxation and
+                                    Incentive</TITLE>, 1953) and lighter (<TITLE
+                                    TITLETYPE="MONOGRAPHIC" REG="Aircraftwoman Grey">Aircraftwoman
+                                    Grey, A Novel</TITLE>, 1943).<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Oxford DNB under Williams" DBREF="29268">under
+                                        Williams, Dame Juliet Evangeline Rhys</BIBCIT><BIBCIT
+                                        PLACEHOLDER="BLC" DBREF="2052"/></BIBCITS> An active member
+                                of the <ORGNAME>Liberal Party</ORGNAME>, she chaired the
+                                publications and publicity committee of the <ORGNAME>Women&apos;s
+                                    Liberal Federation</ORGNAME>. After the war she worked in
+                                European reconstruction as <JOB>secretary</JOB> of the British
+                                committee of the <ORGNAME>European League of Economic
+                                    Co-operation</ORGNAME>. She died in <DATE VALUE="1964-09-18"
+                                    >1964</DATE>.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After the birth of this second daughter, EG&apos;s <NAME
+                                STANDARD="Glyn, Henry Clayton">husband</NAME> went to
+                                    <PLACE><SETTLEMENT>Monte Carlo</SETTLEMENT><GEOG REG="Monaco"
+                                /></PLACE>, where he gambled away the large sum of &pound;10,000.
+                            His excuse was being distraught that the child was not a male
+                                    heir.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 92"
+                                    DBREF="32057">92</BIBCIT><BIBCIT PLACEHOLDER="Oxford DNB"
+                                    DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Once again, EG fell seriously ill after childbirth, this time with
+                            typhoid and rheumatic fever (though the <TITLE TITLETYPE="MONOGRAPHIC"
+                                >Oxford Dictionary of National Biography</TITLE> suggests she
+                            suffered from post-partum depression). Everyone, including herself,
+                            thought she was going to die, but at this point, through reading her
+                            youthful journals, she discovered a new direction for her life:
+                                    writing.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 92"
+                                    DBREF="32057">92</BIBCIT><BIBCIT PLACEHOLDER="Oxford DNB"
+                                    DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Society and Politics</HEADING>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>February 1900</DATE>
+                        <CHRONPROSE>EG appeared on stage in a <FOREIGN LANG="fr">tableau
+                                vivant</FOREIGN>, one of a series designed by a socialite named
+                                <NAME STANDARD="Paget, Lady Arthur">Lady Arthur Paget
+                                    (<SOCALLED>Minnie</SOCALLED>)</NAME> and directed by <NAME
+                                STANDARD="Tree, Sir Herbert Beerbohm">Beerbohm Tree</NAME> at
+                                <ORGNAME REG="His Majesty&apos;s Theatre,, Haymarket"
+                                STANDARD="Her Majesty&apos;s Theatre,, Haymarket">His Majesty&apos;s
+                                Theatre</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 209" DBREF="32057">209</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 83" DBREF="32059">83</BIBCIT>
+                        </BIBCITS>
+                        <SCHOLARNOTE>
+                            <P>EG&apos;s grandson biographer, <NAME>Anthony Glyn</NAME>, says this
+                                performance took place in May 1900.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Anthony Glyn 83" DBREF="32421"
+                                    >83</BIBCIT></BIBCITS></P>
+                        </SCHOLARNOTE>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The other women in these <FOREIGN LANG="fr">tableaux vivants</FOREIGN>
+                            (all titled except one) were <NAME STANDARD="Sackville, Lady Mary">Lady
+                                Mary Sackville</NAME>, the <NAME
+                                STANDARD="d&apos;Erlanger, Marie Rose de Rochegude,,, Baroness"
+                                >Baroness d&apos;Erlanger</NAME>, <NAME
+                                STANDARD="St Oswald, Mabel,,, Lady">Lady St Oswald</NAME>, and
+                                <NAME>Winifred Curzon</NAME> (sister-in-law of EG&apos;s future
+                            lover). They enacted <TITLE TITLETYPE="MONOGRAPHIC">The Five
+                                Senses</TITLE> as painted by <NAME STANDARD="Titian"
+                                    >Titian</NAME>.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 84"
+                                    DBREF="32059">84</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 209" DBREF="32057"
+                                >209</BIBCIT></BIBCITS></P>
+                        <P>About a year later, EG and her <NAME STANDARD="Glyn, Henry Clayton"
+                                >husband</NAME> were present to see <NAME STANDARD="Victoria, Queen"
+                                >Queen Victoria</NAME>&apos;s body in its triple coffin crossing
+                            London on <DATE>2 February 1901</DATE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 97" DBREF="32057">97</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Oxford DNB under Queen Victoria" DBREF="29268"
+                                    >under Queen Victoria</BIBCIT></BIBCITS>
+                            <QUOTE DIRECT="Y">I felt that I was witnessing the funeral procession of
+                                England&apos;s greatness and glory,</QUOTE> EG wrote years later in
+                            her autobiography.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 98"
+                                    DBREF="32057">98</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Without supporting any political party, EG held
+                                <POLITICALAFFILIATION>conservative</POLITICALAFFILIATION> political
+                            views throughout her life. She <POLITICALAFFILIATION
+                                WOMAN-GENDERISSUE="GENDERYES" INVOLVEMENT="INVOLVEMENTYES"
+                                REG="anti-suffragist">opposed the suffrage
+                                movement</POLITICALAFFILIATION> during its struggle, but years
+                            later, writing her autobiography with an eye to posterity, she revised
+                            her earlier views to see herself as <QUOTE DIRECT="Y">a member of the
+                                band of pioneers in the cause of feminine emancipation who laboured
+                                so earnestly . . . to free the souls and bodies of women from the
+                                heavy age-old trammels of custom and
+                                    convention.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 131" DBREF="32057"
+                                >131</BIBCIT></BIBCITS> During her time in Egypt she became a strong
+                            advocate of <POLITICALAFFILIATION INVOLVEMENT="INVOLVEMENTYES"
+                                REG="imperialist">British Imperialism</POLITICALAFFILIATION>, whose
+                            ideals upheld her notions of autocracy, aristocratic rule, class
+                            hierarchies, and Victorian morality. She particularly admired <NAME
+                                STANDARD="Cromer, Evelyn Baring,,, first Earl of">Evelyn Baring,
+                                Lord Cromer</NAME>, the British Consul in Egypt. Her comment in her
+                            autobiography&mdash;that his <QUOTE DIRECT="Y">sagacious rule ensured
+                                not merely the political dominance of the British, but also the
+                                maintenance of a stately, dignified, yet gay social
+                            life</QUOTE>&mdash;exemplifies her habit of subordinating the political
+                            to the social.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 100"
+                                    DBREF="32057">100</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 99-101, 131" DBREF="32057">99-101,
+                                    131</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 92" DBREF="32059"
+                                    >92</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Reincarnation and Karma</HEADING>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>EG writes in her autobiography that she experienced her first sense
+                                of <FOREIGN LANG="fr">d&eacute;j&agrave; vu</FOREIGN> in
+                                        <PLACE><SETTLEMENT>Pompeii</SETTLEMENT><GEOG REG="Italy"
+                                    /></PLACE>; it was followed by a second experience at the
+                                        <PLACE><PLACENAME>Temple of Neptune</PLACENAME> at
+                                        <SETTLEMENT>Paestum</SETTLEMENT><GEOG REG="Italy"/></PLACE>.
+                                After these experiences, she read and thought about <DENOMINATION
+                                    SELF-DEFINED="SELFYES" REG="believer in reincarnation"
+                                    >reincarnation</DENOMINATION>, and came to the conclusion <QUOTE
+                                    DIRECT="Y">that I have lived on earth before, probably many
+                                    times, and that these moments of unusual vision are due to some
+                                    special . . . sensitiveness to influences from beyond the veil,
+                                    and are in no sense illusory.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 112" DBREF="32057"
+                                        >112</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 101"
+                                        DBREF="32059">101</BIBCIT></BIBCITS> For the rest of her
+                                life, she experienced from time to time what she believed to be
+                                visions of her past lives.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 110-17" DBREF="32057"
+                                        >110-17</BIBCIT></BIBCITS> She also developed a theory of
+                                her own about <DENOMINATION SELF-DEFINED="SELFYES" REG="fatalist"
+                                    >karma</DENOMINATION>: it is, she wrote, <QUOTE DIRECT="Y"
+                                    >concerned rather with the adjustment, or re-adjustment, of the
+                                    relations between one individual and another, than with
+                                    punishment of any kind.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 118" DBREF="32057"
+                                    >118</BIBCIT></BIBCITS> She claimed that her reading on
+                                reincarnation, pre-existence, and karma helped her to understand and
+                                accept the <TITLE TITLETYPE="ANALYTIC" REG="Bible" REND="normal">New
+                                    Testament</TITLE>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 119-21" DBREF="32057"
+                                        >119-21</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Love Affairs</HEADING>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>By 1894 EG felt that the romance of her marriage was over. In 1901 or
+                            1902 she fell in love with Major <NAME>Seymour Wynne
+                                    Finch</NAME>.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 84"
+                                    DBREF="32057">84</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 94-6"
+                                    DBREF="32059">94-6</BIBCIT></BIBCITS><SCHOLARNOTE><P>EG dates
+                                    this affair in 1902, while her biographer <NAME>Joan
+                                        Hardwick</NAME> says it took place in
+                                1901.</P></SCHOLARNOTE></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>By 1902 EG was suffering a recurrence of a severe pain in her side that
+                            she had first experienced in Egypt. To treat this pain she went to the
+                            Bohemian spa of <PLACE><SETTLEMENT>Carlsbad</SETTLEMENT><GEOG
+                                    REG="Czech Republic"/></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 129" DBREF="32057"
+                                >129</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>This visit furthered her social networking, bringing her together with
+                            the classical scholar, lawyer and judge <NAME
+                                STANDARD="St Helier, Francis Henry Jeune,,, first Baron">Sir Francis
+                                Henry Jeune (later Lord St Helier)</NAME> and <NAME
+                                STANDARD="St Helier, Susan Elizabeth Mary Constantine Jeune,,, Baroness"
+                                >Lady Jeune</NAME>, of whom she became a close friend. They
+                            introduced her to the writer Sir <NAME>Gilbert Parker</NAME>, who also
+                            became her friend.<BIBCITS><BIBCIT PLACEHOLDER="Anthony Glyn 96"
+                                    DBREF="32421">96</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 108"
+                                    DBREF="32059">108</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In 1903 EG, bored with her marriage, fell for <NAME
+                                STANDARD="Milner, Alfred,,, Viscount">Lord Milner</NAME>, an
+                            imperialist politician who had been the editor of the <TITLE
+                                TITLETYPE="JOURNAL">Pall Mall Gazette</TITLE> and a civil servant in
+                                    Egypt.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 111" DBREF="32059"
+                                    >111</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Oxford DNB under Alfred Milner" DBREF="29268">under
+                                    Alfred Milner</BIBCIT></BIBCITS> The two corresponded for some
+                            time, even after Glyn had begun another affair with <NAME>Lord Alistair
+                                Innes-Ker</NAME>, an army officer. Around this same time (1903-05),
+                            she also met and felt attracted to <NAME
+                                STANDARD="Curzon, George Nathaniel,,, Marquess">Lord Curzon</NAME>,
+                            a Conservative anti-suffragist, formerly Viceroy of
+                                    India.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 113-16"
+                                    DBREF="32059">113-16</BIBCIT></BIBCITS> Because of EG&apos;s
+                                <QUOTE DIRECT="Y">rigid moral code</QUOTE>, however, these affairs
+                            remained chaste.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 118"
+                                    DBREF="32059">118</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>
+                <SOCALLED>God&apos;s own Country</SOCALLED>
+            </HEADING>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>October 1907</DATE>
+                        <CHRONPROSE>EG set out to travel alone for almost a year through the
+                                    <PLACE><GEOG REG="USA">United States</GEOG></PLACE> (which she
+                            had always considered to be <QUOTE DIRECT="Y">God&apos;s own
+                                Country</QUOTE>).</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 137" DBREF="32057">137</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 128" DBREF="32059">128</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Her husband did not travel with her, but took their children and her
+                            mother to Ceylon, Japan, and Russia. An American friend of EG&apos;s had
+                            suggested that she should make the trip and had offered to introduce her
+                            to <PLACE><SETTLEMENT REG="New York City">New York</SETTLEMENT><REGION
+                                    REG="New York"/><GEOG REG="USA"/></PLACE> society. She revelled
+                            in the <QUOTE DIRECT="Y">very big adventure to be thus travelling about
+                                by myself, in the <SIC>r&ocirc;le</SIC> of <QUOTE DIRECT="N">Elinor
+                                    Glyn the famous authoress,</QUOTE> instead of in the company of
+                                my husband as the rather timid, peculiar-looking wife of the
+                                well-known traveller.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 138" DBREF="32057"
+                                >138</BIBCIT></BIBCITS> In her autobiography, thirty years later, EG
+                            remembered that her first impression of Americans <QUOTE DIRECT="Y">was
+                                that there was a faint look of the Red Indian about most of the
+                                people.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 140"
+                                    DBREF="32057">140</BIBCIT></BIBCITS> Accordingly she found
+                            American civilians to be <QUOTE DIRECT="Y">primitive</QUOTE>, though
+                            thirty years later in her autobiography she wrote that the <QUOTE
+                                DIRECT="Y">American woman is unquestionably the most beautiful, the
+                                best-dressed, best-turned-out and consequently the most attractive
+                                of all women.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 151" DBREF="32057"
+                                >151</BIBCIT></BIBCITS> She particularly enjoyed the western States,
+                                <QUOTE DIRECT="Y">because this country and its inhabitants
+                                represented romance.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 158" DBREF="32057"
+                                >158</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In the <PLACE><GEOG REG="USA">USA</GEOG></PLACE> EG met <NAME>Mark
+                                Twain</NAME>, whom she thought <QUOTE DIRECT="Y">the wittiest
+                                creature imaginable.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 144" DBREF="32057"
+                                >144</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Financial Duress</HEADING>
+            <WEALTH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATESTRUCT CERTAINTY="C" VALUE="1908-07-">
+                            <SEASON VALUE="-07-" CERTAINTY="C">Summer</SEASON>
+                            <YEAR VALUE="1908--">1908</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>When EG&apos;s <NAME STANDARD="Glyn, Henry Clayton"
+                                >husband</NAME> returned from his travels around the world, he
+                            confessed to her that he had spent all of their capital and was now in
+                            serious debt.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 168-9" DBREF="32057">168-9</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 142-3" DBREF="32059">142-3</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>He excused himself on the grounds that without a male heir he had found
+                            little point in amassing a fortune (his daughters could marry rich men).
+                            EG was shocked: though she had written of her husband as a Prince
+                            Charming, she also complained that she had <QUOTE DIRECT="Y">imagined
+                                him to be a very rich man.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 169" DBREF="32057"
+                                >169</BIBCIT></BIBCITS> She paid off some of his debts with money
+                            earned by her book sales, and thereafter she controlled <QUOTE
+                                DIRECT="Y">the payment of all the household expenses, and the cost
+                                of the children&apos;s education.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 169" DBREF="32057"
+                                >169</BIBCIT></BIBCITS> The family was forced to sell
+                                    <PLACE><PLACENAME>Sheering Hall</PLACENAME><SETTLEMENT
+                                    REG="Harlow"/><REGION REG="Essex"/><GEOG REG="England"/></PLACE>
+                            and to live with EG&apos;s mother at
+                                    <PLACE><PLACENAME>Lamberts</PLACENAME><REGION REG="Essex"/><GEOG
+                                    REG="England"/></PLACE>, a cottage nearby. EG was also forced to
+                            sign her marriage settlement away to cover her husband&apos;s expenses.
+                            Despite the threat of bankruptcy (averted by her literary earnings),
+                            both of them continued to live beyond their means, and Elinor faced
+                            financial problems throughout her marriage. She later remembered <QUOTE
+                                DIRECT="Y">the years from the summer of 1908 to the winter of 1913 .
+                                . . as one long nightmare of recurring financial
+                                    crises.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 174"
+                                    DBREF="32057">174</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 110"
+                                    DBREF="32059">110</BIBCIT><BIBCIT PLACEHOLDER="Anthony Glyn 78"
+                                    DBREF="32421">78</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>George Curzon</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>23 July 1908</DATE>
+                        <CHRONPROSE>EG <SIGNIFICANTACTIVITY REG="acting"
+                                >played</SIGNIFICANTACTIVITY> the role of <SOCALLED>the
+                                Lady</SOCALLED> in a private production adapted from her romance
+                            novel <TITLE TITLETYPE="MONOGRAPHIC">Three Weeks</TITLE> at the
+                                    <PLACE><PLACENAME>Adelphi Theatre</PLACENAME> in
+                                    <SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 209" DBREF="32057">209</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Anthony Glyn 168" DBREF="32421">168</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICYES">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Her romantic attraction to <NAME
+                                STANDARD="Curzon, George Nathaniel,,, Marquess">Lord Curzon</NAME>
+                            resurfaced when he went out of his way to compliment her on this
+                            production. Her previous determination to be faithful to her husband was
+                            now weakened by <QUOTE DIRECT="Y">passion and a real conflict between
+                                the fidelity she believed she owed her husband and a desire to
+                                experience love to the full.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Hardwick 148" DBREF="32059">148</BIBCIT></BIBCITS>
+                            By now Curzon&apos;s wife, <NAME STANDARD="Curzon, Mary,,, Baroness"
+                                >Mary</NAME>, had died.<SCHOLARNOTE><P>The <TITLE
+                                        TITLETYPE="MONOGRAPHIC">Oxford Dictionary of National
+                                        Biography</TITLE> mentions <QUOTE DIRECT="Y">the deepening
+                                        of their mutual love</QUOTE> during the last years of a
+                                    marriage which had been painful in its early
+                                            stages.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="ODNB under Mary Victoria Curzon"
+                                            DBREF="29268">under Mary Victoria
+                                        Curzon</BIBCIT></BIBCITS></P></SCHOLARNOTE> After a series
+                            of secret meetings, the lovers made their affair public. It lasted eight
+                            years, during which time EG grew increasingly remote from her husband
+                            and their daughters, who were brought up largely by her
+                                    mother.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 149-51"
+                                    DBREF="32059">149-51</BIBCIT></BIBCITS> Once her husband died,
+                            however, Curzon did not propose to her, as she had expected, but to
+                            another fashionable society widow, <NAME
+                                STANDARD="Kedleston, Grace Duggan Curzon,,, Marchioness of">Grace
+                                Duggan</NAME>. Disappointed and angry, EG burned his letters, of
+                            which she had nearly five hundred.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Anthony Glyn 228" DBREF="32421"
+                                >228</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Russia</HEADING>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>28 December 1909</DATE>
+                        <CHRONPROSE>At the invitation of the <NAME
+                                STANDARD="Victoria Melita, Princess">Grand Duchess Cyril (or
+                                Kiril)</NAME> of Russia, EG took up residence in
+                                    <PLACE><SETTLEMENT>St Petersburg</SETTLEMENT><GEOG
+                                    CURRENT="Russian Federation" REG="Russia"/></PLACE> for the
+                            winter.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 179-80" DBREF="32057"
+                                >179-80</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 156" DBREF="32059">156</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Anthony Glyn 178" DBREF="32421">178</BIBCIT>
+                        </BIBCITS>
+                        <SCHOLARNOTE>
+                            <P>Biographers <NAME>Meredith Etherington-Smith</NAME> and <NAME>Jeremy
+                                    Pilcher</NAME> follow the Old Style in use in Russia when they
+                                date EG&apos;s arrival there to 18 December.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Etherington-Smith and Pilcher 131"
+                                        DBREF="32425">131</BIBCIT></BIBCITS></P>
+                        </SCHOLARNOTE>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>In St Petersburg she socialised with members of the Russian aristocracy,
+                            particularly the <NAME STANDARD="Marie Pavlovna, Grand Duchess">Grand
+                                Duchess Vladimir</NAME>, as well as with foreign diplomats and
+                            members of foreign nobility.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 157"
+                                    DBREF="32059">157</BIBCIT></BIBCITS> Though she spent her entire
+                            stay at the Russian court, surrounded by luxury and wealth, she quickly
+                            realised the precariousness of Russian life in general: this was <QUOTE
+                                DIRECT="Y">a country . . . in which it was very unsafe to know too
+                                much, or to hold strong opinions, whether about politics or
+                                individuals.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 198-9" DBREF="32057"
+                                >198-9</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <OTHERLIFEEVENT>
+                <DIV2>
+                    <HEADING>Near-Abduction</HEADING>
+                    <SHORTPROSE>
+                        <P>EG&apos;s autobiography includes a strange tale of near abduction. During
+                            her stay in <PLACE><SETTLEMENT>St Petersburg</SETTLEMENT><GEOG
+                                    CURRENT="Russian Federation" REG="Russia"/></PLACE>, she
+                            received notice that her <NAME STANDARD="Glyn, Henry Clayton"
+                                >husband</NAME> was in debt again and needed her to return to
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE> immediately. She decided to
+                            travel through <PLACE><SETTLEMENT>Moscow</SETTLEMENT><GEOG
+                                    CURRENT="Russian Federation" REG="Russia"/></PLACE> and
+                                    <PLACE><SETTLEMENT>Warsaw</SETTLEMENT><GEOG REG="Poland"
+                                /></PLACE> en route to London, and a man claiming to be an official
+                            of the Russian court told her that all her travel arrangements,
+                            including hotels, had been made for her. She believed him and followed
+                            his instructions. But when she arrived in Warsaw, another strange man
+                            picked her up and drove her off, apparently attempting to abduct her.
+                            Polish policemen stopped him, however, and turned the carriage back
+                            towards Warsaw. Once there, EG went straight to the station and caught
+                            the next train to <PLACE><GEOG>Germany</GEOG></PLACE>. She never found
+                            out who it was who had conspired to abduct her.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 188-92" DBREF="32057"
+                                    >188-92</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 159-61"
+                                    DBREF="32059">159-61</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OTHERLIFEEVENT>
+        </DIV1>
+        <DIV1>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In St Petersburgh EG attended many balls and ceremonial functions; the
+                            Russian court greatly impressed her with its grandeur in comparison with
+                            the <QUOTE DIRECT="Y">simplicity</QUOTE> of the English
+                                    court.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 193"
+                                    DBREF="32057">193</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Friends</HEADING>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>One of EG&apos;s closest friends was a leading Anglo-American socialite,
+                                <NAME STANDARD="Paget, Lady Arthur">Minnie, Lady Arthur
+                            Paget</NAME>. She also became a good friend of author and philosopher
+                                <NAME>F. H. Bradley</NAME>, whom she met in
+                                    <PLACE><GEOG>France</GEOG></PLACE> when they were staying in the
+                            same hotel.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 208, 212"
+                                    DBREF="32057">208, 212</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Hardwick 170" DBREF="32059">170</BIBCIT></BIBCITS>
+                            She claimed that Bradley&apos;s book <TITLE TITLETYPE="MONOGRAPHIC"
+                                >Appearance and Reality</TITLE> (1893) had influenced her greatly,
+                            and that he had helped her <QUOTE DIRECT="Y">very much to study the
+                                difficult art of thinking clearly.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 212" DBREF="32057"
+                                >212</BIBCIT></BIBCITS> EG built another lasting friendship with
+                                <NAME
+                                STANDARD="Londonderry, Theresa Vane-Tempest-Stewart,,, Marchioness of"
+                                >Theresa, Marchioness of Londonderry</NAME>, who was an active
+                            lobbyist for Conservative policies and a founder-leader of the
+                                <ORGNAME>Ulster Women&apos;s Unionist Council</ORGNAME>. The
+                            marchioness <QUOTE DIRECT="Y">came into her own as the presiding genius
+                                of tory high society</QUOTE> when <NAME STANDARD="Bonar Law, Andrew"
+                                >Andrew Bonar Law</NAME> became Conservative leader in November
+                            1911, and retained her influence until her husband died in <DATE
+                                VALUE="1915-02-08">February 1915</DATE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Oxford DNB under Charles Stewart Vane-Tempest Stewart"
+                                    DBREF="29268">under Charles Stewart Vane-Tempest
+                                    Stewart</BIBCIT><BIBCIT PLACEHOLDER="Glyn, Romantic 214"
+                                    DBREF="32057">214</BIBCIT></BIBCITS><SCHOLARNOTE><P>The
+                                        <ORGNAME>Ulster Women&apos;s Unionist Council</ORGNAME>,
+                                    formed on <DATE>23 January 1911</DATE>, was established to
+                                    oppose Irish Home Rule and campaign for the continuing union of
+                                            <PLACE><GEOG>Ireland</GEOG></PLACE> with
+                                            England.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Genesis: Ulster Women&apos;s Unionist Council Papers"
+                                            DBREF="32368"/></BIBCITS></P></SCHOLARNOTE></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Life on the Move</HEADING>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>From 1913 to 1915, EG lived intermittently in
+                                    <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG REG="France"
+                                /></PLACE> as well as <PLACE><SETTLEMENT>London</SETTLEMENT><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>. She was by now
+                            rarely seen with her husband. She later reported Parisian society to be
+                            hectic and a little wild: <QUOTE DIRECT="Y">vices and eccentrities were
+                                tolerated, reserve was a thing of the past.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 221" DBREF="32057"
+                                    >221</BIBCIT><BIBCIT PLACEHOLDER="Anthony Glyn 213-15"
+                                    DBREF="32421">213-15</BIBCIT></BIBCITS> During this time she and
+                            her family had no idea of the political turmoil brewing in Europe. In
+                            her autobiography EG finds it <QUOTE DIRECT="Y">strange, on looking
+                                back, to remember how oddly ignorant we all were of the
+                                possibilities of the political situation. The sense of calamity was
+                                in the air, but it was quite undefined.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 222" DBREF="32057"
+                                >222</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>World War One</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <HEADING>War Work and Widowhood</HEADING>
+                    <SHORTPROSE>
+                        <P>In 1915 EG travelled back to <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG
+                                    REG="France"/></PLACE> to join the war effort by
+                                <SIGNIFICANTACTIVITY REG="propagandist">writing French propaganda
+                                articles for American journals</SIGNIFICANTACTIVITY>. She also
+                                <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                REG="hospital visitor">visited wounded English
+                                soldiers</SIGNIFICANTACTIVITY> at the <PLACE><PLACENAME>Trianon
+                                    Palace Hotel</PLACENAME> in
+                                    <SETTLEMENT>Versailles</SETTLEMENT><GEOG REG="France"/></PLACE>,
+                            which had been turned into a hospital.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 225-6" DBREF="32057"
+                                    >225-6</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 189, 191"
+                                    DBREF="32059">189, 191</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="IMG">
+                            <DATE>November 1915</DATE>
+                            <CHRONPROSE>EG&apos;s <NAME STANDARD="Glyn, Henry Clayton"
+                                    >husband</NAME> died after some years of deteriorating
+                                health.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Glyn, Romantic 227" DBREF="32057">227</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P><QUOTE DIRECT="Y">The horror and tragedy of everything seemed
+                                    overwhelming,</QUOTE> she wrote in her autobiography, twenty-two
+                                years later.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 227"
+                                        DBREF="32057">227</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <HEADING>The War Up-Close</HEADING>
+                    <SHORTPROSE>
+                        <P>Back in London after her husband&apos;s death, EG helped to
+                                <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                REG="food distributor">serve meals to soldiers at
+                                        <PLACE><PLACENAME>Victoria Station</PLACENAME><SETTLEMENT
+                                        REG="London"/><REGION REG="Middlesex"/><GEOG REG="England"
+                                    /></PLACE></SIGNIFICANTACTIVITY> as war work. She felt that
+                            every soldier <QUOTE DIRECT="Y">seemed a hero.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 227-8" DBREF="32057"
+                                >227-8</BIBCIT></BIBCITS></P>
+                        <P>In 1917, with a renewed <JOB REG="journalist">contract to write articles
+                                on the war</JOB> for American news agencies, EG returned to
+                                    <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG REG="France"
+                                /></PLACE>. Her contract enabled her to obtain permits to visit the
+                            most dangerous areas, and <QUOTE DIRECT="Y">French officers told me that
+                                no other woman had been so near to the
+                                    Front.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 234"
+                                    DBREF="32057">234</BIBCIT></BIBCITS> She spent the rest of the
+                            war in Paris, becoming so accustomed to air raids that the <QUOTE
+                                DIRECT="Y">bursting anti-aircraft shells meant no more than so many
+                                fireworks, and all feeling of danger from the raids disappeared, as
+                                far as I was concerned.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 262" DBREF="32057"
+                                >262</BIBCIT></BIBCITS> What frightened her more than bombs, or the
+                            Zeppelins she had experienced in England, was the gunfire she could hear
+                            close by at the front: <QUOTE DIRECT="Y">It is a solemn moment when one
+                                first hears the sound of guns&mdash;guns not firing volleys in
+                                honour of some public rejoicing, not exploding empty shells at
+                                reviews, but guns deliberately aimed at human beings with the
+                                intention to kill.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Hardwick 204" DBREF="32059" QTDIN="QTDINYES"
+                                    >204</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>1917</DATE>
+                        <CHRONPROSE>EG served as <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="refugee work"
+                                >vice-president</SIGNIFICANTACTIVITY> of <ORGNAME>Secours
+                                Franco-Am&eacute;ricain</ORGNAME>, an organisation dedicated to
+                            helping war refugees <QUOTE DIRECT="Y">resettle in the recaptured
+                                areas.</QUOTE></CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 240" DBREF="32057">240</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 207" DBREF="32059">207</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The organisation engaged in <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="fundraiser"
+                                >fundraising</SIGNIFICANTACTIVITY> for the resettlement of refugees.
+                            In particular, it built temporary refugee huts near
+                                    <PLACE><SETTLEMENT>Noyon</SETTLEMENT><GEOG REG="France"
+                                /></PLACE>.</P>
+                        <P>Ignoring orders to leave France for her safety, EG instead travelled in
+                            1918 to <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                REG="military visitor">visit the American base camps at
+                                        <PLACE><SETTLEMENT>St Nazaire</SETTLEMENT><GEOG REG="France"
+                                    /></PLACE></SIGNIFICANTACTIVITY>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 263, 266" DBREF="32057">263,
+                                    266</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 208-9" DBREF="32059"
+                                    >208-9</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Etherington-Smith and Pilcher 190" DBREF="32425"
+                                    >190</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Post-War: Versailles</HEADING>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After the war, EG took a flat in
+                                    <PLACE><SETTLEMENT>Versailles</SETTLEMENT><GEOG REG="France"
+                                /></PLACE>.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 269"
+                                    DBREF="32057">269</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Thnere she met Liberal Prime Minister <NAME
+                                STANDARD="Lloyd George, David">David Lloyd George</NAME>, who helped
+                            to engineer the Versailles Peace Treaty. Her staunchly conservative
+                            views made it matter for surprise that she found him <QUOTE DIRECT="Y"
+                                >much smarter [in appearance] than his pictures would
+                                suggest.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 271"
+                                    DBREF="32057" QTDIN="QTDINYES">271</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="RJB">
+                        <DATE>28 June 1919</DATE>
+                        <CHRONPROSE><NAME STANDARD="Riddell, George Allardice,,, Baron">Lord
+                                Riddell</NAME>, who had engaged EG as a <JOB REG="journalist"
+                                >special correspondent</JOB> for his paper, <TITLE
+                                TITLETYPE="JOURNAL">The News of the World</TITLE>, got her a press
+                            permit to witness the signing of the Versailles Peace Treaty, in the
+                            Hall of Mirrors of the <PLACE><PLACENAME>Palace of
+                                    Versailles</PLACENAME><SETTLEMENT REG="Versailles"/><GEOG
+                                    REG="France"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 275" DBREF="32057">275</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 214" DBREF="32059">214</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Etherington-Smith and Pilcher 203" DBREF="32425"
+                                >203</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The only other woman to witness the signing was <NAME>Frances
+                                Stevenson</NAME>, mistress of British Prime Minister <NAME
+                                STANDARD="Lloyd George, David">David Lloyd George</NAME>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Post-War Travels</HEADING>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In February 1920 EG went to <PLACE><GEOG>Egypt</GEOG></PLACE> for a
+                            second time. There she enjoyed the company of <NAME
+                                STANDARD="Milner, Alfred,,, Viscount">Lord Milner</NAME> and
+                            attended a number of royal balls and extravagant
+                                    parties.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 278-9"
+                                    DBREF="32057">278-9</BIBCIT></BIBCITS> Four weeks later she went
+                            to <PLACE><GEOG>Spain</GEOG></PLACE>, where she attended the Easter
+                            festivities at the Spanish court.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 280" DBREF="32057"
+                                    >280</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 218" DBREF="32059"
+                                    >218</BIBCIT><BIBCIT PLACEHOLDER="Anthony Glyn 262-4"
+                                    DBREF="32421">262-4</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <HEADING>Scandinavian Lecture Tour</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE VALUE="1923-01-">Early 1923</DATE>
+                        <CHRONPROSE>At the behest of the <ORGNAME>Anglo-Swedish Literary
+                                Society</ORGNAME>, EG gave a <SIGNIFICANTACTIVITY REG="lecturer"
+                                >series of lectures</SIGNIFICANTACTIVITY> on education, female
+                            emancipation, marriage, and other subjects in
+                                <PLACE><GEOG>Norway</GEOG></PLACE>,
+                                <PLACE><GEOG>Sweden</GEOG></PLACE>, and
+                                <PLACE><GEOG>Denmark</GEOG></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 309" DBREF="32057">309</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She lectured on <TITLE TITLETYPE="ANALYTIC">Woman&apos;s Place in Modern
+                                Civilization</TITLE>, <TITLE TITLETYPE="ANALYTIC">Marriage
+                                Customs</TITLE>, and <TITLE TITLETYPE="ANALYTIC">Discipline</TITLE>.
+                            The text of the lectures does not survive.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Hardwick 246" DBREF="32059"
+                            >246</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She was presented to the <NAME STANDARD="Alfonso XIII,, King of Spain"
+                                >King</NAME> and <NAME STANDARD="Ena,, Queen of Spain">Queen</NAME>
+                            while in Spain, and to the <NAME
+                                STANDARD="Christian X,, King of Denmark">King</NAME> while in
+                            Denmark (by <NAME
+                                STANDARD="Granville, George Leveson-Gower,,, third Earl">Lord</NAME>
+                            and <NAME STANDARD="Granville, Nina Ayesha Leveson-Gower,,, Countess"
+                                >Lady Granville</NAME>).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 290, 315" DBREF="32057">290,
+                                    315</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <HEADING>The USA: Hollywood</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE>1920</DATE>
+                        <CHRONPROSE>EG entered the <PLACE><SETTLEMENT>Hollywood</SETTLEMENT><REGION
+                                    REG="California"/><GEOG REG="USA"/></PLACE> film industry,
+                            accepting a contract with <NAME>Jesse Lasky</NAME> of <ORGNAME
+                                REG="Paramount Studios" STANDARD="Paramount Studios"
+                                >Famous-Players-Lasky (later Paramount)</ORGNAME> to study
+                            film-writing and to <JOB REG="scriptwriter">compose
+                            film-scripts</JOB>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Glyn, Romantic 299-300, 309" DBREF="32057">299-300,
+                                309</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hardwick 219-21" DBREF="32059">219-21</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>To boost her persona as a dignified foreign lady, she called herself
+                                <SOCALLED>Madame Glyn</SOCALLED>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 299-300, 309" DBREF="32057">299-300,
+                                    309</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 219-21" DBREF="32059"
+                                    >219-21</BIBCIT></BIBCITS> In <DATE>1921</DATE> she <JOB
+                                REG="film producer">produced</JOB> her first film, <TITLE
+                                TITLETYPE="MONOGRAPHIC">The Great Moment</TITLE>, which was directed
+                            by <NAME>Sam Wood</NAME> and which starred <NAME>Gloria
+                            Swanson</NAME>.She produced a number of films after this: her second was
+                                <TITLE TITLETYPE="MONOGRAPHIC">Beyond the Rocks</TITLE>, starring
+                                <NAME>Rudolph Valentino</NAME> and <NAME>Gloria Swanson</NAME>. This
+                            film, which she finished in February 1922, was contracted by
+                            Lasky&apos;s company. After her contract with <EMPLOYER><ORGNAME
+                                    REG="Paramount Studios" STANDARD="Paramount Studios"
+                                    >Famous-Players-Lasky</ORGNAME></EMPLOYER> ended in March 1922,
+                            she produced one film for <EMPLOYER><ORGNAME>Perfect
+                                Pictures</ORGNAME></EMPLOYER> (<TITLE TITLETYPE="MONOGRAPHIC">The
+                                World&apos;s a Stage</TITLE>, 1922) and one for
+                                    <EMPLOYER><ORGNAME>Reliable Feature Film</ORGNAME></EMPLOYER>
+                                (<TITLE TITLETYPE="MONOGRAPHIC">How to Educate a Wife</TITLE>,
+                            1924). In the meantime, she rejected the terms of <ORGNAME
+                                REG="Paramount Studios" STANDARD="Paramount Studios"
+                                >Famous-Players-Lasky</ORGNAME>&apos;s second contract offer, as
+                            well as an offer from <ORGNAME>United Artists</ORGNAME>, signing instead
+                            with the newly-formed <EMPLOYER><ORGNAME REG="MGM" STANDARD="MGM"
+                                    >Metro-Goldwyn-Mayer (MGM)</ORGNAME></EMPLOYER>, which agreed to
+                            allow her to participate in <JOB REG="film director">directing</JOB>.
+                            She worked for MGM for two years, from 1924 to 1926, producing five
+                            films, all adapted from her own novels.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="DLB 153 online" DBREF="18329">153</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 299-300, 309" DBREF="32057">299-300,
+                                    309</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 230-4, 242-4"
+                                    DBREF="32059">230-4, 242-4</BIBCIT><BIBCIT
+                                    PLACEHOLDER="IMDb under Elinor Glyn" DBREF="12265">under Elinor
+                                    Glyn</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Etherington-Smith and Pilcher 222" DBREF="32425"
+                                    >222</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE VALUE="1923--">Late 1923</DATE>
+                        <CHRONPROSE>EG (already a Hollywood producer) returned to the USA, where she
+                            gave a series of ten-minute <JOB REG="lecturer">lectures</JOB> in
+                                    <PLACE><SETTLEMENT REG="New York City">New
+                                    York</SETTLEMENT><REGION REG="New York"/><GEOG REG="USA"
+                                /></PLACE> on the topic of love in vaudeville. <REMUNERATION>She was
+                                paid &pound;500 a week.</REMUNERATION></CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Hardwick 246" DBREF="32059">246</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Anthony Glyn 293" DBREF="32421">293</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>1 March 1924</DATE>
+                        <CHRONPROSE>On the advice of her son-in-law, <NAME
+                                STANDARD="Rhys Williams, Sir Rhys">Rhys Rhys-Williams</NAME>
+                            (Liberal MP), EG <JOB>established</JOB>
+                            <ORGNAME>Elinor Glyn Ltd</ORGNAME>. Her daughters and their husbands
+                            acted as the company&apos;s board of directors.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Hardwick 249" DBREF="32059">249</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Etherington-Smith and Pilcher 233" DBREF="32425"
+                                >233</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Elinor Glyn Ltd was formed to govern her finances, to secure her the
+                            copyrights in and royalties from her films, and to help her gain
+                            negotiating credibility. As a member of the board, Rhys-Williams went to
+                            MGM and successfully renegotiated EG&apos;s two-year
+                                    contract.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 249"
+                                    DBREF="32059">249</BIBCIT></BIBCITS> After this contract ended
+                            in 1926, she returned to <EMPLOYER><ORGNAME REG="Paramount Studios"
+                                    STANDARD="Paramount Studios">Famous-Players-Lasky (now
+                                    Paramount)</ORGNAME></EMPLOYER>, for whom she produced three
+                                    films.<BIBCITS><BIBCIT PLACEHOLDER="DLB 153 online"
+                                    DBREF="18329">153</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="RJB">
+                        <DATE>1927</DATE>
+                        <CHRONPROSE>EG <JOB>produced and appeared</JOB> as herself in her film
+                                <TITLE TITLETYPE="MONOGRAPHIC">It</TITLE>. <NAME>Clara Bow</NAME>
+                            played the leading role. <NAME>Clarence Badger</NAME> directed the film,
+                            which had been designed by <EMPLOYER><ORGNAME REG="Paramount Studios"
+                                    STANDARD="Paramount Studios"
+                            >Paramount</ORGNAME></EMPLOYER>&apos;s <NAME>Benjamin
+                            Schulberg</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Hardwick 260-2" DBREF="32059">260-2</BIBCIT>
+                            <BIBCIT PLACEHOLDER="IMDb under Elinor Glyn" DBREF="12265">under Elinor
+                                Glyn</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P><SOCALLED>It</SOCALLED> was a piquant and fashionable term for
+                            sex-appeal. After the film&apos;s production, EG went on a
+                                <JOB>promotional tour</JOB> across the <PLACE><GEOG REG="USA"
+                                    >USA</GEOG></PLACE>.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 263"
+                                    DBREF="32059">263</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>1928</DATE>
+                        <CHRONPROSE>EG had a <JOB REG="acting">cameo appearance</JOB> in director
+                                <NAME>King Vidor</NAME>&apos;s film about Hollywood stars, <TITLE
+                                TITLETYPE="MONOGRAPHIC">Show People</TITLE>, which starred
+                                <NAME>Marion Davies</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Hardwick 257" DBREF="32059">257</BIBCIT>
+                            <BIBCIT PLACEHOLDER="IMDb under Elinor Glyn" DBREF="12265">under Elinor
+                                Glyn</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>By now her Hollywood career had begun to taper off, as her contract with
+                            Paramount expired in this year. She made only one film in the US after
+                            1928: a talkie entitled <TITLE TITLETYPE="MONOGRAPHIC">Such Men are
+                                Dangerous</TITLE>, for <EMPLOYER><ORGNAME
+                                    REG="Twentieth-Century Fox" STANDARD="Twentieth-Century Fox"
+                                    >20th Century Fox</ORGNAME></EMPLOYER> in 1930. EG left the
+                            American film industry for good that year.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 323, 325-6" DBREF="32057">323,
+                                    325-6</BIBCIT><BIBCIT PLACEHOLDER="DLB 153 online" DBREF="18329"
+                                    >153</BIBCIT></BIBCITS> Over the course of her Hollywood career,
+                            she worked with or directed a number of actors, including <NAME>Gary
+                                Cooper</NAME>, <NAME>Milton Sills</NAME>, <NAME>Conrad Nagel</NAME>,
+                                <NAME>Aileen Pringle</NAME>, <NAME>Pauline Stark</NAME>,
+                                <NAME>Eleanor Boardman</NAME>, <NAME>Lew Cody</NAME>, and <NAME>John
+                                Gilbert</NAME>.<BIBCITS><BIBCIT PLACEHOLDER="Hardwick 248"
+                                    DBREF="32059">248</BIBCIT></BIBCITS> She particularly enjoyed
+                            working with director <NAME>Alan Crosland</NAME>, who let her direct
+                            scenes on her own and who directed MGM&apos;s production of her novel
+                                <TITLE TITLETYPE="MONOGRAPHIC">Three Weeks</TITLE>. She also
+                            favoured artistic director <NAME>Cedric Gibbons</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Hardwick 248, 250, 263" DBREF="32059">248, 250,
+                                    263</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Etherington-Smith and Pilcher 232" DBREF="32425"
+                                    >232</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During her time in the Hollywood film industry, EG became friendly with
+                            such stars as <NAME>Mary Pickford</NAME>, <NAME>Douglas
+                            Fairbanks</NAME>, <NAME>Charlie Chaplin</NAME>, and <NAME>Marion
+                                Davies</NAME>. She stayed with Davies for six weeks in
+                                    1928.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 301, 326"
+                                    DBREF="32057">301, 326</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Hardwick 234, 237" DBREF="32059">234,
+                                237</BIBCIT></BIBCITS> In November 1924 she joined Chaplin,
+                                <NAME>Louella Parsons</NAME>, and <NAME>Thomas Ince</NAME>, among
+                            others, on <NAME>William Randolph Hearst</NAME>&apos;s yacht. When Ince
+                            suddenly died on the trip, his death was at first hushed up and then
+                            became a lasting focus of rumours that suggested murder. (A recent film
+                            of this episode casts EG as narrator.)<BIBCITS><BIBCIT
+                                    PLACEHOLDER="IMDb under The Cat&apos;s Meow" DBREF="12265">under
+                                    The Cat&apos;s Meow</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After leaving the American film industry in 1930, EG moved temporarily to
+                                    <PLACE><SETTLEMENT>Washington</SETTLEMENT>, <REGION
+                                    REG="District of Columbia">DC</REGION><GEOG REG="USA"/></PLACE>,
+                            before returning to <PLACE><SETTLEMENT>London</SETTLEMENT><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>, where she spent
+                            the rest of her life. She said she returned simply because <QUOTE
+                                DIRECT="Y">[t]here is no place like home, after all.</QUOTE>
+                            Biographer <NAME>Joan Hardwick</NAME>, however, describes the move as
+                            motivated by her mother&apos;s recent stroke and by the fact that
+                            non-payment of tax had got her into trouble in the USA.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 326-7" DBREF="32057"
+                                    >326-7</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 269" DBREF="32059"
+                                    >269</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Though EG&apos;s novels and films generated a high income, her inability
+                            to manage her money kept her under continuous financial pressure.
+                            Failure to pay tax on her US income led to her being pursued for payment
+                            by the <ORGNAME REG="Internal Revenue Service"
+                                STANDARD="Internal Revenue Service">IRS</ORGNAME>. She died worth
+                            &pound;6,588 11s. 1d.<BIBCITS><BIBCIT PLACEHOLDER="Oxford DNB"
+                                    DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Film Production in England</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="RJB">
+                        <DATE>February 1930</DATE>
+                        <CHRONPROSE><ORGNAME>United Artists</ORGNAME> released the talking film that
+                            EG had <JOB REG="film director">produced and directed</JOB> on her own,
+                                <TITLE TITLETYPE="MONOGRAPHIC">Knowing Men</TITLE>, at the
+                                    <PLACE><PLACENAME>Regal Cinema</PLACENAME>,
+                                        <ADDRESS><ADDRLINE>Marble Arch</ADDRLINE></ADDRESS>,
+                                    <SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Hardwick 270-1" DBREF="32059">270-1</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>EG announced her intention to direct and produce this film in October
+                            1929, provoking from <TITLE TITLETYPE="JOURNAL">Film Weekly</TITLE> the
+                            question, <QUOTE DIRECT="Y">Can Women Direct
+                                    Films?</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Etherington-Smith and Pilcher 248" DBREF="32425"
+                                    QTDIN="QTDINYES">248</BIBCIT></BIBCITS> She did this work
+                            through the production company she had <JOB REG="company director"
+                                >financed and established</JOB> (at <PLACE><PLACENAME>Elstree
+                                    Studios</PLACENAME><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE> with her business
+                            partner, <NAME>Edward Knoblock</NAME>) on her return to England. <TITLE
+                                TITLETYPE="MONOGRAPHIC">Knowing Men</TITLE> turned out to be the
+                            first and the last film she produced and released through her company.
+                            She had persuaded <ORGNAME>United Artists</ORGNAME> both to release it
+                            and to make an advance payment, but the film&mdash;which starred
+                                <NAME>Elissa Landi</NAME>, <NAME>Carl Brisson</NAME>, <NAME>Helen
+                                Haye</NAME>, and <NAME>Jeanne de Casalis</NAME>&mdash;was a critical
+                            failure. <REMUNERATION>Embarrassed by the devastating reviews, Knoblock
+                                got a temporary block on the film. The result was that no profit,
+                                other than the initial advance, could be generated, and the film
+                                itself could not meet its release
+                                    date.</REMUNERATION><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Etherington-Smith and Pilcher 248-9" DBREF="32425"
+                                    >248-9</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 270-1"
+                                    DBREF="32059">270-1</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 332-4" DBREF="32057"
+                                    >332-4</BIBCIT><BIBCIT PLACEHOLDER="IMDb under Elinor Glyn"
+                                    DBREF="12265">under Elinor Glyn</BIBCIT><BIBCIT
+                                    PLACEHOLDER="DLB 153 online" DBREF="18329"
+                                >153</BIBCIT></BIBCITS></P>
+                        <P>Herself undeterred, EG tried producing <TITLE TITLETYPE="MONOGRAPHIC">The
+                                Price of Things</TITLE> in 1930. The general public never saw this
+                            film, however, <REMUNERATION>and she lost a great deal of money in the
+                                process.</REMUNERATION><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Anthony Glyn 316-19" DBREF="32421"
+                                    >316-19</BIBCIT><BIBCIT PLACEHOLDER="Hardwick 272" DBREF="32059"
+                                    >272</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Etherington-Smith and Pilcher 249" DBREF="32425"
+                                    >249</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In all she spent &pound;40,000 on her endeavours to break into the
+                            English film industry, which plunged her once again into financial
+                                    difficulty.<BIBCITS><BIBCIT PLACEHOLDER="Glyn, Romantic 332"
+                                    DBREF="32057">332</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Spiritualism</HEADING>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>During the late 1920s and early 30s, EG was caught up in the wave of
+                                    <DENOMINATION SELF-DEFINED="SELFYES" REG="Spiritualist"
+                                    >Spiritualism</DENOMINATION> (the belief that the living can
+                                contact the dead through mediums) that had been gaining ground in
+                                        <PLACE><GEOG>England</GEOG></PLACE> particularly since the
+                                First World War. For EG, Spiritualism and making contact the dead
+                                was a reality, as were the past lives she believed she had lived.
+                                These beliefs led her to assume that she <QUOTE DIRECT="Y">possessed
+                                    natural psychic powers, and I told myself that I ought to
+                                    develop them.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 327" DBREF="32057"
+                                    >327</BIBCIT></BIBCITS> She argued that she could not <QUOTE
+                                    DIRECT="Y">see any religious or other reason which . . .
+                                    precludes honest inquiry into the mass of strange
+                                    phenomena.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 327" DBREF="32057"
+                                    >327</BIBCIT></BIBCITS> She joined a Spiritualist group and
+                                attended a number of s&eacute;ances (in which the dead were
+                                    <SOCALLED>contacted</SOCALLED> through a medium); she also
+                                contacted spirits herself through mediums. <QUOTE DIRECT="Y">I was
+                                    convinced that there could be nothing faked about it . . . .
+                                    There was no trickery of any ordinary kind, and the messages
+                                    must, therefore, represent either genuine communications from
+                                        <SOCALLED>the other side</SOCALLED> or else some form of
+                                    telepathy between my own subconscious mind and that of the
+                                    medium,</QUOTE> she later wrote in her
+                                        autobiography.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 328" DBREF="32057"
+                                    >328</BIBCIT></BIBCITS> EG also claimed to be able to do
+                                automatic writing, which occurs when a person writes at the behest
+                                of an external, unseen source. The writer has no control over what
+                                is written or what language the writing is in, hence,
+                                    <SOCALLED>automatic</SOCALLED>. (<NAME>George Yeats</NAME>, wife
+                                of poet <NAME>W. B. Yeats</NAME>, is one of the best known
+                                practitioners of this kind of Spiritualist activity.)</P>
+                            <P>Eventually, however, EG, having noted that the predictions of mediums
+                                seldom came true, lost her faith in Spiritualism and automatic
+                                writing. She was <QUOTE DIRECT="Y">completely and finally convinced
+                                    that these supposed communications from the dead, whether
+                                    through mediums . . . or automatic writing, are entirely
+                                    deceptive</QUOTE> and <QUOTE DIRECT="Y">wholly
+                                        evil</QUOTE>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 329-30" DBREF="32057"
+                                        >329-30</BIBCIT></BIBCITS> Having renounced Spiritualism
+                                (which she did by 1934), she devised something new to believe about
+                                messages from the other side: <QUOTE DIRECT="Y">that
+                                        <EMPH>all</EMPH> supposed communications from the dead are
+                                    really made by non-human sprite-like, dis-embodied
+                                    entities.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Glyn, Romantic 330" DBREF="32057"
+                                    >330</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>The 1930s and 40s</HEADING>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In 1931 EG visited <PLACE><GEOG>Hungary</GEOG></PLACE>, where she stayed
+                            with the Hungarian Minister in London, <NAME
+                                STANDARD="Rubido-Zichy, Baron Iv&aacute;n">Baron
+                            Rubido-Zichy</NAME>, and his wife. There she noted the continuance of a
+                            kind of feudal system, whose handling of class distinction she admired.
+                                <QUOTE DIRECT="Y">The happy feudal relationship between landlord and
+                                peasant which exists still in Hungary is like that which used to
+                                prevail amongst the country squires and people of the English
+                                countryside, and the general atmosphere of mutual respect and of
+                                community interests is the same.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Glyn, Romantic 316, 318" DBREF="32057">316,
+                                    318</BIBCIT></BIBCITS><SCHOLARNOTE><P>Such sentiments link her
+                                    once again with <NAME STANDARD="Orczy, Emmuska,,, Baroness"
+                                        >Emmuska, Baroness Orczy</NAME>.</P></SCHOLARNOTE></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="RJB">
+                        <DATE>1934</DATE>
+                        <CHRONPROSE>With earnings from her book sales, EG bought a good-sized flat
+                            in <PLACE><ADDRESS><ADDRLINE>Connaught Place</ADDRLINE></ADDRESS>,
+                                    <SETTLEMENT CURRENT="London">Bayswater</SETTLEMENT><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Hardwick 277" DBREF="32059">277</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She spent the last years of her life writing and travelling in the
+                            British Isles. By the time the second world war brought air raids back
+                            again to London, EG was living in a flat in <PLACE><PLACENAME>Hertford
+                                    House</PLACENAME> in <SETTLEMENT CURRENT="London"
+                                    >Mayfair</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>, which was paid for by an annuity given
+                            to her by her two daughters.<BIBCITS><BIBCIT PLACEHOLDER="Beaton xx"
+                                    DBREF="32528">xx</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Death</HEADING>
+            <DEATH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                        <DATE>23 September 1943</DATE>
+                        <CHRONPROSE>EG died at <PLACE><ADDRESS><ADDRLINE>39 Royal
+                                    Avenue</ADDRLINE></ADDRESS>, <SETTLEMENT CURRENT="London"
+                                    >Chelsea</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>, after a week in hospital, from an
+                            undetermined illness.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Oxford DNB" DBREF="29268"/>
+                            <BIBCIT PLACEHOLDER="Hardwick 284" DBREF="32059">284</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </DEATH>
+        </DIV1>
+        <WORKSCITED>
+            <SOURCE>Unless otherwise noted, all information is from the FC.</SOURCE>
+            <SOURCE>Glyn, Anthony. Elinor Glyn. 1968.</SOURCE>
+            <SOURCE>Glyn, Elinor. Romantic Adventure. 1937.</SOURCE>
+            <SOURCE>Etherington-Smith, Meredith and Jeremy Pilcher. The It Girls. 1986.</SOURCE>
+            <SOURCE>Hardwick, Joan. Addicted to Romance: The Life and Adventures of Elinor Glyn.
+                1994.</SOURCE>
+            <SOURCE>Duff Gordon, Lady Lucy. Discretions and Indiscretions.1932.</SOURCE>
+            <SOURCE>Beaton, Cecil. Review. Times Archive Online.</SOURCE>
+            <SOURCE>BLC</SOURCE>
+            <SOURCE>OCLC</SOURCE>
+            <SOURCE>Bodleian</SOURCE>
+            <SOURCE>Internet Movie Database.</SOURCE>
+            <SOURCE>Oxford Dictionary of National Biography online</SOURCE>
+            <SOURCE>DLB online</SOURCE>
+            <SOURCE>Royal College of Midwives website</SOURCE>
+            <SOURCE>Spartacus Educational website</SOURCE>
+            <SOURCE>Ulster Women&apos;s Unionist Council Papers website</SOURCE>
+            <SOURCE/>
+        </WORKSCITED>
+    </DIV0>
+</BIOGRAPHY>

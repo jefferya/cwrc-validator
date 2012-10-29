@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="schemas/events-test_10-07-16-CAPS.rng" type="xml"?>
+<?xml-stylesheet type="text/css" href="css/events_style.css"?>
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+<EVENTS>
+	<ORLANDOHEADER TYPE="TEXT">
+		<FILEDESC>
+			<TITLESTMT>
+				<DOCTITLE>Events Template</DOCTITLE>
+			</TITLESTMT>
+			<PUBLICATIONSTMT>
+				<AUTHORITY>Orlando Project</AUTHORITY>
+			</PUBLICATIONSTMT>
+			<SOURCEDESC>Created from original research by members of the Orlando
+				Project</SOURCEDESC>
+		</FILEDESC>
+		<REVISIONDESC>
+			<RESPONSIBILITY WORKVALUE="I" RESP="ACF" WORKSTATUS="CAS">
+				<DATE CALENDAR="BC" CERTAINTY="AFTER" VALUE="">12 August
+					2010</DATE>
+				<ITEM>This is an example note on this document's progress</ITEM>
+			</RESPONSIBILITY>
+		</REVISIONDESC>
+	</ORLANDOHEADER>
+	<DIV0>
+		<HEADING>Event Template</HEADING>
+		<DIV1>
+			<CHRONEVENT>
+				<CHRONSTRUCT CHRONCOLUMN="BRITISHWOMENWRITERS" RELEVANCE="PERIOD" RESP="MPO">
+					<DATE></DATE>
+					<CHRONPROSE></CHRONPROSE>
+				</CHRONSTRUCT>
+				<SHORTPROSE>
+					<P></P>
+				</SHORTPROSE>
+				<BIBCITS>
+					<BIBCIT></BIBCIT>
+				</BIBCITS>
+			</CHRONEVENT>
+		</DIV1>
+		<DIV1>
+			<HEADING>Example Event</HEADING>
+			<CHRONEVENT>
+				<CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="PERIOD" RESP="SIB">
+					<DATE CALENDAR="NEWSTYLE" CERTAINTY="CERT"> 1756 </DATE>
+					<CHRONPROSE><NAME STANDARD="Le Prince de Beaumont, Jeanne">Jeanne Le Prince de
+							Beaumont </NAME> published <TITLE TITLETYPE="MONOGRAPHIC"> Le Magasin
+							des enfants </TITLE>, a collection containing a first influential and
+						literary formulation of the popular <TGENRE GENRENAME="FAIRYTALE"> fairy
+							story </TGENRE>
+						<TITLE TITLETYPE="ANALYTIC"> Beauty and the Beast </TITLE>. </CHRONPROSE>
+				</CHRONSTRUCT>
+				<BIBCITS><BIBCIT DBREF="65785" PLACEHOLDER="Zipes 125-6">125-6 </BIBCIT></BIBCITS>
+				<SHORTPROSE>
+					<P>The origins of this story lie in folk-tale and in the second-century text
+							<TITLE TITLETYPE="MONOGRAPHIC"> The Golden Ass </TITLE> by
+							<NAME>Apuleius </NAME> . Its outlines are legible in several tales by
+							<NAME>Marie-Catherine d'Aulnoy </NAME>. It became a drama by <NAME>St
+							&eacute; phanie-F &eacute; licit &eacute; de Genlis </NAME> in 1785 and
+						an opera by <NAME STANDARD="Marmontel, Jean-Francois"> Marmontel </NAME> and
+							<NAME STANDARD="Grtry, Andr">Gr &eacute; try </NAME> in 1788. <BIBCITS>
+							<BIBCIT PLACEHOLDER="Zipe 128-9" DBREF="65785">128-9</BIBCIT></BIBCITS></P>
+				</SHORTPROSE>
+			</CHRONEVENT>
+		</DIV1>
+	</DIV0>
+</EVENTS>

@@ -1,0 +1,2126 @@
+# 
+# orlando_writing_transitional_medium_rare:
+# A semi-useful schema for encoding Orlando writing documents in XML
+# 
+# Written 2010-07 by Syd Bauman, based on writing.dtd, as sent to me
+# in e-mail "Re: Orlando conversion to XML: summary and meeting" from
+# Susan Brown on 2010-06-21 20:19, and on
+# biography-test_10-07-16-CAPS.rng, common_10-07-16.rnc, and
+# events-test_10-07-16-CAPS.rnc sent to me in e-mail "Re: drafts of
+# schemas" from Mariana Paredes on 2010-07-16 12:37.
+# 
+# Copyright 2010 Syd Bauman, the Brown University Women Writers Project, and 
+# Licensed under the GNU General Public License version 3.
+# 
+# This schema is a representation of the Orlando SGML DTD writing.dtd
+# in RELAX NG with exclusion exceptions represented in ISO Schematron.
+# It is not a particularly good representation, and to date is
+# untested. The intent is to represent every element that is does not
+# have exceptions faithfully. For exclusion exceptions, represent with
+# Schematron. So far, so good. For inclusion exceptions, use a
+# declaration that constrains the element's children (as per e-mail
+# exchange on ORLWWP-L), but permit *any* Writing element (except
+# <Writing>) anywhere inside the children. This seems on the face of
+# it to be a very reasonable approach. The schema should pretty much
+# duplicate the SGML DTD except for those elements that have
+# inclusions, which will still have their attributes and immediate
+# children validated, but deeper contents allow anything. The problem
+# is that <Div0>, one of the very top elements, has inclusion
+# exceptions. So the net result is not that far off from not
+# constraining element occurrence at all. Sigh.
+#
+
+# Version 02: case change by Jeffery Antoniuk, changes by Mariana Paredes-Olea :
+# Added AREA element and attributes
+# Completed responsibility values
+# Fixed hyphenated attributes and value names; missing hyphens and substrings
+# Changed case of elements, attributes, and values names to reflect data in Orlando
+# 
+# Future work - single definition of common attributes
+# from common_10-07-16.rnc:
+#   ID
+#   reg
+#   dates' attributes (id, calendar, value, certainty) --> dateStruct, date, dateRange
+#   sex
+#   person
+#   calendar content
+#   certainty content
+#   resp content
+#   workstatus content
+#   workvalue content
+#   part content
+#   datestruct content
+#   placechild content
+#   chroncolumnrelevance content
+#   links content
+# check common attributes for writing schema
+#
+
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+
+# 
+# Waterlooish pattern: matches *any* Orlando Writing DTD element in
+# "INCLUSION" mode
+#
+anyWri =
+    (included_Div0
+     | included_Div1
+     | included_Div2
+     | included_Div3
+     | included_ExtentOfOeuvre
+     | included_addrLine
+     | included_address
+     | included_area
+     | included_authorSummary
+     | included_authority
+     | included_availability
+     | included_bibCit
+     | included_bibCits
+     | included_biogProse
+     | included_chronProse
+     | included_chronStruct
+     | included_corr
+     | included_dataItem
+     | included_dataStruct
+     | included_date
+     | included_dateRange
+     | included_dateStruct
+     | included_day
+     | included_docAuthor
+     | included_docEditor
+     | included_docExtent
+     | included_docTitle
+     | included_editorialDecl
+     | included_emph
+     | included_fileDesc
+     | included_foreign
+     | included_genericRange
+     | included_geog
+     | included_head
+     | included_heading
+     | included_idno
+     | included_item
+     | included_keywordClass
+     | included_l
+     | included_lb
+     | included_lg
+     | included_month
+     | included_name
+     | included_nonStandardDescriptor
+     | included_occasion
+     | included_orgName
+     | included_p
+     | included_pAdvertising
+     | included_pAnthologization
+     | included_pArchivalLocation
+     | included_pAttitudes
+     | included_pAuthorship
+     | included_pCirculation
+     | included_pContract
+     | included_pCopyright
+     | included_pDedication
+     | included_pEarnings
+     | included_pEditions
+     | included_pFirstLiteraryActivity
+     | included_pInfluencesHer
+     | included_pLastLiteraryActivity
+     | included_pLiterarySchools
+     | included_pManuscriptHistory
+     | included_pMaterialConditions
+     | included_pModeOfPublication
+     | included_pMotives
+     | included_pNonBookMedia
+     | included_pNonSurvival
+     | included_pPerformance
+     | included_pPeriodicalPublication
+     | included_pPlaceOfPublication
+     | included_pPressRun
+     | included_pPrice
+     | included_pRaritiesFeaturesDecorations
+     | included_pRelationsWithPublisher
+     | included_pSerialization
+     | included_pSubmissionsRejections
+     | included_pTypeOfPress
+     | included_place
+     | included_placename
+     | included_production
+     | included_projectDesc
+     | included_pubPlace
+     | included_publicationStmt
+     | included_quote
+     | included_rBestKnownWork
+     | included_rDestructionOfWork
+     | included_rFictionalization
+     | included_rLandmarkText
+     | included_rPenalties
+     | included_rRecognitionName
+     | included_rRecognitionValue
+     | included_rRecognitions
+     | included_rResponses
+     | included_rSelfDescription
+     | included_rSheInfluenced
+     | included_reception
+     | included_region
+     | included_researchNote
+     | included_responsibility
+     | included_revisionDesc
+     | included_rs
+     | included_scholarNote
+     | included_season
+     | included_settlement
+     | included_shortProse
+     | included_sic
+     | included_soCalled
+     | included_source
+     | included_sourceDesc
+     | included_standard
+     | included_tCharacterName
+     | included_tCharacterTypeRole
+     | included_tCharacterization
+     | included_tGenre
+     | included_tGenreIssue
+     | included_tIntertextuality
+     | included_tMotif
+     | included_tPlot
+     | included_tSettingDate
+     | included_tSettingPlace
+     | included_tTechniques
+     | included_tThemeTopic
+     | included_tToneStyle
+     | included_tVoiceNarration
+     | included_textScope
+     | included_textualFeatures
+     | included_time
+     | included_title
+     | included_titleStmt
+     | included_topic
+     | included_week
+     | included_worksCited
+     | included_xptr
+     | included_xref
+     | included_year)*
+# 
+# Declare an "INCLUSION" mode for each and every element (except the
+# root). These declare that the pattern must match the given element
+# and its attributes, but its content can consist of *any* combination
+# of *any* Orlando Writing DTD elements, and also text nodes iff this
+# element had PCDATA per the writing DTD.
+#
+included_Div0 = element DIV0 { attlist.Div0, anyWri }
+included_Div1 = element DIV1 { attlist.Div1, anyWri }
+included_Div2 = element DIV2 { attlist.Div2, anyWri }
+included_Div3 = element DIV3 { attlist.Div3, anyWri }
+included_ExtentOfOeuvre =
+    element EXTENTOFOEUVRE {
+        attlist.ExtentOfOeuvre,
+        mixed { anyWri }
+    }
+included_addrLine =
+    element ADDRLINE {
+        attlist.addrLine,
+        mixed { anyWri }
+    }
+included_address = element ADDRESS { attlist.address, anyWri }
+included_area = element AREA { attlist.area, mixed {anyWri} }
+included_authorSummary = element AUTHORSUMMARY { attlist.authorSummary, anyWri }
+included_authority =
+    element AUTHORITY {
+        attlist.authority,
+        mixed { anyWri }
+    }
+included_availability = element AVAILABILITY { attlist.availability, anyWri }
+included_bibCit =
+    element BIBCIT {
+        attlist.bibCit,
+        mixed { anyWri }
+    }
+included_bibCits = element BIBCITS { attlist.bibCits, anyWri }
+included_biogProse =
+    element BIOGPROSE {
+        attlist.biogProse,
+        mixed { anyWri }
+    }
+included_chronProse =
+    element CHRONPROSE {
+        attlist.chronProse,
+        mixed { anyWri }
+    }
+included_chronStruct = element CHRONSTRUCT { attlist.chronStruct, anyWri }
+included_corr =
+    element CORR {
+        attlist.corr,
+        mixed { anyWri }
+    }
+included_dataItem =
+    element DATAITEM {
+        attlist.dataItem,
+        mixed { anyWri }
+    }
+included_dataStruct = element DATASTRUCT { attlist.dataStruct, anyWri }
+included_date =
+    element DATE {
+        attlist.date,
+        mixed { anyWri }
+    }
+included_dateRange =
+    element DATERANGE {
+        attlist.dateRange,
+        mixed { anyWri }
+    }
+included_dateStruct =
+    element DATESTRUCT {
+        attlist.dateStruct,
+        mixed { anyWri }
+    }
+included_day =
+    element DAY {
+        attlist.day,
+        mixed { anyWri }
+    }
+included_docAuthor =
+    element DOCAUTHOR {
+        attlist.docAuthor,
+        mixed { anyWri }
+    }
+included_docEditor =
+    element DOCEDITOR {
+        attlist.docEditor,
+        mixed { anyWri }
+    }
+included_docExtent =
+    element DOCEXTENT {
+        attlist.docExtent,
+        mixed { anyWri }
+    }
+included_docTitle =
+    element DOCTITLE {
+        attlist.docTitle,
+        mixed { anyWri }
+    }
+included_editorialDecl = element EDITORIALDECL { attlist.editorialDecl, anyWri }
+included_emph =
+    element EMPH {
+        attlist.emph,
+        mixed { anyWri }
+    }
+included_fileDesc = element FILEDESC { attlist.fileDesc, anyWri }
+included_foreign =
+    element FOREIGN {
+        attlist.foreign,
+        mixed { anyWri }
+    }
+included_genericRange =
+    element GENERICRANGE {
+        attlist.genericRange,
+        mixed { anyWri }
+    }
+included_geog =
+    element GEOG {
+        attlist.geog,
+        mixed { anyWri }
+    }
+included_head =
+    element HEAD {
+        attlist.head,
+        mixed { anyWri }
+    }
+included_heading =
+    element HEADING {
+        attlist.heading,
+        mixed { anyWri }
+    }
+included_idno =
+    element IDNO {
+        attlist.idno,
+        mixed { anyWri }
+    }
+included_item =
+    element ITEM {
+        attlist.item,
+        mixed { anyWri }
+    }
+included_keywordClass =
+    element KEYWORDCLASS {
+        attlist.keywordClass,
+        mixed { anyWri }
+    }
+included_l =
+    element L {
+        attlist.l,
+        mixed { anyWri }
+    }
+included_lb =
+    element LB {
+        attlist.lb,
+        mixed { anyWri }
+    }
+included_lg = element LG { attlist.lg, anyWri }
+included_month =
+    element MONTH {
+        attlist.month,
+        mixed { anyWri }
+    }
+included_name =
+    element NAME {
+        attlist.name,
+        mixed { anyWri }
+    }
+included_nonStandardDescriptor =
+    element NONSTANDARDDESCRIPTOR {
+        attlist.nonStandardDescriptor,
+        mixed { anyWri }
+    }
+included_occasion =
+    element OCCASION {
+        attlist.occasion,
+        mixed { anyWri }
+    }
+included_orgName =
+    element ORGNAME {
+        attlist.orgName,
+        mixed { anyWri }
+    }
+included_p =
+    element P {
+        attlist.p,
+        mixed { anyWri }
+    }
+included_pAdvertising =
+    element PADVERTISING {
+        attlist.pAdvertising,
+        mixed { anyWri }
+    }
+included_pAnthologization =
+    element PANTHOLOGIZATION {
+        attlist.pAnthologization,
+        mixed { anyWri }
+    }
+included_pArchivalLocation =
+    element PARCHIVALLOCATION {
+        attlist.pArchivalLocation,
+        mixed { anyWri }
+    }
+included_pAttitudes =
+    element PATTITUDES {
+        attlist.pAttitudes,
+        mixed { anyWri }
+    }
+included_pAuthorship =
+    element PAUTHORSHIP {
+        attlist.pAuthorship,
+        mixed { anyWri }
+    }
+included_pCirculation =
+    element PCIRCULATION {
+        attlist.pCirculation,
+        mixed { anyWri }
+    }
+included_pContract =
+    element PCONTRACT {
+        attlist.pContract,
+        mixed { anyWri }
+    }
+included_pCopyright =
+    element PCOPYRIGHT {
+        attlist.pCopyright,
+        mixed { anyWri }
+    }
+included_pDedication =
+    element PDEDICATION {
+        attlist.pDedication,
+        mixed { anyWri }
+    }
+included_pEarnings =
+    element PEARNINGS {
+        attlist.pEarnings,
+        mixed { anyWri }
+    }
+included_pEditions =
+    element PEDITIONS {
+        attlist.pEditions,
+        mixed { anyWri }
+    }
+included_pFirstLiteraryActivity =
+    element PFIRSTLITERARYACTIVITY {
+        attlist.pFirstLiteraryActivity,
+        mixed { anyWri }
+    }
+included_pInfluencesHer =
+    element PINFLUENCESHER {
+        attlist.pInfluencesHer,
+        mixed { anyWri }
+    }
+included_pLastLiteraryActivity =
+    element PLASTLITERARYACTIVITY {
+        attlist.pLastLiteraryActivity,
+        mixed { anyWri }
+    }
+included_pLiterarySchools =
+    element PLITERARYSCHOOLS {
+        attlist.pLiterarySchools,
+        mixed { anyWri }
+    }
+included_pManuscriptHistory =
+    element PMANUSCRIPTHISTORY {
+        attlist.pManuscriptHistory,
+        mixed { anyWri }
+    }
+included_pMaterialConditions =
+    element PMATERIALCONDITIONS {
+        attlist.pMaterialConditions,
+        mixed { anyWri }
+    }
+included_pModeOfPublication =
+    element PMODEOFPUBLICATION {
+        attlist.pModeOfPublication,
+        mixed { anyWri }
+    }
+included_pMotives =
+    element PMOTIVES {
+        attlist.pMotives,
+        mixed { anyWri }
+    }
+included_pNonBookMedia =
+    element PNONBOOKMEDIA {
+        attlist.pNonBookMedia,
+        mixed { anyWri }
+    }
+included_pNonSurvival =
+    element PNONSURVIVAL {
+        attlist.pNonSurvival,
+        mixed { anyWri }
+    }
+included_pPerformance =
+    element PPERFORMANCE {
+        attlist.pPerformance,
+        mixed { anyWri }
+    }
+included_pPeriodicalPublication =
+    element PPERIODICALPUBLICATION {
+        attlist.pPeriodicalPublication,
+        mixed { anyWri }
+    }
+included_pPlaceOfPublication =
+    element PPLACEOFPUBLICATION {
+        attlist.pPlaceOfPublication,
+        mixed { anyWri }
+    }
+included_pPressRun =
+    element PPRESSRUN {
+        attlist.pPressRun,
+        mixed { anyWri }
+    }
+included_pPrice =
+    element PPRICE {
+        attlist.pPrice,
+        mixed { anyWri }
+    }
+included_pRaritiesFeaturesDecorations =
+    element PRARITIESFEATURESDECORATIONS {
+        attlist.pRaritiesFeaturesDecorations,
+        mixed { anyWri }
+    }
+included_pRelationsWithPublisher =
+    element PRELATIONSWITHPUBLISHER {
+        attlist.pRelationsWithPublisher,
+        mixed { anyWri }
+    }
+included_pSerialization =
+    element PSERIALIZATION {
+        attlist.pSerialization,
+        mixed { anyWri }
+    }
+included_pSubmissionsRejections =
+    element PSUBMISSIONSREJECTIONS {
+        attlist.pSubmissionsRejections,
+        mixed { anyWri }
+    }
+included_pTypeOfPress =
+    element PTYPEOFPRESS {
+        attlist.pTypeOfPress,
+        mixed { anyWri }
+    }
+included_place =
+    element PLACE {
+        attlist.place,
+        mixed { anyWri }
+    }
+included_placename =
+    element PLACENAME {
+        attlist.placename,
+        mixed { anyWri }
+    }
+included_production = element PRODUCTION { attlist.production, anyWri }
+included_projectDesc = element PROJECTDESC { attlist.projectDesc, anyWri }
+included_pubPlace =
+    element PUBPLACE {
+        attlist.pubPlace,
+        mixed { anyWri }
+    }
+included_publicationStmt = element PUBLICATIONSTMT { attlist.publicationStmt, anyWri }
+included_quote =
+    element QUOTE {
+        attlist.quote,
+        mixed { anyWri }
+    }
+included_rBestKnownWork =
+    element RBESTKNOWNWORK {
+        attlist.rBestKnownWork,
+        mixed { anyWri }
+    }
+included_rDestructionOfWork =
+    element RDESTRUCTIONOFWORK {
+        attlist.rDestructionOfWork,
+        mixed { anyWri }
+    }
+included_rFictionalization =
+    element RFICTIONALIZATION {
+        attlist.rFictionalization,
+        mixed { anyWri }
+    }
+included_rLandmarkText =
+    element RLANDMARKTEXT {
+        attlist.rLandmarkText,
+        mixed { anyWri }
+    }
+included_rPenalties =
+    element RPENALTIES {
+        attlist.rPenalties,
+        mixed { anyWri }
+    }
+included_rRecognitionName =
+    element RRECOGNITIONNAME {
+        attlist.rRecognitionName,
+        mixed { anyWri }
+    }
+included_rRecognitionValue =
+    element RRECOGNITIONVALUE {
+        attlist.rRecognitionValue,
+        mixed { anyWri }
+    }
+included_rRecognitions =
+    element RRECOGNITIONS {
+        attlist.rRecognitions,
+        mixed { anyWri }
+    }
+included_rResponses =
+    element RRESPONSES {
+        attlist.rResponses,
+        mixed { anyWri }
+    }
+included_rSelfDescription =
+    element RSELFDESCRIPTION {
+        attlist.rSelfDescription,
+        mixed { anyWri }
+    }
+included_rSheInfluenced =
+    element RSHEINFLUENCED {
+        attlist.rSheInfluenced,
+        mixed { anyWri }
+    }
+included_reception = element RECEPTION { attlist.reception, anyWri }
+included_region =
+    element REGION {
+        attlist.region,
+        mixed { anyWri }
+    }
+included_researchNote =
+    element RESEARCHNOTE {
+        attlist.researchNote,
+        mixed { anyWri }
+    }
+included_responsibility = element RESPONSIBILITY { attlist.responsibility, anyWri }
+included_revisionDesc = element REVISIONDESC { attlist.revisionDesc, anyWri }
+included_rs =
+    element RS {
+        attlist.rs,
+        mixed { anyWri }
+    }
+included_scholarNote = element SCHOLARNOTE { attlist.scholarNote, anyWri }
+included_season =
+    element SEASON {
+        attlist.season,
+        mixed { anyWri }
+    }
+included_settlement =
+    element SETTLEMENT {
+        attlist.settlement,
+        mixed { anyWri }
+    }
+included_shortProse = element SHORTPROSE { attlist.shortProse, anyWri }
+included_sic =
+    element SIC {
+        attlist.sic,
+        mixed { anyWri }
+    }
+included_soCalled =
+    element SOCALLED {
+        attlist.soCalled,
+        mixed { anyWri }
+    }
+included_source =
+    element SOURCE {
+        attlist.source,
+        mixed { anyWri }
+    }
+included_sourceDesc =
+    element SOURCEDESC {
+        attlist.sourceDesc,
+        mixed { anyWri }
+    }
+included_standard =
+    element STANDARD {
+        attlist.standard,
+        mixed { anyWri }
+    }
+included_tCharacterName =
+    element TCHARACTERNAME {
+        attlist.tCharacterName,
+        mixed { anyWri }
+    }
+included_tCharacterTypeRole =
+    element TCHARACTERTYPEROLE {
+        attlist.tCharacterTypeRole,
+        mixed { anyWri }
+    }
+included_tCharacterization =
+    element TCHARACTERIZATION {
+        attlist.tCharacterization,
+        mixed { anyWri }
+    }
+included_tGenre =
+    element TGENRE {
+        attlist.tGenre,
+        mixed { anyWri }
+    }
+included_tGenreIssue =
+    element TGENREISSUE {
+        attlist.tGenreIssue,
+        mixed { anyWri }
+    }
+included_tIntertextuality =
+    element TINTERTEXTUALITY {
+        attlist.tIntertextuality,
+        mixed { anyWri }
+    }
+included_tMotif =
+    element TMOTIF {
+        attlist.tMotif,
+        mixed { anyWri }
+    }
+included_tPlot =
+    element TPLOT {
+        attlist.tPlot,
+        mixed { anyWri }
+    }
+included_tSettingDate =
+    element TSETTINGDATE {
+        attlist.tSettingDate,
+        mixed { anyWri }
+    }
+included_tSettingPlace =
+    element TSETTINGPLACE {
+        attlist.tSettingPlace,
+        mixed { anyWri }
+    }
+included_tTechniques =
+    element TTECHNIQUES {
+        attlist.tTechniques,
+        mixed { anyWri }
+    }
+included_tThemeTopic =
+    element TTHEMETOPIC {
+        attlist.tThemeTopic,
+        mixed { anyWri }
+    }
+included_tToneStyle =
+    element TTONESTYLE {
+        attlist.tToneStyle,
+        mixed { anyWri }
+    }
+included_tVoiceNarration =
+    element TVOICENARRATION {
+        attlist.tVoiceNarration,
+        mixed { anyWri }
+    }
+included_textScope =
+    element TEXTSCOPE {
+        attlist.textScope,
+        mixed { anyWri }
+    }
+included_textualFeatures = element TEXTUALFEATURES { attlist.textualFeatures, anyWri }
+included_time =
+    element TIME {
+        attlist.time,
+        mixed { anyWri }
+    }
+included_title =
+    element TITLE {
+        attlist.title,
+        mixed { anyWri }
+    }
+included_titleStmt = element TITLESTMT { attlist.titleStmt, anyWri }
+included_topic =
+    element TOPIC {
+        attlist.topic,
+        mixed { anyWri }
+    }
+included_week =
+    element WEEK {
+        attlist.week,
+        mixed { anyWri }
+    }
+included_worksCited = element WORKSCITED { attlist.worksCited, anyWri }
+included_xptr = element XPTR { attlist.xptr, empty }
+included_xref =
+    element XREF {
+        attlist.xref,
+        mixed { anyWri }
+    }
+included_year =
+    element YEAR {
+        attlist.year,
+        mixed { anyWri }
+    }
+start = element WRITING { attlist.Writing, Div0 }
+# Div0: +( researchNote , title , bibCit , scholarNote , keywordClass , bibCits , lb)
+Div0 =
+    element DIV0 {
+        attlist.Div0,
+        included_heading?,
+        (included_standard | included_nonStandardDescriptor),
+        included_authorSummary?,
+        included_Div1*,
+        included_worksCited?,
+        included_biogProse?
+    }
+# Div1: +(dateStruct , date , dateRange , time , name , place , orgName , emph , foreign , soCalled , quote , sic , corr , rs , l , lg , topic , xref , xptr)
+Div1 = element DIV1 { attlist.Div1, included_heading?, (included_textScope*, included_Div2+)* }
+Div2 =
+    element DIV2 { attlist.Div2, heading?, textScope*, (production | reception | textualFeatures)* }
+Div3 = element DIV3 { attlist.Div3, heading?, (chronStruct | dataStruct | shortProse)+ }
+ExtentOfOeuvre = element EXTENTOFOEUVRE { attlist.ExtentOfOeuvre, text }
+addrLine =
+    element ADDRLINE {
+        attlist.addrLine,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | topic)*
+    }
+address = element ADDRESS { attlist.address, addrLine+ }
+area = element AREA { attlist.area, text }
+# authorSummary: +(ExtentOfOeuvre , tGenre , genericRange , dateStruct , date , dateRange , time , name , place , orgName , emph , foreign , quote , soCalled , sic , corr , rs , lg , l , topic)
+authorSummary = element AUTHORSUMMARY { attlist.authorSummary, included_shortProse }
+authority =
+    element AUTHORITY {
+        attlist.authority, (text | address | date | name | emph | foreign | soCalled)*
+    }
+availability = element AVAILABILITY { attlist.availability, p+ }
+bibCit = element BIBCIT { attlist.bibCit, text }
+bibCits = element BIBCITS { attlist.bibCits, bibCit+ }
+biogProse = element BIOGPROSE { attlist.biogProse, text }
+chronProse =
+    element CHRONPROSE {
+        attlist.chronProse,
+        (text | rs | time | corr | emph | foreign | soCalled | title | quote | l | lg)*
+    }
+chronStruct =
+    element CHRONSTRUCT { attlist.chronStruct, (dateRange | dateStruct | date), chronProse }
+# element CORR (((l | lg | p) , (l | lg | p | quote)*) | (#PCDATA | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*)
+corr =
+    element CORR {
+        attlist.corr,
+        (text
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | quote
+         | topic
+         | l
+         | lg
+         | p)*
+    }
+dataItem =
+    element DATAITEM {
+        attlist.dataItem,
+        (text | rs | time | corr | emph | foreign | soCalled | title | quote | l | lg)*
+    }
+dataStruct = element DATASTRUCT { attlist.dataStruct, dataItem+ }
+attlist.dataStruct &= empty
+date = element DATE { attlist.date, text }
+dateRange = element DATERANGE { attlist.dateRange, text }
+# dateStruct: -(dateStruct , dateRange , date , keywordClass , name , orgName , place , scholarNote , topic)
+dateStruct =
+    element DATESTRUCT {
+        attlist.dateStruct, (text | year | season | month | week | day | time | occasion)*
+    }
+day = element DAY { attlist.day, text }
+docAuthor = element DOCAUTHOR { attlist.docAuthor, text }
+docEditor = element DOCEDITOR { attlist.docEditor, text }
+docExtent = element DOCEXTENT { attlist.docExtent, (text | date)* }
+docTitle =
+    element DOCTITLE { attlist.docTitle, (text | date | emph | foreign | soCalled | quote | rs)* }
+editorialDecl = element EDITORIALDECL { attlist.editorialDecl, p+ }
+emph =
+    element EMPH {
+        attlist.emph,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*
+    }
+fileDesc = element FILEDESC { attlist.fileDesc, titleStmt, docExtent?, publicationStmt, sourceDesc }
+foreign =
+    element FOREIGN {
+        attlist.foreign,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*
+    }
+genericRange = element GENERICRANGE { attlist.genericRange, text }
+geog = element GEOG { attlist.geog, text }
+head =
+    element HEAD {
+        attlist.head, (text | date | name | rs | corr | emph | foreign | soCalled | quote | topic)*
+    }
+heading = element HEADING { attlist.heading, text }
+idno = element IDNO { attlist.idno, text }
+# element ITEM (((l | lg | p) , (l | lg | p | quote)*) | (#PCDATA | date | name | rs | corr | emph | foreign | soCalled | quote | topic)*)
+item =
+    element ITEM {
+        attlist.item,
+        (text | date | name | rs | corr | emph | foreign | soCalled | quote | topic | l | lg | p)*
+    }
+keywordClass = element KEYWORDCLASS { attlist.keywordClass, text }
+l =
+    element L {
+        attlist.l,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | quote | topic)*
+    }
+lb = element LB { attlist.lb, text }
+lg = element LG { attlist.lg, head, (l | lg)+ }
+month = element MONTH { attlist.month, text }
+name = element NAME { attlist.name, text }
+nonStandardDescriptor = element NONSTANDARDDESCRIPTOR { attlist.nonStandardDescriptor, text }
+occasion = element OCCASION { attlist.occasion, text }
+orgName = element ORGNAME { attlist.orgName, text }
+p =
+    element P {
+        attlist.p, (text | time | emph | foreign | soCalled | quote | corr | rs | title | lg | l)*
+    }
+pAdvertising = element PADVERTISING { attlist.pAdvertising, text }
+pAnthologization = element PANTHOLOGIZATION { attlist.pAnthologization, text }
+pArchivalLocation = element PARCHIVALLOCATION { attlist.pArchivalLocation, text }
+pAttitudes = element PATTITUDES { attlist.pAttitudes, text }
+pAuthorship = element PAUTHORSHIP { attlist.pAuthorship, text }
+pCirculation = element PCIRCULATION { attlist.pCirculation, text }
+pContract = element PCONTRACT { attlist.pContract, text }
+pCopyright = element PCOPYRIGHT { attlist.pCopyright, text }
+pDedication = element PDEDICATION { attlist.pDedication, text }
+pEarnings = element PEARNINGS { attlist.pEarnings, text }
+pEditions = element PEDITIONS { attlist.pEditions, text }
+pFirstLiteraryActivity = element PFIRSTLITERARYACTIVITY { attlist.pFirstLiteraryActivity, text }
+pInfluencesHer = element PINFLUENCESHER { attlist.pInfluencesHer, text }
+pLastLiteraryActivity = element PLASTLITERARYACTIVITY { attlist.pLastLiteraryActivity, text }
+pLiterarySchools = element PLITERARYSCHOOLS { attlist.pLiterarySchools, text }
+pManuscriptHistory = element PMANUSCRIPTHISTORY { attlist.pManuscriptHistory, text }
+pMaterialConditions = element PMATERIALCONDITIONS { attlist.pMaterialConditions, text }
+pModeOfPublication = element PMODEOFPUBLICATION { attlist.pModeOfPublication, text }
+pMotives = element PMOTIVES { attlist.pMotives, text }
+pNonBookMedia = element PNONBOOKMEDIA { attlist.pNonBookMedia, text }
+pNonSurvival = element PNONSURVIVAL { attlist.pNonSurvival, text }
+pPerformance = element PPERFORMANCE { attlist.pPerformance, text }
+pPeriodicalPublication = element PPERIODICALPUBLICATION { attlist.pPeriodicalPublication, text }
+pPlaceOfPublication = element PPLACEOFPUBLICATION { attlist.pPlaceOfPublication, text }
+pPressRun = element PPRESSRUN { attlist.pPressRun, text }
+pPrice = element PPRICE { attlist.pPrice, text }
+pRaritiesFeaturesDecorations =
+    element PRARITIESFEATURESDECORATIONS { attlist.pRaritiesFeaturesDecorations, text }
+pRelationsWithPublisher = element PRELATIONSWITHPUBLISHER { attlist.pRelationsWithPublisher, text }
+pSerialization = element PSERIALIZATION { attlist.pSerialization, text }
+pSubmissionsRejections = element PSUBMISSIONSREJECTIONS { attlist.pSubmissionsRejections, text }
+pTypeOfPress = element PTYPEOFPRESS { attlist.pTypeOfPress, text }
+# place: -(bibCit , dateStruct , dateRange , keywordClass , name , orgName , place , researchNote , scholarNote , topic)
+place =
+    element PLACE {
+        attlist.place, (text | placename | address | settlement | region | geog | area)*
+    }
+placename = element PLACENAME { attlist.placename, text }
+# production: +( pFirstLiteraryActivity , pInfluencesHer , pLiterarySchools , pAttitudes , pMotives , pMaterialConditions , pLastLiteraryActivity , pSubmissionsRejections , pRelationsWithPublisher , pContract , pDedication , pEarnings , pCopyright , pModeOfPublication , pTypeOfPress , pPerformance , pPlaceOfPublication , pPrice , pEditions , pSerialization , pPeriodicalPublication , pNonBookMedia , pAnthologization , pCirculation , pPressRun , pAdvertising , pManuscriptHistory , pAuthorship , pNonSurvival , pArchivalLocation , pRaritiesFeaturesDecorations , rResponses , rSelfDescription , rFictionalization , rRecognitions , rRecognitionName , rPenalties , rRecognitionValue , rDestructionOfWork , rSheInfluenced , rBestKnownWork , rLandmarkText , tSettingDate , tSettingPlace , tGenreIssue , tGenre , tToneStyle , tVoiceNarration , tTechniques , tThemeTopic , tMotif , tCharacterization , tCharacterTypeRole , tCharacterName , tPlot , tIntertextuality)
+production =
+    element PRODUCTION {
+        attlist.production,
+        (included_chronStruct | included_dataStruct | included_shortProse | included_Div3*)+
+    }
+projectDesc = element PROJECTDESC { attlist.projectDesc, p+ }
+pubPlace =
+    element PUBPLACE {
+        attlist.pubPlace,
+        (text
+         | address
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | docTitle
+         | topic)*
+    }
+publicationStmt =
+    element PUBLICATIONSTMT {
+        attlist.publicationStmt,
+        (p+
+         | (authority,
+            (pubPlace?, address?, idno*, availability?, projectDesc*, editorialDecl*, date?)+)+
+         | ((pubPlace?, address?, idno*, availability?, projectDesc*, editorialDecl*, date?)+,
+            authority)+)
+    }
+quote =
+    element QUOTE {
+        attlist.quote,
+        (text
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | quote
+         | topic
+         | l
+         | lg
+         | p)*
+    }
+rBestKnownWork = element RBESTKNOWNWORK { attlist.rBestKnownWork, text }
+rDestructionOfWork = element RDESTRUCTIONOFWORK { attlist.rDestructionOfWork, text }
+rFictionalization = element RFICTIONALIZATION { attlist.rFictionalization, text }
+rLandmarkText = element RLANDMARKTEXT { attlist.rLandmarkText, text }
+rPenalties = element RPENALTIES { attlist.rPenalties, text }
+rRecognitionName = element RRECOGNITIONNAME { attlist.rRecognitionName, text }
+rRecognitionValue = element RRECOGNITIONVALUE { attlist.rRecognitionValue, text }
+rRecognitions = element RRECOGNITIONS { attlist.rRecognitions, text }
+rResponses = element RRESPONSES { attlist.rResponses, text }
+rSelfDescription = element RSELFDESCRIPTION { attlist.rSelfDescription, text }
+rSheInfluenced = element RSHEINFLUENCED { attlist.rSheInfluenced, text }
+# reception: +( pFirstLiteraryActivity , pInfluencesHer , pLiterarySchools , pAttitudes , pMotives , pMaterialConditions , pLastLiteraryActivity , pSubmissionsRejections , pRelationsWithPublisher , pContract , pDedication , pEarnings , pCopyright , pModeOfPublication , pTypeOfPress , pPerformance , pPlaceOfPublication , pPrice , pEditions , pSerialization , pPeriodicalPublication , pNonBookMedia , pAnthologization , pCirculation , pPressRun , pAdvertising , pManuscriptHistory , pAuthorship , pNonSurvival , pArchivalLocation , pRaritiesFeaturesDecorations , rResponses , rSelfDescription , rFictionalization , rRecognitions , rRecognitionName , rPenalties , rRecognitionValue , rDestructionOfWork , rSheInfluenced , rBestKnownWork , rLandmarkText , tIntertextuality , tPlot , tCharacterName , tCharacterTypeRole , tCharacterization , tMotif , tThemeTopic , tTechniques , tVoiceNarration , tToneStyle , tGenre , tGenreIssue , tSettingPlace , tSettingDate)
+reception =
+    element RECEPTION {
+        attlist.reception,
+        (included_chronStruct | included_dataStruct | included_shortProse | included_Div3*)+
+    }
+region = element REGION { attlist.region, text }
+researchNote = element RESEARCHNOTE { attlist.researchNote, text }
+attlist.researchNote &= empty
+responsibility = element RESPONSIBILITY { attlist.responsibility, date, item* }
+revisionDesc = element REVISIONDESC { attlist.revisionDesc, responsibility+ }
+rs =
+    element RS {
+        attlist.rs, (text | date | name | rs | time | corr | emph | foreign | soCalled | topic)*
+    }
+scholarNote = element SCHOLARNOTE { attlist.scholarNote, p+ }
+season = element SEASON { attlist.season, text }
+settlement = element SETTLEMENT { attlist.settlement, text }
+shortProse = element SHORTPROSE { attlist.shortProse, p+ }
+sic = element SIC { attlist.sic, text }
+soCalled =
+    element SOCALLED {
+        attlist.soCalled,
+        (text | date | name | rs | time | corr | emph | foreign | soCalled | topic)*
+    }
+source = element SOURCE { attlist.source, text }
+sourceDesc = element SOURCEDESC { attlist.sourceDesc, text }
+standard = element STANDARD { attlist.standard, text }
+tCharacterName = element TCHARACTERNAME { attlist.tCharacterName, text }
+tCharacterTypeRole = element TCHARACTERTYPEROLE { attlist.tCharacterTypeRole, text }
+tCharacterization = element TCHARACTERIZATION { attlist.tCharacterization, text }
+tGenre = element TGENRE { attlist.tGenre, text }
+tGenreIssue = element TGENREISSUE { attlist.tGenreIssue, text }
+tIntertextuality = element TINTERTEXTUALITY { attlist.tIntertextuality, text }
+tMotif = element TMOTIF { attlist.tMotif, text }
+tPlot = element TPLOT { attlist.tPlot, text }
+tSettingDate = element TSETTINGDATE { attlist.tSettingDate, text }
+tSettingPlace = element TSETTINGPLACE { attlist.tSettingPlace, text }
+tTechniques = element TTECHNIQUES { attlist.tTechniques, text }
+tThemeTopic = element TTHEMETOPIC { attlist.tThemeTopic, text }
+tToneStyle = element TTONESTYLE { attlist.tToneStyle, text }
+tVoiceNarration = element TVOICENARRATION { attlist.tVoiceNarration, text }
+textScope = element TEXTSCOPE { attlist.textScope, text }
+# textualFeatures: +(pFirstLiteraryActivity , pInfluencesHer , pLiterarySchools , pAttitudes , pMotives , pMaterialConditions , pLastLiteraryActivity , pSubmissionsRejections , pRelationsWithPublisher , pContract , pDedication , pEarnings , pCopyright , pModeOfPublication , pTypeOfPress , pPerformance , pPlaceOfPublication , pPrice , pEditions , pSerialization , pPeriodicalPublication , pNonBookMedia , pAnthologization , pCirculation , pPressRun , pAdvertising , pManuscriptHistory , pRaritiesFeaturesDecorations , pAuthorship , pNonSurvival , pArchivalLocation , rResponses , rSelfDescription , rFictionalization , rRecognitions , rRecognitionName , rPenalties , rRecognitionValue , rDestructionOfWork , rSheInfluenced , rBestKnownWork , rLandmarkText , tSettingDate , tSettingPlace , tGenreIssue , tGenre , tToneStyle , tVoiceNarration , tTechniques , tThemeTopic , tMotif , tCharacterization , tCharacterTypeRole , tCharacterName , tPlot , tIntertextuality)
+textualFeatures =
+    element TEXTUALFEATURES {
+        attlist.textualFeatures,
+        (included_chronStruct | included_dataStruct | included_shortProse | included_Div3*)+
+    }
+time = element TIME { attlist.time, text }
+title =
+    element TITLE {
+        attlist.title,
+        (text | title | date | name | emph | foreign | soCalled | quote | rs | topic)*
+    }
+titleStmt = element TITLESTMT { attlist.titleStmt, docTitle+, (docAuthor | docEditor)* }
+topic = element TOPIC { attlist.topic, text }
+week = element WEEK { attlist.week, text }
+worksCited = element WORKSCITED { attlist.worksCited, source+ }
+xptr = element XPTR { attlist.xptr, empty }
+xref =
+    element XREF {
+        attlist.xref,
+        (text
+         | address
+         | date
+         | name
+         | rs
+         | time
+         | corr
+         | emph
+         | foreign
+         | soCalled
+         | docTitle
+         | xptr
+         | xref
+         | quote)*
+    }
+year = element YEAR { attlist.year, text }
+attlist.day &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.week &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.month &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.occasion &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.season &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.year &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute REG { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.Div0 &= attribute ID { xsd:ID }?
+attlist.Div1 &= attribute ID { xsd:ID }?
+attlist.Div2 &= attribute ID { xsd:ID }?
+attlist.Div3 &= attribute ID { xsd:ID }?
+attlist.ExtentOfOeuvre &= attribute ID { xsd:ID }?
+attlist.Writing &= attribute ID { xsd:ID }?
+attlist.addrLine &= attribute ID { xsd:ID }?
+attlist.address &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.area &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.authorSummary &= attribute ID { xsd:ID }?
+attlist.authority &= attribute ID { xsd:ID }?
+attlist.availability &=
+    attribute ID { xsd:ID }?,
+    attribute STATUS { "FREE" | "UNKNOWN" | "RESTRICTED" }?
+attlist.bibCit &=
+    attribute ID { xsd:ID }?,
+    attribute PLACEHOLDER { text }?,
+    attribute DBREF { xsd:NMTOKEN }?,
+    attribute QTDIN { "QTDINYES" }?
+attlist.bibCits &= attribute ID { xsd:ID }?
+attlist.biogProse &= attribute ID { xsd:ID }?
+attlist.chronProse &= attribute ID { xsd:ID }?
+attlist.chronStruct &=
+    attribute ID { xsd:ID }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "TTC"
+        | "KAH"
+        | "JAW"
+        | "SMH"
+        | "SYS"
+        | "HJM"
+        | "CEL"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "JEB"
+        | "SLT"
+        | "BAA"
+        | "CJH"
+        | "JDS"
+        | "MEB"
+        | "NLG"
+        | "CLC"
+        | "GCG"
+        | "KNT"
+        | "JEC"
+        | "RSC"
+        | "SIR"
+        | "ECG"
+        | "SLB"
+        | "CAG"
+        | "MKB"
+        | "OSM"
+        | "DBH"
+        | "KGH"
+        | "JJD"
+        | "DRG"
+        | "NCK"
+        | "DLK"
+        | "AFP"
+        | "KLH"
+        | "CEE"
+        | "TRN"
+        | "RJR"
+        | "LMS"
+        | "JCA"
+        | "JES"
+        | "JLT"
+        | "KGS"
+        | "RJB"
+        | "DMH"
+        | "MAM"
+        | "LKD"
+        | "ARP"
+        | "KDM"
+        | "BJA"
+        | "SEV"
+        | "AJF"
+        | "AGH"
+        | "RTM"
+        | "LM2"
+        | "MRS"
+        | "KEH"
+        | "CLJ"
+        | "JCR"
+        | "TCD"
+        | "EAQ"
+        | "DEK"
+        | "BHL"
+        | "ALR"
+        | "SWK"
+        | "JLP"
+        | "ACF"
+        | "JSE"
+        | "MPO"
+        | "KCS"
+        | "ARC"
+        | "AEG"
+        | "AVU"
+        | "LJH"
+        | "KSN"
+        | "EWD"
+        | "CSK"
+        | "JBB"
+        | "PAD"
+        | "CMD"
+        | "CJG"
+        | "JRW"
+        | "MCA"
+        | "AWI"
+        | "SKR"
+        | "DHA"
+        | "SDU"
+        | "PIH"
+        | "GRA"
+        | "KGL"
+        | "EMH"
+        | "AAC"
+        | "AJD"
+        | "KFA"
+        | "JMA"
+        | "CNO"
+        | "KSM"
+    },
+    attribute CHRONCOLUMN {
+        "BRITISHWOMENWRITERS" | "SOCIALCLIMATE" | "WRITINGCLIMATE" | "NATIONALINTERNATIONAL"
+    },
+    attribute RELEVANCE { "SELECTIVE" | "PERIOD" | "DECADE" | "COMPREHENSIVE" },
+    attribute CHRONCOLUMN1 {
+        "NATIONALINTERNATIONAL1" | "BRITISHWOMENWRITERS1" | "WRITINGCLIMATE1" | "SOCIALCLIMATE1"
+    }?,
+    attribute CHRONCOLUMN2 {
+        "NATIONALINTERNATIONAL2" | "BRITISHWOMENWRITERS2" | "WRITINGCLIMATE2" | "SOCIALCLIMATE2"
+    }?,
+    attribute CHRONCOLUMN3 {
+        "NATIONALINTERNATIONAL3" | "BRITISHWOMENWRITERS3" | "WRITINGCLIMATE3" | "SOCIALCLIMATE3"
+    }?,
+    attribute RELEVANCE1 { "SELECTIVE1" | "PERIOD1" | "DECADE1" | "COMPREHENSIVE1" }?,
+    attribute RELEVANCE2 { "SELECTIVE2" | "PERIOD2" | "DECADE2" | "COMPREHENSIVE2" }?,
+    attribute RELEVANCE3 { "SELECTIVE3" | "PERIOD3" | "DECADE3" | "COMPREHENSIVE3" }?
+attlist.corr &=
+    attribute ID { xsd:ID }?,
+    attribute SIC { text }?,
+    attribute CERT { text }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "TTC"
+        | "KAH"
+        | "JAW"
+        | "SMH"
+        | "SYS"
+        | "HJM"
+        | "CEL"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "JEB"
+        | "SLT"
+        | "BAA"
+        | "CJH"
+        | "JDS"
+        | "MEB"
+        | "NLG"
+        | "CLC"
+        | "GCG"
+        | "KNT"
+        | "JEC"
+        | "RSC"
+        | "SIR"
+        | "ECG"
+        | "SLB"
+        | "CAG"
+        | "MKB"
+        | "OSM"
+        | "DBH"
+        | "KGH"
+        | "JJD"
+        | "DRG"
+        | "NCK"
+        | "DLK"
+        | "AFP"
+        | "KLH"
+        | "CEE"
+        | "TRN"
+        | "RJR"
+        | "LMS"
+        | "JCA"
+        | "JES"
+        | "JLT"
+        | "KGS"
+        | "RJB"
+        | "DMH"
+        | "MAM"
+        | "LKD"
+        | "ARP"
+        | "KDM"
+        | "BJA"
+        | "SEV"
+        | "AJF"
+        | "AGH"
+        | "RTM"
+        | "LM2"
+        | "MRS"
+        | "KEH"
+        | "CLJ"
+        | "JCR"
+        | "TCD"
+        | "EAQ"
+        | "DEK"
+        | "BHL"
+        | "ALR"
+        | "SWK"
+        | "JLP"
+        | "ACF"
+        | "JSE"
+        | "MPO"
+        | "KCS"
+        | "ARC"
+        | "AEG"
+        | "AVU"
+        | "LJH"
+        | "KSN"
+        | "EWD"
+        | "CSK"
+        | "JBB"
+        | "PAD"
+        | "CMD"
+        | "CJG"
+        | "JRW"
+        | "MCA"
+        | "AWI"
+        | "SKR"
+        | "DHA"
+        | "SDU"
+        | "PIH"
+        | "GRA"
+        | "KGL"
+        | "EMH"
+        | "AAC"
+        | "AJD"
+        | "KFA"
+        | "JMA"
+        | "CNO"
+        | "KSM"
+    }
+attlist.dataItem &= attribute ID { xsd:ID }?
+attlist.date &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "NEWSTYLE" ] attribute CALENDAR { "NEWSTYLE" | "BC" }?,
+    attribute VALUE { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.dateRange &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "NEWSTYLE" ] attribute CALENDAR { "NEWSTYLE" | "BC" }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?,
+    attribute FROM { text }?,
+    attribute TO { text }?,
+    attribute EXACT { "TO" | "FROM" | "BOTH" | "NEITHER" }?
+attlist.dateStruct &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?,
+    [ a:defaultValue = "NEWSTYLE" ] attribute CALENDAR { "NEWSTYLE" | "BC" }?,
+    attribute VALUE { text }?
+attlist.docAuthor &= attribute ID { xsd:ID }?
+attlist.docEditor &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "EDITOR" ] attribute ROLE { text }?
+attlist.docExtent &= attribute ID { xsd:ID }?
+attlist.docTitle &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text }?
+attlist.editorialDecl &= attribute ID { xsd:ID }?
+attlist.emph &= attribute ID { xsd:ID }?
+attlist.fileDesc &= attribute ID { xsd:ID }?
+attlist.foreign &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?,
+    attribute LANG { text }?
+attlist.genericRange &= attribute ID { xsd:ID }?
+attlist.geog &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.head &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text }?
+attlist.heading &= attribute ID { xsd:ID }?
+attlist.idno &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text }?
+attlist.item &= attribute ID { xsd:ID }?
+attlist.keywordClass &=
+    attribute ID { xsd:ID }?,
+    attribute KEYWORDTYPE { text }?
+attlist.l &=
+    attribute ID { xsd:ID }?,
+    attribute enjamb { text }?,
+    attribute MET { text }?,
+    attribute REAL { text }?,
+    attribute RHYME { text }?,
+    [ a:defaultValue = "N" ] attribute PART { "Y" | "N" | "I" | "M" | "F" }?
+attlist.lb &= attribute ID { xsd:ID }?
+attlist.lg &=
+    attribute ID { xsd:ID }?,
+    attribute TYPE { text },
+    [ a:defaultValue = "UNIFORM" ] attribute ORG { "COMPOSITE" | "UNIFORM" }?,
+    [ a:defaultValue = "COMPLETE" ]
+    attribute SAMPLE { "INITIAL" | "MEDIAL" | "FINAL" | "UNKNOWN" | "COMPLETE" }?,
+    [ a:defaultValue = "N" ] attribute PART { "Y" | "N" | "I" | "M" | "F" }?,
+    attribute MET { text }?,
+    attribute REAL { text }?,
+    attribute RHYME { text }?
+attlist.name &=
+    attribute ID { xsd:ID }?,
+    attribute STANDARD { text }?
+attlist.nonStandardDescriptor &= attribute ID { xsd:ID }?
+attlist.orgName &=
+    attribute ID { xsd:ID }?,
+    attribute STANDARD { text }?,
+    attribute REG { text }?,
+    attribute ORGTYPE { text }?
+attlist.p &= attribute ID { xsd:ID }?
+attlist.pAdvertising &= attribute ID { xsd:ID }?
+attlist.pAnthologization &= attribute ID { xsd:ID }?
+attlist.pArchivalLocation &= attribute ID { xsd:ID }?
+attlist.pAttitudes &= attribute ID { xsd:ID }?
+attlist.pAuthorship &=
+    attribute ID { xsd:ID }?,
+    attribute AUTHORSHIPCONTROVERSY { "FORGERY" | "SPURIOUS" | "MISATTRIBUTION" | "DOUBTFUL" }?,
+    attribute CONTROVERSYDATE { "PRESENT" | "HISTORICAL" | "ONGOING" }?,
+    attribute AUTHORNAMETYPE { "ANONYMOUS" | "PSEUDONYMOUS" | "ALLUSIVEAUTHORSHIP" }?,
+    attribute COLLABORATION { "COLLABORATIONYES" }?
+attlist.pCirculation &= attribute ID { xsd:ID }?
+attlist.pContract &= attribute ID { xsd:ID }?
+attlist.pCopyright &= attribute ID { xsd:ID }?
+attlist.pDedication &= attribute ID { xsd:ID }?
+attlist.pEarnings &= attribute ID { xsd:ID }?
+attlist.pEditions &= attribute ID { xsd:ID }?
+attlist.pFirstLiteraryActivity &= attribute ID { xsd:ID }?
+attlist.pInfluencesHer &=
+    attribute ID { xsd:ID }?,
+    attribute INFLUENCETYPE { "LITERARY" | "INTELLECTUAL" | "FAMILIAL" }?
+attlist.pLastLiteraryActivity &= attribute ID { xsd:ID }?
+attlist.pLiterarySchools &=
+    attribute ID { xsd:ID }?,
+    attribute INVOLVEMENT { "INVOLVEMENTYES" | "INVOLVEMENTNO" }?,
+    attribute REG { text }?
+attlist.pManuscriptHistory &= attribute ID { xsd:ID }?
+attlist.pMaterialConditions &=
+    attribute ID { xsd:ID }?,
+    attribute DISPLACEMENT { "DISPLACEMENTYES" }?
+attlist.pModeOfPublication &=
+    attribute ID { xsd:ID }?,
+    attribute PUBLICATIONMODE {
+        "SELF-PUBLICATION" | "PRIVATELYPRINTED" | "LIMITEDEDITION" | "PIRATED" | "SUBSCRIPTION"
+    }?
+attlist.pMotives &=
+    attribute ID { xsd:ID }?,
+    attribute MOTIVETYPE { "ASCRIBED" | "SELF-IDENTIFIED" }?
+attlist.pNonBookMedia &= attribute ID { xsd:ID }?
+attlist.pNonSurvival &=
+    attribute ID { xsd:ID }?,
+    attribute TYPEOFNONSURVIVAL { "ACCIDENT" | "UNKNOWN" }?
+attlist.pPerformance &= attribute ID { xsd:ID }?
+attlist.pPeriodicalPublication &= attribute ID { xsd:ID }?
+attlist.pPlaceOfPublication &= attribute ID { xsd:ID }?
+attlist.pPressRun &= attribute ID { xsd:ID }?
+attlist.pPrice &= attribute ID { xsd:ID }?
+attlist.pRaritiesFeaturesDecorations &= attribute ID { xsd:ID }?
+attlist.pRelationsWithPublisher &=
+    attribute ID { xsd:ID }?,
+    attribute RELATIONSHIPTYPE { "PERSONAL" | "PROFESSIONAL" }?
+attlist.pSerialization &=
+    attribute ID { xsd:ID }?,
+    attribute FORMOFSERIALIZATION { "VOLUMEFORM" | "PERIODICALFORM" }?
+attlist.pSubmissionsRejections &= attribute ID { xsd:ID }?
+attlist.pTypeOfPress &= attribute ID { xsd:ID }?
+attlist.place &= attribute ID { xsd:ID }?
+attlist.placename &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.production &= attribute ID { xsd:ID }?
+attlist.projectDesc &= attribute ID { xsd:ID }?
+attlist.pubPlace &=
+    attribute ID { xsd:ID }?,
+    attribute KEY { text }?,
+    attribute REG { text }?
+attlist.publicationStmt &= attribute ID { xsd:ID }?
+attlist.quote &=
+    attribute ID { xsd:ID }?,
+    [ a:defaultValue = "UNSPECIFIED" ] attribute DIRECT { "Y" | "N" | "UNSPECIFIED" }?
+attlist.rBestKnownWork &= attribute ID { xsd:ID }?
+attlist.rDestructionOfWork &=
+    attribute ID { xsd:ID }?,
+    attribute DESTROYEDBY { "SELF" | "OTHER" }?
+attlist.rFictionalization &= attribute ID { xsd:ID }?
+attlist.rLandmarkText &= attribute ID { xsd:ID }?
+attlist.rPenalties &=
+    attribute ID { xsd:ID }?,
+    attribute CENSORSHIP { "CENSORSHIPYES" }?
+attlist.rRecognitionName &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.rRecognitionValue &= attribute ID { xsd:ID }?
+attlist.rRecognitions &= attribute ID { xsd:ID }?
+attlist.rResponses &=
+    attribute ID { xsd:ID }?,
+    attribute RESPONSETYPE { "RE-EVALUATION" | "RECENT" | "INITIAL" }?,
+    attribute FORMALITY { "FORMAL" | "INFORMAL" }?,
+    attribute GENDEREDRESPONSE { "ADFEMINAM" | "GENDEREDYES" | "GENDEREDNO" }?
+attlist.rSelfDescription &= attribute ID { xsd:ID }?
+attlist.rSheInfluenced &= attribute ID { xsd:ID }?
+attlist.reception &= attribute ID { xsd:ID }?
+attlist.region &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.responsibility &=
+    attribute ID { xsd:ID }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "TTC"
+        | "KAH"
+        | "JAW"
+        | "SMH"
+        | "SYS"
+        | "HJM"
+        | "CEL"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "JEB"
+        | "SLT"
+        | "BAA"
+        | "CJH"
+        | "JDS"
+        | "MEB"
+        | "NLG"
+        | "CLC"
+        | "GCG"
+        | "KNT"
+        | "JEC"
+        | "RSC"
+        | "SIR"
+        | "ECG"
+        | "SLB"
+        | "CAG"
+        | "MKB"
+        | "OSM"
+        | "DBH"
+        | "KGH"
+        | "JJD"
+        | "DRG"
+        | "NCK"
+        | "DLK"
+        | "AFP"
+        | "KLH"
+        | "CEE"
+        | "TRN"
+        | "RJR"
+        | "LMS"
+        | "JCA"
+        | "JES"
+        | "JLT"
+        | "KGS"
+        | "RJB"
+        | "DMH"
+        | "MAM"
+        | "LKD"
+        | "ARP"
+        | "KDM"
+        | "BJA"
+        | "SEV"
+        | "AJF"
+        | "AGH"
+        | "RTM"
+        | "LM2"
+        | "MRS"
+        | "KEH"
+        | "CLJ"
+        | "JCR"
+        | "TCD"
+        | "EAQ"
+        | "DEK"
+        | "BHL"
+        | "ALR"
+        | "SWK"
+        | "JLP"
+        | "ACF"
+        | "JSE"
+        | "MPO"
+        | "KCS"
+        | "ARC"
+        | "AEG"
+        | "AVU"
+        | "LJH"
+        | "KSN"
+        | "EWD"
+        | "CSK"
+        | "JBB"
+        | "PAD"
+        | "CMD"
+        | "CJG"
+        | "JRW"
+        | "MCA"
+        | "AWI"
+        | "SKR"
+        | "DHA"
+        | "SDU"
+        | "PIH"
+        | "GRA"
+        | "KGL"
+        | "EMH"
+        | "AAC"
+        | "AJD"
+        | "KFA"
+        | "JMA"
+        | "CNO"
+        | "KSM"
+    },
+    attribute WORKSTATUS {
+        "SUB" | "RWT" | "CAS" | "RBV" | "CFT" | "CFB" | "CFC" | "REV" | "OLD" | "PUB" | "ENH"
+    },
+    attribute WORKVALUE { "I" | "P" | "C" | "O" }
+attlist.revisionDesc &= attribute ID { xsd:ID }?
+attlist.rs &=
+    attribute ID { xsd:ID }?,
+    attribute KEY { text }?,
+    attribute REG { text }?,
+    attribute TYPE { text }?
+attlist.scholarNote &= attribute ID { xsd:ID }?
+attlist.settlement &=
+    attribute ID { xsd:ID }?,
+    attribute CURRENT { text }?,
+    attribute REG { text }?
+attlist.shortProse &= attribute ID { xsd:ID }?
+attlist.sic &=
+    attribute ID { xsd:ID }?,
+    attribute CORR { text }?
+attlist.soCalled &= attribute ID { xsd:ID }?
+attlist.source &= attribute ID { xsd:ID }?
+attlist.sourceDesc &= attribute ID { xsd:ID }?
+attlist.standard &= attribute ID { xsd:ID }?
+attlist.tCharacterName &=
+    attribute ID { xsd:ID }?,
+    attribute REG { text }?
+attlist.tCharacterTypeRole &=
+    attribute ID { xsd:ID }?,
+    attribute PROTAGONIST { "MALE" | "FEMALE" }?
+attlist.tCharacterization &= attribute ID { xsd:ID }?
+attlist.tGenre &=
+    attribute ID { xsd:ID }?,
+    attribute GENRENAME {
+        "ABRIDGEMENT"
+        | "ACLEF"
+        | "ACROSTIC"
+        | "ADAPTATION"
+        | "ADVENTUREWRITING"
+        | "ADVERTISINGCOPY"
+        | "AFTERPIECE"
+        | "AFTERWORD"
+        | "AGITPROP"
+        | "ALLEGORY"
+        | "ALMANAC"
+        | "ANACREONTIC"
+        | "ANAGRAM"
+        | "ANNOTATION"
+        | "ANSWER"
+        | "ANTHEM"
+        | "ANTHOLOGY"
+        | "ANTIROMANCE"
+        | "APHORISM"
+        | "APOLOGY"
+        | "ARTCRITICISM"
+        | "AUTOBIOGRAPHY"
+        | "BALLAD"
+        | "BALLADE"
+        | "BALLADOPERA"
+        | "BALLET"
+        | "BERGAMASQUE"
+        | "BESTIARY"
+        | "BIBLICALPARAPHRASE"
+        | "BILDUNGSROMAN"
+        | "BIOGRAPHICALDICTIONARY"
+        | "BIOGRAPHY"
+        | "BISEXUALFICTION"
+        | "BLACKCOMEDY"
+        | "BOUTSRIMES"
+        | "BROADSIDE"
+        | "BURLETTA"
+        | "CABARET"
+        | "CAPTIVITYNARRATIVE"
+        | "CATECHISM"
+        | "CHAPBOOK"
+        | "CHARACTER"
+        | "CHARADE"
+        | "CHILDRENSLITERATURE"
+        | "CLERIHEW"
+        | "CLOSETDRAMA"
+        | "COLOURINGBOOK"
+        | "COMEDY"
+        | "COMEDYOFHUMOURS"
+        | "COMEDYOFINTRIGUE"
+        | "COMEDYOFMANNERS"
+        | "COMEDYOFMENACE"
+        | "COMICBOOK"
+        | "COMINGOUT"
+        | "COMMONPLACEBOOK"
+        | "COMPANION"
+        | "COMPUTERPROGRAM"
+        | "CONDITIONOFENGLANDNOVEL"
+        | "CONDUCTLITERATURE"
+        | "COOKBOOK"
+        | "COURTSHIPFICTION"
+        | "CRIMINOLOGY"
+        | "DEDICATION"
+        | "DETECTIVE"
+        | "DEVOTIONAL"
+        | "DIALOGUEORDEBATE"
+        | "DIARY"
+        | "DIALOGUEOFTHEDEAD"
+        | "DICTIONARY"
+        | "DIDACTIC"
+        | "DIRECTORY"
+        | "DISSERTATION"
+        | "DOCUMENTARY"
+        | "DOMESTIC"
+        | "DRAMA"
+        | "DRAMATICMONOLOGUE"
+        | "DREAMVISION"
+        | "DYSTOPIA"
+        | "ECLOGUE"
+        | "EDITING"
+        | "ELEGY"
+        | "ENCYCLOPAEDIA"
+        | "EPIC"
+        | "EPICTHEATRE"
+        | "EPIGRAM"
+        | "EPILOGUE"
+        | "EPISODICLITERATURE"
+        | "EPISTLE"
+        | "EPISTOLARY"
+        | "EPITAPH"
+        | "EPITHALAMIUM"
+        | "EPYLLION"
+        | "EROTICAPORNOGRAPHY"
+        | "ESSAY"
+        | "EULOGY"
+        | "EXHIBITIONCATALOGUE"
+        | "EXPRESSIONISTWRITING"
+        | "FABLE"
+        | "FABLIAU"
+        | "FAIRYTALE"
+        | "FANTASY"
+        | "FARCE"
+        | "FEMINIST"
+        | "FEMINISTTHEORY"
+        | "FICTION"
+        | "FILMTVSCRIPT"
+        | "FOLKSONG"
+        | "GARDENINGBOOK"
+        | "GENEALOGY"
+        | "GEORGIC"
+        | "GHOSTSTORY"
+        | "GIFTBOOK"
+        | "GOTHIC"
+        | "GOVERNMENTREPORT"
+        | "GRAMMAR"
+        | "GRAVEYARDPOETRY"
+        | "GUERILLATHEATRE"
+        | "GUIDEBOOK"
+        | "HAGIOGRAPHY"
+        | "HAIKU"
+        | "HARLEQUINADE"
+        | "HEROIC"
+        | "HISTORICAL"
+        | "HISTORY"
+        | "HYMN"
+        | "IMITATION"
+        | "IMPROVISATION"
+        | "INDUSTRIALNOVEL"
+        | "INTRODUCTION"
+        | "JOURNALISM"
+        | "JUVENILIA"
+        | "KITCHENSINKDRAMA"
+        | "KUNSTLERROMAN"
+        | "LAIS"
+        | "LAMPOON"
+        | "LEGALWRITING"
+        | "LEGENDFOLKTALE"
+        | "LESBIAN"
+        | "LETTER"
+        | "LETTERSFROMTHEDEADTOTHELIVING"
+        | "LIBRETTO"
+        | "LITERARYCRITICISM"
+        | "LITURGY"
+        | "LOVE"
+        | "LYRIC"
+        | "MAGICREALIST"
+        | "MANIFESTO"
+        | "MANUAL"
+        | "MAP"
+        | "MASQUE"
+        | "MEDICALWRITING"
+        | "MELODRAMA"
+        | "MIXEDMEDIA"
+        | "MOCKFORMS"
+        | "MONOLOGUE"
+        | "MORALITYMYSTERYPLAY"
+        | "MULTIMEDIA"
+        | "MUSICOLOGY"
+        | "MYSTERY"
+        | "MYTH"
+        | "NARRATIVEPOETRY"
+        | "NATIONALISTFICTION"
+        | "NATIONALTALE"
+        | "NOTEBOOK"
+        | "NOVEL"
+        | "NOVELLA"
+        | "NURSERYRHYME"
+        | "OBITUARY"
+        | "OCCASIONALPOETRY"
+        | "ODE"
+        | "ONEACTPLAY"
+        | "OPERA"
+        | "ORATORIO"
+        | "ORIENTAL"
+        | "PAGEANT"
+        | "PANEGYRIC"
+        | "PANTOMIME"
+        | "PARABLE"
+        | "PARATEXTS"
+        | "PARLIAMENTARYREPORT"
+        | "PARODY"
+        | "PASTORAL"
+        | "PEDAGOGY"
+        | "PERFORMANCEPOETRY"
+        | "PERIODICAL"
+        | "PETITION"
+        | "PHILOSOPHICAL"
+        | "PHILOSOPHY"
+        | "PICARESQUE"
+        | "PINDARIC"
+        | "POETRY"
+        | "POLEMIC"
+        | "POLITICALWRITING"
+        | "POPULAR"
+        | "PRAYER"
+        | "PREFATORYPIECE"
+        | "PROGRAMNOTES"
+        | "PROLETARIANWRITING"
+        | "PROLOGUE"
+        | "PROPAGANDA"
+        | "PROPHECY"
+        | "PSALM"
+        | "PSYCHOANALYTICAL"
+        | "QUIZ"
+        | "RADIODRAMA"
+        | "REALIST"
+        | "REGIONAL"
+        | "RELIGIOUS"
+        | "REVIEW"
+        | "REVUE"
+        | "RIDDLE"
+        | "ROMANCE"
+        | "SAGEWRITING"
+        | "SATIRE"
+        | "SCHOLARSHIP"
+        | "SCHOOLFICTION"
+        | "SCIENCEFICTION"
+        | "SCIENTIFICWRITING"
+        | "SCRAPBOOK"
+        | "SENSATIONNOVEL"
+        | "SENSIBILITY"
+        | "SENTIMENTAL"
+        | "SEQUEL"
+        | "SERMON"
+        | "SEXUALAWAKENINGFICTION"
+        | "SHORTSTORY"
+        | "SILVERFORKNOVEL"
+        | "SKETCH"
+        | "SKETCHBOOK"
+        | "SLAVENARRATIVE"
+        | "SOCIALSCIENCE"
+        | "SONG"
+        | "SONNET"
+        | "SPEECH"
+        | "STAGEREVIEW"
+        | "TESTIMONY"
+        | "TEXTBOOK"
+        | "THEATREOFCRUELTY"
+        | "THEATREOFTHEABSURD"
+        | "THEOLOGY"
+        | "THESAURUS"
+        | "THRILLER"
+        | "TOPOGRAPHICALPOETRY"
+        | "TRACTPAMPHLET"
+        | "TRAGEDY"
+        | "TRAGICOMEDY"
+        | "TRANSLATION"
+        | "TRAVELWRITING"
+        | "TREATISE"
+        | "UTOPIA"
+        | "VERSENOVEL"
+        | "VIGNETTE"
+        | "VILLANELLE"
+        | "YOUNGADULTWRITING"
+    }?,
+    attribute PROPOSEDALTERNATIVENAME { text }?
+attlist.tGenreIssue &= attribute ID { xsd:ID }?
+attlist.tIntertextuality &=
+    attribute ID { xsd:ID }?,
+    attribute INTERTEXTTYPE {
+        "ALLUSIONACKNOWLEDGED"
+        | "ALLUSIONUNACKNOWLEDGED"
+        | "QUOTATION"
+        | "MISQUOTATION"
+        | "PARODY"
+        | "SATIRE"
+        | "IMITATION"
+        | "ADAPTATION-UPDATE"
+        | "PREQUEL"
+        | "CONTINUATION"
+        | "ANSWER"
+    }?,
+    attribute GENDEROFAUTHOR { "FEMALE" | "MALE" }?
+attlist.tMotif &=
+    attribute ID { xsd:ID }?,
+    attribute MOTIFNAME { text }?
+attlist.tPlot &= attribute ID { xsd:ID }?
+attlist.tSettingDate &=
+    attribute ID { xsd:ID }?,
+    attribute SETTINGDATETYPE { "PAST" | "PRESENT" | "FUTURE" | "AMBIGUOUS" }?
+attlist.tSettingPlace &=
+    attribute ID { xsd:ID }?,
+    attribute SETTINGPLACETYPE { "FICTIVE" | "REAL" | "IDENTIFIABLE" }?,
+    attribute SETTINGCLASS { "UPPERCLASS" | "WORKINGCLASS" | "MIDDLECLASS" | "WIDERANGE" }?
+attlist.tTechniques &=
+    attribute ID { xsd:ID }?,
+    attribute TECHNIQUETYPE {
+        "DICTION" | "VERSIFICATION" | "NONSTANDARDENGLISH" | "IMAGERY" | "AURALEFFECTS"
+    }?
+attlist.tThemeTopic &= attribute ID { xsd:ID }?
+attlist.tToneStyle &= attribute ID { xsd:ID }?
+attlist.tVoiceNarration &= attribute ID { xsd:ID }?
+attlist.textScope &=
+    attribute ID { xsd:ID }?,
+    attribute DBREF { xsd:NMTOKEN }?,
+    attribute PLACEHOLDER { text }?
+attlist.textualFeatures &= attribute ID { xsd:ID }?
+attlist.time &=
+    attribute ID { xsd:ID }?,
+    attribute VALUE { text }?,
+    attribute TYPE { text }?,
+    attribute ZONE { text }?,
+    [ a:defaultValue = "CERT" ]
+    attribute CERTAINTY { "CERT" | "C" | "BY" | "AFTER" | "UNKNOWN" | "ROUGHLYDATED" }?
+attlist.title &=
+    attribute ID { xsd:ID }?,
+    attribute TITLETYPE { "MONOGRAPHIC" | "ANALYTIC" | "JOURNAL" | "SERIES" | "UNPUBLISHED" }?,
+    attribute REG { text }?,
+    attribute REND { text }?
+attlist.titleStmt &= attribute ID { xsd:ID }?
+attlist.topic &=
+    attribute ID { xsd:ID }?,
+    attribute STANDARD { text }?
+attlist.worksCited &= attribute ID { xsd:ID }?
+attlist.xptr &=
+    attribute ID { xsd:ID }?,
+    attribute DATE { text }?,
+    attribute DOC { xsd:ENTITY }?,
+    [ a:defaultValue = "ROOT" ] attribute FROM { text }?,
+    [ a:defaultValue = "DITTO" ] attribute TO { text }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "SYS"
+        | "CEL"
+        | "KAH"
+        | "TTC"
+        | "SLT"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "SLB"
+    },
+    attribute URL { text }?
+attlist.xref &=
+    attribute ID { xsd:ID }?,
+    attribute DATE { text }?,
+    attribute DOC { xsd:ENTITY }?,
+    [ a:defaultValue = "ROOT" ] attribute FROM { text }?,
+    [ a:defaultValue = "DITTO" ] attribute TO { text }?,
+    attribute RESP {
+        "IMG"
+        | "SRF"
+        | "PDC"
+        | "KDC"
+        | "ANM"
+        | "CNM"
+        | "KJB"
+        | "TJB"
+        | "JAH"
+        | "MMM"
+        | "SSB"
+        | "SIB"
+        | "MEL"
+        | "JKW"
+        | "KKC"
+        | "PMB"
+        | "SYS"
+        | "CEL"
+        | "KAH"
+        | "TTC"
+        | "SLT"
+        | "HJM"
+        | "JSC"
+        | "PHD"
+        | "AHM"
+        | "SJW"
+        | "SLB"
+    },
+    attribute URL { text }?

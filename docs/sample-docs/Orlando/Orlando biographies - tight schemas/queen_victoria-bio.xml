@@ -1,0 +1,2993 @@
+<?xml version="1.0" encoding="ISO 8859-1"?>
+<?xml-stylesheet type="text/css" href="css/bio_style.css"?>
+<?xml-model href="schemas/biography-test_10-07-16-CAPS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+
+
+<BIOGRAPHY SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER TYPE="text">
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>Queen Victoria: biography</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Orlando Project</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Created from original research by members of the Orlando
+                Project</SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>9 December 1997</DATE>
+                <ITEM>Initial document given to tagger.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SJW" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>26 April 1998</DATE>
+                <ITEM>sjw: v2 Biography--draft, needs to be cft </ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SJW" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>1 May 1998</DATE>
+                <ITEM>sjw: v2 Biography--chron intensive draft, needs to be cft and info. added
+                </ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SJW" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>7 May 1998</DATE>
+                <ITEM>sjw: v2 Biography--chron intensive draft, needs to be cft and info. added
+                </ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>9 May 1998</DATE>
+                <ITEM>reviewed for MTR</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>20 May 1998</DATE>
+                <ITEM>reviewed for MTR</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="AHM" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>21 May 1998</DATE>
+                <ITEM>ahm: 1 mtr rev</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PHD" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>21 May 1998</DATE>
+                <ITEM>phd: 2 mtr rev</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SJW" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>21 May 1998</DATE>
+                <ITEM>sjw: mtr rev</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JDS" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>24 July 1998</DATE>
+                <ITEM>JDS: fixed non-expanding initials and standardized name practice</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JEB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>4 August 1998</DATE>
+                <ITEM>JDS: fixed non-expanding initials and standardized name practice</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>6 October 1998</DATE>
+                <ITEM>Updated for Sept 1998 Audit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SRF" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>18 November 1998</DATE>
+                <ITEM>--added value attribute to dateStruct</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>17 May 1999</DATE>
+                <ITEM>the telegraph shortProse from Standage: as a separate event this was rwt by
+                    SIB, rev by KAH as per SIB instructions</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>26 June 1999</DATE>
+                <ITEM>initals and some names</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KNT" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 July 1999</DATE>
+                <ITEM>knt: fixed date</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>7 August 1999</DATE>
+                <ITEM>blended in telegraph ref from Standage</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 December 1999</DATE>
+                <ITEM>BATCH CHANGE: primarily orgName and bibCit cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JEC" WORKSTATUS="REV" WORKVALUE="P">
+                <DATE>14 November 2000</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>28 November 2000</DATE>
+                <ITEM>Merged some events from dbase and generally revised. Still needs ranking of
+                    chronevents.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JEC" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>24 January 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JEC" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>30 January 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="DRG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>1 February 2001</DATE>
+                <ITEM>converted textual apostrophes and quotation marks to entity references</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>12 February 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JEC" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>13 February 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>14 February 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>17 February 2001</DATE>
+                <ITEM>checked for tagging</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>21 February 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>22 February 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="OSM" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>12 March 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="OSM" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>12 March 2001</DATE>
+                <ITEM>thought I checked in the wrong the version</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="OSM" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>20 March 2001</DATE>
+                <ITEM>almost done this one. a few DNB sources left to check and waiting for a
+                    book.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="OSM" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>27 March 2001</DATE>
+                <ITEM>just a few more things. Wellesley Index and name regging</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>28 March 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="OSM" WORKSTATUS="CAS" WORKVALUE="P">
+                <DATE>30 March 2001</DATE>
+                <ITEM>might need a scholar note on the Munshi, and need an accent on the standard
+                    version of Eugenie. That is all.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>4 May 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="OSM" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>7 May 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RSC" WORKSTATUS="PUB" WORKVALUE="I">
+                <DATE>4 June 2001</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>18 June 2001</DATE>
+                <ITEM>fixed socalled</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>19 June 2001</DATE>
+                <ITEM>removed title tag(s) from workscited</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>20 June 2001</DATE>
+                <ITEM>fixed quote</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>27 June 2001</DATE>
+                <ITEM>fixed entity ref</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>5 July 2001</DATE>
+                <ITEM>fixed place</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>9 July 2001</DATE>
+                <ITEM>fixed names (not yet complete)</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>10 July 2001</DATE>
+                <ITEM>fixed names</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>11 July 2001</DATE>
+                <ITEM>fixed names</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>11 July 2001</DATE>
+                <ITEM>fixed names</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>12 July 2001</DATE>
+                <ITEM>fixed names</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>17 July 2001</DATE>
+                <ITEM>fixed orgname</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>17 September 2001</DATE>
+                <ITEM>fixed standard name of Princess Helena</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KGH" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>14 October 2001</DATE>
+                <ITEM>checked and corrected title tags</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SIB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>16 October 2001</DATE>
+                <ITEM>revised chronstruct and added comments from Morgan on opening of
+                    parliament</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>30 October 2001</DATE>
+                <ITEM>fixed spacing</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>8 February 2002</DATE>
+                <ITEM>cfb in progress</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>11 February 2002</DATE>
+                <ITEM>cfb done</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>12 February 2002</DATE>
+                <ITEM>fixed dbref and several bibcits</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>13 February 2002</DATE>
+                <ITEM>fixed bibcits</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RSC" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>21 March 2002</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>27 March 2002</DATE>
+                <ITEM>fixed socalled</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>1 May 2002</DATE>
+                <ITEM>fixed name</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>2 May 2002</DATE>
+                <ITEM>fixed name</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>16 July 2002</DATE>
+                <ITEM>fixed orgname</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>15 October 2002</DATE>
+                <ITEM>fixed name(s)</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>10 March 2003</DATE>
+                <ITEM>added Mumbai as current attribute on Bombay fixed PLACE</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>10 March 2003</DATE>
+                <ITEM>added Kolkata as current attribute on Calcutta fixed PLACE</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>26 March 2003</DATE>
+                <ITEM> fixed TITLE</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>10 April 2003</DATE>
+                <ITEM> fixed PLACE</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>11 April 2003</DATE>
+                <ITEM>fixed bibcit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>11 April 2003</DATE>
+                <ITEM>fixed bibcits</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>11 April 2003</DATE>
+                <ITEM>fixed bibcits</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>14 April 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily PLACE cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>22 April 2003</DATE>
+                <ITEM>fixed bibcits</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>12 May 2003</DATE>
+                <ITEM> fixed NAME</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>16 June 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily TGENRENAME cleanup, BIBCIT following P moved before P,
+                    BIBCITS TAG added</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDM" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>5 May 2004</DATE>
+                <ITEM>Added orgname tag to Civil List.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>08 April 2005</DATE>
+                <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name
+                    changes</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>1 September 2005</DATE>
+                <ITEM>job/occupation regs</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>5 April 2006</DATE>
+                <ITEM>final readthrough</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>31 January 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 February 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>9 March 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>18 July 2008</DATE>
+                <ITEM>fixed place</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY WORKSTATUS="REV" RESP="JSE" WORKVALUE="C">
+                <DATE>18 February 2009</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+        <HEADING>Biography</HEADING>
+        <STANDARD>Victoria, Queen</STANDARD>
+        <DIV1>
+            <PERSONNAME>
+                <DIV2>
+                    <DATASTRUCT>
+                        <DATAITEM>
+                            <BIRTHNAME>
+                                <SURNAME/>
+                                <GIVEN>Alexandrina Victoria</GIVEN>
+                            </BIRTHNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <ROYAL>Princess Alexandrina Victoria</ROYAL>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <ROYAL WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES">Queen Victoria</ROYAL>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <ROYAL>Empress of India</ROYAL>
+                        </DATAITEM>
+                    </DATASTRUCT>
+                </DIV2>
+            </PERSONNAME>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>QV came from the <NATIONALHERITAGE REG="German"
+                                >Hanoverian</NATIONALHERITAGE> line of the <NATIONALITY
+                                SELF-DEFINED="SELFYES">English</NATIONALITY> monarchy and learned
+                                <LANGUAGE>English</LANGUAGE> as a second language to
+                                <LANGUAGE>German</LANGUAGE> from the age of three. She occupied an
+                            anomalous role as the <RACECOLOUR>white</RACECOLOUR> female ruler of a
+                            vast <NATIONALITY SELF-DEFINED="SELFYES">British</NATIONALITY> empire
+                            which eventually allowed her, as its Empress, to count one quarter of
+                            humanity as her subjects. The peculiarity of her role, along with the
+                            portliness emphasized by her short stature, is evoked in <NAME>Anna
+                                Leonowens</NAME>&apos;s tongue-in-cheek report<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Leonowens 140-5" DBREF="8410">140-5</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Longford 25-7" DBREF="7794">25-7</BIBCIT>
+                            </BIBCITS> of a Siamese ambassador&apos;s comment that QV <QUOTE
+                                DIRECT="Y">must be of pure descent from a race of goodly and warlike
+                                kings and rulers of the earth, in that her eyes, complexion, and
+                                above all her bearing, are those of a beautiful and majestic white
+                                elephant.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Leonowens 145" DBREF="8410" QTDIN="QTDINYES"
+                                    >145</BIBCIT>
+                            </BIBCITS><SCHOLARNOTE>
+                                <P>Leonowens details the elaborate and costly ceremonials
+                                    surrounding the white elephant. Her sense of their
+                                    ridiculousness connects to the notion, derived from Siamese
+                                    culture, of white elephants as <QUOTE DIRECT="Y">a burdensome
+                                        possession,</QUOTE><BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Brewer Phrase and Fable" DBREF="782"/>
+                                    </BIBCITS> which suggests that the ambassador&apos;s remark may
+                                    have had an anti-imperial twist.</P>
+                            </SCHOLARNOTE></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <CLASSISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Although she was obviously an <CLASS SOCIALRANK="NOBILITY"
+                                    SELF-DEFINED="SELFYES">aristocrat</CLASS>, QV&apos;s
+                                sensibilities in many respects allied her with the <CLASS
+                                    SOCIALRANK="PROFESSIONAL" SELF-DEFINED="SELFNO">middle
+                                    classes</CLASS>. She defined herself against the excesses of the
+                                Regency, and her public performance of domesticity and wifely
+                                devotion, as well as many of her tastes and opinions, helped to
+                                legitimise bourgeois values in the period that was named after
+                                her.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </CLASSISSUE>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>QV was a devout <DENOMINATION SELF-DEFINED="SELFYES"><ORGNAME
+                                        REG="Anglican Church" STANDARD="Anglican Church"
+                                        >Anglican</ORGNAME></DENOMINATION>, as befitted the head of
+                                the <ORGNAME STANDARD="Anglican Church">Church of England</ORGNAME>.
+                                (When in Scotland, however, she attended the local
+                                        <DENOMINATION><ORGNAME REG="Presbyterian Church"
+                                        STANDARD="Presbyterian Church"
+                                    >Presbyterian</ORGNAME></DENOMINATION>, that is <ORGNAME>Church
+                                    of Scotland</ORGNAME>, parish church.)</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>QV&apos;s <DATERANGE>1837-1901</DATERANGE> reign was the longest of any
+                            British monarch. By taking a dedicated and active role in the rule of
+                            her country&mdash;despite her assertion that <QUOTE DIRECT="Y">I
+                                    <EMPH>never interfere</EMPH> in politics</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Lytton, Court Diary 43" DBREF="8612"
+                                    QTDIN="QTDINYES">43</BIBCIT>
+                            </BIBCITS>&mdash;she helped Britain survive times of intense political
+                            turmoil and served as an example of a strong female public leader during
+                            a time when dominant ideologies of gender represented women as queens
+                            within the private domestic sphere. Despite being associated early in
+                            her reign more with the <POLITICALAFFILIATION ACTIVISM="ACTIVISTNO"
+                                WOMAN-GENDERISSUE="GENDERNO" MEMBERSHIP="MEMBERSHIPNO"
+                                INVOLVEMENT="INVOLVEMENTNO"><ORGNAME REG="Whig Party"
+                                    STANDARD="Liberal Party">Whigs</ORGNAME></POLITICALAFFILIATION>
+                            and reform measures than with the more conservative Tories, she was not
+                            particularly progressive.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen xviii" DBREF="7792"
+                                    >xviii</BIBCIT>
+                            </BIBCITS> Although her dislike of radicalism may have been in part
+                            owing to the early guidance in government she received from <NAME
+                                STANDARD="Melbourne, Henry William Lamb,,, second Viscount">Lord
+                                Melbourne</NAME>, she also exhibited a deep-rooted faith in
+                            convention and tradition.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Birth</HEADING>
+            <BIRTH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="SELECTIVE1">
+                        <DATE>24 May 1819</DATE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Alexandrina Victoria</NAME>,
+                            fifth in line to the throne and the future Queen of England, was born at
+                                    <PLACE><PLACENAME>Kensington Palace</PLACENAME><SETTLEMENT
+                                    REG="London"/><REGION REG="Middlesex"/><GEOG REG="England"
+                                /></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 22, 24" DBREF="7794">22, 24</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Her birth was witnessed and attested, as dictated by traditional royal custom.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 1" DBREF="7792">1</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Interestingly, although Victoria later opposed female midwives and
+                            doctors, she was delivered by a German midwife, Fr&auml;ulein Siebold.
+                            Her parents, the Duke and Duchess of Kent, were living in
+                                    <PLACE><GEOG>Germany</GEOG></PLACE> until the last month of the
+                            pregnancy. At this time the Duke decided that the child should be born
+                            in England, as she was close enough to the succession to be of concern
+                            to the government and royal family.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 1" DBREF="7792">1</BIBCIT>
+                            </BIBCITS> Despite the risk to his wife&apos;s health and their lack of
+                            money, they journeyed towards English soil. Victoria was born a few days
+                            after their arrival.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Strachey 23-4" DBREF="7795">23-4</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Longford 21" DBREF="7794">21</BIBCIT>
+                            </BIBCITS></P>
+                        <P>QV&apos;s future husband, <NAME>Prince Albert</NAME>, was delivered by
+                            the same midwife as Victoria, just over three months later.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 22" DBREF="7794">22</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </BIRTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Family</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="MOTHER">
+                    <DIV2>
+                        <HEADING>Mother</HEADING>
+                        <SHORTPROSE>
+                            <P>QV&apos;s mother was <NAME
+                                    STANDARD="Kent, Victoria Mary Louisa,,, Duchess of">Victoire of
+                                    Leiningen, Princess of Saxe-Coburg-Saalfield, Duchess of
+                                    Kent</NAME>, who came from a strong line of German monarchy.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 1" DBREF="7792">1</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Longford 16, 19" DBREF="7794">16,
+                                        19</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Munich 253" DBREF="7793">253</BIBCIT>
+                                </BIBCITS> Victoire was a thirty-year-old widow, with two children
+                                by her late German husband, <NAME>Prince Emich Charles of
+                                    Leiningen</NAME>, when she married <NAME
+                                    STANDARD="Kent, Edward Augustus,,, Duke of">Edward
+                                    Augustus</NAME>, QV&apos;s father. After her second marriage,
+                                she was referred to in England as Victoria, Duchess of Kent. The
+                                marriage was purely an economic one.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 16" DBREF="7794">16</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                                </BIBCITS></P>
+                            <P>According to biographer Elizabeth Longford, <QUOTE DIRECT="Y">when
+                                    people remarked that [Victoria] resembled her royal father she
+                                    would claim with a tightening of the lips to have inherited
+                                        <QUOTE DIRECT="N">more from my dear Mother</QUOTE>.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 19" DBREF="7794" QTDIN="QTDINYES"
+                                        >19</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="FATHER">
+                    <DIV2>
+                        <HEADING>Father</HEADING>
+                        <SHORTPROSE>
+                            <P>QV&apos;s father, <NAME STANDARD="Kent, Edward Augustus,,, Duke of"
+                                    >Edward Augustus, Duke of Kent</NAME>, was a son of domestic and
+                                high-minded parents, <NAME STANDARD="George III, King">George
+                                    III</NAME> and <NAME
+                                    STANDARD="Charlotte of Mecklenburg-Strelitz,, Queen of England"
+                                    >Queen Charlotte</NAME>, but since their day the House of
+                                Hanover had become renowned for debauchery and imprudence. <NAME
+                                    STANDARD="Kent, Edward Augustus,,, Duke of">Edward
+                                    Augustus</NAME> grew up to be an <JOB>army officer</JOB>, then
+                                ex-officer exiled in relative poverty in
+                                        <PLACE><SETTLEMENT>Brussels</SETTLEMENT><GEOG
+                                        CURRENT="Belgium" REG="Belgium"/></PLACE> for many years.
+                                Before marrying, he lived with a French woman, <NAME
+                                    STANDARD="de St Laurent, Julie,,, Madame">Julie, Madame de St
+                                    Laurent</NAME>, for twenty-seven years.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 15-16" DBREF="7794">15-16</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>23 January 1820</DATE>
+                            <CHRONPROSE><NAME STANDARD="Kent, Edward Augustus,,, Duke of">Edward,
+                                    Duke of Kent</NAME>, died of pneumonia less than eight months
+                                after the birth of his daughter <NAME STANDARD="Victoria, Queen"
+                                    >Alexandrina Victoria</NAME>, future queen of
+                                England.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 25" DBREF="7794">25</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                    </DIV2>
+                </MEMBER>
+                <DIV2>
+                    <HEADING>Siblings</HEADING>
+                    <SHORTPROSE>
+                        <P>Although QV was the only child of Edward Augustus and Victoire, she had
+                            two older siblings from her mother&apos;s first marriage, her
+                            half-brother <NAME STANDARD="Charles of Leiningen, Prince"
+                                >Charles</NAME> and her half-sister <NAME
+                                STANDARD="Feodore of Leiningen, Princess">Feodore</NAME>, who was
+                            twelve years her elder and married when Victoria was nine.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 29" DBREF="7794">29</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 16" DBREF="7792">16</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <MEMBER RELATION="COUSIN">
+                    <DIV2>
+                        <HEADING>Cousins</HEADING>
+                        <SHORTPROSE>
+                            <P>Princess Victoria had many cousins, the most significant of whom was
+                                    <NAME STANDARD="Albert, Prince">Albert</NAME>, her future husband.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 52" DBREF="7794">52</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Christening and Infancy</HEADING>
+            <OTHERLIFEEVENT>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>24 June 1819</DATE>
+                        <CHRONPROSE>The Duke and Duchess of Kent&apos;s daughter was christened
+                                <NAME STANDARD="Victoria, Queen">Alexandrina Victoria</NAME>, after
+                            heated arguments during the ceremony.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 23-4" DBREF="7794">23-4</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Strachey 25-6" DBREF="7795">25-6</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The Prince Regent vehmently objected to the original names chosen by the
+                            Duke: Georgina Charlotte Augusta Alexandrina Victoria, a name designed
+                            to honour both his parents. The final choice was unpopular in England
+                            because both names were foreign. The arguments over naming foreshadowed
+                            the constant political struggle which <SOCALLED>Drina</SOCALLED> faced
+                            while growing up as a potential successor to the throne.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 23-4" DBREF="7794">23-4</BIBCIT>
+                            </BIBCITS></P>
+                        <P>As an infant, the future queen was breast-fed, and vaccinated against smallpox.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 19, 24" DBREF="7794">19, 24</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OTHERLIFEEVENT>
+        </DIV1>
+        <DIV1>
+            <HEADING>Childhood</HEADING>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>12 February 1820</DATE>
+                        <CHRONPROSE>After the Duke of Kent died, his impoverished wife and <NAME
+                                STANDARD="Victoria, Queen">daughter</NAME> (the <NAME
+                                STANDARD="Victoria, Queen">Princess Alexandrina Victoria</NAME>)
+                            were forced to move into Kensington Palace and live at the expense of
+                                <NAME STANDARD="Leopold I,, King of Belgium">Prince
+                            Leopold</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 25" DBREF="7794">25</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>QV remembered much of her childhood as sad and dull. The little girl
+                            quickly became known for her sociability and hot temper.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 26-8" DBREF="7794">26-8</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Education</HEADING>
+            <EDUCATION MODE="DOMESTIC">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>1824</DATE>
+                        <CHRONPROSE>A German woman, <NAME STANDARD="Lehzen, Louise,,, Baroness"
+                                >Louise Lehzen</NAME>, was hired as governess to <NAME
+                                STANDARD="Victoria, Queen">Princess Alexandrina
+                            Victoria</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 29" DBREF="7794">29</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This appointment created anxiety within the family on account of the
+                            strong German influence which Lehzen would exercise. In fact, Victoria,
+                            whose mother spoke only German to her, did not even begin to speak
+                            English until the age of three; however, from that point she was allowed
+                            to speak German only during language lessons.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 29-31" DBREF="7794">29-31</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 1-2" DBREF="7792">1-2</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Lehzen established the tradition of reading history to Victoria while the
+                            young heiress dressed in her chambers. This practice continued even
+                            after Victoria became Queen.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 30" DBREF="7794">30</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE VALUE="1826-05-24" CERTAINTY="BY">By May 1826</DATE>
+                        <CHRONPROSE>By the age of seven, <NAME STANDARD="Victoria, Queen">Princess
+                                Alexandrina Victoria</NAME> was learning the
+                                <SUBJECT>classics</SUBJECT>, as well as <SUBJECT>history</SUBJECT>,
+                                <SUBJECT>scripture</SUBJECT>, and <SUBJECT>moral
+                            tales</SUBJECT>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 31" DBREF="7794">31</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>These were taught her by her first formal teacher, the young and
+                            Evangelical Reverend <INSTRUCTOR><NAME>George Davys</NAME></INSTRUCTOR>.
+                            At eight, she began learning <SUBJECT>Latin</SUBJECT>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 31" DBREF="7794">31</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Victoria was trained in music from an early age, and particularly enjoyed
+                                <SUBJECT>singing</SUBJECT> lessons with <INSTRUCTOR><NAME>John
+                                    Sale</NAME></INSTRUCTOR>. Later, the famous tenor
+                                    <INSTRUCTOR><NAME>Luigi Lablache</NAME></INSTRUCTOR> was
+                            employed to teach her.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 31, 45" DBREF="7794">31, 45</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SJW">
+                    <DATE VALUE="1837-01-09" CERTAINTY="BY">By 9 January 1837</DATE>
+                    <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                            Victoria</NAME> had begun reading her first novel, <TEXT><NAME>Sir
+                                Walter Scott</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC">Bride of
+                                Lammermoor</TITLE></TEXT>; she remained an avid reader of novels
+                        throughout her life.</CHRONPROSE>
+                    <BIBCITS>
+                        <BIBCIT PLACEHOLDER="Longford 43" DBREF="7794">43</BIBCIT>
+                    </BIBCITS>
+                </CHRONSTRUCT>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Trained for the Monarchy</HEADING>
+            <OTHERLIFEEVENT>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>11 March 1830</DATE>
+                        <CHRONPROSE>While studying the history of the British monarchy, young <NAME
+                                STANDARD="Victoria, Queen">Princess Alexandrina Victoria</NAME>
+                            discovered her claim to the throne.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 32" DBREF="7794">32</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Looking over the genealogical tables she realised her own position as
+                            successor, and is said to have burst into tears. Upon recovering, she
+                            uttered the famous phrase <QUOTE DIRECT="Y">I will be good.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 32" DBREF="7794">32</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OTHERLIFEEVENT>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>31 July 1832</DATE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                                Victoria</NAME> and her entourage embarked on a formal tour of the
+                            country, beginning with <PLACE><GEOG>Wales</GEOG></PLACE> and the
+                                    <PLACE><REGION>Midlands</REGION><GEOG REG="England"
+                                    /></PLACE><PLACE><REGION REG="Staffordshire"/><GEOG
+                                    REG="England"/></PLACE><PLACE><REGION REG="Warwickshire"/><GEOG
+                                    REG="England"/></PLACE><PLACE><REGION REG="Worcestershire"
+                                    /><GEOG REG="England"/></PLACE><PLACE><REGION REG="Lincolnshire"
+                                    /><GEOG REG="England"/></PLACE><PLACE><REGION
+                                    REG="Northamptonshire"/><GEOG REG="England"
+                                    /></PLACE><PLACE><REGION REG="Derbyshire"/><GEOG REG="England"
+                                /></PLACE><PLACE><REGION REG="Nottinghamshire"/><GEOG REG="England"
+                                /></PLACE><PLACE><REGION REG="Leicestershire"/><GEOG REG="England"
+                                /></PLACE><PLACE><REGION REG="Shropshire"/><GEOG REG="England"
+                                /></PLACE><PLACE><REGION REG="Herefordshire"/><GEOG REG="England"
+                                /></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 42" DBREF="7794">42</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>30 July 1835</DATE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                                Victoria</NAME> was <DENOMINATION SELF-DEFINED="SELFYES"
+                                REG="Anglican"><ORGNAME REG="Anglican Church"
+                                    STANDARD="Anglican Church">confirmed an
+                                Anglican</ORGNAME></DENOMINATION> at the <PLACE><PLACENAME>Chapel
+                                    Royal</PLACENAME>, <SETTLEMENT CURRENT="London">St
+                                    James&apos;s</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 47" DBREF="7794">47</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </RELIGION>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>August 1835</DATE>
+                        <CHRONPROSE>Against her wishes, <NAME STANDARD="Victoria, Queen">Princess
+                                Alexandrina Victoria</NAME> was sent on another grand tour, this
+                            time of the <PLACE><GEOG REG="England">North of
+                            England</GEOG></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 47" DBREF="7794">47</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Victoria was conscious of the fact that these travels angered the king,
+                            and were designed solely to promote her public image as successor.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 47" DBREF="7794">47</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATERANGE CERTAINTY="C" FROM="1835-10-07" TO="1835-10-31" EXACT="BOTH">7-31
+                            October 1835</DATERANGE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                                Victoria</NAME> suffered an acute attack of typhoid; she took a
+                            further three months to recover fully.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 49-50" DBREF="7794">49-50</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This illness enabled the opposition to spread rumours about her weak
+                            health and suggest that she unsuitable for the crown.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 50" DBREF="7794">50</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="SOCIALCLIMATE" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>1835</DATE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                                Victoria</NAME> became <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                REG="patron, philanthropist">patron</SIGNIFICANTACTIVITY> of the
+                                <ORGNAME
+                                STANDARD="Royal Society for the Prevention of Cruelty to Animals"
+                                >Society for the Prevention of Cruelty to Animals</ORGNAME>, along
+                            with her mother, the <NAME
+                                STANDARD="Kent, Victoria Mary Louisa,,, Duchess of">Duchess of
+                                Kent</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She later inspired the Anti-Vivisection Act of 1876.<RESEARCHNOTE>kdc;
+                                link to Event 12456</RESEARCHNOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 836" DBREF="109889"
+                                    >836</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>15 June 1837</DATE>
+                        <CHRONPROSE>With the king close to death, <NAME STANDARD="Victoria, Queen"
+                                >Princess Alexandrina Victoria</NAME> was pressed from all political
+                            sides to align herself with an advisor and party; she chose <NAME
+                                STANDARD="Melbourne, Henry William Lamb,,, second Viscount">Lord
+                                Melbourne</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 58-9" DBREF="7794">58-9</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She made her choice despite the protests and schemes of her mother and
+                            her confidant <NAME STANDARD="Conroy, Sir John">Sir John (later Lord)
+                                Conroy</NAME>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 58-9" DBREF="7794">58-9</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><NAME STANDARD="Conroy, Sir John">Conroy</NAME> had been equerry to her
+                            father and then an important support to her mother in difficult
+                            political situations and the dominant political influence on the young
+                            Victoria. Her assertion of independence from him was an important step
+                            in her maturing.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="ODNB under Conroy" DBREF="29268">under
+                                    Conroy</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Courting</HEADING>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICYES">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SJW"
+                        CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATERANGE FROM="1836-05-22" TO="1836-06-07" EXACT="BOTH">22 May-7 June
+                            1836</DATERANGE>
+                        <CHRONPROSE><NAME STANDARD="Albert, Prince">Prince Albert of
+                                Saxe-Coburg</NAME>, <NAME STANDARD="Victoria, Queen">Princess
+                                Alexandrina Victoria</NAME>&apos;s cousin, visited England for the
+                            first time.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Longford 52-3" DBREF="7794">52-3</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She described him in her journal as <QUOTE DIRECT="Y">full of goodness
+                                and sweetness, and very clever and intelligent.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 52" DBREF="7794" QTDIN="QTDINYES"
+                                    >52</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <SHORTPROSE>
+                        <P>Victoria had been informally matched to Albert from an early age, and
+                            knew from her uncle Prince Leopold that this young cousin, along with
+                            two others, was a future suitor.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 31-3" DBREF="7792">31-3</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Longford 51-2" DBREF="7794">51-2</BIBCIT>
+                            </BIBCITS> Albert was a staunch Lutheran, and loved music, science,
+                            technology, and art.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 52-3, 129" DBREF="7794">52-3,
+                                    129</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 33" DBREF="7792">33</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Accession to the Throne</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>20 June 1837</DATE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                                Victoria</NAME> received the news that she was Queen, on the death
+                            of <NAME STANDARD="William IV, King">William IV of
+                            Britain</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 56, 60" DBREF="7794">56, 60</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>At about five o&apos;clock in the morning, <NAME>Lord Conyngham</NAME>
+                            arrived at Kensington Palace, demanding to see <QUOTE DIRECT="Y">the
+                                Queen</QUOTE>; in a private interview, he informed the young and
+                            sleepy princess that she had acceded to the throne of England. At
+                            eighteen, she had just reached the age at which a regency was not
+                            required. Her journals of this time emphasize the alienated position
+                            into which she felt herself pushed, perpetually alone with important
+                            decisions to make.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 60-4" DBREF="7794">60-4</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 23" DBREF="7792">23</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE VALUE="1837-12-23" CERTAINTY="BY">Late December 1837</DATE>
+                        <CHRONPROSE>QV opened <ORGNAME>Parliament</ORGNAME>, witnessed by many
+                            including <NAME STANDARD="Morgan, Sydney Owenson,,, Lady">Lady
+                                Morgan</NAME>, who admired her composure and oral
+                            delivery.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                            <BIBCIT PLACEHOLDER="Longford 73" DBREF="7794">73</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Morgan Memoirs 2: 428" DBREF="108398">2:
+                                428</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Morgan commented: <QUOTE DIRECT="Y">The young Queen&apos;s
+                                    <EMPH>aplomb</EMPH> was truly wonderful; her voice clear and
+                                sonorous&mdash;whoever <QUOTE DIRECT="Y">taught the young
+                                        <EMPH>girl</EMPH> to read,</QUOTE> did every justice to the
+                                development of her vocal organ, and her small person seemed to
+                                dilate under the pressure of her conscious greatness; for the Queen
+                                of England is, at this moment, certainly the greatest sovereign in
+                                the world, because she is the chief of a free people&mdash;what
+                                charmed me most, however, was her inexpressibly girlish laugh.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Morgan Memoirs 2: 428" DBREF="108398">2:
+                                        428</BIBCIT>
+                                </BIBCITS></QUOTE></P>
+                        <P>That month, Parliament awarded QV an annual <ORGNAME>Civil List</ORGNAME>
+                            Pension of <REMUNERATION>&pound;385,000 </REMUNERATION> for the rest of
+                            her life; in addition, she received revenues from the Duchies of
+                            Cornwall and Lancaster.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                                <BIBCIT PLACEHOLDER="Longford 73" DBREF="7794">73</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>28 June 1838</DATE>
+                        <CHRONPROSE><NAME STANDARD="Victoria, Queen">Princess Alexandrina
+                                Victoria</NAME> was crowned Queen in <PLACE><PLACENAME>Westminster
+                                    Abbey</PLACENAME><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 79" DBREF="7794">79</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The day after her accession she had officially dropped her first name,
+                            and ordered it removed from all documentation. </P>
+                        <P>By December she was already weary of life as a monarch, and close to a
+                            nervous breakdown.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 71, 92-4" DBREF="7794">71,
+                                    92-4</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Marriage</HEADING>
+            <INTIMATERELATIONSHIPS>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>10 October 1839</DATE>
+                        <CHRONPROSE><NAME STANDARD="Albert, Prince">Prince Albert of
+                                Saxe-Coburg</NAME> made a second visit to England to see his cousin
+                            QV.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 132" DBREF="7794">132</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiii" DBREF="7793">xiii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Victoria had written to her uncle less than three months before to tell
+                            him that <EMPH>any</EMPH> marriage should be postponed, and that the
+                            thought of matrimony held <QUOTE DIRECT="Y">great repugnance</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 125" DBREF="7794" QTDIN="QTDINYES"
+                                    >125</BIBCIT>
+                            </BIBCITS> for her. Naturally, Albert felt little chance of success when
+                            he arrived, but after only four days Victoria, charmed by his handsome
+                            looks and intelligent manner, found her attitude changing and fell in
+                            love with him.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 133" DBREF="7794">133</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 33" DBREF="7792">33</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>15 October 1839</DATE>
+                        <CHRONPROSE>QV proposed marriage to <NAME STANDARD="Albert, Prince">Prince
+                                Albert of Saxe-Coburg</NAME> after spending a short time with
+                            him.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 133-4" DBREF="7794">133-4</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The fact that she had to propose to him was the source of considerable
+                            public ridicule. The collision between the hierarchy of power which made
+                            Victoria queen and head of state, against the gender ideology and
+                            practices that should have made Albert king of his household, provided
+                            much fodder for jest in the press.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 31ff" DBREF="7792">31ff</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                                RESP="IMG" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="DECADE1">
+                                <DATE>10 February 1840</DATE>
+                                <CHRONPROSE>QV and <NAME STANDARD="Albert, Prince">Prince Albert of
+                                        Saxe-Coburg</NAME> were married in the <PLACE>Chapel Royal,
+                                            <PLACENAME>St James&apos;s Palace</PLACENAME><SETTLEMENT
+                                            REG="London"/><REGION REG="Middlesex"/><GEOG
+                                            REG="England"/></PLACE>.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>Since Salic Law was not practised in England, QV ruled in her own
+                                    right, and anyone who married her would be placed in the role of
+                                    consort to the sovereign. Thus, the controversial issues of the
+                                    Prince&apos;s status and income took some time to resolve before
+                                    the marriage; after that, even the details of the wedding
+                                    underwent debate.<BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Thompson Queen 31-6" DBREF="7792"
+                                            >31-6</BIBCIT>
+                                    </BIBCITS></P>
+                                <P>There also arose the question of whether the ceremony was to be
+                                    public or private. <NAME
+                                        STANDARD="Melbourne, Henry William Lamb,,, second Viscount"
+                                        >Lord Melbourne</NAME> convinced QV, despite her hesitation,
+                                    that a public ceremony was the only viable option, and she was
+                                    duly married in public. Another conflict involved the honeymoon.
+                                    QV disregarded Albert&apos;s wishes by shortening their stay at
+                                    Windsor, saying: <QUOTE DIRECT="Y">You forget, my dearest Love,
+                                        that I am the Sovereign and that business can stop and wait
+                                        for nothing.</QUOTE><BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Longford 140" DBREF="7794"
+                                            QTDIN="QTDINYES">140</BIBCIT>
+                                    </BIBCITS> He soon lamented his position as <QUOTE DIRECT="Y"
+                                        >husband, not the master of the house,</QUOTE> despite the
+                                    fact that the relationship was otherwise happy.<BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Longford 148" DBREF="7794"
+                                            QTDIN="QTDINYES">148</BIBCIT>
+                                        <BIBCIT PLACEHOLDER="Longford 139-40" DBREF="7794"
+                                            >139-40</BIBCIT>
+                                    </BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                        <DIV2>
+                            <SHORTPROSE>
+                                <P>There was much political turmoil amongst Members of Parliament on
+                                    public notification of the marriage, owing to the prince&apos;s
+                                    German heritage and Victoria&apos;s position of power combined
+                                    with her gender and her youth. <NAME STANDARD="Albert, Prince"
+                                        >Albert</NAME> was suspected of having foreign loyalties.<BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Longford 136-7" DBREF="7794"
+                                            >136-7</BIBCIT>
+                                        <BIBCIT PLACEHOLDER="Thompson Queen 33" DBREF="7792"
+                                            >33</BIBCIT>
+                                    </BIBCITS> He certainly came to wield considerable political
+                                    influence, acting as Victoria&apos;s secretary and drafting
+                                    memoranda for her.<BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 836"
+                                            DBREF="109889">836</BIBCIT>
+                                    </BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                                RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1"
+                                RELEVANCE1="COMPREHENSIVE1">
+                                <DATE>1857</DATE>
+                                <CHRONPROSE><NAME>Prince Albert</NAME> was officially granted the
+                                    title of Prince Consort.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>The Tories were instrumental in voting him only &pound;30,000 a
+                                    year, only about half the expected stipend for a Prince Consort.<BIBCITS>
+                                        <BIBCIT PLACEHOLDER="Longford 136-7" DBREF="7794"
+                                            >136-7</BIBCIT>
+                                    </BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MARRIAGE>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Children</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="DAUGHTER">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>QV had her first of nine children within a year of her marriage.
+                                Despite her prolific rate of reproduction, she had a tremendous
+                                dislike for the processes of pregnancy and childbirth.</P>
+                        </SHORTPROSE>
+                        <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                            RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>July 1840</DATE>
+                            <CHRONPROSE>When QV was five months pregnant, Prince Albert was
+                                appointed Regent in the event of her death in
+                                childbirth.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 152" DBREF="7794">152</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                            RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>21 November 1840</DATE>
+                            <CHRONPROSE>
+                                <CHILDREN NUMBER="9">After a twelve-hour labour, QV gave birth to
+                                    her first child: <NAME STANDARD="Victoria,, Empress of Germany"
+                                        >Victoria Adelaide Mary Louise, Princess
+                                    Royal</NAME>.</CHILDREN>
+                            </CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 153-4" DBREF="7794">153-4</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>Albert had wanted an official announcement of QV&apos;s pregnancy,
+                                but Melbourne preferred the news to circulate informally.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 151" DBREF="7794">151</BIBCIT>
+                                </BIBCITS></P>
+                            <P>Victoria was not close to her child during the first few months; she
+                                saw babies as <QUOTE DIRECT="Y">froglike</QUOTE>.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 154" DBREF="7794" QTDIN="QTDINYES"
+                                        >154</BIBCIT>
+                                </BIBCITS> Years later, she admitted that while she did not <QUOTE
+                                    DIRECT="Y">dislike babies, . . . very young ones [were] rather
+                                    disgusting.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="QV Letters 228" DBREF="10959">228</BIBCIT>
+                                </BIBCITS> A wet-nurse took care of the baby, who was commonly known
+                                as <SOCALLED>Vicky</SOCALLED> and affectionately called
+                                    <SOCALLED>Pussy</SOCALLED>.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 154" DBREF="7794">154</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                                </BIBCITS></P>
+                            <P>Victoria called childbirth the <QUOTE DIRECT="Y">shadow-side of
+                                    marriage</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 154" DBREF="7794" QTDIN="QTDINYES"
+                                        >154</BIBCIT>
+                                </BIBCITS> or <FOREIGN LANG="de">die Schattenseite</FOREIGN>, a
+                                description which implies the secrecy and pain of pregnancy and
+                                labour.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                    <DIV2/>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                            RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>9 November 1841</DATE>
+                            <CHRONPROSE>QV gave birth to her second child, the heir to the throne,
+                                    <NAME STANDARD="Edward VII, King">Albert Edward, Prince of
+                                    Wales</NAME>.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>Commonly referred to as <SOCALLED>Bertie</SOCALLED>, he became in due
+                                course <NAME STANDARD="Edward VII, King">King Edward VII</NAME>.
+                                Prince Albert purposely broke with the tradition of inviting the
+                                Archbishop of Canterbury and the Lord President of the Council for
+                                the birth.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Longford 168" DBREF="7794">168</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW">
+                        <DATE>16 January 1842</DATE>
+                        <CHRONPROSE>Prince Albert and QV had a major argument over the management of
+                            their children, and the position of <NAME
+                                STANDARD="Lehzen, Louise,,, Baroness">Baroness Lehzen</NAME> in the
+                            household.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 159, 161" DBREF="7794">159, 161</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Lehzen left on <DATE>30 September 1842</DATE> without saying goodbye to
+                            the Queen.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 162" DBREF="7794">162</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <MEMBER RELATION="DAUGHTER">
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>23 April 1843</DATE>
+                        <CHRONPROSE><NAME STANDARD="Hesse, Princess Louis of">Princess Alice Mary
+                                Maud</NAME>, QV&apos;s third child, was born.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>6 August 1844</DATE>
+                            <CHRONPROSE>At <PLACE><SETTLEMENT>Windsor</SETTLEMENT><REGION
+                                        REG="Berkshire"/><GEOG REG="England"/></PLACE>, QV gave
+                                birth to her fourth child, <NAME
+                                    STANDARD="Edinburgh, Alfred,,, Duke of">Prince Alfred Ernest
+                                    Albert, Duke of Edinburgh and Duke of Coburg</NAME>, commonly
+                                referred to as <SOCALLED>Affie</SOCALLED>.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>The newly-developed telegraph was used to announce his birth.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Standage 49" DBREF="1221">49</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>25 May 1846</DATE>
+                        <CHRONPROSE>QV gave birth to <NAME
+                                STANDARD="Schleswig-Holstein, Princess Christian of">Princess Helena
+                                Augusta Victoria</NAME>, her fifth child, commonly known as
+                                <SOCALLED>Lenchen</SOCALLED>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>18 March 1848</DATE>
+                            <CHRONPROSE><NAME STANDARD="Argyll, Louise,,, Duchess of">Princess
+                                    Louise Caroline Alberta</NAME>, QV&apos;s sixth child, who was
+                                commonly known as <SOCALLED>Loosy</SOCALLED>, was born.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xv" DBREF="7793">xv</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>She became a <SIGNIFICANTACTIVITY>sculptor</SIGNIFICANTACTIVITY>, who
+                                exhibited three portrait works at the <ORGNAME>Royal
+                                    Academy</ORGNAME> between 1868 and 1874.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Graves" DBREF="22297"/>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>1 May 1850</DATE>
+                        <CHRONPROSE>QV gave birth to <NAME
+                                STANDARD="Connaught and Strathearn, Arthur,,, first Duke of">Prince
+                                Arthur William Patrick Albert, Duke of Connaught</NAME>, her seventh
+                            child.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xv" DBREF="7793">xv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <DIV2>
+                        <HEADING>Chloroform for Labour Pain</HEADING>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="SIB" CHRONCOLUMN1="SOCIALCLIMATE1"
+                            CHRONCOLUMN2="NATIONALINTERNATIONAL2" RELEVANCE1="DECADE1"
+                            RELEVANCE2="COMPREHENSIVE2">
+                            <DATE>7 April 1853</DATE>
+                            <CHRONPROSE>QV gave birth to her eighth child, <NAME
+                                    STANDARD="Albany, Leopold,,, first Duke of">Prince Leopold
+                                    George Duncan Albert, Duke of Albany</NAME>; her use of
+                                chloroform during this birth popularized pain relief for women in
+                                labour.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xv" DBREF="7793">xv</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Longford 233" DBREF="7794">233</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>QV never glamourized birth and pregnancy, and was willing to undergo
+                                the controversial new pain relief to ease the process. She thought
+                                of birth as <QUOTE DIRECT="Y">being like a cow or a dog at such
+                                    moments; when our poor nature becomes so very animal and
+                                    unecstatic.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="QV Letters 105" DBREF="10959">105</BIBCIT>
+                                </BIBCITS> Birth arrangements, in the Queen&apos;s opinion, were
+                                    <QUOTE DIRECT="Y">too horrid&mdash;and quite like an execution.
+                                    Oh! if those selfish men&mdash;who are the cause of all
+                                    one&apos;s misery, only knew what their poor slaves go through!
+                                    What suffering&mdash;what humiliation to the feelings of a poor
+                                    woman, above all a young one&mdash;especially with those nasty
+                                    doctors.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="QV Letters 115" DBREF="10959">115</BIBCIT>
+                                </BIBCITS> With such sentiments, QV opted for chloroform.</P>
+                            <P>Doctor <NAME>John Snow</NAME> administered the drug. The <TITLE
+                                    TITLETYPE="JOURNAL">British Medical Journal</TITLE> was not
+                                convinced that Queen Victoria had in fact used chloroform and
+                                maintained that this was merely a rumour.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 22"
+                                        DBREF="109889">22</BIBCIT>
+                                </BIBCITS></P>
+                            <P>The obstetrical use of chloroform had been publicized by Dr <NAME
+                                    STANDARD="Simpson, Sir James Young">James Young Simpson</NAME>
+                                in 1847.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 22"
+                                        DBREF="109889">22</BIBCIT>
+                                </BIBCITS> A fierce debate ensued in pamphlets and medical journals
+                                between proponents of the practice and religious authorities. The
+                                latter viewed labour pain as a divinely ordained consequence of
+                                    <NAME>Eve</NAME>&apos;s transgression&mdash;which interdicted
+                                medical intervention. In addition, there were concerns even among
+                                medical men that the use of anaesthesia stimulated women and led to
+                                displays of sexual arousal. Victoria&apos;s sanction went a great
+                                way towards making the use of chloroform in childbirth respectable.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Poovey Uneven 24, 27, 30" DBREF="109632"
+                                        >24, 27, 30</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>14 April 1857</DATE>
+                            <CHRONPROSE>QV gave birth to <NAME
+                                    STANDARD="Battenberg, Princess Henry of">Princess Beatrice Mary
+                                    Victoria Feodora</NAME>, commonly known as
+                                    <SOCALLED>Baby</SOCALLED>.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>She used anaesthesia for this delivery as well.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 835"
+                                        DBREF="109889">835</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <DIV2>
+                        <HEADING>Children&apos;s Marriages</HEADING>
+                        <SHORTPROSE>
+                            <P>As well as being busy with her many pregnancies and births, QV was a
+                                tireless and devoted monarch and mother, who orchestrated not only
+                                the affairs of her country, but also those of her ever-growing
+                                family. She arranged marriages for her children which fostered
+                                alliances between Britain and most other countries in Europe.</P>
+                        </SHORTPROSE>
+                        <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                            RESP="SJW" CHRONCOLUMN1="BRITISHWOMENWRITERS1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>25 January 1858</DATE>
+                            <CHRONPROSE>QV&apos;s eldest daughter, <NAME
+                                    STANDARD="Victoria,, Empress of Germany">Crown Princess
+                                    Victoria</NAME>, married <NAME
+                                    STANDARD="Frederick III,, Emperor of Germany">Prince Frederick
+                                    of Prussia</NAME>.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="GRANDSON">
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>February 1859</DATE>
+                        <CHRONPROSE>QV&apos;s eldest daughter, <NAME
+                                STANDARD="Victoria,, Empress of Germany">Princess Victoria of
+                                Prussia</NAME>, gave birth a year after her marriage to a son
+                            nicknamed <SOCALLED>Willie</SOCALLED>, who later became <NAME
+                                STANDARD="Wilhelm II,, Kaiser of Germany">Kaiser Wilhelm
+                            II</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>1 July 1862</DATE>
+                        <CHRONPROSE>QV&apos;s daughter <NAME STANDARD="Hesse, Princess Louis of"
+                                >Crown Princess Alice</NAME> married <NAME
+                                STANDARD="Hesse, Prince Louis of">Prince Louis of
+                                Hesse-Darmstadt</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB">
+                        <DATE>10 March 1863</DATE>
+                        <CHRONPROSE>The Prince of Wales, and heir to the throne of Britain, <NAME
+                                STANDARD="Edward VII, King">Edward Albert</NAME>, married Princess
+                                <NAME STANDARD="Alexandra of Denmark,, Queen of England">Alexandra
+                                of Denmark</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>5 July 1866</DATE>
+                        <CHRONPROSE>QV&apos;s daughter <NAME
+                                STANDARD="Schleswig-Holstein, Princess Christian of">Crown Princess
+                                Helena</NAME> married <NAME
+                                STANDARD="Schleswig-Holstein, Prince Christian of">Prince Christian
+                                of Schleswig-Holstein-Sonderburg-Augustenburg</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xvii" DBREF="7793">xvii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB">
+                        <DATE>21 March 1871</DATE>
+                        <CHRONPROSE>QV&apos;s daughter <NAME STANDARD="Argyll, Louise,,, Duchess of"
+                                >Crown Princess Louise</NAME> married the <NAME
+                                STANDARD="Argyll, John Campbell,,, ninth Duke of">Marquess of
+                                Lorne</NAME> (heir to the dukedom of Argyll).</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xvii" DBREF="7793">xvii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>The <NAME STANDARD="Edward VII, King">Prince of Wales</NAME> was in
+                                    <DATE VALUE="1871--">this year</DATE> seriously ill with typhoid.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Munich xvii" DBREF="7793">xvii</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>23 January 1874</DATE>
+                        <CHRONPROSE>QV&apos;s son <NAME STANDARD="Edinburgh, Alfred,,, Duke of"
+                                >Crown Prince Alfred</NAME> married <NAME
+                                STANDARD="Edinburgh, Marie Alexandrovna,,, Duchess of">Marie, Grand
+                                Duchess of Russia</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xviii" DBREF="7793">xviii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>13 March 1879</DATE>
+                        <CHRONPROSE>QV&apos;s son <NAME
+                                STANDARD="Connaught and Strathearn, Arthur,,, first Duke of">Crown
+                                Prince Arthur</NAME> married <NAME
+                                STANDARD="Connaught and Strathearn, Louise Margaret,,, Duchess of"
+                                >Louise of Prussia</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xviii" DBREF="7793">xviii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="SON">
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>27 April 1882</DATE>
+                        <CHRONPROSE>QV&apos;s son <NAME STANDARD="Albany, Leopold,,, first Duke of"
+                                >Crown Prince Leopold</NAME> married <NAME
+                                STANDARD="Albany, Helen,,, Duchess of">Helen of
+                            Waldeck</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <MEMBER RELATION="DAUGHTER">
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB">
+                        <DATE>23 July 1885</DATE>
+                        <CHRONPROSE>QV&apos;s daughter <NAME
+                                STANDARD="Battenberg, Princess Henry of">Crown Princess
+                                Beatrice</NAME> married <NAME STANDARD="Battenberg, Prince Henry of"
+                                >Prince Henry of Battenburg</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Despite the geographical distances between QV and her married children,
+                            she maintained contact with them through her voluminous correspondence.
+                            She and her eldest daughter, <NAME
+                                STANDARD="Victoria,, Empress of Germany">Crown Princess
+                                Victoria</NAME>, wrote especially regularly, often several times a
+                            week, over a span of forty years.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Fulford Editorial Dearest Child 1-2"
+                                    DBREF="8152">1-2</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Hibbert Editorial QV Letters 5" DBREF="109238"
+                                    >5</BIBCIT>
+                            </BIBCITS><SCHOLARNOTE>
+                                <P>QV&apos;s correspondence with her eldest daughter is collected in
+                                    six volumes, five edited by Roger Fulford and the sixth by
+                                    Agatha Ramm. Christopher Hibbert&apos;s <TITLE
+                                        TITLETYPE="MONOGRAPHIC">Queen Victoria in her Letters and
+                                        Journals</TITLE> features selected letters between QV and
+                                    some of her other children.</P>
+                            </SCHOLARNOTE></P>
+                        <P>Although she was close to some of her grandchildren, QV remarked in a
+                            letter to her eldest daughter: <QUOTE DIRECT="Y">I take interest in [the
+                                offspring] of my children when there are two or three&mdash;and of
+                                people who are dear to me and whom I am fond of&mdash;but when they
+                                come at the rate of three a year it becomes a cause of mere anxiety
+                                for my own children and of no great interest.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 228" DBREF="10959">228</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Travel and Holiday Homes</HEADING>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Victoria travelled often, both for pleasure and as part of her royal
+                            duties. Her love of the country and of domestic retreat led her to spend
+                            much of the winter at <PLACE><PLACENAME>Windsor
+                                    Castle</PLACENAME><SETTLEMENT REG="Windsor"/><REGION
+                                    REG="Berkshire"/><GEOG REG="England"/></PLACE> or on the
+                                    <PLACE><REGION>Isle of Wight</REGION><GEOG REG="England"
+                                /></PLACE>, and most summers in <PLACE><GEOG>Scotland</GEOG></PLACE>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 836" DBREF="109889"
+                                    >836</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATERANGE FROM="1842-08-29" TO="1842-09-17" EXACT="BOTH">29 August-17
+                            September 1842</DATERANGE>
+                        <CHRONPROSE>QV travelled to <PLACE><GEOG>Scotland</GEOG></PLACE> with her
+                            young family for the first time.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She journeyed by sea, and quickly fell in love with the rugged Scottish coastline.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                                <BIBCIT PLACEHOLDER="QV Leaves 14-23" DBREF="8145">14-23</BIBCIT>
+                            </BIBCITS>
+                        </P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>September 1843</DATE>
+                        <CHRONPROSE>QV made a landmark visit to <NAME
+                                STANDARD="Louis-Philippe,, King of France">Louis-Philippe</NAME> at
+                                    <PLACE><PLACENAME>Chateau d&apos;Eu</PLACENAME><GEOG
+                                    REG="France"/></PLACE> near
+                                    <PLACE><SETTLEMENT>Treport</SETTLEMENT><GEOG CURRENT="France"
+                                    REG="France"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This was the first time QV journeyed to foreign soil, and also the first
+                            time an English sovereign had visited a French sovereign since
+                                <DATE>1520</DATE>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                    CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                    <DATE>1844</DATE>
+                    <CHRONPROSE>The royal family purchased <PLACE><PLACENAME>Osborne
+                                House</PLACENAME> in the <REGION>Isle of Wight</REGION><GEOG
+                                REG="England"/></PLACE>; the island then became a popular holiday
+                        destination for the upper classes.</CHRONPROSE>
+                    <BIBCITS>
+                        <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                        <BIBCIT PLACEHOLDER="Adburgham Punch 64" DBREF="4543">64</BIBCIT>
+                    </BIBCITS>
+                </CHRONSTRUCT>
+                <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                    CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                    <DATE>1847</DATE>
+                    <CHRONPROSE>QV and her family bought <PLACE><PLACENAME>Balmoral
+                                Castle</PLACENAME><REGION REG="Aberdeenshire"/><GEOG REG="Scotland"
+                            /></PLACE> in the Scottish <PLACE><REGION>Highlands</REGION><GEOG
+                                REG="Scotland"/></PLACE>.</CHRONPROSE>
+                    <BIBCITS>
+                        <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                    </BIBCITS>
+                </CHRONSTRUCT>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="VISITED">
+                <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                    CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                    <DATERANGE FROM="1849-08-03" TO="1849-08-10" EXACT="BOTH">3 August-10 August
+                        1849</DATERANGE>
+                    <CHRONPROSE>QV and her family made their initial visit to
+                                <PLACE><GEOG>Ireland</GEOG></PLACE>.</CHRONPROSE>
+                    <BIBCITS>
+                        <BIBCIT PLACEHOLDER="Munich xv" DBREF="7793">xv</BIBCIT>
+                    </BIBCITS>
+                </CHRONSTRUCT>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                    CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                    <DATE>1855</DATE>
+                    <CHRONPROSE>QV and Prince Albert&apos;s state visit to <NAME
+                            STANDARD="Napoleon III,, Emperor of France">Louis-Napoleon</NAME> and
+                            <NAME STANDARD="Eug&eacute;nie,, Empress of France"
+                            >Eug&eacute;nie</NAME> was the first visit to
+                                <PLACE><SETTLEMENT>Paris</SETTLEMENT><GEOG REG="France"/></PLACE> by
+                        an English monarch since 1431.</CHRONPROSE>
+                    <BIBCITS>
+                        <BIBCIT PLACEHOLDER="Munich xv" DBREF="7793">xv</BIBCIT>
+                    </BIBCITS>
+                </CHRONSTRUCT>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Stalkers and Assassination Attempts</HEADING>
+            <VIOLENCE>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>QV&apos;s public appearances made her personally loved by many of her
+                            subjects, but also vulnerable. She exhibited considerable personal
+                            courage in her response to threats and assassination attempts.</P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>10 June 1840</DATE>
+                        <CHRONPROSE>An assassination attempt was made on QV, pregnant with her first
+                            child, as she and <NAME STANDARD="Albert, Prince">Albert</NAME> drove in
+                            an open carriage.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 151-2" DBREF="7794">151-2</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The would-be assassin was a youth of eighteen named <NAME
+                                STANDARD="Oxford, Edward,, fl. 1840">Edward Oxford</NAME>. He was
+                            declared insane and committed to an asylum.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>3 December 1840</DATE>
+                        <CHRONPROSE>QV was frightened to discover a young boy in her private
+                            dressing-room.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 155" DBREF="7794">155</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P><SOCALLED>Boy Jones</SOCALLED>, as he became known, had apparently
+                            visited the palace before, and returned after a sentence in prison. He
+                            was finally transported.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 155" DBREF="7794">155</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>29 May 1842</DATE>
+                        <CHRONPROSE>A second assassination attempt on QV was made as she rode in her
+                            carriage; the man&apos;s pistol misfired.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 170" DBREF="7794">170</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The potential assassin was a twenty year-old cabinet maker by the name of
+                                <NAME>John Francis</NAME> who was found to be <QUOTE DIRECT="Y">not
+                                the least bit mad&mdash;but very cunning.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 70" DBREF="10959">70</BIBCIT>
+                            </BIBCITS> In a letter to <NAME STANDARD="Leopold I,, King of Belgium"
+                                >King Leopold</NAME>, QV describes the unfolding of events and
+                            comments that she and Prince Albert were <QUOTE DIRECT="Y">both very
+                                glad that our drive had had the effect of having the man seized.
+                                Whether [the pistol] was loaded or not we cannot yet tell, but we
+                                are again full of gratitude to Providence for invariably protecting
+                                us! The feeling of horror is very great in the public, and great
+                                affection is shown us . . . Everything is to be kept secret at this
+                                time, which is very right, and altogether I think it is being well
+                                done . . . I was really not at all frightened.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="QV Letters 70" DBREF="10959">70</BIBCIT>
+                                </BIBCITS></QUOTE></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><NAME>John Francis</NAME> was condemned to death, a punishment with which
+                            the Queen agreed heartily; however, he was reprieved on July 1. </P>
+                    </SHORTPROSE>
+                    <SHORTPROSE>
+                        <P>Only three days after Francis&apos; assassination attempt, a man
+                            described by editor Christopher Hibbert as a <QUOTE DIRECT="Y">deformed
+                                youth no more than four feet tall</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Hibbert Editorial QV Letters70" DBREF="109238"
+                                    >70</BIBCIT>
+                            </BIBCITS> with a pistol containing more tobacco than gunpowder
+                            attempted to finish the job. </P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>3 July 1842</DATE>
+                        <CHRONPROSE>A third assassination attempt was made on QV.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xiv" DBREF="7793">xiv</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The attack this time came from a <NAME>John William Bean</NAME>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>19 May 1849</DATE>
+                        <CHRONPROSE>A fourth assassination attempt on QV was made by an Irishman
+                            using a homemade gun.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 192" DBREF="7794">192</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P><NAME STANDARD="Hamilton, William,, fl. 1849">William Hamilton</NAME> was
+                            sentenced to seven years transportation.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Hibbert Editorial QV Letters 81" DBREF="109238"
+                                    >81</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>June 1850</DATE>
+                        <CHRONPROSE>A fifth attempt to assassinate QV was made by an ex-lieutenant
+                            of the <ORGNAME>10th Hussars</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xv" DBREF="7793">xv</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Hibbert Editorial QV Letters 80" DBREF="109238"
+                                >80</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P><NAME>Robert Pate</NAME> struck the Queen over the head with a cane after
+                            she left <PLACE><PLACENAME>Cambridge House</PLACENAME> in <ADDRESS>
+                                    <ADDRLINE>Piccadilly</ADDRLINE>
+                                </ADDRESS><SETTLEMENT REG="London"/><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>. In a letter to King Leopold, Victoria
+                            wrote, <QUOTE DIRECT="Y">I have not suffered except from my head, which
+                                is still very tender, the blow having been extremely violent, and
+                                the brass end of the stick fell on my head so as to make a
+                                considerable noise.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 80" DBREF="10959">80</BIBCIT>
+                            </BIBCITS> She felt the attack to be <QUOTE DIRECT="Y">disgraceful and
+                                very inconceivable,</QUOTE> and complained that <QUOTE DIRECT="Y">it
+                                makes me nervous out driving, and I stare at any person coming near
+                                the carriage.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 80" DBREF="10959">80</BIBCIT>
+                            </BIBCITS> In her journal, she developed her feelings about this attack.
+                                <QUOTE DIRECT="Y">Certainly it is very hard and very horrid, that I,
+                                a woman&mdash;a defenceless young woman should be exposed to insults
+                                of this kind, and be unable to go out quietly for a drive . . . for
+                                a man to strike any woman is most brutal, and I, as well as everyone
+                                else, think this far worse than any attempt to shoot, which, wicked
+                                as it is, is at least more comprehensible and more courageous.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="QV Letters 80-1" DBREF="10959"
+                                        >80-1</BIBCIT>
+                                </BIBCITS></QUOTE> Pate was not found insane, and was sentenced to
+                            seven years transportation.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Hibbert Editorial QV Letters 80" DBREF="109238"
+                                    >80</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Longford 192-3" DBREF="7794">192-3</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>14 October 1867</DATE>
+                        <CHRONPROSE>QV was warned that <ORGNAME>Fenians</ORGNAME> were plotting to
+                            seize and possibly assassinate her.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 359" DBREF="7794">359</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xvii" DBREF="7793">xvii</BIBCIT>
+                            <BIBCIT PLACEHOLDER="QV Letters 200" DBREF="10959">200</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>On being shown a telegram containing the threat, the Queen merely
+                            remarked: <QUOTE DIRECT="Y">[t]oo foolish!</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 200" DBREF="10959">200</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>28 February 1872</DATE>
+                        <CHRONPROSE>A young man with <ORGNAME STANDARD="Fenians">Fenian</ORGNAME>
+                            connections was apprehended for an assassination attempt on QV; his
+                            pistol proved not to be loaded. </CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 390" DBREF="7794">390</BIBCIT>
+                            <BIBCIT PLACEHOLDER="QV Letters 227" DBREF="10959">227</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>While the Queen and her entourage were on a drive, QV&apos;s close
+                            personal servant and friend <NAME STANDARD="Brown, John,, 1826 - 1883"
+                                >John Brown</NAME> spotted the pistol in the hand of a bystander and
+                            wrestled the potential assassin to the ground. In her journal, Victoria
+                            wrote: <QUOTE DIRECT="Y">[i]t is to good Brown and to his wonderful
+                                presence of mind that I greatly owe my safety, for he alone saw the
+                                boy rush round and followed him!</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 227" DBREF="10959">227</BIBCIT>
+                            </BIBCITS> The Queen later learned that <NAME>Arthur
+                                O&apos;Connor</NAME>&apos;s attempt was made in connection with the
+                            holding of <ORGNAME STANDARD="Fenians">Fenian</ORGNAME> prisoners whose
+                            release he hoped to secure.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 390" DBREF="7794">390</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>2 March 1882</DATE>
+                        <CHRONPROSE>A seventh attempt was made to assassinate QV.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The potential assassin this time was <NAME>Roderick McLean</NAME>, who,
+                            after firing a pistol at the Queen and missing, was at once beaten by
+                            nearby Eton boys. Of this attack, Victoria wrote in her journal that she
+                            was <QUOTE DIRECT="Y">really not shaken or frightened.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 272" DBREF="10959">272</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <HEADING>The Arts</HEADING>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>A keen reader, theatre-goer, and ballet and opera enthusiast throughout
+                            her life, QV had a passion for the literary, dramatic, and musical arts
+                            from an early age. Her love of visual art was also apparent, and she
+                            filled many sketchbooks with her drawings and watercolours, selections
+                            of which were eventually published. It is not surprising, then, that the
+                            Queen was a faithful supporter of creative endeavours and did much to
+                            foster cultural production in Britain during her reign.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 31-2, 43" DBREF="7794">31-2,
+                                    43</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Among her favourite writers were <NAME STANDARD="Tennyson, Alfred">Alfred
+                                Tennyson</NAME>, <NAME>Sir Walter Scott</NAME>, <NAME>George
+                                Eliot</NAME> (whose <TITLE TITLETYPE="MONOGRAPHIC">The Mill on the
+                                Floss</TITLE> made a <QUOTE DIRECT="Y">deep impression</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 116" DBREF="10959">116</BIBCIT>
+                            </BIBCITS> on her), and <NAME STANDARD="Kingsley, Charles,, 1819 - 1875"
+                                >Charles Kingsley</NAME>, whose <TITLE TITLETYPE="MONOGRAPHIC">Two
+                                Years Ago</TITLE> QV found brimming with <QUOTE DIRECT="Y">such
+                                truths, so much imagination, and a power of description and beauty
+                                of language which equals <NAME STANDARD="Scott, Sir Walter">Walter
+                                    Scott</NAME>.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Dearest Child 210" DBREF="10962"
+                                    >210</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Longford 43" DBREF="7794">43</BIBCIT>
+                                <BIBCIT PLACEHOLDER="QV and Tennyson 67" DBREF="8157">67</BIBCIT>
+                                <BIBCIT PLACEHOLDER="QV Letters 20" DBREF="10959">20</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 70-3" DBREF="8146"
+                                    >70-3</BIBCIT>
+                            </BIBCITS> QV was also highly impressed with <TITLE
+                                TITLETYPE="MONOGRAPHIC">Aurora Leigh</TITLE>, by <NAME>Elizabeth
+                                Barrett Browning</NAME>, which she found to be <QUOTE DIRECT="Y"
+                                >very strange, very original full of talent and of some beautiful
+                                things&mdash;but at times dreadfully coarse&mdash;though very moral
+                                in its tendency&mdash;but an incredible book for a lady to have
+                                written.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 188" DBREF="10959">188</BIBCIT>
+                            </BIBCITS> Additionally, as an enthusiast for all things Scottish, the
+                            Queen was <QUOTE DIRECT="Y">so fond of <NAME STANDARD="Burns, Robert"
+                                    >Burns</NAME>&apos;s poems,</QUOTE> calling them <QUOTE
+                                DIRECT="Y">so poetical&mdash;so simple in their dear Scotch tongue,
+                                which is so full of poetry.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 188" DBREF="10959">188</BIBCIT>
+                            </BIBCITS> She also enjoyed <NAME>Mary Elizabeth Braddon</NAME>&apos;s
+                            sensationalist novel <TITLE TITLETYPE="MONOGRAPHIC">Lady Audley&apos;s
+                                Secret</TITLE> and <NAME
+                                STANDARD="Lytton, Edward George Earle Lytton Bulwer-Lytton,,, first Baron"
+                                >Edward Bulwer-Lytton</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC"
+                                >Eugene Aram</TITLE>, although of the latter she remarked that
+                                <QUOTE DIRECT="Y">beautifully written and fearfully interesting as
+                                it is, I am glad I have finished it, for I never feel quite at ease
+                                or at home when I am reading a Novel.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 39" DBREF="10959">39</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Cruse 326" DBREF="8280">326</BIBCIT>
+                            </BIBCITS> She was primarily a fan of history, poetry, sensation
+                            fiction, and romance; indeed, she complained that <NAME>Anthony
+                                Trollope</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC">Barchester
+                                Towers</TITLE> did not have <QUOTE DIRECT="Y">enough romance in it.
+                                The people I could not interest myself in.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 109" DBREF="10959">109</BIBCIT>
+                            </BIBCITS></P>
+                        <P>As to the drama, QV thought the works of <NAME>William Shakespeare</NAME>
+                            to be <QUOTE DIRECT="Y">very coarse</QUOTE>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 111" DBREF="10959">111</BIBCIT>
+                            </BIBCITS> She recommended <TITLE TITLETYPE="MONOGRAPHIC">Faust</TITLE>
+                            and French plays, about which she said that <QUOTE DIRECT="Y"
+                                >[o]ne&apos;s dislike to a nation need not prevent one&apos;s
+                                admiring and being amused by what is good, clever, and amusing in
+                                it.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 111" DBREF="10959">111</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Beyond her own activities, which included correspondence with several
+                            writers, especially <NAME STANDARD="Tennyson, Alfred">Alfred
+                                Tennyson</NAME>, QV was a devoted <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                REG="patron, philanthropist">patron of the
+                                arts</SIGNIFICANTACTIVITY> who not only fostered their development
+                            but also envisioned them as having a moral role in society. She saw
+                            theatre as a means for social betterment, arguing that the lower classes
+                            should have access to drama, <QUOTE DIRECT="Y">for I think the absence
+                                of innocent amusement for the poor people [is] a misfortune and an
+                                encouragement of vice.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV Letters 112" DBREF="10959">112</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Influence Upon Victorian Writers</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>As a powerful female leader, a long-reigning sovereign, an avid reader,
+                            and a published writer, QV inspired many writers to compose works either
+                            about her or in her honour. In addition, as <NAME>Gail Turley
+                                Houston</NAME> argues in <TITLE TITLETYPE="MONOGRAPHIC">Royalties:
+                                The Queen and Victorian Writers</TITLE>, the Queen was a crucial
+                            figure in the nexus of debate surrounding <QUOTE DIRECT="Y">who was the
+                                proper representative of authority and who was the appropriate
+                                subject of representation.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 51" DBREF="8146">51</BIBCIT>
+                            </BIBCITS> Debates over British subjectivity, gender, and the powers of
+                            discourse often had recourse to QV, making her an important cultural
+                            icon not only for who she was, but also for the way her image
+                            circulated.</P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Charles Dickens</HEADING>
+                    <SHORTPROSE>
+                        <P><NAME>Charles Dickens</NAME>, while recognizing the value that appeal to
+                            the crown could have for an author&apos;s socio-economic position and
+                            prestige, also felt that his power to create representations which would
+                            reflect and shape the Victorian age were, in a way, more significant
+                            than those powers held by the Queen. In a letter to <NAME>Basil
+                                Hall</NAME> on <DATE>28 January 1841</DATE>, Dickens implied that
+                            his calling was above that of the Queen, for whom he had little time; he
+                            claimed that he was so intent on his writing that even <QUOTE DIRECT="Y"
+                                >if the Queen were to send for me . . . I wouldn&apos;t go to
+                                her.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 88" DBREF="8146"
+                                    QTDIN="QTDINYES">88</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Indeed, Dickens constructed the figure of QV as the converse of his own.
+                            Referred to as a <SOCALLED>feminine</SOCALLED> writer by literary
+                            critics, he sought to assert his masculinity and virility by
+                            representing the Queen as domestic and feminine, downplaying her
+                            influence and heightening his own. His anxiety about the role of the
+                            male writer compared to that of the female monarch was evident in many
+                            of his letters and actions. He masked his ambivalence with aloofness,
+                            repeatedly declining the Queen&apos;s invitations to meet with or to
+                            perform for her. Finally, after twenty-two years of requests, Dickens
+                            consented to meet with QV. At this audience he ranted about class
+                            issues, though he accepted the Queen&apos;s gift of her book <TITLE
+                                TITLETYPE="MONOGRAPHIC">More Leaves from the Journal of Our Life in
+                                the Highlands</TITLE>, which she had inscribed: <QUOTE DIRECT="Y"
+                                >From the humblest of authors to one of the greatest.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 93" DBREF="8146"
+                                    QTDIN="QTDINYES">93</BIBCIT>
+                            </BIBCITS> Yet her gift may not have been as <SOCALLED>humble</SOCALLED>
+                            as might appear: she was well aware of the popularity of her book, and
+                            her act of giving it to Dickens can be read as a reassertion of her
+                            representational powers and a sign of the still unresolved, unofficial
+                            competition between the two.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 87-93" DBREF="8146"
+                                    >87-93</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Sarah Stickney Ellis</HEADING>
+                    <SHORTPROSE>
+                        <P><NAME>Sarah Stickney Ellis</NAME> deployed the image of the Queen to fuse
+                            together notions of <SOCALLED>queenly womanhood</SOCALLED> (as a virtue
+                            for the <SOCALLED>average</SOCALLED> woman to strive for) with that of
+                            the female sovereign. In <TITLE TITLETYPE="MONOGRAPHIC">The Women of
+                                England</TITLE>, this popular conduct writer warned that with the
+                                <QUOTE DIRECT="Y">British throne being now graced by a female
+                                sovereign</QUOTE> it was <QUOTE DIRECT="Y">surely not a time for the
+                                female part of the community to fall away from the high standard of
+                                moral excellence, to which they have been accustomed to look, in the
+                                formation of their domestic habits.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 33" DBREF="8146"
+                                    QTDIN="QTDINYES">33</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Elizabeth Barrett Browning</HEADING>
+                    <SHORTPROSE>
+                        <P><NAME>Elizabeth Barrett Browning</NAME> is one of the best known authors
+                            whose works address, explicitly and implicitly, QV and the figure of a
+                            female monarch. Eventually deemed <SOCALLED>The Queen of
+                                Poetry</SOCALLED> herself, Barrett Browning used her writings <QUOTE
+                                DIRECT="Y">to define her literary credo and form her own poetic,
+                                sovereign persona in contradistinction to and parallel with the
+                                female monarch&apos;s profession.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 116" DBREF="8146"
+                                    >116</BIBCIT>
+                            </BIBCITS> In her epic poem <TITLE TITLETYPE="MONOGRAPHIC">Aurora
+                                Leigh</TITLE> and her occasional pieces about QV at her accession
+                                (<TITLE TITLETYPE="ANALYTIC">Victoria&apos;s Tears</TITLE> and
+                                <TITLE TITLETYPE="ANALYTIC">The Young Queen</TITLE>) and her
+                            marriage to Prince Albert (<TITLE TITLETYPE="ANALYTIC">Crowned and
+                                Wedded</TITLE>), Barrett Browning honoured Victoria and
+                            simultaneously implied that earthly rule was more mundane, and
+                            ultimately less important, than the poet&apos;s power to represent.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 117" DBREF="8146"
+                                    >117</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Most Victorian women writers commented in some way on the Queen&apos;s
+                            role. <NAME>Christina Rossetti</NAME> engaged with it positively in
+                                <TITLE TITLETYPE="ANALYTIC">Our Widowed Queen</TITLE>, while
+                                <NAME>George Eliot</NAME>&apos;s narrator in <TITLE
+                                TITLETYPE="MONOGRAPHIC" REG="Felix Holt, the Radical">Felix Holt,
+                                the Radical</TITLE> refers to Victoria as a <QUOTE DIRECT="Y">little
+                                humbug of a queen.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 79" DBREF="8146"
+                                    QTDIN="QTDINYES">79</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 78-9" DBREF="8146"
+                                    >78-9</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Margaret Oliphant</HEADING>
+                    <SHORTPROSE>
+                        <P>Perhaps the author whose writings and politics addressed the Queen the
+                            most frequently was <NAME>Margaret Oliphant</NAME>, whose biographical
+                            works often championed female monarchs, especially Victoria. A critic,
+                            correspondent, even friend of QV, Oliphant strove to raise the status of
+                            women&apos;s work by addressing the feminization of labour in the
+                            nineteenth century and blurring the conventional Victorian distinctions
+                            between the <SOCALLED>public</SOCALLED> and <SOCALLED>private</SOCALLED>
+                            spheres. As <NAME>Gail Turley Houston</NAME> argues, she subtly directed
+                            attention to women&apos;s powers of representation, both as authors who
+                            create representations and leaders who represent the populace.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 139-40" DBREF="8146"
+                                    >139-40</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Alfred Tennyson</HEADING>
+                    <SHORTPROSE>
+                        <P><NAME STANDARD="Tennyson, Alfred">Tennyson</NAME> had a closer personal
+                            relationship than any other writer with the Queen. QV and her court
+                            appointed him Poet Laureate on <DATE>19 November 1850</DATE>. Following
+                                <NAME>Prince Albert</NAME>&apos;s death and the Queen&apos;s
+                            deepened appreciation of Tennyson&apos;s work, the two became friends
+                            and close correspondents. She wrote in her diary on <DATE>5 January
+                                1862</DATE> that only <QUOTE DIRECT="Y">those who have suffered as I
+                                do, can understand these beautiful poems.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV and Tennyson 67" DBREF="8157">67</BIBCIT>
+                            </BIBCITS> At this time Victoria invited the poet to come to see her. At
+                            the visit, on <DATE>14 April 1862</DATE>, Tennyson read from works
+                            including <TITLE TITLETYPE="MONOGRAPHIC" REG="In Memoriam, A.H.H.">In
+                                Memoriam</TITLE>, and it seems that both poet and queen were a good
+                            deal moved.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV and Tennyson 69" DBREF="8157">69</BIBCIT>
+                            </BIBCITS> Their relationship deepened even further after the death of
+                                <NAME STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="QV and Tennyson 21-30, 87" DBREF="8157">21-30,
+                                    87</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Marie Corelli and Suffragists</HEADING>
+                    <SHORTPROSE>
+                        <P>In her <TITLE TITLETYPE="MONOGRAPHIC"
+                                REG="The Passing of the Great Queen">Passing of the Great
+                                Queen</TITLE>, <NAME>Marie Corelli</NAME>, like Sarah Stickney
+                            Ellis, linked QV&apos;s femininity to that of the women of Britain, but
+                            Corelli transforms her praise of Victoria&apos;s womanly virtue into an
+                            argument for the superiority of women&apos;s rule. Her portrayal of QV
+                            and Victorian womanhood can be read as empowering rather than as
+                            policing for women.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston  Royalties 33-5, 77-8" DBREF="8146"
+                                    >33-5, 77-8</BIBCIT>
+                            </BIBCITS>
+                        </P>
+                        <P>Even more empowering was the way that Victorian suffragists deployed
+                            QV&apos;s image. In their writings, for instance in a newspaper article
+                            entitled <TITLE TITLETYPE="ANALYTIC">The Franchise for Women</TITLE>,
+                            these feminists pointed out that while <QUOTE DIRECT="Y">the highest
+                                political prerogative and dignity in this land is held by a
+                                woman</QUOTE> and <QUOTE DIRECT="Y">no law can be enacted without
+                                her concurrence, no writ issued but in her name,</QUOTE> the vast
+                            majority of women <QUOTE DIRECT="Y">do not belong to the body politic,
+                                but remain a non-political element side by side with the male
+                                population.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Houston Royalties 35" DBREF="8146"
+                                    QTDIN="QTDINYES">35</BIBCIT>
+                            </BIBCITS> Ironically, QV&apos;s active <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTNO" WOMAN-GENDERISSUE="GENDERYES"
+                                MEMBERSHIP="MEMBERSHIPNO" INVOLVEMENT="INVOLVEMENTNO"
+                                REG="anti-suffragist">opposition</POLITICALAFFILIATION> to
+                            women&apos;s rights, and her declaration in 1870 that she was <QUOTE
+                                DIRECT="Y">most anxious to enlist every one who can speak or write
+                                to join in checking this mad, wicked folly of &apos;Woman&apos;s
+                                Rights&apos;, with all its attendant horrors, on which her poor
+                                feeble sex is bent,</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Rover 34" DBREF="111" QTDIN="QTDINYES"
+                                    >34</BIBCIT>
+                            </BIBCITS> became in itself one of a frequently-cited argument in favour
+                            of the female franchise.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Rover 33-4" DBREF="111">33-4</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>The Death of Prince Albert</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                            RESP="SJW" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="DECADE1">
+                            <DATE>14 December 1861</DATE>
+                            <CHRONPROSE><NAME>Prince Albert</NAME>, consort of QV, died of typhoid
+                                in the Blue Room at <PLACE><PLACENAME>Windsor
+                                        Castle</PLACENAME><SETTLEMENT REG="Windsor"/><REGION
+                                        REG="Berkshire"/><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>The death of her husband devastated the queen. He had shown deep
+                                affection and commitment to his wife and children, and the images of
+                                happy nuclear family life circulating about the royal family were an
+                                accurate as well as a deliberate self-representation. While not
+                                attempting to dominate the queen, he took a close interest in the
+                                affairs of the state and often acted as her advisor and confidant.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 33" DBREF="7792">33</BIBCIT>
+                                </BIBCITS></P>
+                            <P>After the death of her husband, QV&apos;s deep sorrow caused her to
+                                withdraw from public life for several years. She continued to dress
+                                in black clothes of mourning long after she became a widow.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 58-9, 130-1" DBREF="7792"
+                                        >58-9, 130-1</BIBCIT>
+                                </BIBCITS> For half a decade, she remained in her country dwellings
+                                and never came to London, inciting even loyal monarchists to voice
+                                their discontent. Some of her subjects, who viewed her extended
+                                grief as appropriate for a widow but not for a leader, complained
+                                that her withdrawal was proof that a woman was unsuitable as a monarch.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 55-6" DBREF="7792"
+                                        >55-6</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                        <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                            RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1"
+                            RELEVANCE1="COMPREHENSIVE1">
+                            <DATE>21 June 1864</DATE>
+                            <CHRONPROSE>QV made her first public appearance after <NAME
+                                    STANDARD="Albert, Prince">Prince Albert</NAME>&apos;s death.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 58-9" DBREF="7792"
+                                        >58-9</BIBCIT>
+                                </BIBCITS></CHRONPROSE>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>She drove out in an open carriage, and this, along with other later
+                                public appearances, helped to dispel rumours about her health and
+                                sanity which circulated during her seclusion.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 58-9" DBREF="7792"
+                                        >58-9</BIBCIT>
+                                </BIBCITS></P>
+                            <P>These were soon displaced by salacious speculation based on the
+                                intimacy of the queen with her personal servant, <NAME
+                                    STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>, who
+                                became a significant source of emotional support in her widowhood.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Thompson Queen 59-60" DBREF="7792"
+                                        >59-60</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Personal Servants</HEADING>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICNO">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATE VALUE="1863--" CERTAINTY="BY">By 1863</DATE>
+                        <CHRONPROSE>QV began to entertain a psychic, <NAME>Robert James
+                            Lees</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 334" DBREF="7794">334</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>He attracted her attention when he <SOCALLED>contacted</SOCALLED>
+                            <NAME STANDARD="Albert, Prince">Albert</NAME> in the world beyond, and
+                            transmitted a message which included Albert&apos;s secret pet-name.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 334" DBREF="7794">334</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <HEADING>John Brown</HEADING>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE VALUE="1864-10-" CERTAINTY="C">Late 1864</DATE>
+                        <CHRONPROSE><NAME STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>
+                            became personal servant to the widowed QV at
+                                    <PLACE><SETTLEMENT>Windsor</SETTLEMENT><REGION REG="Berkshire"
+                                    /><GEOG REG="England"/></PLACE>, in addition to his position at
+                                    <PLACE><PLACENAME>Balmoral</PLACENAME><REGION
+                                    REG="Aberdeenshire"/><GEOG REG="Scotland"/></PLACE>; this
+                            fuelled speculation about the queen&apos;s domestic purity.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 322" DBREF="7794">322</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xvi" DBREF="7793">xvi</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P><NAME STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>, a
+                            Highlander, had first entered the service of the royal family in
+                                <DATE>1851</DATE>; Victoria&apos;s biographer <NAME>Elizabeth
+                                Longford</NAME> says she first mentioned him in her journal on
+                                <DATE>11 September 1849</DATE>. After <NAME>Prince
+                            Albert</NAME>&apos;s death, QV became increasingly close to <NAME
+                                STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>, and soon
+                            began to quote him to others. The <TITLE TITLETYPE="MONOGRAPHIC"
+                                REG="Oxford Dictionary of National Biography">ODNB</TITLE> observes
+                            that, paradoxically, Brown&apos;s membership of the lower classes made
+                            it possible for him to speak informally and brusquely to Victoria in a
+                            way that would have been unthinkable from somebody of higher rank.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                            </BIBCITS></P>
+                        <P>In <DATE>1876</DATE> QV gave him his own cottage at Balmoral, despite the
+                            fact that he was not married. In response to this attention, newspapers
+                            began to make humorous references to her as <SOCALLED>Mrs
+                                Brown</SOCALLED>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 323, 325, 327" DBREF="7794">323, 325,
+                                    327</BIBCIT>
+                            </BIBCITS> There is no evidence that the queen and <NAME
+                                STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME> had sexual
+                            relations, and the fact that Victoria thought of making public her
+                            memoir of him strongly suggests that they did not. But the existence of
+                            an intimate relationship suspected of being sexual posed a serious
+                            challenge to conventional proprieties.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 61" DBREF="7792">61</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>June 1867</DATE>
+                        <CHRONPROSE>QV learned that her ministers wished to exclude her Scots
+                            servant <NAME STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>
+                            from her life, in an effort to rouse her to her public
+                            duty.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 329" DBREF="7794">329</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The ministers were not only motivated by desire to have her return to an
+                            active public role, but were also responding to public and familial
+                            disapproval of the queen&apos;s relations with a man of the servant
+                            class, her <QUOTE DIRECT="Y">social inferior</QUOTE>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 63" DBREF="7792">63</BIBCIT>
+                            </BIBCITS> Victoria was furious at the suggestion and refused to comply.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Longford 329-30" DBREF="7794">329-30</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>November 1872</DATE>
+                        <CHRONPROSE><NAME STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>,
+                            personal servant to QV, was accorded the now middle-class title of
+                                <SOCALLED>Esquire</SOCALLED> and given a salary increase to
+                            &pound;400 annually.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 326" DBREF="7794">326</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SJW"
+                        CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>27 March 1883</DATE>
+                        <CHRONPROSE><NAME STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>,
+                            QV&apos;s loyal servant and close friend, died at Windsor Castle, after
+                            thirty-four years in her service.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DNB: Missing Persons" DBREF="108414"/>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The queen was grief-stricken at his death. Her devastation resembled that
+                            which she had experienced after the death of <NAME>Prince Albert</NAME>.
+                            In a letter to her secretary, <NAME>Sir Henry Ponsonby</NAME>, she
+                            compared the situation to the <QUOTE DIRECT="Y">shock of 1861</QUOTE>
+                            when <QUOTE DIRECT="Y">every link has been shaken and torn and at every
+                                turn and every moment the loss . . . is most cruelly missed.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 67" DBREF="7792"
+                                    QTDIN="QTDINYES">67</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Unlike the funerals of other royal servants, <NAME
+                                STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>&apos;s was a
+                            lavish affair, complete with a card on the coffin from the queen, which
+                            read, in her own handwriting: <QUOTE DIRECT="Y">A tribute of loving,
+                                grateful, and everlasting friendship and affection from his truest,
+                                best, and most faithful friend, Victoria R &amp; I.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 69" DBREF="7792"
+                                    QTDIN="QTDINYES">69</BIBCIT>
+                            </BIBCITS> To his relatives, she wrote: <QUOTE DIRECT="Y">Weep with me
+                                for we have lost the best, the truest heart that ever beat.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 69" DBREF="7792"
+                                    QTDIN="QTDINYES">69</BIBCIT>
+                            </BIBCITS> He was further memorialized with a granite headstone
+                            featuring lines commissioned from <NAME STANDARD="Tennyson, Alfred"
+                                >Tennyson</NAME>, a life-sized statue by sculptor <NAME>Edgar
+                                Boehm</NAME>, plaster casts of his bust, and gold brooches and
+                            tie-pins bearing his image and the queen&apos;s monogram.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 69-70" DBREF="7792"
+                                    >69-70</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <HEADING>Abdul Karim</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SJW" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>23 June 1887</DATE>
+                        <CHRONPROSE>QV began to employ two Indian servants.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 502" DBREF="7794">502</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>One of them, <NAME>Abdul Karim</NAME>, was then a slim twenty-four
+                            year-old. He eventually became quite close to the queen, although her
+                            feelings for him never compared to those she had felt for the late <NAME
+                                STANDARD="Brown, John,, 1826 - 1883">John Brown</NAME>.</P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SJW" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>1889</DATE>
+                        <CHRONPROSE><NAME>Abdul Karim</NAME>, QV&apos;s personal servant, was
+                            accorded the title of <SOCALLED>Munshi</SOCALLED> for his dedication to
+                            her service.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Longford 508" DBREF="7794">508</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                        </BIBCITS>
+                        <SCHOLARNOTE>
+                            <P>Adrienne Munich gives the date as 1888.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                                </BIBCITS></P>
+                        </SCHOLARNOTE>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>He was accorded this title because he claimed he did not come from the
+                            servant class.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <EDUCATION MODE="SELF-TAUGHT">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><SOCALLED>Munshi</SOCALLED> means teacher in Hindustani and Urdu, and QV
+                            studied <SUBJECT>Hindustani</SUBJECT> with him to the point that she was
+                            able to speak a little to Indian soldiers who attended the celebration
+                            of the Diamond Jubilee.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <RACEANDETHNICITY>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Once the Munshi was raised to this level, QV had to struggle against
+                                courtiers who objected to his inclusion in activities of the royal
+                                household, to the point of refusing to acknowledge him. Their racism
+                                and class prejudice were buttressed by suspicions that he might be
+                                leaking confidential documents she had shown to him. She certainly
+                                came to feel from her association with him considerable sympathy for
+                                    <DENOMINATION REG="Islam">Muslims</DENOMINATION>; she told her
+                                lady-in-waiting <NAME STANDARD="Lytton, Edith,,, Countess of">Lady
+                                    Lytton</NAME> that she wished <QUOTE DIRECT="Y">the Mahommedans
+                                    could be let alone by Missionaries.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Lytton, Court Diary 38" DBREF="8612"
+                                        QTDIN="QTDINYES">38</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Lytton, Court Diary 38-9, 42" DBREF="8612"
+                                        >38-9, 42</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RACEANDETHNICITY>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P/>
+                    </SHORTPROSE>
+                    <SHORTPROSE>
+                        <P>In <DATE>1892</DATE>
+                            <NAME>Abdul Karim</NAME> was further honoured with the title of
+                                <SOCALLED>Munshi Hafiz</SOCALLED>, and two years after that Victoria
+                            made him a <SOCALLED>Companion of the Order of the Indian
+                                Empire</SOCALLED>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Munich xx" DBREF="7793">xx</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Later Years of Reign; Jubilees</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SJW"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>6 February 1866</DATE>
+                        <CHRONPROSE>QV opened Parliament for the first time since <NAME>Prince
+                                Albert</NAME>&apos;s death nearly five years before.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xvii" DBREF="7793">xvii</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She continued to participate sparingly in public ceremony for the next
+                            decade.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>After <NAME>Benjamin Disraeli</NAME> first became Prime Minister,
+                            somewhat briefly, on <DATE>27 April 1866</DATE>, Victoria encountered a
+                            type of politician which was new to her. Prince Albert had distrusted
+                            Disraeli and favoured <NAME STANDARD="Gladstone, William Ewart"
+                                >Gladstone</NAME>; Victoria found Disraeli able, unusual, and <QUOTE
+                                DIRECT="Y">full of poetry, romance and chivalry.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="ODNB" DBREF="29268" QTDIN="QTDINYES"/>
+                            </BIBCITS> Whereas Gladstone lectured her, Disraeli consulted her.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Disraeli&apos;s return to office in <DATE>February 1874</DATE> initiated
+                            a fruitful working relationship. Victoria had found Gladstone&apos;s
+                            Liberal agenda in many ways too innovative, and in the later years of
+                            her reign her sympathies lay instinctively with the
+                                <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERYES"
+                                INVOLVEMENT="INVOLVEMENTYES" REG="Conservative"
+                                >Tories</POLITICALAFFILIATION>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>1 January 1877</DATE>
+                        <CHRONPROSE>QV was proclaimed Empress of India at
+                                    <PLACE><SETTLEMENT>Delhi</SETTLEMENT><GEOG REG="India"
+                            /></PLACE>, <PLACE><SETTLEMENT CURRENT="Kolkata"
+                                    >Calcutta</SETTLEMENT><GEOG REG="India"/></PLACE>,
+                                    <PLACE><SETTLEMENT CURRENT="Chennai">Madras</SETTLEMENT><GEOG
+                                    REG="India"/></PLACE>, and <PLACE><SETTLEMENT CURRENT="Mumbai"
+                                    >Bombay</SETTLEMENT><GEOG REG="India"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Keller I: 825" DBREF="109838">I: 825</BIBCIT>
+                        </BIBCITS>
+                        <KEYWORDCLASS KEYWORDTYPE="India">Empire</KEYWORDCLASS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The title, which she initiated herself, reflected her self-image as the
+                            head of a massive empire rather than simply a nation; she believed in
+                            the imperial mission to <QUOTE DIRECT="Y">protect the poor natives and
+                                advance <SIC>civilization</SIC>.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Mitchell Victorian Britain 836" DBREF="109889"
+                                    QTDIN="QTDINYES">836</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SJW" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>21 June 1887</DATE>
+                        <CHRONPROSE>The Empire celebrated QV&apos;s Golden Jubilee.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xix" DBREF="7793">xix</BIBCIT>
+                            <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The Jubilee was a time for lavish displays of loyalty, and featured a
+                            huge parade in which the Queen was the star attraction. As scholar
+                                <NAME>Dorothy Thompson</NAME> argues, it was a celebration <QUOTE
+                                DIRECT="Y">aimed at holding together the complex and often competing
+                                strands that made up the empire, the country and the
+                                metropolis.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 133" DBREF="7792">133</BIBCIT>
+                            </BIBCITS> The festivities were designed to promote a feeling of unity
+                            and mass allegiance, and were marked by a wealth of biographies and
+                            poems celebrating QV&apos;s life, rule, and the image of the empire she embodied.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 130-6" DBREF="7792"
+                                    >130-6</BIBCIT>
+                            </BIBCITS> The <TITLE TITLETYPE="JOURNAL">Illustrated London
+                                News</TITLE> called the opening <QUOTE DIRECT="Y">the grandest State
+                                ceremony of this generation; one, indeed, practically unique in the
+                                annals of modern England.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Richards, Commodity Culture 76" DBREF="7021"
+                                    QTDIN="QTDINYES">76</BIBCIT>
+                            </BIBCITS></P>
+                        <P>The notion of empire is always already intertwined with mercantilism.
+                            Critic <NAME>Thomas Richards</NAME> argues that the Jubilee was a
+                            crucial moment in the history of the commodity, when the charisma the
+                            Queen was yoked to material objects to create
+                                <SOCALLED>kitsch</SOCALLED>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Richards, Commodity Culture 75-6" DBREF="7021"
+                                    >75-6</BIBCIT>
+                            </BIBCITS> Her image was splashed across numerous products from flags to
+                            dishes, handkerchiefs to chocolates, and even mustard to condensed milk.
+                            QV&apos;s subjects could now display their loyalty through the act of
+                            commodity consumption.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 130-2" DBREF="7792"
+                                    >130-2</BIBCIT>
+                            </BIBCITS> More than ever before, they could figuratively bring the
+                            Queen into their homes. It is argued that this twinning of allegiance
+                            and mass consumerism was a new concept, and the public was both
+                            fascinated and awed by the spectacle it created. For this Jubilee,
+                            twenty-six thousand children were gathered in <PLACE><PLACENAME>Hyde
+                                    Park</PLACENAME><REGION REG="Yorkshire"/><GEOG REG="England"
+                                /></PLACE> and entertained with games, amusements, food, and the
+                            gift of a souvenir mug for each. Inciting loyalty in the young was
+                            considered especially important, as a small&mdash;and emphatically
+                            gendered&mdash;rhyme by Rev <NAME>Hardwicke Rawnsley</NAME> illustrates:
+                                <QUOTE DIRECT="Y">Little children grow to men; / Loyal
+                                    <EMPH>now</EMPH> is loyal <EMPH>then</EMPH>.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 131-2" DBREF="7792"
+                                    QTDIN="QTDINYES">131</BIBCIT>
+                            </BIBCITS></P>
+                        <P>Not all of QV&apos;s subjects were pleased with the idea of the Jubilee,
+                            however. Some were sceptical of the uncritical commercialization which
+                            played such a large role in the festivities. In <NAME>Mary Elizabeth
+                                Braddon</NAME>&apos;s unpublished fictional version of the Golden
+                            Jubilee, <TITLE TITLETYPE="UNPUBLISHED">The Good Hermione</TITLE>, the
+                            generally cheerful narrator laments that everyone <QUOTE DIRECT="Y">came
+                                forward with their particular fads, &amp; everyone wanted his or her
+                                little adventure to profit by the queen&apos;s Jubilee. . . .
+                                everyone of all shades &amp; denominations, clamoured for
+                                institutions, or halls, or museums, or almshouses, or schools, or
+                                creches, or recreation rooms, or libraries, to be built out of
+                                Jubilee money and endowed with Jubilee money.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Houston Royalties 58-9" DBREF="8146"
+                                        QTDIN="QTDINYES">58-9</BIBCIT>
+                                </BIBCITS></QUOTE> Some liberals and socialists also feared the
+                            unbridled feelings of imperialism and nationalism the event fostered.
+                            One <TITLE TITLETYPE="JOURNAL">Vanity Fair</TITLE> writer viewed
+                            QV&apos;s reign as shameful, arguing <QUOTE DIRECT="Y">[a]lthough in
+                                these fifty years we have waged only one European war (and that a
+                                war of collusion, when we were agreed with our enemy rather than our
+                                ally) we have waged a great number of wars in
+                                        <PLACE><GEOG>Africa</GEOG></PLACE> and
+                                        <PLACE><GEOG>Asia</GEOG></PLACE>; wars for the most part
+                                unjust, waged without due cause, and without Declaration of
+                                War.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 135-6" DBREF="7792"
+                                    QTDIN="QTDINYES">135-6</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="SOCIALCLIMATE" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>6 July 1887</DATE>
+                        <CHRONPROSE>QV laid the foundation-stone of the <PLACE><PLACENAME>Imperial
+                                    Institute</PLACENAME><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>, which was
+                            erected in honour of her fifty years&apos; reign.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This Renaissance-palatial building in <PLACE><SETTLEMENT REG="London"
+                                    >South Kensington</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE> was intended to showcase modern
+                            developments in industry, agriculture, and communications.</P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SJW" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>22 June 1897</DATE>
+                        <CHRONPROSE>The Empire celebrated QV&apos;s Diamond Jubilee, honouring her
+                            sixty years&apos; rule.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Munich xxi" DBREF="7793">xx</BIBCIT>
+                            <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Like the Golden Jubilee ten years before, the celebration brimmed with a
+                            mixture of loyalty, fanfare, and consumer nationalism. <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 130-6" DBREF="7792"
+                                    >130-6</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Declining Health</HEADING>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SIB" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>1898</DATE>
+                        <CHRONPROSE>QV&apos;s eyesight began to fail because of cataracts; reading
+                            became very difficult for her, and even letter-writing was a
+                            problem.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Strachey 421" DBREF="7795">421</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>QV was already reliant upon a cane for walking, and often used a
+                            wheelchair because of her rheumatism.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Strachey 421" DBREF="7795">421</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SJW" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATESTRUCT CERTAINTY="C" CALENDAR="NEWSTYLE" VALUE="1900-07-">
+                            <SEASON>Summer</SEASON>
+                            <YEAR>1900</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>QV&apos;s memory began to fail, and within a couple of months
+                            her general health seriously declined.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Strachey 421" DBREF="7795">421</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="NATIONALINTERNATIONAL" RESP="SIB"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>14 January 1901</DATE>
+                        <CHRONPROSE>After entertaining guests in her home, QV
+                            collapsed.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Strachey 422" DBREF="7795">422</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>20 January 1901</DATE>
+                        <CHRONPROSE>The public was shocked by the official announcement that QV was
+                            close to death; most of her subjects could not imagine the Empire
+                            without her.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Strachey 423" DBREF="7795">423</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She continued to perform official duties, although medical attendants
+                            believed her death to be imminent.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Death</HEADING>
+            <DEATH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="SELECTIVE1">
+                        <DATE>22 January 1901</DATE>
+                        <CHRONPROSE>QV died peacefully of <CAUSE>old age</CAUSE> at
+                                    <PLACE><PLACENAME>Osborne House</PLACENAME><REGION
+                                    REG="Isle of Wight"/><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Strachey 422" DBREF="7795">422</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Munich xx" DBREF="7793">xx</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>QV&apos;s funeral was attended by large crowds as her body was conveyed
+                            with military honours from <PLACE><PLACENAME REG="Osborne House"
+                                    >Osborne</PLACENAME><REGION REG="Isle of Wight"/><GEOG
+                                    REG="England"/></PLACE> through
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE> to
+                                    <PLACE><SETTLEMENT>Windsor</SETTLEMENT><REGION REG="Berkshire"
+                                    /><GEOG REG="England"/></PLACE>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen 123" DBREF="7792">123</BIBCIT>
+                                <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </DEATH>
+        </DIV1>
+        <DIV1>
+            <OTHERLIFEEVENT>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="NATIONALINTERNATIONAL"
+                        RESP="SIB" CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>4 February 1901</DATE>
+                        <CHRONPROSE>QV was laid in her final resting place at
+                                    <PLACE><PLACENAME>Frogmore</PLACENAME><SETTLEMENT REG="Windsor"
+                                    /><REGION REG="Berkshire"/><GEOG REG="England"/></PLACE>, where
+                            her body joined that of her husband.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="DNB" DBREF="1759"/>
+                            </BIBCITS></CHRONPROSE>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </OTHERLIFEEVENT>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She left her family one of the richest in Europe, although the estate she
+                            herself inherited had been seriously hampered by her father&apos;s debts.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Thompson Queen xiv" DBREF="7792">xiv</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <WORKSCITED>
+            <SOURCE>Gentleman&apos;s Magazine.</SOURCE>
+            <SOURCE>Longford, Elizabeth. Victoria R. I., 1964</SOURCE>
+            <SOURCE>Strachey, Lytton. Queen Victoria, 1921, 1931.</SOURCE>
+            <SOURCE>Munich, Adrienne. Queen Victoria&apos;s Secrets, 1973.</SOURCE>
+            <SOURCE>Standage, Tom. The Victorian Internet. 1998.</SOURCE>
+            <SOURCE>Thompson, Dorothy. Queen Victoria: Gender and Power, 1990.</SOURCE>
+            <SOURCE>Unless otherwise noted, all information is from the FC.</SOURCE>
+        </WORKSCITED>
+    </DIV0>
+</BIOGRAPHY>

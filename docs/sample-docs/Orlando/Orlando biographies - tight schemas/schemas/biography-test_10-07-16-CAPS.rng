@@ -1,0 +1,2404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Biography schema    *in progress*
+    written 2010-04-08 by Mariana Paredes-Olea
+    based on biograph.dtd (SGML)
+    Copyright 2010 The Orlando Project -->
+
+<!-- TO DO: -->
+<!-- check all mixed patterns against dtds (text) -->
+<!-- Redefine default values - schematron -->
+<!-- Finish implementing inclusions and exclusions -->
+<!-- check all mixed patterns against dtds (text) -->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <include href="common_10-07-16.rng">
+
+        <start>
+            <ref name="Biography-element"/>
+        </start>
+
+        <define name="emph-element">
+            <!-- commented more overlapping elements -->
+            <element name="EMPH">
+                <ref name="ID-attribute"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="quote-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="foreign-element">
+            <!-- commented more overlapping elements -->
+            <element name="FOREIGN">
+                <ref name="ID-attribute"/>
+                <ref name="reg-attribute"/>
+                <optional>
+                    <attribute name="LANG"/>
+                </optional>
+                <!-- xml:lang ?-->
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="quote-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="quote-element">
+            <element name="QUOTE">
+                <ref name="ID-attribute"/>
+                <attribute name="DIRECT" a:defaultValue="UNSPECIFIED">
+                    <choice>
+                        <value>UNSPECIFIED</value>
+                        <value>Y</value>
+                        <value>N</value>
+                    </choice>
+                </attribute>
+                <mixed>
+                    <!-- Div1 and Div0 inclusions are in corrquoteitemgroup plus items below -->
+                    <zeroOrMore>
+                        <choice>
+                            <ref name="researchNote-element"/>
+                            <ref name="dateStruct-element"/>
+                            <!--<ref name="date-element"></ref>-->
+                            <ref name="dateRange-element"/>
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="lg-element"></ref>-->
+                            <!--<ref name="l-element"></ref>-->
+                            <ref name="corrquoteitem-group"/>
+                            <ref name="personName-inclusion"/>
+                            <ref name="birth-inclusion"/>
+                            <ref name="death-inclusion"/>
+                            <ref name="culturalFormation-inclusion"/>
+                            <ref name="education-inclusion"/>
+                            <ref name="family-inclusion"/>
+                            <!-- member inclusion overlaps with occupation inclusion -->
+                            <ref name="friendsAssociates-inclusion"/>
+                            <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                            <ref name="occupation-inclusion"/>
+                            <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="soCalled-element">
+            <!-- commented more overlapping elements -->
+            <element name="SOCALLED">
+                <ref name="ID-attribute"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="rs-element">
+            <!-- commented more overlapping elements -->
+            <element name="RS">
+                <ref name="ID-attribute"/>
+                <optional>
+                    <attribute name="KEY"/>
+                </optional>
+                <ref name="reg-attribute"/>
+                <optional>
+                    <attribute name="TYPE"/>
+                </optional>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="responsibility-element">
+            <!-- commented overlapping element -->
+            <element name="RESPONSIBILITY">
+                <ref name="ID-attribute"/>
+                <ref name="resp-content"/>
+                <ref name="workStatus-content"/>
+                <ref name="workValue-content"/>
+                <mixed>
+                     <!--<ref name="date-element"></ref>-->
+                     <zeroOrMore>
+                         <choice>
+                            <ref name="item-element"/>
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                     </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="l-element">
+            <!-- commented more overlapping elements -->
+            <element name="L">
+                <ref name="ID-attribute"/>
+                <optional>
+                    <attribute name="ENJAMB"/>
+                </optional>
+                <optional>
+                    <attribute name="MET"/>
+                </optional>
+                <optional>
+                    <attribute name="REAL"/>
+                </optional>
+                <optional>
+                    <attribute name="RHYME"/>
+                </optional>
+                <ref name="part-content"/>
+                <interleave>
+                    <zeroOrMore>
+                        <choice>
+                            <text/>
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="quote-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                    </zeroOrMore>
+                </interleave>
+            </element>
+        </define>
+
+        <define name="lg-element">
+            <!-- commented overlapping elements -->
+            <element name="LG">
+                <ref name="ID-attribute"/>
+                <attribute name="TYPE"/>
+                <!-- CDATA and check #CURRENT occurrence -->
+                <attribute name="ORG" a:defaultValue="UNIFORM">
+                    <choice>
+                        <value>UNIFORM</value>
+                        <value>COMPOSITE</value>
+                    </choice>
+                </attribute>
+                <attribute name="SAMPLE" a:defaultValue="COMPLETE">
+                    <choice>
+                        <value>COMPLETE</value>
+                        <value>INITIAL</value>
+                        <value>MEDIAL</value>
+                        <value>FINAL</value>
+                        <value>UNKNOWN</value>
+                    </choice>
+                </attribute>
+                <ref name="part-content"/>
+                <optional>
+                    <attribute name="MET"/>
+                </optional>
+                <optional>
+                    <attribute name="REAL"/>
+                </optional>
+                <optional>
+                    <attribute name="RHYME"/>
+                </optional>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <group>
+                                <ref name="head-element"/>
+                                <!--<oneOrMore>
+                                    <choice>
+                                    <ref name="l-element"></ref>
+                                    <ref name="lg-element"></ref>
+                                    </choice>
+                                    </oneOrMore>-->
+                            </group>
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>                            
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="head-element">
+            <!-- commented more overlapping elements -->
+            <element name="HEAD">
+                <ref name="ID-attribute"/>
+                <optional>
+                    <attribute name="TYPE"/>
+                </optional>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="quote-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="title-element">
+            <!-- commented more overlapping elements -->
+            <element name="TITLE">
+                <ref name="ID-attribute"/>
+                <optional>
+                    <attribute name="TITLETYPE">
+                        <choice>
+                            <value>MONOGRAPHIC</value>
+                            <value>ANALYTIC</value>
+                            <value>JOURNAL</value>
+                            <value>SERIES</value>
+                            <value>UNPUBLISHED</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="reg-attribute"/>
+                <optional>
+                    <attribute name="REND"/>
+                </optional>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                            <!--<ref name="title-element"/>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="quote-element"/>-->
+                            <!--<ref name="topic-element"/>-->
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                            <ref name="personName-inclusion"/>
+                            <ref name="birth-inclusion"/>
+                            <ref name="death-inclusion"/>
+                            <ref name="culturalFormation-inclusion"/>
+                            <ref name="education-inclusion"/>
+                            <ref name="family-inclusion"/>
+                            <ref name="friendsAssociates-inclusion"/>
+                            <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                            <ref name="occupation-inclusion"/>
+                            <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="chronStruct-element">
+            <!-- commented more overlapping elements-->
+            <element name="CHRONSTRUCT">
+                <ref name="ID-attribute"/>
+                <ref name="chronColumnRelevance-content"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <group>
+                                <choice>
+                                    <ref name="dateRange-element"/>
+                                    <ref name="dateStruct-element"/>
+                                    <ref name="date-element"/>
+                                </choice>
+                                <ref name="chronProse-element"/>
+                            </group>
+                            <ref name="Div0-inclusion"/>
+                            <!-- adapted Div1 inclusion: -->
+                            <ref name="time-element"/>
+                            <ref name="name-element"/>
+                            <ref name="place-element"/>
+                            <ref name="orgName-element"/>
+                            <ref name="emph-element"/>
+                            <ref name="foreign-element"/>
+                            <ref name="soCalled-element"/>
+                            <ref name="quote-element"/>
+                            <ref name="sic-element"/>
+                            <ref name="corr-element"/>
+                            <ref name="rs-element"/>
+                            <ref name="lg-element"/>
+                            <ref name="l-element"/>
+                            <ref name="topic-element"/>
+                            <ref name="xref-element"/>
+                            <ref name="xptr-element"/>
+                        </choice>
+                        <ref name="personName-inclusion"/>
+                        <ref name="birth-inclusion"/>
+                        <ref name="death-inclusion"/>
+                        <ref name="culturalFormation-inclusion"/>
+                        <ref name="education-inclusion"/>
+                        <ref name="family-inclusion"/>
+                        <ref name="friendsAssociates-inclusion"/>
+                        <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        <ref name="occupation-inclusion"/>
+                        <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="chronProse-element">
+            <element name="CHRONPROSE">
+                <ref name="ID-attribute"/>
+                <!-- commented more overlapping elements -->
+                <mixed>
+                    <!--<zeroOrMore>
+                        <choice>
+                            <text></text>
+                             <!-\-<ref name="rs-element"/>-\->
+                             <!-\-<ref name="corr-element"/>-\->
+                             <!-\-<ref name="emph-element"/>-\->
+                             <!-\-<ref name="foreign-element"/>-\->
+                             <!-\-<ref name="soCalled-element"/>-\->
+                             <!-\-<ref name="title-element"/>-\->
+                             <!-\-<ref name="quote-element"/>-\->
+                            <!-\-<ref name="l-element"></ref>-\->
+                            <!-\-<ref name="lg-element"></ref>-\->
+                            <!-\-<ref name="dateStruct-element"></ref>-\->
+                            <!-\-<ref name="date-element"></ref>-\->
+                            <!-\-<ref name="dateRange-element"></ref>-\->
+                        </choice>
+                        </zeroOrMore>-->
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text/>-->
+                                <ref name="Div0-inclusion"/>
+                                <ref name="Div1-inclusion"/>
+                                <ref name="personName-inclusion"/>
+                                <ref name="birth-inclusion"/>
+                                <ref name="death-inclusion"/>
+                                <ref name="culturalFormation-inclusion"/>
+                                <ref name="education-inclusion"/>
+                                <ref name="family-inclusion"/>
+                                <ref name="friendsAssociates-inclusion"/>
+                                <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                                <ref name="occupation-inclusion"/>
+                                <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="p-element">
+            <!-- commented more overlapping elements -->
+            <element name="P">
+                <ref name="ID-attribute"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                          <!--<text></text>-->
+                          <!--  <ref name="emph-element"/>-->
+                          <!--  <ref name="foreign-element"/>-->
+                          <!--  <ref name="soCalled-element"/>-->
+                          <!--  <ref name="quote-element"/>-->
+                          <!--  <ref name="corr-element"/>-->
+                          <!--  <ref name="rs-element"/>-->
+                          <!--  <ref name="title-element"/>-->
+                          <!--<ref name="lg-element"></ref>-->
+                          <!--<ref name="l-element"></ref>-->
+                            <!-- <text/>-->
+                             <ref name="Div0-inclusion"/>
+                             <ref name="Div1-inclusion"/>
+                             <ref name="personName-inclusion"/>
+                             <ref name="birth-inclusion"/>
+                             <ref name="death-inclusion"/>
+                             <ref name="culturalFormation-inclusion"/>
+                             <ref name="education-inclusion"/>
+                             <ref name="family-inclusion"/>
+                             <ref name="friendsAssociates-inclusion"/>
+                             <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                             <ref name="occupation-inclusion"/>
+                             <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="addrLine-element">
+            <!-- commented more overlapping elements -->
+            <element name="ADDRLINE">
+                <ref name="ID-attribute"/>
+                <interleave>
+                    <zeroOrMore>
+                        <choice>
+                            <text/>
+                            <!--<ref name="date-element"></ref>DISABLED-->
+                            <ref name="name-element"/>
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!-- <ref name="corr-element"/>-->
+                            <!-- <ref name="emph-element"/>-->
+                            <!-- <ref name="foreign-element"/>-->
+                            <!-- <ref name="soCalled-element"/>-->
+                            <ref name="topic-element"/>
+                        </choice>
+                    </zeroOrMore>
+                    <ref name="narrow-inclusion"/>
+                </interleave>
+            </element>
+        </define>
+
+        <define name="dateStruct-element">
+            <element name="DATESTRUCT">
+                <ref name="date-attributes"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <ref name="year-element"/>
+                            <ref name="ocassion-element"/>
+                            <ref name="season-element"/>
+                            <ref name="month-element"/>
+                            <!--<ref name="time-element"></ref>-->
+                            <ref name="week-element"/>
+                            <ref name="day-element"/>
+                        </choice>
+                    </zeroOrMore>
+                    <ref name="narrow-inclusion"/>
+                    <!-- TIME>TITLED -->
+                    <!-- narrow inclusion: from Div0 and Div1 except elements in DTD exclusion: 
+                        dateStruct , dateRange , keywordClass , name , orgName , 
+                        place , date , scholarNote , topic? -->
+                    <ref name="personName-inclusion"/>
+                    <!-- TITLED -->
+                    <ref name="birth-inclusion"/>
+                    <ref name="death-inclusion"/>
+                    <ref name="culturalFormation-inclusion"/>
+                    <ref name="education-inclusion"/>
+                    <ref name="family-inclusion"/>
+                    <ref name="friendsAssociates-inclusion"/>
+                    <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                    <ref name="occupation-inclusion"/>
+                    <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                </mixed>
+            </element>
+        </define>
+
+        <define name="Div0-element">
+            <!-- could combine=interleave,
+            but order/sequence of elements would be lost. Check-->
+            <element name="DIV0">
+                <ref name="ID-attribute"/>
+                <interleave>
+                    <group>
+                        <optional>
+                            <ref name="heading-element"/>
+                        </optional>
+                        <optional>
+                            <ref name="standard-element"/>
+                        </optional>
+                        <oneOrMore>
+                            <ref name="Div1-element"/>
+                        </oneOrMore>
+                        <optional>
+                            <ref name="worksCited-element"/>
+                        </optional>
+                        <optional>
+                            <ref name="biogProse-element"/>
+                        </optional>
+                    </group>
+                    <!-- First occurrence of SGML inclusion (events and biography): researchNote,
+                        title, bibCit, scholarNote, keywordClas, bibCits, lb -->
+                    <ref name="Div0-inclusion"/>
+                </interleave>
+            </element>
+        </define>
+
+        <define name="Div1-element">
+            <element name="DIV1">
+                <ref name="ID-attribute"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <group>
+                                <!-- test whether elements in inclusion interleave in group above OF INCLUSION-->
+                                <optional>
+                                    <ref name="heading-element"/>
+                                </optional>
+                                <choice>
+                                    <ref name="personName-element"/>
+                                    <ref name="birth-element"/>
+                                    <ref name="death-element"/>
+                                    <ref name="culturalFormation-element"/>
+                                    <zeroOrMore>
+                                        <ref name="education-element"/>
+                                    </zeroOrMore>
+                                    <ref name="family-element"/>
+                                    <ref name="friendsAssociates-element"/>
+                                    <zeroOrMore>
+                                        <ref name="health-element"/>
+                                    </zeroOrMore>
+                                    <zeroOrMore>
+                                        <ref name="intimateRelationships-element"/>
+                                    </zeroOrMore>
+                                    <zeroOrMore>
+                                        <ref name="location-element"/>
+                                    </zeroOrMore>
+                                    <ref name="occupation-element"/>
+                                    <ref name="politics-element"/>
+                                    <ref name="leisureAndSociety-element"/>
+                                    <ref name="violence-element"/>
+                                    <ref name="wealth-element"/>
+                                    <ref name="otherLifeEvent-element"/>
+                                </choice>
+                            </group>
+                            <ref name="Div0-inclusion"/>
+                            <ref name="Div1-inclusion"/>
+                            <!-- First occurrence of SGML inclusion
+                                (biography): datestruct, date, daterange, time, 
+                                name , place , orgName , rs , sic , corr , emph , 
+                                quote , foreign , soCalled , quote , lg, l, topic, xptr , xref -->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="worksCited-element">
+            <element name="WORKSCITED">
+                <ref name="ID-attribute"/>
+                <interleave>
+                    <oneOrMore>
+                        <ref name="source-element"/>
+                    </oneOrMore>
+                    <ref name="Div0-inclusion"/>
+                </interleave>
+            </element>
+        </define>
+
+        <!--<define name="tGenre-element" combine="interleave">
+            <notAllowed></notAllowed>
+        </define> ENABLE AFTER TESTING-->
+
+        <define name="dataItem-element">
+            <element name="DATAITEM">
+                <ref name="ID-attribute"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!--<text></text>-->
+                            <!--<ref name="dateStruct-element"></ref>-->
+                            <!--<ref name="dateRange-element"></ref>-->
+                            <!--<ref name="date-element"></ref>-->
+                            <!--<ref name="name-element"/>-->
+                            <!--<ref name="place-element"/>-->
+                            <!--<ref name="orgName-element"/>-->
+                            <!--<ref name="rs-element"/>-->
+                            <!--<ref name="time-element"></ref>-->
+                            <!--<ref name="corr-element"/>-->
+                            <!--<ref name="emph-element"/>-->
+                            <!--<ref name="foreign-element"/>-->
+                            <!--<ref name="soCalled-element"/>-->
+                            <!--<ref name="title-element"/>-->
+                            <!--<ref name="quote-element"/>-->
+                            <!--<ref name="l-element"></ref>-->
+                            <!--<ref name="lg-element"></ref>-->
+                            <!--<ref name="topic-element"/>-->
+                    <ref name="Div0-inclusion"/>
+                    <ref name="Div1-inclusion"/>
+                    <ref name="personName-inclusion"/>
+                    <ref name="birth-inclusion"/>
+                    <ref name="death-inclusion"/>
+                    <ref name="culturalFormation-inclusion"/>
+                    <ref name="education-inclusion"/>
+                    <ref name="family-inclusion"/>
+                    <ref name="friendsAssociates-inclusion"/>
+                    <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                    <ref name="occupation-inclusion"/>
+                            <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+        <define name="orgName-element">
+            <element name="ORGNAME">
+                <ref name="ID-attribute"/>
+                <optional>
+                    <attribute name="STANDARD"/>
+                </optional>
+                <optional>
+                    <attribute name="ORGTYPE"/>
+                </optional>
+                <ref name="reg-attribute"/>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <!-- changed interleave to mixed, and deleted <text> -->
+                            <ref name="narrow-inclusion"/>
+                            <ref name="personName-inclusion"></ref>
+                            <ref name="birth-inclusion"></ref>
+                            <ref name="death-inclusion"></ref>
+                            <ref name="culturalFormation-inclusion"></ref>
+                            <ref name="education-inclusion"></ref>
+                            <ref name="family-inclusion"></ref>
+                            <ref name="friendsAssociates-inclusion"></ref>
+                            <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                            <ref name="occupation-inclusion"></ref>
+                            <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+        </define>
+
+    </include>
+
+    <!-- redefinition ends -->
+    <!-- new elements / combine="interleave" starts -->
+
+    <define name="Biography-element">
+        <element name="BIOGRAPHY">
+            <ref name="ID-attribute"/>
+            <ref name="sex-attribute"/>
+            <ref name="person-attribute"/>
+            <ref name="OrlandoHeader-element"/>
+            <ref name="Div0-element"/>
+        </element>
+    </define>
+
+    <define name="Div2-element">
+        <element name="DIV2">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>                <group>
+                        <optional>
+                            <ref name="heading-element"/>
+                        </optional>
+                        <oneOrMore>
+                            <choice>
+                                <ref name="chronStruct-element"/>
+                                <ref name="dataStruct-element"/>
+                                <ref name="shortProse-element"/>
+                                <zeroOrMore>
+                                    <ref name="Div3-element"/>
+                                </zeroOrMore>
+                            </choice>
+                        </oneOrMore>
+                    </group>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                        <ref name="personName-inclusion"/>
+                        <ref name="birth-inclusion"/>
+                        <ref name="death-inclusion"/>
+                        <ref name="culturalFormation-inclusion"/>
+                        <!--                <ref name="education-inclusion"/>-->
+                        <ref name="family-inclusion"/>
+                        <ref name="friendsAssociates-inclusion"/>
+                        <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        <ref name="occupation-inclusion"/>
+                        <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion--></choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="Div3-element">
+        <element name="DIV3">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <group>
+                            <optional>
+                                <ref name="heading-element"/>
+                            </optional>
+                            <oneOrMore>
+                                <choice>
+                                    <ref name="chronStruct-element"/>
+                                    <ref name="dataStruct-element"/>
+                                    <ref name="shortProse-element"/>
+                                    <!-- test include by checking what paragraph definition is embedded in shortprose -->
+                                    <ref name="extendedProse-element"/>
+                                </choice>
+                            </oneOrMore>
+                        </group>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                        <ref name="personName-inclusion"/>
+                        <ref name="birth-inclusion"/>
+                        <ref name="death-inclusion"/>
+                        <ref name="culturalFormation-inclusion"/>
+                        <ref name="education-inclusion"/>
+                        <ref name="family-inclusion"/>
+                        <ref name="friendsAssociates-inclusion"/>
+                        <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with culturalformation inclusion-->
+                        <ref name="occupation-inclusion"/>
+                        <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <!--<define name="dataStruct-element" combine="interleave">
+        <ref name="personName-inclusion"></ref>
+        </define>DISABLED-->
+
+    <!--<define name="date-element" combine="interleave">
+        <ref name="personName-inclusion"></ref>
+        </define> DISABLED-->
+
+    <!--<define name="dateStruct-element" combine="interleave">
+        <ref name="personName-inclusion"></ref>
+        </define>DISABLED-->
+
+    <!--<define name="time-element" combine="interleave">
+        <ref name="personName-inclusion"></ref>
+        </define>DISABLED-->
+
+    <define name="extendedProse-element">
+        <element name="EXTENDEDPROSE">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <oneOrMore>
+                            <ref name="p-element"/>
+                        </oneOrMore>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>                        
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="personName-element">
+        <element name="PERSONNAME">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <oneOrMore>
+                            <choice>
+                                <zeroOrMore>
+                                    <ref name="chronStruct-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="Div2-element"/>
+                                </zeroOrMore>
+                            </choice>
+                        </oneOrMore>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                        <ref name="personName-inclusion"/>
+                        <!-- first occurrence of personname inclusion -->                        
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="birth-element">
+        <element name="BIRTH">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        
+                        <oneOrMore>
+                            <choice>
+                                <zeroOrMore>
+                                    <ref name="chronStruct-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="Div2-element"/>
+                                </zeroOrMore>
+                            </choice>
+                        </oneOrMore>
+                        <!-- first occurrence of birth-inclusion -->
+                        <ref name="birth-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="death-element">
+        <element name="DEATH">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        
+                        <oneOrMore>
+                            <choice>
+                                <zeroOrMore>
+                                    <ref name="chronStruct-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="Div2-element"/>
+                                </zeroOrMore>
+                            </choice>
+                        </oneOrMore>
+                        <!-- first occurrence of death-inclusion -->
+                        <ref name="death-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="culturalFormation-element">
+        <element name="CULTURALFORMATION">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <oneOrMore>
+                            <choice>
+                                <zeroOrMore>
+                                    <ref name="chronStruct-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="Div2-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="classIssue-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="nationalityIssue-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="raceAndEthnicity-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="religion-element"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="sexuality-element"/>
+                                </zeroOrMore>
+                            </choice>
+                        </oneOrMore>
+                        <!-- first occurrence of culturalFormation-inclusion -->
+                        <ref name="culturalFormation-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="education-element">
+        <element name="EDUCATION">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="MODE">
+                    <choice>
+                        <value>DOMESTIC</value>
+                        <value>INSTITUTIONAL</value>
+                        <value>SELF-TAUGHT</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <mixed> <!--revise: text is not allowed in dtd-->
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of education-inclusion -->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="family-element">
+        <element name="FAMILY">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="member-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of family inclusion -->
+                <ref name="family-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="member-element">
+        <element name="MEMBER">
+            <ref name="ID-attribute"/>
+            <attribute name="RELATION" a:defaultValue="MOTHER">
+                <choice>
+                    <value>MOTHER</value>
+                    <value>FATHER</value>
+                    <value>SISTER</value>
+                    <value>BROTHER</value>
+                    <value>AUNT</value>
+                    <value>UNCLE</value>
+                    <value>GRANDFATHER</value>
+                    <value>GRANDMOTHER</value>
+                    <value>GRANDDAUGHTER</value>
+                    <value>GRANDSON</value>
+                    <value>NEPHEW</value>
+                    <value>STEPSISTER</value>
+                    <value>STEPBROTHER</value>
+                    <value>STEPFATHER</value>
+                    <value>STEPMOTHER</value>
+                    <value>COUSIN</value>
+                    <value>FOREBEAR</value>
+                    <value>OTHER</value>
+                    <value>SON</value>
+                    <value>DAUGHTER</value>
+                    <value>STEPSON</value>
+                    <value>STEPDAUGHTER</value>
+                    <value>GUARDIAN</value>
+                    <value>NIECE</value>
+                    <value>HUSBAND</value>
+                    <value>WIFE</value>
+                    <value>CHILD</value>
+                    <value>PARTNER</value>
+                </choice>
+            </attribute>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <ref name="chronStruct-element"/>
+                        <ref name="Div2-element"/>
+                        <ref name="marriage-element"/>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of member inclusion -->
+                <ref name="family-inclusion"/>
+                <ref name="member-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="marriage-element">
+        <element name="MARRIAGE">
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="family-inclusion"/>
+                <ref name="member-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="friendsAssociates-element">
+        <element name="FRIENDSASSOCIATES">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of friendsassociates inclusion -->
+                <ref name="friendsAssociates-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="health-element">
+        <element name="HEALTH">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="ISSUE">
+                    <choice>
+                        <value>PHYSICAL</value>
+                        <value>MENTAL</value>
+                        <value>FEMALEBODY</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="intimateRelationships-element">
+        <element name="INTIMATERELATIONSHIPS">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="EROTIC">
+                    <choice>
+                        <value>EROTICYES</value>
+                        <value>EROTICNO</value>
+                        <value>EROTICPOSSIBLY</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of intimaterelationships inclusion -->
+                <ref name="intimateRelationships-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="location-element">
+        <element name="LOCATION">
+            <ref name="ID-attribute"/>
+            <attribute name="RELATIONTO">
+                <choice>
+                    <value>LIVED</value>
+                    <value>VISITED</value>
+                    <value>MOVED</value>
+                    <value>UNKNOWN</value>
+                    <value>TRAVELLED</value>
+                    <value>MIGRATED</value>
+                </choice>
+            </attribute>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="occupation-element">
+        <element name="OCCUPATION">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of occupation inclusion -->
+                <ref name="occupation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="politics-element">
+        <element name="POLITICS">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <!-- first occurrence of politics inclusion -->
+                <ref name="politics-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="leisureAndSociety-element">
+        <element name="LEISUREANDSOCIETY">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="violence-element">
+        <element name="VIOLENCE">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="wealth-element">
+        <element name="WEALTH">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="otherLifeEvent-element">
+        <element name="OTHERLIFEEVENT">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <oneOrMore>
+                    <choice>
+                        <zeroOrMore>
+                            <ref name="chronStruct-element"/>
+                        </zeroOrMore>
+                        <zeroOrMore>
+                            <ref name="Div2-element"/>
+                        </zeroOrMore>
+                    </choice>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+
+    <!-- new inclusions -->
+
+    <define name="researchNote-element" combine="interleave">
+        <ref name="education-inclusion"/>
+    </define>
+    
+    <define name="Div1-inclusion" combine="interleave">
+        <zeroOrMore>
+            <choice>                    
+                <ref name="dateStruct-element"/>
+                <ref name="date-element"/>
+                <ref name="dateRange-element"/>
+                <ref name="time-element"/>
+                <ref name="lg-element"/>
+                <ref name="l-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="narrow-inclusion" combine="interleave">
+        <!--Inclusion from Div1 and Div0 except elements
+        in DTD exclusion -(date, dateStruct, dateRange, keywordClass, name, orgName, place, 
+        scholarNote, topic) -->
+        <zeroOrMore>
+            <choice>
+                <ref name="time-element"/>
+                <ref name="l-element"/>
+                <ref name="lg-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="education-inclusion">
+        <zeroOrMore>
+            <choice>
+                <ref name="award-element"/>
+                <ref name="companion-element"/>
+                <ref name="contestedBehaviour-element"/>
+                <ref name="degree-element"/>
+                <ref name="instructor-element"/>
+                <ref name="school-element"/>
+                <ref name="subject-element"/>
+                <ref name="text-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="politics-inclusion">
+        <zeroOrMore>
+            <ref name="politicalAffiliation-element"/>
+        </zeroOrMore>
+    </define>
+
+    <define name="member-inclusion">
+        <zeroOrMore>
+            <ref name="job-element"/>
+            <ref name="significantActivity-element"/>
+        </zeroOrMore>
+    </define>
+
+    <define name="personName-inclusion">
+        <zeroOrMore>
+            <choice>
+                <ref name="birthname-element"/>
+                <ref name="indexed-element"/>
+                <ref name="married-element"/>
+                <ref name="nickname-element"/>
+                <ref name="pseudonym-element"/>
+                <ref name="religiousName-element"/>
+                <ref name="royal-element"/>
+                <ref name="selfConstructed-element"/>
+                <ref name="styled-element"/>
+                <ref name="titled-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="birth-inclusion">
+        <zeroOrMore>
+            <ref name="birthPosition-element"/>
+        </zeroOrMore>
+    </define>
+
+    <define name="death-inclusion">
+        <zeroOrMore>
+            <ref name="cause-element"/>
+        </zeroOrMore>
+    </define>
+
+    <define name="family-inclusion">
+        <zeroOrMore>
+            <choice>
+                <ref name="children-element"/>
+                <ref name="childlessness-element"/>
+                <ref name="separation-element"/>
+                <ref name="divorce-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="friendsAssociates-inclusion">
+        <zeroOrMore>
+            <ref name="livesWith-element"/>
+        </zeroOrMore>
+    </define>
+
+    <define name="occupation-inclusion">
+        <zeroOrMore>
+            <choice>
+                <ref name="job-element"/>
+                <ref name="empolyer-element"/>
+                <ref name="remuneration-element"/>
+                <ref name="significantActivity-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="intimateRelationships-inclusion">
+        <zeroOrMore>
+            <choice>
+                <ref name="sexualIdentity-element"/>
+                <ref name="livesWith-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="culturalFormation-inclusion">
+        <zeroOrMore>
+            <choice>
+                <ref name="raceColour-element"/>
+                <ref name="class-element"/>
+                <ref name="nationalHeritage-element"/>
+                <ref name="nationality-element"/>
+                <ref name="geogHeritage-element"/>
+                <ref name="ethnicity-element"/>
+                <ref name="denomination-element"/>
+                <ref name="language-element"/>
+                <ref name="politicalAffiliation-element"/>
+                <ref name="sexualIdentity-element"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <!-- personname inclusion elements and child elements -->
+
+    <define name="birthname-element">
+        <element name="BIRTHNAME">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="surname-element"/>
+                        <ref name="given-element"/>
+                        <ref name="personName-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="surname-element">
+        <element name="SURNAME">
+            <ref name="ID-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="given-element">
+        <element name="GIVEN">
+            <ref name="ID-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="indexed-element">
+        <element name="INDEXED">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="INDEXSOURCE" a:defaultValue="LC">
+                    <choice>
+                        <value>LC</value>
+                        <value>BL</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="married-element">
+        <element name="MARRIED">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="nickname-element">
+        <element name="NICKNAME">
+            <ref name="ID-attribute"/>
+            <ref name="nametype-attribute"/>
+            <ref name="nameconnotation-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="nameSignifier-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="pseudonym-element">
+        <element name="PSEUDONYM">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="nameSignifier-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="religiousName-element">
+        <element name="RELIGIOUSNAME">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="royal-element">
+        <element name="ROYAL">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="selfConstructed-element">
+        <element name="SELFCONSTRUCTED">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="nameSignifier-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="styled-element">
+        <element name="STYLED">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="titled-element">
+        <element name="TITLED">
+            <ref name="ID-attribute"/>
+            <ref name="wroteOrPublishedAs-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="personName-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- birth inclusion elements -->
+
+    <define name="birthPosition-element">
+        <element name="BIRTHPOSITION">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="POSITION" a:defaultValue="ELDEST">
+                    <choice>
+                        <value>ELDEST</value>
+                        <value>YOUNGEST</value>
+                        <value>ONLY</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <mixed><zeroOrMore>
+                <choice>
+                    <!--<text/>-->
+                    <ref name="birth-inclusion"/>
+                    <ref name="Div0-inclusion"/>
+                    <ref name="Div1-inclusion"/>
+                </choice>
+            </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- death inclusion elements -->
+
+    <define name="cause-element">
+        <element name="CAUSE">
+            <ref name="ID-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="death-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- culturalformation elements -->
+    <!-- check content overlapping
+        in culturalformation-element and culturalformation-inclusion elements -->
+
+    <define name="classIssue-element">
+        <element name="CLASSISSUE">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <ref name="culturalFormation-content"/>
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="culturalFormation-content">
+        <oneOrMore>
+            <choice>
+                <zeroOrMore>
+                    <ref name="chronStruct-element"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="Div2-element"/>
+                </zeroOrMore>
+            </choice>
+        </oneOrMore>
+    </define>
+
+    <define name="nationalityIssue-element">
+        <element name="NATIONALITYISSUE">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <ref name="culturalFormation-content"/>
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="raceAndEthnicity-element">
+        <element name="RACEANDETHNICITY">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <ref name="culturalFormation-content"/>
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="religion-element">
+        <element name="RELIGION">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <ref name="culturalFormation-content"/>
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="sexuality-element">
+        <element name="SEXUALITY">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <ref name="culturalFormation-content"/>
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="raceColour-element">
+        <element name="RACECOLOUR">
+            <ref name="ID-attribute"/>
+            <optional>
+                <ref name="forebear-attribute"/>
+            </optional>
+            <ref name="self-defined-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="class-element">
+        <element name="CLASS">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="SOCIALRANK" a:defaultValue="OTHER"
+                    a:documentation="Social class based on project keywords">
+                    <choice>
+                        <value>OTHER</value>
+                        <value>NOBILITY</value>
+                        <value>GENTRY</value>
+                        <value>MANAGERIAL</value>
+                        <value>PROFESSIONAL</value>
+                        <value>ENTREPENEURIAL-INDUSTRIALIST</value>
+                        <value>SHOPKEEPERS</value>
+                        <value>LOWER-MIDDLECLASS</value>
+                        <value>YEOMAN-FARMER</value>
+                        <value>SKILLEDCRAFTPERSON-ARTISAN</value>
+                        <value>URBAN-INDUSTRIALUNSKILLED</value>
+                        <value>RURAL-UNSKILLED</value>
+                        <value>SERVANT</value>
+                        <value>INDIGENT</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="self-defined-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="nationalHeritage-element">
+        <element name="NATIONALHERITAGE">
+            <ref name="ID-attribute"/>
+            <ref name="currentAlternativeTerm-attribute"/>
+            <optional>
+                <ref name="forebear-attribute"/>
+            </optional>
+            <ref name="self-defined-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="nationality-element">
+        <element name="NATIONALITY">
+            <ref name="ID-attribute"/>
+            <ref name="self-defined-attribute"/>
+            <ref name="currentAlternativeTerm-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="geogHeritage-element">
+        <element name="GEOGHERITAGE">
+            <ref name="ID-attribute"/>
+            <ref name="forebear-attribute"/>
+            <ref name="self-defined-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="ethnicity-element">
+        <element name="ETHNICITY">
+            <ref name="ID-attribute"/>
+            <ref name="self-defined-attribute"/>
+            <optional>
+                <ref name="forebear-attribute"/>
+            </optional>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <zeroOrMore>
+                    <ref name="livesWith-element"/>
+                </zeroOrMore>
+                <!--<ref name="intimateRelationships-inclusion"></ref> overlaps with cultform inclusion-->
+                <!--<ref name="politics-inclusion"></ref>overlaps with cultform inclusion-->
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="denomination-element">
+        <element name="DENOMINATION">
+            <ref name="ID-attribute"/>
+            <ref name="self-defined-attribute"/>
+            <ref name="currentAlternativeTerm-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="language-element">
+        <element name="LANGUAGE">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="COMPETENCE" a:defaultValue="OTHER">
+                    <choice>
+                        <value>OTHER</value>
+                        <value>MOTHER</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="politicalAffiliation-element">
+        <element name="POLITICALAFFILIATION">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="ACTIVISM" a:defaultValue="ACTIVISTYES">
+                    <choice>
+                        <value>ACTIVISTYES</value>
+                        <value>ACTIVISTNO</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="WOMAN-GENDERISSUE" a:defaultValue="GENDERYES">
+                    <choice>
+                        <value>GENDERYES</value>
+                        <value>GENDERNO</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="MEMBERSHIP" a:defaultValue="MEMBERSHIPYES">
+                    <choice>
+                        <value>MEMBERSHIPYES</value>
+                        <value>MEMBERSHIPNO</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="INVOLVEMENT" a:defaultValue="INVOLVEMENTYES">
+                    <choice>
+                        <value>INVOLVEMENTYES</value>
+                        <value>INVOLVEMENTNO</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="currentAlternativeTerm-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="sexualIdentity-element">
+        <element name="SEXUALIDENTITY">
+            <ref name="ID-attribute"/>
+            <ref name="self-defined-attribute"/>
+            <ref name="currentAlternativeTerm-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="culturalFormation-inclusion"/>
+                <zeroOrMore>
+                    <ref name="livesWith-element"/>
+                    <!-- from intimaterelationships inclusion -->
+                </zeroOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- education inclusion elements -->
+
+    <define name="award-element">
+        <element name="AWARD">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="AWARDTYPE">
+                    <choice>
+                        <value>SCHOLARSHIP</value>
+                        <value>PRIZE</value>
+                        <value>OTHER</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="companion-element">
+        <element name="COMPANION">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="contestedBehaviour-element">
+        <element name="CONTESTEDBEHAVIOUR">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="degree-element">
+        <element name="DEGREE">
+            <ref name="ID-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="instructor-element">
+        <element name="INSTRUCTOR">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="school-element">
+        <element name="SCHOOL">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="INSTITUTION">
+                    <choice>
+                        <value>BOARDING</value>
+                        <value>GRAMMAR</value>
+                        <value>PRIVATE</value>
+                        <value>STATE</value>
+                        <value>DAMESCHOOL</value>
+                        <value>DAYSCHOOL</value>
+                        <value>COMPREHENSIVE</value>
+                        <value>SECONDARYMODERN</value>
+                        <value>TRADESCHOOL</value>
+                        <value>PREP</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="STUDENTBODY">
+                    <!-- CHECK: ADD A:DEFAULTVALUE? -->
+                    <choice>
+                        <value>SINGLESEX</value>
+                        <value>CO-ED</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="RELIGIOUS">
+                    <value>RELIGIOUSYES</value>
+                    <!-- CHECK: ADD A:DEFAULTVALUE? -->
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="INSTITUTIONLEVEL">
+                    <!-- CHECK: ADD A:DEFAULTVALUE? -->
+                    <choice>
+                        <value>PRIMARY</value>
+                        <value>SECONDARY</value>
+                        <value>POST-SECONDARY</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="subject-element">
+        <element name="SUBJECT">
+            <ref name="ID-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="education-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="text-element">
+        <element name="TEXT">
+            <ref name="ID-attribute"/>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <!--<text/>-->
+                        <ref name="education-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/></choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- family inclusion elements -->
+
+    <define name="children-element">
+        <element name="CHILDREN">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="NUMBER">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
+            <mixed>
+                <!--<text/>-->
+                <ref name="family-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="childlessness-element">
+        <element name="CHILDLESSNESS">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="family-inclusion"/>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="separation-element">
+        <element name="SEPARATION">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <!--<text/>-->
+                        <ref name="family-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="divorce-element">
+        <element name="DIVORCE">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <!--<text/>-->
+                        <ref name="family-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- fiendsassociates / intimaterelationships inclusion elements -->
+
+    <define name="livesWith-element">
+        <element name="LIVESWITH">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <!--<text/>-->
+                        <!--<ref name="friendsAssociates-inclusion"></ref> already in inclusion below-->
+                        <ref name="intimateRelationships-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- occupation / member inclusion elements -->
+
+    <define name="job-element">
+        <element name="JOB">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="FAMILYBUSINESS" a:defaultValue="FAMILYBUSINESSYES">
+                    <!-- check att DEFAULT value -->
+                    <value>FAMILYBUSINESSYES</value>
+                </attribute>
+            </optional>
+            <ref name="currentAlternativeTerm-attribute"/>
+            <optional>
+                <attribute name="HISTORICALTERM"/>
+            </optional>
+            <optional>
+                <attribute name="HISTORICALTERMCONTEXTDATE"
+                    a:annotation="The context and time period in which the historical term was in use"/>
+            </optional>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                <!--<text/>-->
+                <ref name="occupation-inclusion"/>
+                <!-- member inclusion elements overlap -->
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>                        
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="empolyer-element">
+        <element name="EMPLOYER">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <!--<text/>-->
+                        <ref name="occupation-inclusion"/>
+                        <!-- member inclusion elements overlap -->
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="remuneration-element">
+        <element name="REMUNERATION">
+            <ref name="ID-attribute"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <!--<text/>-->
+                        <ref name="occupation-inclusion"/>
+                        <!-- member inclusion elements overlap -->
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="significantActivity-element">
+        <element name="SIGNIFICANTACTIVITY">
+            <ref name="ID-attribute"/>
+            <optional>
+                <attribute name="PHILANTHROPYVOLUNTEER" a:defaultValue="PHILANTHROPYVOLUNTEERYES">
+                    <value>PHILANTHROPYVOLUNTEERYES</value>
+                    <!-- check att DEFAULT value -->
+                </attribute>
+            </optional>
+            <ref name="reg-attribute"/>
+            <mixed>
+                <!--<text/>-->
+                <ref name="occupation-inclusion"/>
+                <!-- member inclusion elements overlap -->
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-inclusion"/>
+            </mixed>
+        </element>
+    </define>
+
+    <!-- attributes -->
+
+    <define name="wroteOrPublishedAs-attribute">
+        <optional>
+            <attribute name="WROTEORPUBLISHEDAS" a:defaultValue="WROTEORPUBLISHEDASYES"/>
+        </optional>
+    </define>
+
+    <define name="nametype-attribute">
+        <optional>
+            <attribute name="NAMETYPE" a:defaultValue="LITERARY">
+                <choice>
+                    <value>LITERARY</value>
+                    <value>FAMILIAR</value>
+                    <value>OTHER</value>
+                </choice>
+            </attribute>
+        </optional>
+    </define>
+
+    <define name="nameconnotation-attribute">
+        <optional>
+            <attribute name="NAMECONNOTATION" a:defaultValue="ABUSIVE">
+                <choice>
+                    <value>ABUSIVE</value>
+                    <value>HONORIFIC</value>
+                </choice>
+            </attribute>
+        </optional>
+    </define>
+
+    <define name="nameSignifier-attribute">
+        <optional>
+            <attribute name="NAMESIGNIFIER" a:defaultValue="CRYPTIC">
+                <choice>
+                    <value>CRYPTIC</value>
+                    <value>LOCAL</value>
+                    <value>ROMANCE</value>
+                </choice>
+            </attribute>
+        </optional>
+    </define>
+
+    <define name="forebear-attribute">
+        <optional>
+            <attribute name="FOREBEAR" a:defaultValue="FAMILY">
+                <choice>
+                    <value>FATHER</value>
+                    <value>MOTHER</value>
+                    <value>PARENTS</value>
+                    <value>GRANDFATHER</value>
+                    <value>GRANDMOTHER</value>
+                    <value>GRANDPARENTS</value>
+                    <value>AUNT</value>
+                    <value>UNCLE</value>
+                    <value>OTHER</value>
+                    <value>FAMILY</value>
+                </choice>
+            </attribute>
+        </optional>
+    </define>
+
+    <define name="self-defined-attribute">
+        <optional>
+            <attribute name="SELF-DEFINED" a:defaultValue="SELFUNKNOWN">
+                <choice>
+                    <value>SELFYES</value>
+                    <value>SELFNO</value>
+                    <value>SELFUNKNOWN</value>
+                </choice>
+            </attribute>
+        </optional>
+    </define>
+
+    <define name="currentAlternativeTerm-attribute">
+        <optional>
+            <attribute name="CURRENTALTERNATIVETERM"/>
+        </optional>
+    </define>
+
+</grammar>

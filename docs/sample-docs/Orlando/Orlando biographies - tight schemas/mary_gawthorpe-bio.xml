@@ -1,0 +1,2281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="css/bio_style.css"?>
+<?xml-model href="schemas/biography-test_10-07-16-CAPS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+
+<BIOGRAPHY SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER>
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>Mary Gawthorpe: Biography</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Orlando Project</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Based on original research by members of the Orlando Project </SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>28 June 1996</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;incomplete&quot;</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>26 August 1996</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;complete&quot;</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>27 July 1997</DATE>
+                <ITEM>Automatically generated to load Workflow Management System.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PDC" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>6 October 1998</DATE>
+                <ITEM>Updated for Sept 1998 Audit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SRF" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>29 January 1999</DATE>
+                <ITEM>fixed dateRanges</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="GCG" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>12 May 1999</DATE>
+                <ITEM>gcg: added missing titletype attribute</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 December 1999</DATE>
+                <ITEM>BATCH CHANGE: primarily orgName and bibCit cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="DRG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>1 February 2001</DATE>
+                <ITEM>converted textual apostrophes and quotation marks to entity references</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>4 February 2002</DATE>
+                <ITEM>fixed standard name</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>17 October 2002</DATE>
+                <ITEM>fixed name(s)</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>14 April 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily PLACE cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>16 June 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily TGENRENAME cleanup, BIBCIT following P moved before P,
+                    BIBCITS TAG added</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KLH" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>31 July 2003</DATE>
+                <ITEM>added researchnote re dora marsden</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>22 March 2004</DATE>
+                <ITEM>changed position to birth position</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>08 April 2005</DATE>
+                <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name
+                    changes</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>7 March 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>9 March 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>15 March 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="P">
+                <DATE>21 March 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="P">
+                <DATE>6 May 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="P">
+                <DATE>3 June 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>5 June 2008</DATE>
+                <ITEM>rwt c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="EAQ" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>12 June 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="EAQ" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>16 June 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>25 July 2008</DATE>
+                <ITEM>Up Hill to Holloway checked so book can be returned to ILL</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>6 August 2008</DATE>
+                <ITEM>Holton, Suffrage Days, checked and returned to library</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>2 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>3 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>5 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>5 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>9 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>10 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="P">
+                <DATE>12 September 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ACF" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>14 October 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>14 October 2008</DATE>
+                <ITEM>rbv c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>29 October 2008</DATE>
+                <ITEM>cft c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 November 2008</DATE>
+                <ITEM>tag cleanup complete</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>21 November 2008</DATE>
+                <ITEM>cfb complete</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="PUB" WORKVALUE="I">
+                <DATE>28 November 2008</DATE>
+                <ITEM>pub i</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>1 December 2008</DATE>
+                <ITEM>researchnotes addressed</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY WORKSTATUS="PUB" RESP="SLB" WORKVALUE="C">
+                <DATE>22 December 2008</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+        <HEADING>Biography</HEADING>
+        <STANDARD>Gawthorpe, Mary</STANDARD>
+        <DIV1>
+            <PERSONNAME>
+                <DIV2>
+                    <DATASTRUCT>
+                        <DATAITEM>
+                            <BIRTHNAME WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"
+                                REG="Gawthorpe, Mary">
+                                <GIVEN>Mary</GIVEN>
+                                <GIVEN>Eleanor</GIVEN>
+                                <SURNAME>Gawthorpe</SURNAME>
+                            </BIRTHNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <NICKNAME NAMETYPE="FAMILIAR">Nellie</NICKNAME>
+                            <SCHOLARNOTE>
+                                <P>As a girl MG was called not by her first name but by a diminutive
+                                    of her second.</P>
+                            </SCHOLARNOTE>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <MARRIED>Sanders</MARRIED>
+                        </DATAITEM>
+                    </DATASTRUCT>
+                </DIV2>
+            </PERSONNAME>
+        </DIV1>
+        <DIV1>
+            <HEADING>Yorkshire Born, Yorkshire Bred</HEADING>
+            <BIRTH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                        <DATE VALUE="1881-01-12">12 January 1881</DATE>
+                        <CHRONPROSE>MG was born in <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE>, probably at <PLACE><ADDRESS>
+                                    <ADDRLINE>5 Melville Street</ADDRLINE>
+                                </ADDRESS> in the district of <SETTLEMENT REG="Leeds"
+                                    >Woodhouse</SETTLEMENT><REGION REG="Yorkshire"/><GEOG
+                                    REG="England"/></PLACE>. <QUOTE DIRECT="Y">Mother&apos;s
+                                home</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 17" DBREF="104304"
+                                    >17</BIBCIT>
+                            </BIBCITS> was the way she remembered this house.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                            <BIBCIT PLACEHOLDER="FamilySearch" DBREF="470"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>
+                            <BIRTHPOSITION>She was third in a family of five children, four girls
+                                (of whom, besides herself, only the eldest survived to adulthood)
+                                and one boy. <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Banks I:86" DBREF="109657">1: 86</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Uphill 7" DBREF="104304"
+                                        >7</BIBCIT>
+                                </BIBCITS></BIRTHPOSITION> She was born late in the day in <QUOTE
+                                DIRECT="Y">blizzardy</QUOTE> weather,<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 9" DBREF="104304">9</BIBCIT>
+                            </BIBCITS> and though her father recorded the precise time in the family
+                            Bible, he was not there to run for the doctor, so the baby was delivered
+                            by her maternal grandmother.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 7, 9" DBREF="104304">7,
+                                    9</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </BIRTH>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <RELIGION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>MG begins her autobiography with her local identity: <QUOTE
+                                    DIRECT="Y">I was Yorkshire born. My forebears, grandparents
+                                    maternal and paternal, were all born in
+                                                <GEOGHERITAGE><PLACE><REGION>Yorkshire</REGION>, in
+                                                <SETTLEMENT>Leeds</SETTLEMENT><GEOG REG="England"
+                                            /></PLACE></GEOGHERITAGE> so far as I know.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 7" DBREF="104304"
+                                        >7</BIBCIT>
+                                </BIBCITS> Born <NATIONALITY SELF-DEFINED="SELFYES" REG="English"
+                                    >English</NATIONALITY> therefore, she was baptised in the
+                                    <ORGNAME REG="Anglican Church" STANDARD="Anglican Church"
+                                        ><DENOMINATION SELF-DEFINED="SELFYES" REG="Anglican">Church
+                                        of England</DENOMINATION></ORGNAME>, when her <QUOTE
+                                    DIRECT="Y">godmother and godfather had promised quite a lot of
+                                    things for me of which I knew nothing until later years.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 13" DBREF="104304"
+                                        >13</BIBCIT>
+                                </BIBCITS> As a child she fully accepted this faith, though while
+                                she was at school it suddenly came to her that she was not sure that
+                                Jesus was God&apos;s son, and she also, thinking of her mother,
+                                mentally rejected the Catechism&apos;s assertion that she was born
+                                in sin. She signed the pledge of the <ORGNAME>Band of
+                                Hope</ORGNAME>, the <ORGNAME REG="Anglican Church"
+                                    STANDARD="Anglican Church">Anglican</ORGNAME> children&apos;s
+                                    <POLITICALAFFILIATION MEMBERSHIP="MEMBERSHIPYES"
+                                    >temperance</POLITICALAFFILIATION> society (or teetotal society,
+                                as they called it), and was moved by Sunday School and even by a
+                                Mission at about the same period&mdash;yet from another Mission a
+                                few years later she precipitately fled.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 49, 70-4, 78, 81, 86"
+                                        DBREF="104304">49, 70-4, 78, 81, 86</BIBCIT>
+                                </BIBCITS> She suggests implicitly in her memoirs that her Christian
+                                faith was shaken when she discovered in the course of local
+                                political work that pious people cared more about the forms of
+                                religion than whether poor children got enough to eat.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 184-5" DBREF="104304"
+                                        >184-5</BIBCIT>
+                                </BIBCITS> For a while she belonged to the <ORGNAME
+                                    STANDARD="Labour Church">Labour Church</ORGNAME>. She later took
+                                up more experimental belief-systems. Though she was never a <QUOTE
+                                    DIRECT="Y">formal member</QUOTE> of the <DENOMINATION
+                                    SELF-DEFINED="SELFNO" REG="Theosophist"><ORGNAME>Theosophical
+                                        Society</ORGNAME></DENOMINATION>,<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 193" DBREF="104304"
+                                        >193</BIBCIT>
+                                </BIBCITS> she was hugely impressed, and propelled into
+                                self-questioning that was new to her, by <NAME>Annie
+                                Besant</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC">Karma</TITLE>
+                                (1895), which she felt to be reading her rather than letting her
+                                read it. She liked particularly the declaration inside the cover:
+                                    <QUOTE DIRECT="Y">There is no religion higher than
+                                    truth.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 192" DBREF="104304"
+                                        QTDIN="QTDINYES">192</BIBCIT>
+                                </BIBCITS> She also took an interest in <ORGNAME
+                                    REG="Church of Christ Scientist" STANDARD="Christian Science"
+                                        ><DENOMINATION SELF-DEFINED="SELFYES"
+                                        REG="Christian Scientist">Christian
+                                    Science</DENOMINATION></ORGNAME>.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 184-5" DBREF="104304"
+                                        >184-5</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Holton 247" DBREF="182">247</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </RELIGION>
+                <CLASSISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Her poor, <CLASS SOCIALRANK="SKILLEDCRAFTPERSON-ARTISAN"
+                                    SELF-DEFINED="SELFYES">working-class</CLASS> family <QUOTE
+                                    DIRECT="Y">enjoyed a certain standing in the local
+                                    community</QUOTE> because of her parents&apos; <CLASS
+                                    SOCIALRANK="SKILLEDCRAFTPERSON-ARTISAN" SELF-DEFINED="SELFYES"
+                                    >energetic participation in various social groups</CLASS>, but
+                                it remained <QUOTE DIRECT="Y">vulnerable to the many hazards of
+                                        <CLASS SOCIALRANK="URBAN-INDUSTRIALUNSKILLED"
+                                        SELF-DEFINED="SELFYES">working-class</CLASS>
+                                        life.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Holton 115"
+                                        DBREF="182">115</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </CLASSISSUE>
+                <NATIONALITYISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>By the end of her life MG had lived longer in the USA than in
+                                    <NATIONALITY SELF-DEFINED="SELFYES" REG="British"
+                                    >Britain</NATIONALITY>. In the context of her <QUOTE DIRECT="Y"
+                                        ><NATIONALITY SELF-DEFINED="SELFYES" REG="American"
+                                        >American</NATIONALITY> incarnation</QUOTE>, she writes of
+                                the capacity to shift from one national viewpoint to another, to
+                                accept the existence of <QUOTE DIRECT="Y">more than one
+                                    patriotism,</QUOTE> as not known in the England or the Yorkshire
+                                of her growing up, and as dating from <QUOTE DIRECT="Y">the period
+                                    following the Great War.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 132" DBREF="104304"
+                                        >132</BIBCIT></BIBCITS> As a girl she left unread a school
+                                prize which might have prepared her for these ideas, <TITLE
+                                    TITLETYPE="MONOGRAPHIC">From the Tan Yard to the White
+                                    House</TITLE> by <NAME>Samuel Smiles</NAME>, in which two boys
+                                come to blows over whether <NAME>George Washington</NAME> was a
+                                patriot or a traitor.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 131-2" DBREF="104304"
+                                        >131-2</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </NATIONALITYISSUE>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>At ten months Mary Eleanor nearly died of measles, and was thought to
+                            have been saved by having brandy poured down her throat. She had scarlet
+                            fever at about eight and was sent to hospital with the dreaded typhoid
+                            fever not long afterwards.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 18, 24-6" DBREF="104304">18,
+                                    24-6</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She grew up at <PLACE><ADDRESS><ADDRLINE>5 Melville
+                                    Street</ADDRLINE></ADDRESS><SETTLEMENT REG="Leeds"/><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> among industrial
+                            working-class housing which was typical of the time but in later
+                            parlance a slum. Going to the toilet (except at night, for which a pot
+                            was kept under the bed) meant walking <QUOTE DIRECT="Y">up the street to
+                                those frightful closets emptied by the nightsoil men in the hours
+                                between midnight and dawn.</QUOTE> These were later replaced by
+                                <QUOTE DIRECT="Y">trough water-closets . . . two families to a
+                                closet,</QUOTE> where centrally-propelled water would surge randomly
+                            and messily through the troughs.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="FamilySearch" DBREF="470"/><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 17" DBREF="104304"
+                                >17</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>On bank holidays (poor people seldom had more than one day&apos;s holiday
+                            at a time) the family would often go by train to some nearby village to
+                            walk in the country, and hope that a farmhouse would provide
+                                    tea.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 57"
+                                    DBREF="104304">57</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>They moved during Mary Eleanor&apos;s childhood (soon after she was ill
+                            with typhoid) from <PLACE><ADDRESS><ADDRLINE>Melville
+                                    Street</ADDRLINE></ADDRESS><SETTLEMENT REG="Leeds"/><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> to
+                                        <PLACE><ADDRESS><ADDRLINE>Jubilee
+                                    Street</ADDRLINE></ADDRESS>, but without leaving the district of
+                                    <SETTLEMENT REG="Leeds">Woodhouse</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE>, let alone
+                                    Leeds.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 61"
+                                    DBREF="104304">61</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="MOTHER">
+                    <DIV2>
+                        <HEADING>Mother</HEADING>
+                        <SHORTPROSE>
+                            <P>MG&apos;s mother, <NAME STANDARD="Gawthorpe, Annie Eliza">Annie Eliza
+                                    (Mountain) Gawthorpe</NAME>, had <QUOTE DIRECT="Y">a little
+                                    schooling</QUOTE> before hard times came and children were
+                                forced to take jobs because fathers had lost theirs.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 8" DBREF="104304"
+                                    >8</BIBCIT></BIBCITS> She became a <JOB REG="factory worker"
+                                    >mill-worker</JOB>, then escaped <QUOTE DIRECT="Y">the
+                                    abominated mill</QUOTE> to work as a <JOB
+                                    FAMILYBUSINESS="FAMILYBUSINESSYES" REG="dressmaker"
+                                    >dressmaker</JOB> for her eldest sister, Emma, who had set up
+                                her own business.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 8"
+                                        DBREF="104304">8</BIBCIT></BIBCITS> Her work on the
+                                family&apos;s clothes was important to the family budget.</P>
+                            <P>After the deaths of two of her children, when Nellie (the later Mary)
+                                was about ten, Annie Eliza fell seriously ill with rheumatic fever
+                                which permanently weakened her, and she was a semi-invalid during
+                                her menopause. She did not approve when her husband became a
+                                Conservative political agent, both because payment depended on
+                                results and because of the high living and drinking which the work
+                                        involved.<BIBCITS><BIBCIT PLACEHOLDER="Holton 115, 116"
+                                        DBREF="182">115, 116</BIBCIT><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 24, 62" DBREF="104304">24,
+                                        62</BIBCIT><BIBCIT PLACEHOLDER="FC" DBREF="107913"
+                                    /></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="FATHER">
+                    <DIV2>
+                        <HEADING>Father</HEADING>
+                        <SHORTPROSE>
+                            <P>MG&apos;s father, <NAME STANDARD="Gawthorpe, John">John
+                                    Gawthorpe</NAME>, was a <JOB REG="worker in leather">leather
+                                    currier</JOB>, who <JOB REG="factory worker">worked at a
+                                    tannery</JOB> or leather factory. He was also a
+                                    <SIGNIFICANTACTIVITY>church choirmaster</SIGNIFICANTACTIVITY>,
+                                    <SIGNIFICANTACTIVITY
+                                    PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="teacher"
+                                    >Sunday-school superintendent</SIGNIFICANTACTIVITY>,
+                                    <SIGNIFICANTACTIVITY>cricket-team captain</SIGNIFICANTACTIVITY>
+                                and later an <SIGNIFICANTACTIVITY REG="political agent"
+                                    >agent</SIGNIFICANTACTIVITY> for the <ORGNAME>Conservative
+                                    Party</ORGNAME>, as well as a <JOB REG="newspaper dealer"
+                                    >peripatetic newsagent</JOB>, <JOB REG="bookseller">second-hand
+                                    book dealer</JOB>, and <JOB REG="journalist">sports
+                                    journalist</JOB>.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 28-38" DBREF="104304"
+                                        >28-38</BIBCIT><BIBCIT PLACEHOLDER="Holton 115-16"
+                                        DBREF="182">115-16</BIBCIT></BIBCITS> He was intolerant of
+                                anybody in authority, and Mary later wrote of him: <QUOTE DIRECT="Y"
+                                    >Enmeshed in the caste system of the England of the day, he was
+                                    an intellectual soul who would have done brilliantly in an
+                                    intellectual profession.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 35" DBREF="104304"
+                                        >35</BIBCIT></BIBCITS> As it was, before the youngest child
+                                was born his <QUOTE DIRECT="Y">glaring indiscretion</QUOTE> brought
+                                a dark cloud upon his family, making his wife unhappy and therefore
+                                his children too.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 21" DBREF="104304"
+                                        >21</BIBCIT></BIBCITS> Some years later Mary realised both
+                                that he had debts and that he was <QUOTE DIRECT="Y">not
+                                    teetotal</QUOTE>; she became conscious for the first time of
+                                taking her mother&apos;s side.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 26" DBREF="104304"
+                                        >26</BIBCIT></BIBCITS> Her father was not, she realised when
+                                she saw more of the world, a very heavy drinker. He got drunk only
+                                occasionally, but his spasmodic efforts to give it up never lasted
+                                for long, and the money he drank was sorely needed by his
+                                        family.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 120-1" DBREF="104304"
+                                        >120-1</BIBCIT></BIBCITS></P>
+                            <P>MG at nineteen knew nothing about sex, though she knew that when her
+                                father came in late that meant no sleep for her mother. When her
+                                remaining sister married, she invited her mother to move out of the
+                                marital bed into hers. Even when her father came one night to
+                                reclaim his wife, Mary did not understand.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 64-5" DBREF="104304"
+                                        >64-5</BIBCIT></BIBCITS> Once she was a self-supporting
+                                adult, she persuaded the rest of the family to move house without
+                                him and her parents unofficially separated.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Banks I: 86" DBREF="109657">1:
+                                        86</BIBCIT><BIBCIT PLACEHOLDER="Cowman 450" DBREF="50329"
+                                        >450</BIBCIT><BIBCIT PLACEHOLDER="Holton 118" DBREF="182"
+                                        >118</BIBCIT></BIBCITS></P>
+                            <P>MG had apparently her last sight of her father when she was marching
+                                in a parade in <PLACE><SETTLEMENT>Huddersfield</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE> to celebrate
+                                the release of herself and other Yorkshire suffragists from jail. He
+                                tipped his hat to her and bowed low, <QUOTE DIRECT="Y">eyes gleaming
+                                    a trifle sardonically for all the respect in the
+                                    gesture.</QUOTE> She <QUOTE DIRECT="Y">ignored him completely.
+                                    But [she] knew he was proud of his belligerent
+                                    offspring.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Holton 128"
+                                        DBREF="182" QTDIN="QTDINYES">128</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="GRANDMOTHER">
+                    <DIV2>
+                        <HEADING>Grandparents</HEADING>
+                        <SHORTPROSE>
+                            <P>MG&apos;s maternal grandmother, <NAME>Elizabeth Raney
+                                Mountain</NAME>, was believed to be of French descent. She and her
+                                husband were a devoted, long-married pair. Both began as <JOB
+                                    REG="factory worker">cloth-dressers</JOB>, though they worked at
+                                anything going, as their children had to in their turn from their
+                                youth up. In old age this grandmother was almost blind, and she
+                                outlived her husband by only a month.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 7, 9" DBREF="104304">7,
+                                        9</BIBCIT></BIBCITS></P>
+                            <P>Mary&apos;s other grandmother spoke Yorkshire dialect like her
+                                husband, and was conservative in dress (wearing a lace net on her
+                                hair), but eclectic in religion, attending <ORGNAME
+                                    REG="Anglican Church" STANDARD="Anglican Church"
+                                    >church</ORGNAME> and <ORGNAME REG="Dissenters"
+                                    STANDARD="Dissenters">chapel</ORGNAME>
+                                        alternately.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 11-12" DBREF="104304"
+                                        >11-12</BIBCIT></BIBCITS> It was from this side that MG
+                                thought the family got its <QUOTE DIRECT="Y">ginger and
+                                    ferment.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 11" DBREF="104304"
+                                        >11</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="SISTER">
+                    <DIV2>
+                        <HEADING>Siblings</HEADING>
+                        <SHORTPROSE>
+                            <P>When Mary was seven her baby sister, aged ten months, died of
+                                convulsions, and two and a half years later her next-elder sister
+                                died of inflammation of the bowels at not quite
+                                        eleven.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 22-3" DBREF="104304"
+                                        >22-3</BIBCIT></BIBCITS></P>
+                            <P>Her surviving and eldest sister, Annie, was optimistic and energetic:
+                                when she married, in <DATE VALUE="1900-09-">September 1900</DATE>,
+                                it was into an institution in countless small ways reformed and
+                                modernised. She and her husband were the first in the family to
+                                emigrate to America, as MG, her mother, and her brother all did
+                                        later.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 108-15" DBREF="104304"
+                                        >108-15</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="IMG">
+                            <DATE VALUE="1905-08-">August 1905</DATE>
+                            <CHRONPROSE>MG&apos;s sister Annie emigrated to the
+                                        <PLACE><GEOG>USA</GEOG></PLACE>, setting sail with her
+                                three-year-old son to join her carpenter husband, who had gone on
+                                ahead.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 188" DBREF="104304"
+                                    >188</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="BROTHER">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>MG&apos;s brother and youngest surviving sibling, Jim, like her
+                                emigrated to the United States. He died there just before she
+                                published her memoirs.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gawthorpe, Up Hill 122" DBREF="104304"
+                                        >122</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Education</HEADING>
+            <EDUCATION MODE="DOMESTIC">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Like all her siblings but one, MG had been taught to <SUBJECT
+                                REG="reading">read</SUBJECT> before she went to the local <ORGNAME
+                                REG="Anglican Church" STANDARD="Anglican Church">Church of
+                                England</ORGNAME>
+                            <SCHOOL INSTITUTION="DAYSCHOOL" STUDENTBODY="CO-ED"
+                                RELIGIOUS="RELIGIOUSYES" INSTITUTIONLEVEL="PRIMARY">infants&apos;
+                                school</SCHOOL>, St Michael&apos;s, at the age of five.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 19" DBREF="104304"
+                                    >19</BIBCIT>
+                            </BIBCITS> The whole family had <QUOTE DIRECT="Y">the reading
+                                habit</QUOTE>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 129" DBREF="104304"
+                                    >129</BIBCIT>
+                            </BIBCITS> Apart from the popular press (including society papers and
+                            funny papers), the key was always in the lock of the glass-fronted,
+                                <QUOTE DIRECT="Y">well filled bookcase</QUOTE>,<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 129" DBREF="104304"
+                                    >129</BIBCIT>
+                            </BIBCITS> looking like an invitation. Their collection contained books
+                            awarded as prizes to each of their parents, plentiful religious books,
+                            the <TEXT>poetry of <NAME>Christina Rossetti</NAME></TEXT>, and
+                                    <TEXT><NAME>George Eliot</NAME>&apos;s <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Romola</TITLE></TEXT> (a gift to the
+                            mother from the father, who made baffling reference to the author&apos;s
+                                <QUOTE DIRECT="Y">irregular behaviour</QUOTE>).<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 129" DBREF="104304"
+                                    >129</BIBCIT>
+                            </BIBCITS> Among Mary&apos;s own favourites were <TEXT><TITLE
+                                    TITLETYPE="MONOGRAPHIC">Self and Self-Sacrifice; or,
+                                    Nelly&apos;s Story</TITLE> by <NAME>Anna Lisle</NAME></TEXT> and
+                                    <TEXT><TITLE TITLETYPE="MONOGRAPHIC">The First Violin</TITLE> by
+                                    <NAME>Jessie Fothergill</NAME></TEXT>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 130" DBREF="104304"
+                                    >130</BIBCIT>
+                            </BIBCITS> When her father became a dealer in books their sources of
+                            supply increased.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 123-43" DBREF="104304"
+                                    >123-43</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+            <EDUCATION MODE="INSTITUTIONAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>At the school Mary Eleanor attended the sexes were separated at the age
+                            of seven, and she went up into the Girls&apos; department of
+                                    <ORGNAME><SCHOOL INSTITUTION="DAYSCHOOL" STUDENTBODY="SINGLESEX"
+                                    RELIGIOUS="RELIGIOUSYES" INSTITUTIONLEVEL="PRIMARY"
+                                    REG="St Michael&apos;s National School,, Leeds">St
+                                    Michael&apos;s National School</SCHOOL></ORGNAME>. This school
+                            prided itself on the fact that National Schools (including church
+                            schools) belonged to a system dating back to the parliamentary grant
+                            made by the Education Act of 1833, while Board Schools dated from the
+                            much later though better-known Education Act of 1870.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 20, 41" DBREF="104304">20,
+                                    41</BIBCIT></BIBCITS></P>
+                        <P>MG later remembered several of her teachers: <INSTRUCTOR><NAME>Miss
+                                    Gargrave</NAME></INSTRUCTOR> the headmistress, <INSTRUCTOR>Miss
+                                    <NAME>Clara Locke</NAME></INSTRUCTOR>, and <INSTRUCTOR>Miss
+                                    <NAME>Florence Wood</NAME></INSTRUCTOR>. <CONTESTEDBEHAVIOUR>She
+                                remembered the last-named for punishing her for talking, with a
+                                stroke on the hand. She was guiltless of this offence, and caused a
+                                furore by steadily refusing to hold out her hand. She gave in at
+                                last rather than be late for her newspaper round with her father,
+                                but she later remembered this as her lesson that injustice is
+                                possible in the world.</CONTESTEDBEHAVIOUR> She learned less
+                            problematic lessons too: <SUBJECT>reading</SUBJECT>,
+                                <SUBJECT>spelling</SUBJECT> (which all her family were good at),
+                                <SUBJECT>dictation</SUBJECT>, <SUBJECT>writing</SUBJECT>, <SUBJECT
+                                REG="maths">arithmetic</SUBJECT>, <SUBJECT>sewing</SUBJECT>,
+                                <SUBJECT>knitting</SUBJECT> (which she preferred to sewing),
+                                <SUBJECT>singing</SUBJECT>, <SUBJECT>history</SUBJECT>,
+                                <SUBJECT>geography</SUBJECT>, and <SUBJECT REG="religious studies"
+                                >scripture</SUBJECT>. When Mary Eleanor was in the third standard
+                            Miss Gargrave was displaced by a male head and the boys&apos; and
+                            girls&apos; departments were amalgamated to the extent of sitting each
+                            on a different side of the same classroom. Male teachers were a novelty,
+                            but Mary&apos;s father supported the ousted headmistress. In standard
+                            six she was for the first time asked to write in her own words. Her
+                            learning was not entirely confined to school: she once attended a
+                            temperance class taught by <INSTRUCTOR><NAME>Frances
+                                Willard</NAME></INSTRUCTOR>, who was visiting from the
+                                    <PLACE><GEOG>USA</GEOG></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 41-3, 45-6, 49, 78"
+                                    DBREF="104304">41-3, 45-6, 49, 78</BIBCIT></BIBCITS> Her closest
+                            school friend, Elsie, later married a cousin of her own
+                                    fianc&eacute;.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 158" DBREF="104304"
+                                >158</BIBCIT></BIBCITS></P>
+                        <P>One of the poems MG had to learn for <SUBJECT>recitation</SUBJECT> was
+                                    <TEXT><TITLE TITLETYPE="ANALYTIC">Meddlesome Matty</TITLE> by
+                                    <NAME STANDARD="Gilbert, Ann Taylor">Ann Taylor (later
+                                    Gilbert)</NAME></TEXT>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 47" DBREF="104304"
+                                >47</BIBCIT></BIBCITS> (MG thought it was by the other sister, and
+                            later regretted that she <QUOTE DIRECT="Y">never did have it out with
+                                        <TEXT><NAME>Jane Taylor</NAME></TEXT>, drat the
+                                woman</QUOTE> for this, <TEXT><TITLE TITLETYPE="ANALYTIC">The
+                                    Violet</TITLE></TEXT>, and <QUOTE DIRECT="Y">that egregiously
+                                silly <TEXT><TITLE TITLETYPE="ANALYTIC">Little
+                                Fish</TITLE></TEXT>,</QUOTE> all of them inculcating modesty and
+                                    obedience.)<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 68"
+                                    DBREF="104304">68</BIBCIT></BIBCITS> She loved, however, most of
+                            the <TEXT>hymns</TEXT> which she regularly sang, as well as, when she
+                            met them through <INSTRUCTOR>Miss Lees</INSTRUCTOR> (the most learned of
+                            her Sunday-school teachers), <TEXT><NAME>Victor Hugo</NAME></TEXT> and
+                                    <TEXT><NAME STANDARD="Scott, Sir Walter">Walter
+                                Scott</NAME></TEXT>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 71, 82" DBREF="104304">71,
+                                    82</BIBCIT></BIBCITS></P>
+                        <P><AWARD AWARDTYPE="SCHOLARSHIP">From St Michael&apos;s MG, aged thirteen,
+                                won a scholarship to a local high school,</AWARD> but it was awarded
+                            without maintenance. (The dictation in the scholarship exam had been
+                            about the migration of terns, a seabird unknown to a city child. She
+                            felt sure the word <SOCALLED>turn</SOCALLED> must be wrong, and in fact
+                            in spelling the word phonetically spelled it correctly, but at the cost
+                            of near-terror.) Her family could not afford her being taught without
+                            maintenance, so she became a pupil-teacher at St Michael&apos;s instead.
+                            She continued to study in the evenings and on Sundays, and made the
+                            vicar gasp when she told him she wanted one day to take a
+                                    degree.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 49-50, 80, 86" DBREF="104304"
+                                    >49-50, 80, 86</BIBCIT></BIBCITS> Only her maternal grandfather
+                            applied to her studies an antifeminist proverb: <QUOTE DIRECT="Y">A
+                                whistling woman and a crowing hen</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 86" DBREF="104304"
+                                >86</BIBCIT></BIBCITS> (used by another Yorkshirewoman, <NAME>A. S.
+                                Byatt</NAME>, in <DATE VALUE="2002-09-12">2002</DATE> to title a
+                            novel).</P>
+                        <P>Apprenticeship included some part-time attendance at the <ORGNAME
+                                REG="Leeds Pupil-Teacher Centre"
+                                STANDARD="Leeds Pupil-Teacher Centre">Pupil-Teacher Centre</ORGNAME>
+                            in the <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>
+                            <ORGNAME REG="Leeds School Board" STANDARD="Leeds School Board">School
+                                Board</ORGNAME> offices. There MG continued with largely the same
+                            subjects as at school, with the addition of <SUBJECT>French</SUBJECT>,
+                                <SUBJECT REG="education">educational theory</SUBJECT>,
+                                <SUBJECT>psychology</SUBJECT>, and at the last moment, with college
+                            entrance in mind, <SUBJECT>Latin</SUBJECT> as well. The various books
+                            which came to her as prizes included a volume of <TEXT><NAME>Sir Walter
+                                    Scott</NAME>&apos;s poems</TEXT>, three volumes of <TEXT>works
+                                by <NAME STANDARD="Bront&euml;, Anne">the</NAME>
+                                <NAME STANDARD="Bront&euml;, Charlotte">Bront&euml;</NAME>
+                                <NAME STANDARD="Bront&euml;, Emily">sisters</NAME></TEXT>,
+                                    <TEXT><TITLE TITLETYPE="MONOGRAPHIC">Aylwin</TITLE> by
+                                    <NAME>Theodore Watts-Dunton</NAME></TEXT>, and, later, a
+                                <TEXT>biography of <NAME STANDARD="Milton, John"
+                                >Milton</NAME></TEXT> and <TEXT><TITLE TITLETYPE="MONOGRAPHIC">Our
+                                    Hundred Days in Europe</TITLE> by <NAME>Oliver Wendell
+                                    Holmes</NAME></TEXT>. Exams were held each year and after
+                            passing with a second class for two years MG reached first-class level
+                            in her third and fourth years. One of her pupil-teacher friends was
+                                    <COMPANION><NAME STANDARD="Snowden, Ethel">Ethel
+                                Annakin</NAME></COMPANION>, who later as Ethel Snowden became a
+                            fellow suffragist and feminist, a viscountess (when her husband&apos;s
+                            political services were honoured), and the first woman governor of the
+                                <ORGNAME>BBC</ORGNAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 96-101, 102-3, 140"
+                                    DBREF="104304">96-101, 102-3, 140</BIBCIT></BIBCITS></P>
+                        <P>Going to college would have been the natural sequel to doing well as a
+                            pupil-teacher. Several people tried to make it possible for MG to follow
+                            this route, and when she wrote her memoirs sixty years later she still
+                            felt defensive about turning them down. Both her current principal and
+                            her Aunt Eliza offered to finance her further study, and she herself sat
+                            the entrance exam for <ORGNAME REG="University of Manchester"
+                                STANDARD="University of Manchester">Victoria University</ORGNAME>
+                            (now the University of Manchester) and was <AWARD
+                                AWARDTYPE="SCHOLARSHIP">awarded a Queen&apos;s Scholarship, First
+                                Class</AWARD>. (She felt she ought to have come higher up the graded
+                            list of results.) When her beautifully-written letter of application to
+                            enter in 1900 was returned with a request for one in her own
+                            handwriting, she wrote to assure the authorities, with another sample,
+                            that the writing was <QUOTE DIRECT="Y">really and truly</QUOTE> her own.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 102" DBREF="104304"
+                                    >102</BIBCIT>
+                            </BIBCITS> Yet she still felt that her mother needed her to be earning,
+                            which she could do if she continued to study part-time only, but not if
+                            she went to college. She felt that this was her immediate duty. <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 101-5" DBREF="104304"
+                                    >101-5</BIBCIT>
+                            </BIBCITS> Continuing her studies in her next job, as an Assistant
+                            Teacher, she passed her first and second-year <DEGREE
+                                REG="Teaching Certificate,, First Class">Certificate</DEGREE> exams
+                            with first-class results in each part: <QUOTE DIRECT="Y">what was called
+                                a double-first.</QUOTE> The actual certificate, the government
+                            parchment, would not be issued till after another eighteen months&apos;
+                            probationary teaching, when she was nearly twenty-one.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 148" DBREF="104304"
+                                    >148</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE VALUE="1904-02-">February 1904</DATE>
+                        <CHRONPROSE>MG received her government parchment marking her <DEGREE
+                                REG="Teaching Certificate, First Class">Teaching
+                                Certificate</DEGREE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 170" DBREF="104304">170</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She had recently been taking classes in <SUBJECT>singing</SUBJECT> at
+                                <ORGNAME STANDARD="Leeds College of Music"><SCHOOL
+                                    STUDENTBODY="CO-ED" INSTITUTIONLEVEL="POST-SECONDARY"
+                                    REG="Leeds College of Music">Leeds College of
+                                Music</SCHOOL></ORGNAME> (another subject in which she was awarded a
+                            scholarship). A course in <SUBJECT>elocution</SUBJECT> at the same
+                            institution proved useful later on, in the suffrage campaign. The summer
+                            after receiving her Certificate she began studying by distance learning
+                            towards an L. L. A in <SUBJECT>Moral Philosophy</SUBJECT> and
+                                <SUBJECT>Physiology</SUBJECT>. She sat by post the examination for
+                            her <DEGREE REG="L.L.A. (Lady Literate in the Arts)">L. L. A. (Lady
+                                Literate in the Arts) degree</DEGREE> from <ORGNAME
+                                REG="University of St Andrews" STANDARD="University of St Andrews"
+                                >St Andrews University</ORGNAME>, which had instituted this
+                            qualification for women before they were allowed to be regular members
+                            of any Scottish university.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 163-5, 170-1" DBREF="104304"
+                                    >163-5, 170-1</BIBCIT></BIBCITS></P>
+                        <P>MG&apos;s later educational endeavours continued through 1904-5, running
+                            concurrently with teaching (as the family breadwinner) and increasing
+                            political activity. She felt as if this was a private obsession, which
+                            would be incomprehensible to anyone in the world except perhaps another
+                            autodidact, <TEXT><NAME>H. G. Wells</NAME>, whose <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Experiment in
+                                Autobiography</TITLE></TEXT> had a profound influence on her. For
+                            various courses she was awarded a first in <SUBJECT>hygiene</SUBJECT>
+                            and a second in <SUBJECT>education</SUBJECT>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 141, 186-7" DBREF="104304"
+                                    >141, 186-7</BIBCIT>
+                            </BIBCITS>
+                            <QUOTE DIRECT="Y">All this work undertaken very much on the run was not
+                                compulsory. There were no personal gains . . . . No one, literally,
+                                cared whether I or anyone else continued A.C.P. into L.C.P. into
+                                    F.C.P.,<RESEARCHNOTE>img: not tagging these degrees since dont
+                                    know either what they are or whether she got
+                                    them.</RESEARCHNOTE> as did Wells, or battled <DEGREE
+                                    REG="L.L.A. (Lady Literate in the Arts)">L. L. A.</DEGREE> to
+                                its ultimate certificate. The mad, sad fact was that I liked
+                                studying for its own sake and examinations were the approved mode of
+                                testing what had been learned.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 187" DBREF="104304"
+                                        >187</BIBCIT>
+                                </BIBCITS></QUOTE> In <DATE VALUE="1915--">1915</DATE> she took a
+                                <SUBJECT REG="shorthand-typing">secretarial</SUBJECT> course at
+                                <SCHOOL INSTITUTION="PRIVATE" INSTITUTIONLEVEL="POST-SECONDARY"
+                                REG="Kensington College"><ORGNAME STANDARD="Kensington College"
+                                    >Kensington College</ORGNAME></SCHOOL>.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Early Work</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG&apos;s first work experience was helping her
+                                <EMPLOYER>father</EMPLOYER>
+                            <JOB FAMILYBUSINESS="FAMILYBUSINESSYES" REG="newspaper deliverer"
+                                >deliver newspapers and magazines</JOB>, then <JOB
+                                FAMILYBUSINESS="FAMILYBUSINESSYES" REG="messenger girl">running his
+                                journalistic copy from sports fields to the newspaper office</JOB>:
+                            both jobs requiring self-reliance. Then, from the age of thirteen, she
+                            spent four years as <JOB REG="teacher">pupil-teacher</JOB> of
+                            primary-age children at <EMPLOYER><ORGNAME>St Michael&apos;s National
+                                    School</ORGNAME></EMPLOYER>. She learned there that she liked
+                            teaching and was good at it (she soon gave up using the
+                                    cane).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 28-9, 38, 88, 93" DBREF="104304"
+                                    >28-9, 38, 88, 93</BIBCIT></BIBCITS> Her testimonial from the
+                            headmaster when she completed her apprenticeship <QUOTE DIRECT="Y"
+                                >seemed to me an almost unbelievable instrument of
+                                    praise.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 88" DBREF="104304"
+                                >88</BIBCIT></BIBCITS></P>
+                        <P>After her momentous decision, at the age of nineteen, that she must
+                            support her mother instead of going on to university, MG decided to
+                            leave St Michael&apos;s <REMUNERATION>(though they offered to raise her
+                                salary to &pound;45 a year). She became an <JOB REG="teacher"
+                                    >assistant teacher</JOB> at <EMPLOYER><ORGNAME>St Luke&apos;s
+                                        Boys School</ORGNAME></EMPLOYER> (much further from home and
+                                entailing long street-car rides), at &pound;50 a
+                                year.</REMUNERATION> She taught there for five years, taking classes
+                            at every level. She was ready to try anything, and even taught a class
+                            of boys to knit.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 105-6, 145, 148" DBREF="104304"
+                                    >105-6, 145, 148</BIBCIT></BIBCITS> She remained a teacher in
+                            and around <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE> until spring or early summer
+                            1905, though a year before this she moved to the then countrified
+                                    <PLACE><SETTLEMENT>Bramley</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE> school (where she observed when
+                            her class was entered for a singing contest, that she was supposed to
+                            remain impassive whether they won or lost). From this post she resigned
+                            after a year, with no prospects in sight but with her career as a
+                                <SIGNIFICANTACTIVITY REG="political activist">political
+                                activist</SIGNIFICANTACTIVITY>, <JOB>writer</JOB>, and <JOB
+                                REG="journalist">journalist</JOB> barely visible on the horizon.
+                                <REMUNERATION>She was soon receiving some remuneration as <JOB
+                                    REG="secretary">secretary</JOB> of the local <EMPLOYER><ORGNAME
+                                        STANDARD="Women&apos;s Labour League">Women&apos;s Labour
+                                        League</ORGNAME></EMPLOYER>.</REMUNERATION> While working
+                            for them she resisted persuasion to join the <ORGNAME REG="WSPU"
+                                STANDARD="Women&apos;s Social and Political Union"
+                                    >WSPU</ORGNAME>.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 187-90, 218, 225" DBREF="104304"
+                                    >187-90, 218, 225</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Holton 118, 122-3" DBREF="182">118,
+                                122-3</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>As a pupil-teacher MG developed a <SOCALLED>crush</SOCALLED> (a word then
+                            unknown to her) on a girl named Margaret. She purloined a book as a gift
+                            for her, first copying on the flyleaf a poem on the name
+                                <SOCALLED>Margaret</SOCALLED>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 94" DBREF="104304"
+                                >94</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG&apos;s health was still not good. As a pupil-teacher, although she
+                            would make light of ailments (she told nobody when she fell and, as it
+                            turned out, broke her finger), she went down with pneumonia after she
+                            was confined to working in the cold cloakroom during a school bazaar
+                            because her home-made voile dress was disapproved of. Her eldest sister
+                            contrasted with her in physical strength and energy; the eldest, she
+                            wrote, is often far the healthiest in families pinched by
+                                    want.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 90-3, 108-9" DBREF="104304"
+                                    >90-3, 108-9</BIBCIT></BIBCITS></P>
+                        <P>In late summer 1902 a summer cold developed into something serious, and
+                            she was persuaded to undergo general anaesthesia in order to have a
+                            nasal block removed. Her response to the operation drew the comment
+                                <QUOTE DIRECT="Y">neurotic</QUOTE>,<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 171" DBREF="104304"
+                                >171</BIBCIT></BIBCITS> but recovery, first at
+                                    <PLACE><SETTLEMENT>Scarborough</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> and then in a
+                            convalescent home at <PLACE><SETTLEMENT>Ilkley</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE>, took
+                                    weeks.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 171-2"
+                                    DBREF="104304">171-2</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATESTRUCT CERTAINTY="C" VALUE="1902-06-">
+                            <SEASON>Early summer</SEASON>
+                            <YEAR>1902</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>A few months after turning twenty-one, MG took the initiative
+                            and moved her family (parents and brother) from
+                                        <PLACE><ADDRESS><ADDRLINE>Jubilee
+                                    Street</ADDRLINE></ADDRESS> in <SETTLEMENT REG="Leeds"
+                                    >Woodhouse</SETTLEMENT><REGION REG="Yorkshire"/><GEOG
+                                    REG="England"/></PLACE> to <PLACE><ADDRESS><ADDRLINE>Southmount
+                                        Terrace</ADDRLINE></ADDRESS>, <SETTLEMENT REG="Leeds"
+                                    >Beeston Hill</SETTLEMENT><REGION REG="Yorkshire"/><GEOG
+                                    REG="England"/></PLACE>, another district of Leeds.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 151" DBREF="104304">151</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The move cut down her travelling time to work. The house was not large,
+                            but it was not a back-to-back. It had its own facilities, <QUOTE
+                                DIRECT="Y">a little backyard and the tiniest suggestion of a [front]
+                                garden.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 151"
+                                    DBREF="104304">151</BIBCIT></BIBCITS> Her father, however, was
+                            unhappy about this move, which symbolised his loss of power in the
+                            family. Very soon he <QUOTE DIRECT="Y">announced . . . that as for him
+                                he was going back to Woodhouse. . . . With unbelievable speed the
+                                rest of Father&apos;s family acted.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 152" DBREF="104304"
+                                >152</BIBCIT></BIBCITS> Mary got part of her salary advanced: she
+                            and her mother and brother house-hunted in their new area, found
+                            something smaller and cheaper <QUOTE DIRECT="Y">at the junction of
+                                            <PLACE><ADDRESS><ADDRLINE>Fulham</ADDRLINE></ADDRESS><SETTLEMENT
+                                        REG="Leeds"/><REGION REG="Yorkshire"/><GEOG REG="England"
+                                    /></PLACE> and
+                                        <PLACE><ADDRESS><ADDRLINE>Greenmount</ADDRLINE></ADDRESS><SETTLEMENT
+                                        REG="Leeds"/><REGION REG="Yorkshire"/><GEOG REG="England"
+                                    /></PLACE>,</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 153" DBREF="104304"
+                                >153</BIBCIT></BIBCITS> and moved there with their personal
+                            belongings, leaving the furniture (except the piano, for which they took
+                            over paying the instalments). This was for Mary a major step into
+                            maturity and freedom.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 152-5" DBREF="104304"
+                                    >152-5</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Money was easier without her father as part of the family; they had the
+                            salaries of both Mary and her brother. Their mother seemed healthier,
+                            and rejuvenated.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 157"
+                                    DBREF="104304">157</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG, as a householder, found herself in possession of a <QUOTE DIRECT="Y"
+                                >municipal vote</QUOTE>, a <QUOTE DIRECT="Y">property
+                                    vote</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 157" DBREF="104304"
+                                >157</BIBCIT></BIBCITS> in local elections. The fact that this came
+                            without the right to a vote in parliamentary elections was a small push
+                            towards her later <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERYES" REG="suffragist"
+                                >suffragist</POLITICALAFFILIATION> politics. Soon after this came
+                            her discovery, through her fianc&eacute;, of <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES" REG="socialist"
+                                >socialism</POLITICALAFFILIATION> and the <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="labour activist">Labour
+                                    movement</POLITICALAFFILIATION>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 157, 173" DBREF="104304">157,
+                                    173</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICYES">
+                <DIV2>
+                    <HEADING>Engagement</HEADING>
+                    <SHORTPROSE>
+                        <P>Just before this family drama MG had acquired a boyfriend. He has been
+                            identified as <NAME STANDARD="Garrs, Tom">T. B. (Tom) Garrs</NAME>, a
+                            compositor on the <TITLE TITLETYPE="JOURNAL">Yorkshire Post</TITLE> and
+                            an enthusiast about music, whom she had met once years before. In her
+                            memoirs she calls him by the initials <SOCALLED>F. L.</SOCALLED>,
+                            apparently for <SOCALLED>First Love</SOCALLED>. Her mother liked him at
+                            once. Though Mary&apos;s home life had set her against marriage (she
+                            asked F. L. to stay away while she and her family made the break with
+                            her father), the pair soon formed the intention of marrying one day,
+                            after a long engagement. Garrs was already an active socialist, and with
+                            him Gawthorpe explored the worlds of politics and of the
+                                    arts.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 155-62"
+                                    DBREF="104304">155-62</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Holton 118-19" DBREF="182">118-19</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Spartacus, Mary Gawthorpe" DBREF="17355">under Mary
+                                    Gawthorpe</BIBCIT></BIBCITS> But this relationship had not
+                                <QUOTE DIRECT="Y">matured to the point of marriage</QUOTE> when MG
+                            began constantly travelling for the political work which absorbed her.
+                            Her fianc&eacute; was simultaneously <QUOTE DIRECT="Y">uneasy and
+                                approving</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 228-9" DBREF="104304"
+                                    >228-9</BIBCIT></BIBCITS> about this work, while Gawthorpe
+                            herself and her mother felt uneasy about the possibility of combining it
+                            with marriage and children, despite the shining and unrepentant example
+                            of <NAME>Emmeline Pankhurst</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 228-9" DBREF="104304"
+                                    >228-9</BIBCIT></BIBCITS> Garrs helped out when Gawthorpe was
+                            suffering the attentions of a fellow-activist and visited her when she
+                            was in prison for suffrage activities,<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 231" DBREF="104304"
+                                    >231</BIBCIT><BIBCIT PLACEHOLDER="Holton 128" DBREF="182"
+                                    >128</BIBCIT></BIBCITS> but the relationship eventually petered
+                            out.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Political Involvement, England</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><NAME>Tom Garrs</NAME> introduced MG to <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" REG="Socialist"
+                                >Socialist</POLITICALAFFILIATION> politics. This was a time, she
+                            wrote later, when in a place the size of Leeds the labour movement was
+                                <QUOTE DIRECT="Y">deeply aware but not yet moving, much less on the
+                                march.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 181"
+                                    DBREF="104304">181</BIBCIT></BIBCITS> She joined the <ORGNAME
+                                STANDARD="Independent Labour Party">Independent Labour
+                                Party</ORGNAME> (ILP), the <ORGNAME
+                                STANDARD="Women&apos;s Labour League">Women&apos;s Labour
+                                League</ORGNAME>, and the <ORGNAME
+                                STANDARD="National Union of Women&apos;s Suffrage Societies"
+                                >National Union of Women&apos;s Suffrage Societies</ORGNAME> (of
+                            which she helped to found the
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE> branch), and became active in a
+                            range of organizations at a local level: the <ORGNAME REG="NUT"
+                                STANDARD="National Union of Teachers">National Union of Teachers
+                                (NUT)</ORGNAME>, the <ORGNAME
+                                REG="Committee for the Feeding of School Children"
+                                STANDARD="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                >Committee for the Feeding of School Children</ORGNAME> or <ORGNAME
+                                REG="Children&apos;s Relief Committee"
+                                STANDARD="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                >Children&apos;s Relief Committee</ORGNAME> set up by the Lord Mayor
+                            of <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"/><GEOG
+                                    REG="England"/></PLACE>, and the <ORGNAME
+                                STANDARD="Leeds Art Club">Leeds Arts Club</ORGNAME>, which was run
+                            by the <ORGNAME REG="Fabian Society" STANDARD="Fabian Society"
+                                >Fabian</ORGNAME>
+                            <NAME STANDARD="Orage, Alfred Richard">A. R. Orage</NAME>. She was
+                            quickly invited onto the executive bodies of most of the institutions
+                            she joined.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"
+                                    /><BIBCIT PLACEHOLDER="Banks I:86" DBREF="109657">1:
+                                    86</BIBCIT><BIBCIT PLACEHOLDER="Holton 119, 122" DBREF="182"
+                                    >119, 122</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Spartacus, Mary Gawthorpe" DBREF="17355">under Mary
+                                    Gawthorpe</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATE>October 1904</DATE>
+                        <CHRONPROSE>MG attended the meeting which set up the <ORGNAME
+                                REG="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                STANDARD="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                >Lord Mayor&apos;s Children&apos;s Relief Committee</ORGNAME> in
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>, providing help for families
+                            which had difficulty feeding their children.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 181" DBREF="104304">181</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Holton 119" DBREF="182">119</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The meeting was called in view of <QUOTE DIRECT="Y">the temporary
+                                distress consequent upon depression in
+                                    trade.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 181" DBREF="104304"
+                                    QTDIN="QTDINYES">181</BIBCIT></BIBCITS> Gawthorpe and her
+                            associates thought this distress went beyond the temporary into
+                            deep-seated causes, as had been revealed by the physique of army
+                            recruits for the Boer War. The meeting, however, explicitly confined
+                            itself to the temporary. When discussion moved to the thriftlessness and
+                            intemperance of the poor, MG got to her feet with an impassioned speech
+                            based on her own experience. Nevertheless, when the committee was
+                            struck, she was at first the only labourite on it, the only person not a
+                            well-known, leading citizen. In five months 323,414 dinners were
+                            provided (only at recognised centres, so children who could not go to
+                            school because they had no boots got no dinner). The food was often a
+                            lentil roast, guaranteed not to cost more than about a halfpenny a
+                                    meal,<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 181-3"
+                                    DBREF="104304">181-3</BIBCIT></BIBCITS> and the recipe advised
+                                <QUOTE DIRECT="Y">can be fried in slices on the second
+                                    day.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 183" DBREF="104304"
+                                    QTDIN="QTDINYES">183</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="PERIOD" CHRONCOLUMN="SOCIALCLIMATE" RESP="IMG"
+                        CHRONCOLUMN1="BRITISHWOMENWRITERS1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>24 February 1905</DATE>
+                        <CHRONPROSE>The <ORGNAME
+                                REG="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                STANDARD="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                >Lord Mayor&apos;s Children&apos;s Relief Committee</ORGNAME> in
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE> stopped providing free food
+                            because they could not cover costs for the next week, although, as MG
+                            wrote, <QUOTE DIRECT="Y">there were still hungry and underfed
+                                children.</QUOTE></CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 183" DBREF="104304">183</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The committee was disbanded in October, handing the balance of their
+                            funds to some voluntary body yet to be formed, and leaving Gawthorpe
+                            feeling the gulf between middle-class do-gooders and the Labour
+                            movement, and the impossibility of changing social conditions without
+                            having the vote.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 186"
+                                    DBREF="104304">186</BIBCIT><BIBCIT PLACEHOLDER="Holton 119"
+                                    DBREF="182">119</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG&apos;s great ally on the <ORGNAME
+                                REG="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                STANDARD="Lord Mayor&apos;s Children&apos;s Relief Committee,, Leeds"
+                                >Lord Mayor&apos;s Children&apos;s Relief Committee</ORGNAME> was
+                                <NAME>Dr William Hall</NAME>. He too wanted continuing action
+                            against hunger, and he observed that Jewish children were better fed
+                            than Gentile children from the same slum areas, apparently because
+                            Jewish charities were readier to minister to the body instead of
+                            predominantly to the soul. He hinted to MG his impatience with the pious
+                            tone of the Lord Mayor and others on the committee.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 184-5" DBREF="104304"
+                                    >184-5</BIBCIT></BIBCITS></P>
+                        <P>MG equally admired <NAME STANDARD="Orage, Alfred Richard">A. R.
+                                Orage</NAME> and <NAME>Holbrook Jackson</NAME>, founders of the
+                                <ORGNAME STANDARD="Leeds Art Club">Leeds Arts Club</ORGNAME>. At the
+                            Club she also met <NAME>Edward Carpenter</NAME>, <NAME>W. B.
+                                Yeats</NAME>, <NAME>G. K. Chesterton</NAME>, <NAME>George Bernard
+                                Shaw</NAME>, and <NAME STANDARD="Farr, Florence">Florence Farr (whom
+                                she calls Beatrice)</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 191-2, 196-7" DBREF="104304"
+                                    >191-2, 196-7</BIBCIT></BIBCITS> Activists in the Labour
+                            movement and the suffrage movement constituted an <QUOTE DIRECT="Y"
+                                >adult family grouping.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 203" DBREF="104304"
+                                >203</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICPOSSIBLY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG records in detail a <QUOTE DIRECT="Y">drama in
+                                    miniature</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 198" DBREF="104304"
+                                >198</BIBCIT></BIBCITS> when she was visiting <NAME
+                                STANDARD="Orage, Alfred Richard">Orage</NAME> at his home, and he
+                            suddenly, without warning, pulled her close and said <QUOTE DIRECT="Y"
+                                >Kiss me</QUOTE>. She did so (responding instinctively), and found
+                            that his response was <QUOTE DIRECT="Y">a little laugh, an elated,
+                                triumphant laugh.</QUOTE> She told F. L. about this at once, and did
+                            not again step upstairs when visiting Orage.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 199" DBREF="104304"
+                                >199</BIBCIT></BIBCITS><RESEARCHNOTE>img: dont think violence wd be
+                                right for this.</RESEARCHNOTE> Later F. L. repelled by his mere
+                            presence the unwanted attentions of an eccentric socialist who seemed
+                            elderly to the young MG.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 231" DBREF="104304"
+                                >231</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE VALUE="1905-06-21" CERTAINTY="C">Midsummer 1905</DATE>
+                        <CHRONPROSE>For reasons undefined except a vague need for change, MG formed
+                            the desire to live in the country, and moved with her family from
+                                    <PLACE><SETTLEMENT REG="Leeds">Beeston Hill</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> to
+                                    <PLACE><SETTLEMENT>Bramley</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>, then an oasis of peace where
+                            their kitchen looked out on fields.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 187-9" DBREF="104304"
+                                >187-9</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This was just before her sister emigrated to America.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During this period, she wrote later from the USA, she was blown by two
+                            powerful and regular winds which seemed to keep changing direction,
+                            those of the <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERYES" REG="Socialist"
+                                >Labour</POLITICALAFFILIATION> movement and the
+                                <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERYES" REG="suffragist">Woman
+                                Suffrage</POLITICALAFFILIATION> movement.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 203" DBREF="104304"
+                                >203</BIBCIT></BIBCITS> The differences were just beginning to
+                            emerge between the <NAME STANDARD="Pankhurst, Emmeline">Pankhurst</NAME>
+                            wing of the suffrage movement, which advocated escalating violence, and
+                            the more moderate wing. The split did not become official until
+                                <DATERANGE CERTAINTY="C" FROM="1907-10-" TO="1907-11-" EXACT="BOTH"
+                                >October-November 1907</DATERANGE>. MG wrote: <QUOTE DIRECT="Y">I
+                                was virgin soil in the weighty matters of cliques and struggles for
+                                leadership.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 215" DBREF="104304"
+                                >215</BIBCIT></BIBCITS> Difficulties between the suffrage movement
+                            as a whole and the labour movement were also in the air.</P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SYS">
+                        <DATERANGE CERTAINTY="AFTER" FROM="1905-10-13" TO="1906--" EXACT="FROM">Late
+                            1905 to 1906</DATERANGE>
+                        <CHRONPROSE>MG (inspired by the notorious arrest of <NAME>Annie
+                                Kenney</NAME> and <NAME>Christabel Pankhurst</NAME> in
+                                    <PLACE><SETTLEMENT>Manchester</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE> on 13 October
+                            1905) worked with <NAME STANDARD="Ford, Isabella Ormston">Isabella
+                                Ford</NAME> to launch and run the
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>
+                            <ORGNAME STANDARD="Women&apos;s Suffrage Society">Women&apos;s Suffrage
+                                Society</ORGNAME>. <BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/><BIBCIT PLACEHOLDER="FC" DBREF="107913"
+                                /></BIBCITS></CHRONPROSE>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The <ORGNAME REG="WSPU"
+                                STANDARD="Women&apos;s Social and Political Union">Women&apos;s
+                                Social and Political Union</ORGNAME> was only just spreading from
+                                    <PLACE><SETTLEMENT>Manchester</SETTLEMENT>, its birthplace in
+                                    <REGION>Lancashire</REGION><GEOG REG="England"/></PLACE>, across
+                            the Pennines into <PLACE><REGION>Yorkshire</REGION><GEOG REG="England"
+                                /></PLACE>. MG worked with <NAME>Christabel Pankhurst</NAME> in
+                                    <PLACE><REGION>Glamorgan</REGION>, <GEOG>Wales</GEOG></PLACE>,
+                            to mobilize mining communities for Labour and against the local Liberal
+                            candidate, and by 1909 she was chief organizer for the original
+                            Lancashire branch.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SYS">
+                        <DATE VALUE="1906-08-" CERTAINTY="C">Late summer 1906</DATE>
+                        <CHRONPROSE>MG became a paid organizer for the national <EMPLOYER><ORGNAME
+                                    REG="WSPU" STANDARD="Women&apos;s Social and Political Union"
+                                    >Women&apos;s Social and Political Union</ORGNAME></EMPLOYER>.
+                            She worked for the WSPU until <DATESTRUCT CERTAINTY="C" VALUE="1911-10-"
+                                    ><SEASON>autumn</SEASON>
+                                <YEAR>1911</YEAR></DATESTRUCT> and became one of its leading <JOB
+                                REG="political organizer">organizers</JOB> and <JOB
+                                REG="political speaker">speakers</JOB>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Cowman 450" DBREF="50329">450</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                            <BIBCIT PLACEHOLDER="FC" DBREF="107913"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The WSPU had been founded on <DATE>10 March 1903</DATE>. MG always felt
+                            herself something of a late-comer. <REMUNERATION>In this job she was
+                                paid two pounds a week, distinctly more than she would have expected
+                                at this age as a school-teacher.</REMUNERATION><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 457" DBREF="50329">457</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Holton 125" DBREF="182">125</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She could not have afforded to work full-time for the WSPU without being
+                            paid. She supported her mother (who received half her wages every week)
+                            as well as herself.<BIBCITS><BIBCIT PLACEHOLDER="Cowman 450"
+                                    DBREF="50329">450</BIBCIT><BIBCIT PLACEHOLDER="Holton 123, 125"
+                                    DBREF="182">123, 125</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE>1 March 1906</DATE>
+                        <CHRONPROSE>MG left her teacher&apos;s pay-packet, a <QUOTE DIRECT="Y"
+                                >little envelope</QUOTE> containing her <QUOTE DIRECT="Y">entire
+                                month&apos;s salary,</QUOTE> in the pocket of her coat in
+                                    <PLACE><SETTLEMENT>Bramley</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE> school cloakroom, and it was
+                            stolen.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 210" DBREF="104304">210</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Up to then, she said, <QUOTE DIRECT="Y">perfect trust and safety in the
+                                school surroundings was normal.</QUOTE> She was badly shaken by this
+                            loss, which forced her to borrow from her boyfriend F. L. Much later she
+                            concluded that the thief might have been a political
+                                    enemy.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 210"
+                                    DBREF="104304">210</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <HEADING>Travelling</HEADING>
+                    <SHORTPROSE>
+                        <P>Before she became a paid employee of the WSPU, MG&apos;s furthest foray
+                            away from home was to <PLACE><SETTLEMENT>Edinburgh</SETTLEMENT><REGION
+                                    REG="Midlothian"/><GEOG REG="Scotland"/></PLACE> in August 1905.
+                            She followed this by travelling to the <PLACE><REGION>Lake
+                                    District</REGION><GEOG REG="England"/></PLACE> soon afterwards
+                            and <PLACE><SETTLEMENT>Oxford</SETTLEMENT><REGION REG="Oxfordshire"
+                                    /><GEOG REG="England"/></PLACE> (her first introduction to the
+                                <SOCALLED>Midlands</SOCALLED>) the next Whitsun. The first and last
+                            of these trips were made in connection with Labour activism. In the
+                            ancient seat of learning she spoke eloquently in favour of extending its
+                            privileges more widely.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 203-5, 211, 212" DBREF="104304"
+                                    >203-5, 211, 212</BIBCIT></BIBCITS></P>
+                        <P>For these four years she lived <QUOTE DIRECT="Y">a semi-itinerant
+                                life.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Cowman 458" DBREF="50329"
+                                    >458</BIBCIT></BIBCITS> Besides
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE> and
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE>, she campaigned for labour or
+                            suffrage or both in <PLACE><SETTLEMENT>Cockermouth</SETTLEMENT><REGION
+                                    REG="Cumberland"/><GEOG REG="England"/></PLACE> (where an
+                            election in 1906 was crucial),
+                                    <PLACE><SETTLEMENT>Teignmouth</SETTLEMENT><REGION REG="Devon"
+                                    /><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Oldham</SETTLEMENT><REGION REG="Lancashire"
+                                    /><GEOG REG="England"/></PLACE> (where she and <NAME>Jennie
+                                Baines</NAME> hid in the flies at the theatre to heckle a Liberal
+                            speaker on stage), <PLACE><SETTLEMENT>Jarrow</SETTLEMENT><REGION
+                                    REG="Durham"/><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Manchester</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Liverpool</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE> (where she met
+                            with <SOCALLED>girls</SOCALLED> from one factory after another),
+                                    <PLACE><SETTLEMENT>Huddersfield</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> (where the strong
+                            socialist women delighted her),
+                                    <PLACE><SETTLEMENT>Birmingham</SETTLEMENT><REGION
+                                    REG="Warwickshire"/><GEOG REG="England"/></PLACE> (a hard nut to
+                            crack because of its size),
+                                    <PLACE><SETTLEMENT>Rochdale</SETTLEMENT><REGION REG="Lancashire"
+                                    /><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Stockport</SETTLEMENT><REGION REG="Cheshire"
+                                    /><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Preston</SETTLEMENT><REGION REG="Lancashire"
+                                    /><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Morecambe</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Harrogate</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Belfast</SETTLEMENT><REGION/><GEOG
+                                    CURRENT="Northern Ireland" REG="Ireland"/></PLACE>, and the
+                            scarred and ravaged <PLACE><GEOG REG="Wales">Welsh</GEOG> mining
+                                villages whose names (from <SETTLEMENT>Maesteg</SETTLEMENT><REGION
+                                    REG="Glamorgan"/><GEOG REG="Wales"/></PLACE> to
+                                    <PLACE><SETTLEMENT>Pontycymer</SETTLEMENT><REGION
+                                    REG="Glamorgan"/><GEOG REG="Wales"/></PLACE>) she found exotic.
+                            Manchester became her base from the end of August 1908.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 458" DBREF="50329">458</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Holton  123, 129, 132, 133, 134-5, 150" DBREF="182"
+                                    >123, 129, 132, 133, 134-5, 150</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 225-7, 229, 232, 235"
+                                    DBREF="104304">225-7, 229, 232, 235</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <HEADING>London</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE>11 July 1906</DATE>
+                        <CHRONPROSE>MG arrived in <PLACE><SETTLEMENT>London</SETTLEMENT><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE> representing the
+                            Leeds <ORGNAME STANDARD="Women&apos;s Labour League">Women&apos;s Labour
+                                League</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 218-19" DBREF="104304"
+                                >218-19</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>On this occasion she returned to Leeds and resumed travelling and working
+                            for the cause, but it was not long before she moved to
+                                    London.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 219"
+                                    DBREF="104304">219</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Her immediate task was to attend a meeting about <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="poverty activist">providing food for destitute
+                                schoolchildren</POLITICALAFFILIATION>. She then made part of a
+                            parliamentary delegation on this topic, attended a <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="industrial reformer">meeting about the Sweated Industries
+                                Exhibition</POLITICALAFFILIATION>, and chaired a meeting about
+                            conditions for women working as assistants in the printing
+                                    trade<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 219-22"
+                                    DBREF="104304">219-22</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>23 October 1906</DATE>
+                        <CHRONPROSE>MG was arrested for the first time, for <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="suffragist">suffrage action</POLITICALAFFILIATION> in
+                            disrupting the opening of <ORGNAME>Parliament</ORGNAME> in
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE>; together with many suffrage
+                            leaders, she was sentenced to two months in <ORGNAME>Holloway
+                                Prison</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Holton 127" DBREF="182" QTDIN="QTDINYES"
+                                >127</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>It was apparently MG who began the action, when Prime Minister <NAME>Sir
+                                Henry Campbell-Bannerman</NAME> refused to meet the suffrage
+                            deputation and she <QUOTE DIRECT="Y">sprang on one of the sacred velvet
+                                chairs, and began to speak.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Holton 127" DBREF="182" QTDIN="QTDINYES"
+                                    >127</BIBCIT></BIBCITS> She found it, however, no easy matter to
+                            be arrested: she was not well enough known to be a prison target. Two
+                            huge policemen pulled her from the chair and ejected her despite the
+                            combined physical efforts of <NAME>Emmeline Pankhurst</NAME> and
+                                <NAME>Emmeline Pethick-Lawrence</NAME>, and she had thrice to climb
+                            the railings outside, beginning a speech three times over in three
+                            different places, to secure her arrest.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 239-40" DBREF="104304"
+                                    >239-40</BIBCIT></BIBCITS> This was her <QUOTE DIRECT="Y"
+                                >baptism of fire.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Holton 127"
+                                    DBREF="182" QTDIN="QTDINYES">127</BIBCIT></BIBCITS> The horrors
+                            of prison were only slightly mitigated by kind gifts of books from the
+                            outside. MG first read <NAME>Charlotte Perkins Gilman</NAME>&apos;s
+                                <TITLE TITLETYPE="MONOGRAPHIC"
+                                REG="Women and Economics: A Study of the Economic Relation Between Men and Women as a Factor in Social Evolution"
+                                >Women and Economics</TITLE> and <NAME>Mary
+                            Wollstonecraft</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC">A
+                                Vindication of the Rights of Woman</TITLE> (as well as
+                                <NAME>Plato</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC"
+                                >Republic</TITLE>) in <ORGNAME REG="Holloway Prison"
+                                STANDARD="Holloway Prison">Holloway</ORGNAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 247" DBREF="104304"
+                                >247</BIBCIT></BIBCITS> This was the first of several imprisonments
+                            for her; it ended when quite without warning she and her companions were
+                            released half-way through their sentence. Even when taken ill, in 1910,
+                            she continued to campaign from her bedside.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Banks I:86-7" DBREF="109657">1:
+                                    86-7</BIBCIT><BIBCIT PLACEHOLDER="Holton 128" DBREF="182"
+                                    >128</BIBCIT><BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"
+                                /></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She and <NAME>Annie Kenney</NAME> left prison with about thirteen
+                            shillings each as payment for their compulsory knitting of prison
+                                    stockings.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 247-8" DBREF="104304"
+                                    >247-8</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She went on hunger strike in prison and suffered force feeding on several
+                            occasions, which was hard on her somewhat fragile
+                                    health.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="FEMALEBODY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In a passage on prison conditions which she did not include in her
+                            published memoir, MG recalled her distaste for prison garb, especially
+                            the <QUOTE DIRECT="Y">nauseating undergarment . . . stained as it was in
+                                a revolting and suggestive manner in spite of whatever sanitary
+                                precautions may or may not have been taken in those days.</QUOTE>
+                                (<NAME>Constance Lytton</NAME> had not yet undertaken her campaign
+                            for women prisoners to be issued with sanitary towels.)<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Holton 128" DBREF="182" QTDIN="QTDINYES"
+                                    >128</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During her time with the WSPU, MG worked with <NAME>Christabel
+                                Pankhurst</NAME> (who was twenty-four when Gawthorpe first met her,
+                            before she had yet met <NAME STANDARD="Ford, Isabella Ormston">Isabella
+                                Ford</NAME>), whom, like <NAME>Ethel Snowden</NAME>, she knew from
+                            her time in Leeds.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 180-1" DBREF="104304"
+                                    >180-1</BIBCIT></BIBCITS> She recorded her first meeting with
+                            Ford (a somewhat fraught occasion when Ford and the future Snowden
+                            apparently tried to discipline Gawthorpe for speaking on behalf of the
+                            movement without specific authorization) and her first sight of
+                                <NAME>Emmeline Pankhurst</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 214-16" DBREF="104304"
+                                    >214-16</BIBCIT></BIBCITS> Ford later became a close associate.
+                            Gawthorpe also worked to a lesser degree with <NAME>Sylvia
+                                Pankhurst</NAME>, and many others. <NAME
+                                STANDARD="Pethick-Lawrence, Emmeline">Emmeline
+                                Pethick-Lawrence</NAME> became a particularly warm friend because of
+                            a shared enthusiasm for <NAME>Cecil Sharp</NAME>
+                                    folksongs.<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 217"
+                                    DBREF="104304">217</BIBCIT></BIBCITS> At meetings organised by
+                            the Leeds ILP, MG met <NAME STANDARD="Billington Greig, Teresa">Teresa
+                                Billington</NAME> and <NAME
+                                STANDARD="Pethick-Lawrence, Frederick William">Frederick
+                                Pethick-Lawrence</NAME>. In London she met Socialist and feminist
+                            women like <NAME STANDARD="MacDonald, Margaret Ethel Gladstone">Margaret
+                                MacDonald</NAME> (wife of the future Prime Minister, who died
+                            tragically young in <DATE VALUE="1911-09-08">1911</DATE>), <NAME>Mary
+                                MacArthur</NAME>, <NAME>Gertrude Tuckwell</NAME>, <NAME>Annie
+                                Kenney</NAME>, and <NAME>Charlotte Despard</NAME>. She had warm
+                            relations also with <NAME>Rose Lamartine Yates</NAME>, <NAME>Henrietta
+                                Lowy</NAME>, and <NAME>Jennie Baines</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 180-1" DBREF="104304"
+                                    >180-1</BIBCIT><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/><BIBCIT PLACEHOLDER="Banks I:86" DBREF="109657"
+                                    >1: 86</BIBCIT><BIBCIT PLACEHOLDER="Cowman 452" DBREF="50329"
+                                    >452</BIBCIT><BIBCIT PLACEHOLDER="Holton 122, 125, 130"
+                                    DBREF="182">122, 125, 130</BIBCIT></BIBCITS> She held in
+                            affection and admiration such Labour stalwarts as <NAME>Keir
+                                Hardie</NAME> (who was one of the first to visit the suffragist
+                            prisoners in <ORGNAME REG="Holloway Prison" STANDARD="Holloway Prison"
+                                >Holloway</ORGNAME>) and <NAME>Robert
+                                    Smillie</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Gawthorpe, Up Hill 225, 245" DBREF="104304">225,
+                                    245</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG&apos;s rate of work was extraordinary. During the first six months of
+                            1907 she took part in seven election campaigns. It appears that her
+                            loyalty to the <ORGNAME REG="WSPU"
+                                STANDARD="Women&apos;s Social and Political Union">WSPU</ORGNAME>
+                            was unaffected by the shifts and splits within the <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="suffragist">suffrage movement</POLITICALAFFILIATION> towards
+                            the end of this year.<BIBCITS><BIBCIT PLACEHOLDER="Holton 130, 131-2"
+                                    DBREF="182">130, 131-2</BIBCIT></BIBCITS></P>
+                        <P>One of her many arrests (this one together with <NAME>Dora Marsden</NAME>
+                            and <NAME>Rona Robinson</NAME>) came at <ORGNAME
+                                REG="University of Manchester" STANDARD="University of Manchester"
+                                >Victoria University, Manchester</ORGNAME>, on <DATE>4 October
+                                1909</DATE>, when they faced the prospect of prison and
+                            force-feeding, though in the event this did not happen.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Holton 146-7" DBREF="182"
+                            >146-7</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <HEADING>Interrupted by Illness and Injury</HEADING>
+                    <SHORTPROSE>
+                        <P>In 1907 MG was ill with appendicitis and recuperated slowly; she herself
+                            felt that her health was permanently affected at this
+                                    time.<BIBCITS><BIBCIT PLACEHOLDER="Holton 131" DBREF="182"
+                                    >131</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="SYS">
+                        <DATE VALUE="1909-12-04" CERTAINTY="C">Early December 1909</DATE>
+                        <CHRONPROSE>MG, who was involved with <NAME>Dora Marsden</NAME> in impeding
+                                <NAME STANDARD="Churchill, Sir Winston Leonard Spencer">Winston
+                                Churchill</NAME>&apos;s election rallies in
+                                    <PLACE><SETTLEMENT>Southport</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE>, received <QUOTE
+                                DIRECT="Y">grave internal injuries</QUOTE> when she was struck by
+                            one of the stewards.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Holton 149" DBREF="182" QTDIN="QTDINYES"
+                                >149</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This description comes from <NAME STANDARD="West, Rebecca">Cicily
+                                Fairfield (the future Rebecca West)</NAME>, who was observing the
+                            election campaign. West also said that stewards commonly used <QUOTE
+                                DIRECT="Y">great physical violence,</QUOTE> and she attributed
+                            Gawthorpe&apos;s health breakdown directly to this blow. Gawthorpe and
+                            another woman who had also been injured brought a charge of assault, but
+                            their case was dismissed by a court.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Holton 149" DBREF="182" QTDIN="QTDINYES"
+                                    >149</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><NAME>Sylvia Pankhurst</NAME> later wrote that MG was <QUOTE DIRECT="Y"
+                                >totally incapacitated for several months and an invalid for several
+                                years.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Cowman 450"
+                                    DBREF="50329" QTDIN="QTDINYES">450</BIBCIT></BIBCITS> It is
+                            remarkable how many reference reports of her illness fail to mention its
+                            source in injury.<BIBCITS><BIBCIT PLACEHOLDER="Banks I:87"
+                                    DBREF="109657">1: 87</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Guide to Papers" DBREF="50231"/></BIBCITS> She went
+                            on driving herself hard even when she was ill, so it is difficult to
+                            tell just how much she was slowed down. She continued to feel guilty
+                            about not finishing the work she had undertaken.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 458" DBREF="50329"
+                            >458</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>During her illness, and as long as she remained in England, MG received
+                            financial help from suffragists who were more materially comfortable
+                            than she was.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <HEADING>
+                        <TITLE TITLETYPE="JOURNAL">The Freewoman</TITLE>
+                    </HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATESTRUCT CERTAINTY="C" VALUE="1911-10-">
+                            <SEASON>Autumn</SEASON>
+                            <YEAR>1911</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>MG resigned her <JOB REG="political organizer">position</JOB>
+                            with the <EMPLOYER><ORGNAME REG="WSPU"
+                                    STANDARD="Women&apos;s Social and Political Union">Women&apos;s
+                                    Social and Political Union</ORGNAME></EMPLOYER> (she had been
+                            trying to continue working while bedridden).</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Cowman 450" DBREF="50329">450</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She then accepted <EMPLOYER><NAME>Dora Marsden</NAME></EMPLOYER>&apos;s
+                            offer of a position as <JOB REG="editor">co-editor</JOB> on <TITLE
+                                TITLETYPE="JOURNAL">The Freewoman</TITLE>, although she had turned
+                            down Marsden&apos;s first suggestion on the grounds that she wanted to
+                                <QUOTE DIRECT="Y">finish [her] work in the WSPU
+                                    <EMPH>properly</EMPH>.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 451" DBREF="50329" QTDIN="QTDINYES"
+                                    >451</BIBCIT></BIBCITS> Marsden was pressing: she badly wanted
+                            Gawthorpe&apos;s established name to give her periodical a <QUOTE
+                                DIRECT="Y">kick-off</QUOTE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 455" DBREF="50329" QTDIN="QTDINYES"
+                                    >455</BIBCIT></BIBCITS> The first number of <TITLE
+                                TITLETYPE="JOURNAL">The Freewoman</TITLE> appeared on <DATE
+                                VALUE="1911-11-23">23 November</DATE>. Gawthorpe later wrote: <QUOTE
+                                DIRECT="Y">had I had the least inkling that Dora&apos;s first number
+                                was to be launched with an attack on the <ORGNAME REG="WSPU"
+                                    STANDARD="Women&apos;s Social and Political Union">Women&apos;s
+                                    Social and Political Union</ORGNAME> I should never have allowed
+                                myself to be named as joint editor.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 456" DBREF="50329" QTDIN="QTDINYES"
+                                    >456</BIBCIT></BIBCITS> She resigned in <DATE>March 1912</DATE>
+                            because Marsden&apos;s anti-WSPU line did not reflect her views, and was
+                            bringing a flood of complaints from her WSPU friends and contacts (to
+                            many of whom she had innocently recommended <TITLE TITLETYPE="JOURNAL"
+                                >The Freewoman</TITLE>).<BIBCITS><BIBCIT PLACEHOLDER="Cowman 451"
+                                    DBREF="50329">451</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE>February 1912</DATE>
+                        <CHRONPROSE>While still employed on <TITLE TITLETYPE="JOURNAL">The
+                                Freewoman</TITLE> though not by the increasingly militant <ORGNAME
+                                REG="WSPU" STANDARD="Women&apos;s Social and Political Union"
+                                >WSPU</ORGNAME>, MG engaged in smashing windows of government
+                            buildings in support of a (male) hunger striker.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Cowman 451" DBREF="50329">451</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Imprisoned on this account, she mounted both a hunger and a thirst strike
+                            before being released on account of her frail health.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Holton 178" DBREF="182">178</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She had no objection to this kind of violence against official property,
+                            though she felt that increasing <ORGNAME REG="WSPU"
+                                STANDARD="Women&apos;s Social and Political Union">WSPU</ORGNAME>
+                            militancy was likely to result in escalation of violence against people
+                            on both sides. She gave a lot of time this year to the forced-feeding
+                            scandal and campaigning for signatures to a petition against it. She
+                            attempted to organize a national women&apos;s hunger strike for October
+                            1912, but did not succeed: this was the end of her suffrage
+                                    work.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/><BIBCIT PLACEHOLDER="Cowman 451-2" DBREF="50329"
+                                    >451-2</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Move to the USA</HEADING>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG tried living in various different places in an attempt to benefit her
+                            health, as was common for invalids at that date. She spent the winter of
+                            1914-15 visiting <PLACE><GEOG>Italy</GEOG></PLACE> (which entered the
+                            First World War as an ally of Britain in <DATESTRUCT CERTAINTY="C"
+                                VALUE="1915-04-"><SEASON>spring</SEASON>
+                                <YEAR>1915</YEAR></DATESTRUCT>).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Guide to Papers" DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="MIGRATED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG">
+                        <DATE VALUE="1916-01-" CERTAINTY="C">Early 1916</DATE>
+                        <CHRONPROSE>MG sailed from <PLACE><GEOG>England</GEOG></PLACE> for the
+                            United States with her <NAME STANDARD="Gawthorpe, Annie Eliza"
+                                >mother</NAME>, and settled with her married sister, Annie, in
+                                    <PLACE><SETTLEMENT>Monroe</SETTLEMENT>, <REGION>New
+                                    York</REGION><GEOG REG="USA"/></PLACE>; at her departure she
+                            entrusted her suffrage archive to <NAME>Rose Lamartine
+                            Yates</NAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Holton 211, 153, 179" DBREF="182">211, 153,
+                                179</BIBCIT>
+                            <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                            <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The legal status of this move was important. MG and her mother did not
+                            enter the USA as immigrants (Mary as a known <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES" REG="radical"
+                                >radical activist</POLITICALAFFILIATION> would not have been welcome
+                            there), but for a family visit. She subsequently married an American and
+                                <QUOTE DIRECT="Y">[took] out citizenship in my own right,</QUOTE>
+                            but she nonetheless felt acutely how <NAME>Sylvia
+                            Pankhurst</NAME>&apos;s casual description of her in <TITLE
+                                TITLETYPE="MONOGRAPHIC">The Suffragette Movement</TITLE> as having
+                                <QUOTE DIRECT="Y">emigrated to America</QUOTE> might have made
+                            difficulty for her.<BIBCITS><BIBCIT PLACEHOLDER="Cowman 455"
+                                    DBREF="50329" QTDIN="QTDINYES">455</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Later, MG and her mother moved from
+                                    <PLACE><SETTLEMENT>Monroe</SETTLEMENT>, <REGION>New
+                                    York</REGION><GEOG REG="USA"/></PLACE>, to
+                                    <PLACE><SETTLEMENT>Newark</SETTLEMENT>, <REGION>New
+                                    Jersey</REGION><GEOG REG="USA"/></PLACE>. After her marriage she
+                            moved to <PLACE><SETTLEMENT>New York City</SETTLEMENT><REGION
+                                    REG="New York"/><GEOG REG="USA"/></PLACE>, though not
+                                    Manhattan.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 168"
+                                    DBREF="104304">168</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Between her arrival in the <PLACE><GEOG>USA</GEOG></PLACE> and her
+                            marriage, though MG may have worked briefly as an <JOB
+                                REG="editorial assistant">editorial assistant</JOB> most of her
+                            employment was political in nature, as an <JOB REG="political organizer"
+                                >organizer</JOB>, <JOB REG="political speaker">public speaker</JOB>,
+                                <JOB REG="educational officer">educational officer</JOB>, and <JOB
+                                REG="press officer">liaison officer</JOB> with the press. Her
+                            employers included the <EMPLOYER><ORGNAME>Woman Suffrage Party</ORGNAME>
+                                of <PLACE><REGION REG="New York">New York State</REGION><GEOG
+                                        REG="USA"/></PLACE></EMPLOYER> and the <EMPLOYER><ORGNAME
+                                    STANDARD="National Consumers League">National Consumers
+                                    League</ORGNAME></EMPLOYER> (for whose study on <TITLE
+                                TITLETYPE="UNPUBLISHED">Woman&apos;s Work in Wartime</TITLE> she did
+                            research among families in <PLACE><SETTLEMENT>Wilmington</SETTLEMENT>,
+                                    <REGION>Delaware</REGION><GEOG REG="USA"/></PLACE>). She also
+                            worked for the <EMPLOYER><ORGNAME REG="Labor Party"
+                                    STANDARD="Farmer-Labor Party">Labor Party (later the
+                                    Farmer-Labor Party)</ORGNAME></EMPLOYER> in
+                                    <PLACE><SETTLEMENT>Chicago</SETTLEMENT><REGION REG="Illinois"
+                                    /><GEOG REG="USA"/></PLACE> (whose Women&apos;s Section occupied
+                            most of her energy), for the <EMPLOYER><ORGNAME
+                                    STANDARD="Amalgamated Clothing Workers of America">Amalgamated
+                                    Clothing Workers of America</ORGNAME></EMPLOYER> (for whom,
+                            briefly, she served as <JOB REG="education director">Director of
+                                Educational Programs</JOB>), for the presidential campaign of
+                                    <EMPLOYER><NAME>Parley Parker Christensen</NAME></EMPLOYER>, and
+                            for the <EMPLOYER><ORGNAME STANDARD="League for Mutual Aid">League for
+                                    Mutual Aid</ORGNAME></EMPLOYER> (of which she was <JOB
+                                REG="executive secretary">executive
+                                    secretary</JOB>).<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERYES" REG="suffragist"
+                                >Suffrage</POLITICALAFFILIATION> was a compelling cause in the
+                                    <PLACE><GEOG>USA</GEOG></PLACE> as in Britain: women had the
+                            vote in some states, but lacked it for federal elections until the
+                            Nineteenth Amendment to the Constitution passed on <DATE>18 August
+                                1920</DATE>. During her first couple of years in America, MG worked
+                            for the <ORGNAME>Woman Suffrage Party</ORGNAME> of <PLACE><REGION
+                                    REG="New York">New York State</REGION>, <SETTLEMENT
+                                    REG="New York City">Brooklyn</SETTLEMENT><GEOG REG="USA"
+                                /></PLACE> branch. For the <ORGNAME
+                                STANDARD="National Consumers League">National Consumers
+                                League</ORGNAME>, in 1918, <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="labour activist">she addressed herself to issues of
+                                women&apos;s wartime employment</POLITICALAFFILIATION>. This led her
+                            to work in support of a Minimum Wage Law in the state of
+                                    <PLACE><REGION>Delaware</REGION><GEOG REG="USA"/></PLACE>, and
+                            then in turn to other <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERYES" REG="Socialist">labour
+                                issues</POLITICALAFFILIATION>, <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="trade unionist">trade union issues</POLITICALAFFILIATION>, and
+                            the improvement of working-class education.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Guide to Papers" DBREF="50231"/><BIBCIT
+                                    PLACEHOLDER="Holton 238" DBREF="182">238</BIBCIT></BIBCITS>
+                            <NAME>Parley Parker Christensen</NAME>, whose presidential campaign she
+                            worked on, was a leftist and <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERYES"
+                                REG="civil libertarian">civil libertarian</POLITICALAFFILIATION>.
+                            The <ORGNAME STANDARD="League for Mutual Aid">League for Mutual
+                                Aid</ORGNAME>
+                            <QUOTE DIRECT="Y">provided interest-free loans to those affiliated with
+                                labor and libertarian causes.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Avrich 371" DBREF="50265"
+                            >371</BIBCIT></BIBCITS></P>
+                        <P>These years of work and campaigning, in close continuity with her
+                            political work in Britain, were what MG felt to have been overlooked by
+                                <NAME>Sylvia Pankhurst</NAME> when the latter wrote that she <QUOTE
+                                DIRECT="Y">emigrated to America, took up journalism, and
+                                married.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Cowman 450"
+                                    DBREF="50329" QTDIN="QTDINYES">450</BIBCIT></BIBCITS> It was
+                            true, MG said, that her public involvement decreased the year following
+                            her marriage, but the cause was once again her health.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Holton 239" DBREF="182">239</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG&apos;s political work took her to
+                                    <PLACE><SETTLEMENT>Buffalo</SETTLEMENT><REGION REG="New York"
+                                    /><GEOG REG="USA"/></PLACE> and
+                                    <PLACE><SETTLEMENT>Rochester</SETTLEMENT> in <REGION>New
+                                    York</REGION><GEOG REG="USA"/></PLACE>, to
+                                    <PLACE><SETTLEMENT>Wilmington</SETTLEMENT>,
+                                    <REGION>Delaware</REGION><GEOG REG="USA"/></PLACE>, and to
+                                    <PLACE><SETTLEMENT>Chicago</SETTLEMENT><REGION REG="Illinois"
+                                    /><GEOG REG="USA"/></PLACE> and
+                                    <PLACE><SETTLEMENT>Bellevue</SETTLEMENT> in
+                                    <REGION>Illinois</REGION><GEOG REG="USA"/></PLACE>. In Illinois
+                            and <PLACE><REGION>Indiana</REGION><GEOG REG="USA"/></PLACE> she spoke
+                            in mining districts, as she had done in Wales.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>MG had English friends from the suffrage movement who were now, like her,
+                            in America, such as <NAME>Beatrice Forbes-Robinson
+                                    Hale</NAME>.<BIBCITS><BIBCIT PLACEHOLDER="Holton 211"
+                                    DBREF="182">211</BIBCIT></BIBCITS> She worked with American
+                            suffragists such as <NAME>Gertrude Franchot Tone</NAME> and <NAME>Mary
+                                Ogden White</NAME>. White called her <QUOTE DIRECT="Y">a morsel of a
+                                woman to have achieved so much . . . . She is all fire and quick
+                                response.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231" QTDIN="QTDINYES"/></BIBCITS> She corresponded
+                            later with <NAME>Parley Parker Christensen</NAME>, whose campaign she
+                            had supported. Her friendship with <NAME>Mary Dreier</NAME>, born of
+                            shared politics, lasted her lifetime.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 460" DBREF="50329">460</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Holton 242" DBREF="182">242</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Marriage</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                RESP="IMG">
+                                <DATE>1921</DATE>
+                                <CHRONPROSE>MG was married at
+                                        <PLACE><SETTLEMENT>Newark</SETTLEMENT>, <REGION>New
+                                            Jersey</REGION><GEOG REG="USA"/></PLACE>, to <NAME>John
+                                        Sanders</NAME>, an American
+                                    <JOB>engineer</JOB>.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>In writing about him she calls him <QUOTE DIRECT="Y">the
+                                        Engineer</QUOTE>.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Gawthorpe, Up Hill 39" DBREF="104304"
+                                            >39</BIBCIT></BIBCITS> He died in 1963, having become
+                                    seriously ill a few years earlier. <CHILDLESSNESS>The marriage
+                                        was childless.</CHILDLESSNESS><BIBCITS><BIBCIT
+                                            PLACEHOLDER="Holton 242, 247" DBREF="182">242,
+                                            247</BIBCIT><BIBCIT PLACEHOLDER="Guide to Papers"
+                                            DBREF="50231"/></BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MARRIAGE>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>With her new husband, MG moved from
+                                    <PLACE><SETTLEMENT>Newark</SETTLEMENT><REGION REG="New Jersey"
+                                    /><GEOG REG="USA"/></PLACE> to <PLACE><SETTLEMENT
+                                    REG="New York City">Whitestone, an area of the borough of
+                                    Queen&apos;s</SETTLEMENT>, <REGION>New York</REGION><GEOG
+                                    REG="USA"/></PLACE>, where she lived for the rest of her
+                                    life.<BIBCITS><BIBCIT PLACEHOLDER="Guide to Papers"
+                                    DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The two of them made a <QUOTE DIRECT="Y">flying visit</QUOTE> to England
+                            in 1933 and MG took her husband to
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>, where they looked at several
+                            sites associated with her youth, and watched a cricket match at
+                                    <PLACE><SETTLEMENT REG="Leeds">Headingly</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> (though not to
+                            the end).<BIBCITS><BIBCIT PLACEHOLDER="Gawthorpe, Up Hill 39-40"
+                                    DBREF="104304">39-40</BIBCIT></BIBCITS> They came back to
+                            England again for one or more brief visits during the
+                                    1950s.<BIBCITS><BIBCIT PLACEHOLDER="Holton 239" DBREF="182"
+                                    >239</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>As a married woman MG did not engage in paid employment but continued to
+                            work as a volunteer <QUOTE DIRECT="Y">with a number of
+                                    <SIGNIFICANTACTIVITY
+                                    PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                    REG="political organizer">progressive and labor
+                                    organizations</SIGNIFICANTACTIVITY></QUOTE> in
+                                    <PLACE><SETTLEMENT>New York City</SETTLEMENT><REGION
+                                    REG="New York"/><GEOG REG="USA"/></PLACE>, particularly the
+                                <ORGNAME STANDARD="New School for Social Research">New School for
+                                Social Research</ORGNAME>. Her hobbies included <SIGNIFICANTACTIVITY
+                                REG="astrologer">astrology</SIGNIFICANTACTIVITY>,
+                                <SIGNIFICANTACTIVITY REG="gardening"
+                            >gardening</SIGNIFICANTACTIVITY>, <SIGNIFICANTACTIVITY REG="artist"
+                                >painting, and drawing</SIGNIFICANTACTIVITY>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Guide to Papers" DBREF="50231"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <HEADING>Quarrel with Sylvia Pankhurst</HEADING>
+                    <SHORTPROSE>
+                        <P>MG&apos;s friendship with <NAME>Dora Marsden</NAME> ended in a breach.
+                            With <NAME>Sylvia Pankhurst</NAME>, too, her relationship later came to
+                            grief, but this was after a particularly close period following the
+                            birth of Sylvia&apos;s son on <DATE>3 December 1927</DATE>. This was a
+                            difficult time for Sylvia, who was hounded by the press, disapproved of
+                            by her mother and sister, and seriously short of money. MG recognised
+                            Sylvia&apos;s right to be a mother without being a wife, and sent a baby
+                            gift; just over a year later the two women entered into regular
+                                    correspondence.<BIBCITS><BIBCIT PLACEHOLDER="Cowman 451-3"
+                                    DBREF="50329">451-3</BIBCIT></BIBCITS> Gawthorpe helped
+                            publicize Pankhurst&apos;s <TITLE TITLETYPE="MONOGRAPHIC">The
+                                Suffragette Movement</TITLE> (<DATE VALUE="1931-02-20"
+                                CERTAINTY="BY">1931</DATE>) in the USA, even though she was upset by
+                            its footnote summarizing her own later suffrage activity in America,
+                            which she found totally inadequate and even potentially damaging to her
+                            US citizenship. Having enlisted support from a list of distiguished
+                            names to market the book in America, she later appealed to some of the
+                            same people to compel Pankhurst to issue a revised edition. They
+                            exchanged letters about this issue from 1931; in 1934 Gawthorpe&apos;s
+                            letters became angry; in 1935 she contacted a lawyer, and silence fell
+                            between these former friends.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Cowman 454-62" DBREF="50329"
+                                >454-62</BIBCIT></BIBCITS></P>
+                        <P>MG&apos;s correspondents included <NAME>Emmeline Pethick-Lawrence</NAME>,
+                                <NAME>Alice Paul</NAME>, <NAME>Elizabeth Gurley Flynn</NAME>,
+                                <NAME>Elizabeth Robins</NAME>, <NAME>Helena Swanwick</NAME>,
+                                <NAME>Henry Nevinson</NAME>, <NAME>Havelock Ellis</NAME>, <NAME>John
+                                Galsworthy</NAME>, <NAME>Victor Gollancz</NAME>, <NAME
+                                STANDARD="Orage, Alfred Richard">A. R. Orage</NAME>, <NAME>Bertrand
+                                Russell</NAME>, <NAME>George Bernard Shaw</NAME>, and <NAME
+                                STANDARD="Snow, Charles Percy">C. P. Snow</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Guide to Papers" DBREF="50231"/><BIBCIT
+                                    PLACEHOLDER="Cowman 459" DBREF="50329">459</BIBCIT></BIBCITS>
+                            When one of her former pupils, <NAME>L. Dockray</NAME>, approached her
+                            by letter in 1971 she called this resurrection of friendship <QUOTE
+                                DIRECT="Y">one of the wonder experiences of my long
+                                    life.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Holton 243 and n33"
+                                    DBREF="182" QTDIN="QTDINYES">243 and n33</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Death</HEADING>
+            <DEATH>
+                <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="SYS">
+                    <DATE>12 March 1973</DATE>
+                    <CHRONPROSE>MG died at ninety-two, after a decade of widowhood, at the
+                                <PLACE><PLACENAME REG="Clearview Nursing Home">Clearview Nursing
+                                Home</PLACENAME> in <SETTLEMENT REG="New York City"
+                                >Whitestone</SETTLEMENT> (Queen&apos;s), <REGION>New York</REGION>,
+                                <GEOG>USA</GEOG></PLACE>. In England she had been imagined to be
+                        already dead for some years.</CHRONPROSE>
+                    <BIBCITS>
+                        <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                        <BIBCIT PLACEHOLDER="Guide to Papers" DBREF="50231"/>
+                    </BIBCITS>
+                </CHRONSTRUCT>
+            </DEATH>
+        </DIV1>
+        <WORKSCITED>
+            <SOURCE>Unless otherwise noted, all information is from the FC</SOURCE>
+            <SOURCE>Avrich, Paul. The Modern School Movement. 2005.</SOURCE>
+            <SOURCE>Gawthorpe, Mary. Up Hill to Holloway.</SOURCE>
+            <SOURCE>Guide to Papers.</SOURCE>
+        </WORKSCITED>
+    </DIV0>
+</BIOGRAPHY>

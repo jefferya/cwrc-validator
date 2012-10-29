@@ -1,0 +1,2455 @@
+<?xml-stylesheet type="text/css" href="css/bio_style.css"?>
+<?xml-model href="schemas/biography-test_10-07-16-CAPS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!DOCTYPE grammar [
+<!ENTITY % iso-lat1 SYSTEM "entities/iso-lat1.ent">
+<!ENTITY % iso-lat2 SYSTEM "entities/iso-lat2.ent">
+<!ENTITY % iso-grk1 SYSTEM "entities/iso-grk1.ent">
+<!ENTITY % iso-grk2 SYSTEM "entities/iso-grk2.ent">
+<!ENTITY % iso-grk3 SYSTEM "entities/iso-grk3.ent">
+<!ENTITY % iso-pub SYSTEM "entities/iso-pub.ent">
+<!ENTITY % iso-num SYSTEM "entities/iso-num.ent">
+<!ENTITY % ORLENT SYSTEM "entities/ORLENT.ENT">
+%iso-lat1;
+%iso-lat2;
+%iso-grk1;
+%iso-grk2;
+%iso-grk3;
+%iso-pub;
+%iso-num;
+%ORLENT;
+]>
+
+<BIOGRAPHY SEX="FEMALE" PERSON="BRWWRITER">
+    <ORLANDOHEADER TYPE="text">
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>Storm Jameson: biography</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Orlando Project</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Created from original research by members of the Orlando
+                Project</SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="PMB" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>1 May 1997</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;incomplete&quot; Initial
+                    document given to tagger.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PMB" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>2 May 1997</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;incomplete&quot; PMB:
+                    tagged FC entry.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PMB" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>8 May 1997</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;tagged&quot; OLDWORKVALUE=&quot;complete&quot; PMB: tagged
+                    other biographical info. Couldn&apos;t find much on her.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>28 May 1997</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;checked&quot; OLDWORKVALUE=&quot;complete&quot; jah:
+                    secondary sources checked.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="OLD" WORKVALUE="O">
+                <DATE>10 June 1997</DATE>
+                <ITEM>OLDWORKSTATUS=&quot;CHECKED&quot; OLDWORKVALUE=&quot;QUERY&quot; kdc: checked
+                    for tagging and structure. As jah noticed, the two marriages and the son are
+                    missing. Also, FC suggests that SJ identified with her northern roots-worth
+                    mentioning in a cultural formation?</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PMB" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>27 July 1997</DATE>
+                <ITEM>Automatically generated to load Workflow Management System.</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>27 October 1997</DATE>
+                <ITEM>pmb: tagged; jah: sources checked.kdc: structure/tagging checked; pmb: revised
+                    &amp; added info </ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PHD" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>24 February 1998</DATE>
+                <ITEM>phd: revised Jan 1891 for MTR chron</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SRF" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>30 March 1998</DATE>
+                <ITEM>SRF: fixed missing titletype attribute</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KAH" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>31 March 1998</DATE>
+                <ITEM>kah: 2 mtr revisions: added wom and ed kwd</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PDC" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>6 October 1998</DATE>
+                <ITEM>Updated for Sept 1998 Audit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JSC" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>26 October 1998</DATE>
+                <ITEM>revisions just begun</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JSC" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>28 October 1998</DATE>
+                <ITEM>revisions in progress</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JSC" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>29 October 1998</DATE>
+                <ITEM>revisions completed for checking</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>31 October 1998</DATE>
+                <ITEM>revisions completed for checking</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JSC" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>2 November 1998</DATE>
+                <ITEM>revisions completed for checking</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SRF" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>12 November 1998</DATE>
+                <ITEM>--added value attribute to dateStruct</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JEB" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>15 November 1998</DATE>
+                <ITEM>This is ready to go; I added a copuple of bibcits, and ammended two items
+                    slightly in response to research notes.jeb</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KAH" WORKSTATUS="CFC" WORKVALUE="C">
+                <DATE>8 December 1998</DATE>
+                <ITEM>document completed to medium depth</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SRF" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>2 February 1999</DATE>
+                <ITEM>fixed dateRanges</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="GCG" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>13 May 1999</DATE>
+                <ITEM>gcg: added missing titletype attribute</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 December 1999</DATE>
+                <ITEM>BATCH CHANGE: primarily orgName and bibCit cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="DRG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>1 February 2001</DATE>
+                <ITEM>converted textual apostrophes and quotation marks to entity references</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>17 August 2001</DATE>
+                <ITEM>removed title tag(s) from workscited</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>26 September 2002</DATE>
+                <ITEM>fixed name</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>23 October 2002</DATE>
+                <ITEM>fixed name(s)</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="RSC" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>21 December 2002</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>14 April 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily PLACE cleanup</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>16 June 2003</DATE>
+                <ITEM>BATCH CHANGE: primarily TGENRENAME cleanup, BIBCIT following P moved before P,
+                    BIBCITS TAG added</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KLH" WORKSTATUS="RWT" WORKVALUE="I">
+                <DATE>12 August 2003</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KLH" WORKSTATUS="RWT" WORKVALUE="C">
+                <DATE>28 August 2003</DATE>
+                <ITEM>ref sources will be in sj folder in proj room</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KLH" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>6 September 2003</DATE>
+                <ITEM>klh: revised according to pdc&apos;s instructions</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ARP" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>12 September 2003</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>19 September 2003</DATE>
+                <ITEM> fixed DATE</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ARP" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>22 September 2003</DATE>
+                <ITEM>couple sources lacking an existence</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ARP" WORKSTATUS="CAS" WORKVALUE="I">
+                <DATE>3 October 2003</DATE>
+                <ITEM>waiting on Martin source</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ARP" WORKSTATUS="CAS" WORKVALUE="C">
+                <DATE>6 October 2003</DATE>
+                <ITEM>storm is finally finished, although a couple problems still linger (see
+                    researchnotes)</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="AHM" WORKSTATUS="REV" WORKVALUE="I">
+                <DATE>9 February 2004</DATE>
+                <ITEM>needs cft to go pub-i</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="KDC" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>11 February 2004</DATE>
+                <ITEM>checked for tagging</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>22 March 2004</DATE>
+                <ITEM>changed position to birth position</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SEV" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>25 June 2004</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SEV" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>6 July 2004</DATE>
+                <ITEM>RVB for PDC by SEV</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="PDC" WORKSTATUS="RBV" WORKVALUE="C">
+                <DATE>7 July 2004</DATE>
+                <ITEM>rbv-c</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>27 August 2004</DATE>
+                <ITEM>fixed bibcits tags</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>31 August 2004</DATE>
+                <ITEM>moved bibcits contents as necessary</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>10 September 2004</DATE>
+                <ITEM> fixed PLACE</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>16 September 2004</DATE>
+                <ITEM> fixed NAME</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>17 September 2004</DATE>
+                <ITEM> fixed ORGNAME</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>20 September 2004</DATE>
+                <ITEM> fixed ORGNAME</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>20 September 2004</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>21 September 2004</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="P">
+                <DATE>26 September 2004</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="PUB" WORKVALUE="I">
+                <DATE>27 September 2004</DATE>
+                <ITEM>pub i</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>12 November 2004</DATE>
+                <ITEM>cfb done</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>17 November 2004</DATE>
+                <ITEM>fixed titles</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="PUB" WORKVALUE="C">
+                <DATE>10 December 2004</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="JAH" WORKSTATUS="CFB" WORKVALUE="C">
+                <DATE>14 December 2004</DATE>
+                <ITEM>fixed bibcit</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="CFT" WORKVALUE="I">
+                <DATE>08 April 2005</DATE>
+                <ITEM>BATCH CHANGE: March 2005 Specifications. Mainly tag/attribute name
+                    changes</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>29 August 2005</DATE>
+                <ITEM>job/occupation regs</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>7 September 2005</DATE>
+                <ITEM>job/occupation regs</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>9 September 2005</DATE>
+                <ITEM>changed attribute value none on attribute exact to neither</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>10 March 2006</DATE>
+                <ITEM>added from odnb</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="ARP" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>27 March 2006</DATE>
+                <ITEM>fixed attribute on wedding date</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>8 May 2006</DATE>
+                <ITEM>final readthro</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>19 July 2006</DATE>
+                <ITEM>revised various names</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="IMG" WORKSTATUS="REV" WORKVALUE="C">
+                <DATE>4 August 2006</DATE>
+                <ITEM>final readthro</ITEM>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>15 March 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>20 March 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>26 March 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+            <RESPONSIBILITY RESP="SLB" WORKSTATUS="CFT" WORKVALUE="C">
+                <DATE>9 May 2007</DATE>
+                <ITEM/>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </ORLANDOHEADER>
+    <DIV0>
+        <HEADING>Biography</HEADING>
+        <STANDARD>Jameson, Storm</STANDARD>
+        <DIV1>
+            <PERSONNAME>
+                <DIV2>
+                    <DATASTRUCT>
+                        <DATAITEM>
+                            <BIRTHNAME WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES" REG="Jameson, Storm">
+                                <GIVEN>Margaret</GIVEN>
+                                <GIVEN>Ethel</GIVEN>
+                                <SURNAME>Jameson</SURNAME>
+                            </BIRTHNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <NICKNAME NAMETYPE="FAMILIAR">Daisy</NICKNAME>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <SELFCONSTRUCTED WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"
+                                REG="Jameson, Storm">Storm Jameson</SELFCONSTRUCTED>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <PSEUDONYM WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"
+                                NAMESIGNIFIER="CRYPTIC" REG="Hill, James">James Hill</PSEUDONYM>
+                        </DATAITEM>
+                        <DATAITEM>
+                            <PSEUDONYM WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"
+                                NAMESIGNIFIER="CRYPTIC" REG="Lamb, William">William Lamb</PSEUDONYM>
+                        </DATAITEM>
+                    </DATASTRUCT>
+                </DIV2>
+            </PERSONNAME>
+        </DIV1>
+        <DIV1>
+            <HEADING>Birth and Local Influence</HEADING>
+            <BIRTH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="KLH">
+                        <DATE>8 January 1891</DATE>
+                        <CHRONPROSE>Margaret Ethel Jameson (later SJ) was born at
+                                    <PLACE><SETTLEMENT>Whitby</SETTLEMENT> in <REGION
+                                    REG="Yorkshire">North Yorkshire</REGION><GEOG REG="England"
+                                /></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>
+                            <BIRTHPOSITION POSITION="ELDEST">She was the eldest of her parents&apos;
+                                four children&mdash;three daughters and a son.</BIRTHPOSITION>
+                        </P>
+                    </SHORTPROSE>
+                </DIV2>
+            </BIRTH>
+        </DIV1>
+        <DIV1>
+            <CULTURALFORMATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P><GEOGHERITAGE SELF-DEFINED="SELFYES" REG="Yorkshire">Her familial and
+                                spiritual attachments to <PLACE><REGION>Yorkshire</REGION><GEOG
+                                        REG="England"/></PLACE> were intense and
+                                resilient.</GEOGHERITAGE> She writes in her autobiography, <TITLE
+                                TITLETYPE="MONOGRAPHIC">Journey from the North</TITLE>, that the
+                                <QUOTE DIRECT="Y">span of my life is even longer than it seems,
+                                since its roots are twisted round hundreds of lives passed in the
+                                same place.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 15" DBREF="18954"
+                                >15</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <CLASSISSUE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Born into the <NATIONALITY>English</NATIONALITY>
+                                <CLASS SOCIALRANK="LOWER-MIDDLECLASS" SELF-DEFINED="SELFYES">middle
+                                    class</CLASS>, with a father who had made good without an
+                                education, SJ often felt gauche and provincial in the company of her
+                                confidently upper-middle-class friends.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </CLASSISSUE>
+            </CULTURALFORMATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="MOTHER">
+                    <DIV2>
+                        <HEADING>Mother</HEADING>
+                        <SHORTPROSE>
+                            <P>SJ&apos;s mother, <NAME STANDARD="Jameson, Hannah Margaret">Hannah
+                                    Margaret (Gallilee) Jameson</NAME>, was the <QUOTE DIRECT="Y"
+                                    >dominant influence</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Berry and Bostridge 361" DBREF="121"
+                                        >361</BIBCIT>
+                                </BIBCITS> on her early life. Hannah was the eldest of seven
+                                children born to George Gallilee and his first wife. She did not get
+                                on with his second wife. Hannah is said to have instilled ambition
+                                and discipline in her own children by thrashing them frequently. In
+                                her autobiography, ST writes of Hannah&apos;s feelings of boredom
+                                and entrapment as a young mother at home, her bitter marriage, and
+                                of her own desire to please her mother. The two women had a close
+                                and sometimes tense relationship.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 18, 24, 32, 351"
+                                        DBREF="18954">18, 24, 32, 351</BIBCIT>
+                                </BIBCITS> When writing about Hannah&apos;s death in about <DATE
+                                    VALUE="1937-02-" CERTAINTY="C">February 1937</DATE>, her
+                                daughter observes, <QUOTE DIRECT="Y">[h]er life did not end then; it
+                                    goes on echoing through mine, and will echo there until it and I
+                                    are both silenced.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 355" DBREF="18954"
+                                        >355</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                        <KEYWORDCLASS KEYWORDTYPE="violence">Family</KEYWORDCLASS>
+                    </DIV2>
+                </MEMBER>
+                <MEMBER RELATION="FATHER">
+                    <DIV2>
+                        <HEADING>Father</HEADING>
+                        <SHORTPROSE>
+                            <P>The author&apos;s father, <NAME>William Storm Jameson</NAME>, was a
+                                    <JOB>sea captain</JOB>. His mother was George Gallilee&apos;s
+                                second wife by a previous marriage, though SJ asserts that the
+                                couple kept their families apart, and further that <QUOTE DIRECT="Y"
+                                    >[m]y mother cannot have had even the most short-lived sense
+                                    that she was marrying a stepbrother.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 24" DBREF="18954"
+                                        >24</BIBCIT>
+                                </BIBCITS> After having little success in school (he may have been
+                                dyslexic), William was sent out as apprentice on a ship at the age
+                                of thirteen: SJ pointed to this as a central element in the
+                                formation of his harsh character. She was never close to her father.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 34-5" DBREF="18954"
+                                        >34-5</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+                <DIV2>
+                    <HEADING>Siblings</HEADING>
+                    <SHORTPROSE>
+                        <P>SJ and her three siblings were born between 1891 and
+                                    1906.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 33"
+                                    DBREF="18954">33</BIBCIT><BIBCIT PLACEHOLDER="FC" DBREF="107913"
+                                /></BIBCITS> In her autobiography she writes most frequently and
+                            vividly of her younger sister <NAME>Dorothy Jameson Pateman</NAME> and
+                            her brother, <NAME>Harold Jameson</NAME>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Childhood and Adolescence</HEADING>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>When Margaret (later SJ) was a very small girl she and her mother often
+                            joined her father on sea voyages to various
+                                <PLACE><GEOG>Europe</GEOG></PLACE>an ports. She notes in <TITLE
+                                TITLETYPE="MONOGRAPHIC">Journey from the North</TITLE> that <QUOTE
+                                DIRECT="Y">[t]he first thing I remember is the deck of a ship in
+                                sunlight,</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 17"
+                                    DBREF="18954">17</BIBCIT></BIBCITS> though she later cautions
+                            her reader, <QUOTE DIRECT="Y">[d]o not believe that the earliest
+                                memories are anything but disguised choices.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 28-9" DBREF="18954"
+                                >28-9</BIBCIT></BIBCITS> Her childhood home (on land) that she
+                            recalled most distinctly was <PLACE><ADDRESS><ADDRLINE>5 Park
+                                        Terrace</ADDRLINE></ADDRESS> in the sea-going town of
+                                    <SETTLEMENT>Whitby</SETTLEMENT><REGION REG="Yorkshire"/><GEOG
+                                    REG="England"/></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 28" DBREF="18954"
+                                >28</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Education</HEADING>
+            <EDUCATION MODE="SELF-TAUGHT">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ taught herself to read, <QUOTE DIRECT="Y">probably driven to it by
+                                boredom.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 29"
+                                    DBREF="18954">29</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+            <EDUCATION MODE="INSTITUTIONAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>At about the age of eight she was sent to a <SCHOOL
+                                INSTITUTION="BOARDING" INSTITUTIONLEVEL="PRIMARY">boarding
+                                school</SCHOOL> run by the <INSTRUCTOR>Misses Corney</INSTRUCTOR>.
+                            She drily calls the rote memorization taught at the <QUOTE DIRECT="Y"
+                                >so-called school . . . the best in the world, since it leaves the
+                                child&apos;s imagination severely alone.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 29" DBREF="18954"
+                                >29</BIBCIT></BIBCITS></P>
+                        <P>SJ later attended a <SCHOOL INSTITUTION="PRIVATE"
+                                INSTITUTIONLEVEL="SECONDARY">private school</SCHOOL> run by
+                                    <INSTRUCTOR><NAME>Lily Ingham</NAME></INSTRUCTOR>, then spent a
+                            year at <SCHOOL><PLACE><SETTLEMENT>Scarborough</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE> Municipal
+                                School</SCHOOL>. She began writing the Cambridge exams at the age of
+                            thirteen and went to Scarborough to prepare for the last of them. With
+                            strong encouragement from her mother she secured her future university
+                            plans by becoming the first young woman awarded <AWARD
+                                AWARDTYPE="SCHOLARSHIP">one of only three County
+                                Scholarships</AWARD> in the North Riding of Yorkshire.
+                                    <BIBCITS><BIBCIT PLACEHOLDER="Feinstein i" DBREF="108093"
+                                    >i</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Post-Secondary Studies</HEADING>
+                    <SHORTPROSE>
+                        <P>While at Leeds University, SJ served as Secretary of the
+                                <ORGNAME>Women&apos;s Representative Council</ORGNAME> of the
+                            Student Union, met her future husband <NAME>Charles Douglas
+                                Clarke</NAME> (also a student), and wrote an undergraduate thesis on
+                                <NAME STANDARD="Blake, William">Blake</NAME>. She recalled that at
+                            this point she had a strong desire for an academic career, but was too
+                            undisciplined to hope to realize it.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 51-8" DBREF="18954"
+                                >51-8</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATE VALUE="1912-06-" CERTAINTY="C">1912</DATE>
+                        <CHRONPROSE>SJ was the first woman awarded a <DEGREE>BA in <SUBJECT>English
+                                    Language and Literature</SUBJECT></DEGREE> from <SCHOOL
+                                STUDENTBODY="CO-ED" INSTITUTIONLEVEL="POST-SECONDARY"
+                                REG="University of Leeds"
+                                        ><PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE>
+                                <ORGNAME STANDARD="University of Leeds"
+                                >University</ORGNAME></SCHOOL>. She graduated with <DEGREE>first
+                                class honours</DEGREE>.</CHRONPROSE>
+                        <KEYWORDCLASS KEYWORDTYPE="Access">Education</KEYWORDCLASS>
+                        <KEYWORDCLASS>Women and Education</KEYWORDCLASS>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Berry and Bostridge 361" DBREF="121">361</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>After completing her undergraduate degree at <ORGNAME
+                                REG="University of Leeds" STANDARD="University of Leeds"><SCHOOL
+                                    STUDENTBODY="CO-ED" INSTITUTIONLEVEL="POST-SECONDARY"
+                                    >Leeds</SCHOOL></ORGNAME> she won, the same year, a <AWARD
+                                AWARDTYPE="SCHOLARSHIP">John Ruteau Fellowship</AWARD>. It was
+                            intended for study at <ORGNAME
+                                REG="University College,, University of London"
+                                STANDARD="University College,, University of London"><SCHOOL
+                                    STUDENTBODY="CO-ED" INSTITUTIONLEVEL="POST-SECONDARY"
+                                    REG="University College,, London University">University College,
+                                    London</SCHOOL></ORGNAME>, but she soon transferred to <ORGNAME
+                                REG="King&apos;s College,, University of London"
+                                STANDARD="King&apos;s College,, University of London"><SCHOOL
+                                    STUDENTBODY="CO-ED" INSTITUTIONLEVEL="POST-SECONDARY"
+                                    REG="King&apos;s College,, London University">King&apos;s
+                                    College</SCHOOL></ORGNAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="DLB 36: 70" DBREF="2921">36: 70</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 55, 58, 64" DBREF="18954">55, 58,
+                                    64</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>While at <ORGNAME REG="King&apos;s College,, University of London"
+                                STANDARD="King&apos;s College,, University of London"
+                                >King&apos;s</ORGNAME>, SJ accepted an invitation to join the
+                            Eikonoklasts, a group of men that met for weekly discussion in a campus
+                            common room. Jameson recalled with relish that they were <QUOTE
+                                DIRECT="Y">skeptics, unavowed anarchists, self-dedicated to the
+                                unmasking of hypocrites, politicians, clericals, reactionaries,
+                                bigots, and dogmatists of all ages and conditions. . . . We admired
+                                certain people&mdash;[A. R.] <NAME STANDARD="Orage, Alfred Richard"
+                                    >Orage</NAME>, <NAME>H. G. Wells</NAME>, <NAME
+                                    STANDARD="Freud, Sigmund">Freud</NAME>, the writer of <TITLE
+                                    TITLETYPE="MONOGRAPHIC">La r&eacute;volte des anges</TITLE>
+                                    [<NAME>Anatole France</NAME>]&mdash;so sincerely and blindly
+                                that we adopted their enemies.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 65-6" DBREF="18954"
+                                >65-6</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>For about a year Jameson was also a volunteer <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                >tutor</SIGNIFICANTACTIVITY> at a working women&apos;s college in
+                                    <PLACE><SETTLEMENT CURRENT="London">Earl&apos;s
+                                    Court</SETTLEMENT><REGION REG="Middlesex"/><GEOG REG="England"
+                                /></PLACE>, founded by <NAME>Mary Jane
+                                    Bridges-Adams</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 67" DBREF="18954"
+                                >67</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <EDUCATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ first planned to write her graduate thesis on representations of
+                            pantheism in <SUBJECT>French and German literature</SUBJECT>. Following
+                            consultation with <INSTRUCTOR><NAME STANDARD="Ker, William Paton">W. P.
+                                    Ker</NAME></INSTRUCTOR> at <ORGNAME
+                                REG="University College,, University of London"
+                                STANDARD="University College,, University of London"><SCHOOL
+                                    INSTITUTIONLEVEL="POST-SECONDARY"
+                                    REG="University College, London">University
+                                College</SCHOOL></ORGNAME>, she changed it to a study of
+                                <SUBJECT>modern European drama</SUBJECT>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 68-9" DBREF="18954"
+                                >68-9</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATE>1914</DATE>
+                        <CHRONPROSE>SJ received her <DEGREE>MA</DEGREE> in
+                                <SUBJECT>English</SUBJECT> after working at <SCHOOL
+                                STUDENTBODY="CO-ED" INSTITUTIONLEVEL="POST-SECONDARY"
+                                REG="King&apos;s College,, London University">King&apos;s College,
+                                University of London</SCHOOL>; at this date the London MA was a
+                            final degree, equivalent to a doctorate elsewhere.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DLB 36: 72" DBREF="2921">36: 72</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>SJ&apos;s thesis was also approved by <ORGNAME REG="University of Leeds"
+                                STANDARD="University of Leeds"><SCHOOL INSTITUTION="PRIVATE"
+                                    INSTITUTIONLEVEL="POST-SECONDARY">Leeds
+                                University</SCHOOL></ORGNAME>, which had supported her work with a
+                            research award. It was published as <TITLE TITLETYPE="MONOGRAPHIC"
+                                >Modern Drama in Europe</TITLE>, 1922.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Feinstein i" DBREF="108093">i</BIBCIT><BIBCIT
+                                    PLACEHOLDER="ODNB" DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </EDUCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <HEADING>London Life</HEADING>
+                    <SHORTPROSE>
+                        <P><LIVESWITH>While completing her graduate work SJ lived (with her
+                                mother&apos;s permission) with three close friends, all of them
+                                male. She was pleased with her decision not to live with girls or
+                                women, but with young men who <QUOTE DIRECT="Y">[w]ithin reason . .
+                                    . treated me like a younger brother, with as much unconcern and
+                                    good-temper.</QUOTE><BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 71" DBREF="18954"
+                                        >71</BIBCIT>
+                                </BIBCITS> These friends were the brothers <NAME
+                                    STANDARD="Harland, Sydney">Sydney</NAME> and <NAME>Oswald
+                                    Harland</NAME>, and <NAME>Archie White</NAME>.<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 63-4" DBREF="18954"
+                                        >63-4</BIBCIT>
+                                </BIBCITS></LIVESWITH> Another friend, <NAME>Charles Douglas
+                                Clarke</NAME>, visited only occasionally and elicited dislike and
+                            disappoval from Jameson&apos;s room-mates.<BIBCITS>
+                                <BIBCIT PLACEHOLDER="Jameson, Journey 72" DBREF="18954">72</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>They lived first in rooms on <PLACE><SETTLEMENT CURRENT="London">Herne
+                                    Hill</SETTLEMENT><REGION REG="Surrey"/><GEOG REG="England"
+                                /></PLACE>, then in <PLACE><SETTLEMENT CURRENT="London"
+                                    >Shepherd&apos;s Bush</SETTLEMENT><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>. SJ developed a lasting passion for
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG CURRENT="England"/></PLACE> along with these
+                            friendships. She expresses throughout her autobiography deep regret for
+                            the loss of the vibrancy and freedom of this pre-war
+                                    period.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey passim"
+                                    DBREF="18954">passim</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>First Marriage</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                RESP="KLH">
+                                <DATE>15 January 1913</DATE>
+                                <CHRONPROSE>SJ married <NAME>Charles Douglas Clarke</NAME>. They had
+                                    first met as students at <ORGNAME REG="University of Leeds"
+                                        STANDARD="University of Leeds">Leeds
+                                    University</ORGNAME>.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="ODNB" DBREF="29268"/>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 56" DBREF="18954"
+                                        >56</BIBCIT>
+                                    <BIBCIT PLACEHOLDER="Berry and Bostridge 361" DBREF="121"
+                                        >361</BIBCIT>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                        </DIV2>
+                    </MARRIAGE>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>SJ is vague about the details of her wedding in <TITLE
+                                    TITLETYPE="MONOGRAPHIC">Journey from the North</TITLE>. She
+                                there refers to Clarke, who was a <JOB REG="teacher"
+                                    >schoolmaster</JOB> of American extraction<BIBCITS><BIBCIT
+                                        PLACEHOLDER="ODNB" DBREF="29268"/></BIBCITS> and may have
+                                been working as a <JOB>journalist</JOB>, only as
+                                    <SOCALLED>K.</SOCALLED> At some point after marrying, the couple
+                                moved to another room in <PLACE><SETTLEMENT CURRENT="London"
+                                        >Shepherd&apos;s Bush</SETTLEMENT>, this time in
+                                            <ADDRESS><ADDRLINE>Caxton
+                                        Street</ADDRLINE></ADDRESS><REGION REG="Middlesex"/><GEOG
+                                        REG="England"/></PLACE>. The room was tidy but possessed an
+                                    <QUOTE DIRECT="Y">ingrained squalor and the musty smell of
+                                    poverty.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 75" DBREF="18954"
+                                    >75</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="MENTAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In <DATE VALUE="1913-10-" CERTAINTY="C">late 1913</DATE> SJ attempted
+                            suicide by overdosing on phenacetin pills. In <TITLE
+                                TITLETYPE="MONOGRAPHIC" REG="Journey from the North">Journey</TITLE>
+                            she writes of the tensions between herself and her husband, as well as
+                            their poverty and her feelings of <QUOTE DIRECT="Y">despair and a
+                                reckless wish to be anywhere but where I
+                                    was.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 74"
+                                    DBREF="18954">74</BIBCIT></BIBCITS> After taking the pills,
+                            Jameson became frightened and confessed to Clarke, who threatened to
+                            call the police but brought her a doctor instead.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>
+                                <SEPARATION>The couple separated for the first time, temporarily, in
+                                        <DATE>January 1914</DATE>, when SJ returned to
+                                            <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION
+                                            REG="Yorkshire"/><GEOG REG="England"
+                                            /></PLACE>.<BIBCITS><BIBCIT
+                                            PLACEHOLDER="Jameson, Journey 76" DBREF="18954"
+                                            >76</BIBCIT></BIBCITS></SEPARATION>
+                            </P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In about <DATE VALUE="1914-04-" CERTAINTY="C">April 1914</DATE>, after
+                            some time in <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE>, SJ was reunited
+                            with her husband in <PLACE><SETTLEMENT>Kettering</SETTLEMENT><REGION
+                                    REG="Northamptonshire"/><GEOG REG="England"/></PLACE>, a town in
+                            the Midlands where he had taken a job as a schoolmaster. Jameson
+                            detested the town and they rented a room in a small hotel instead of
+                            securing a house of their own. She later stated without jest that her
+                                <QUOTE DIRECT="Y">hatred of a settled domestic life was, is, an
+                                instinct, and borders on mania.</QUOTE><BIBCITS>
+                                <BIBCIT PLACEHOLDER="Jameson, Journey 82" DBREF="18954">82</BIBCIT>
+                            </BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <LEISUREANDSOCIETY>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In Kettering SJ found respite from a place she disliked in walking and in
+                            a subscription to the <ORGNAME>Times Book Club</ORGNAME>, which brought
+                            to her attention <NAME STANDARD="Symonds, John Addington,, 1840 - 1893"
+                                >J. A. Symonds</NAME>&apos;s <TITLE TITLETYPE="MONOGRAPHIC"
+                                >Renaissance in Italy</TITLE> and <NAME>Allen Upward</NAME>&apos;s
+                                <TITLE TITLETYPE="MONOGRAPHIC">The Divine Mystery</TITLE>. She also
+                            began writing her first novel, which remained
+                                    unpublished.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 81-5"
+                                    DBREF="18954">81-5</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LEISUREANDSOCIETY>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="SON">
+                    <DIV2>
+                        <HEADING>Motherhood</HEADING>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="KLH">
+                            <DATE>20 June 1915</DATE>
+                            <CHRONPROSE>SJ delivered her son, <NAME>Charles William Storm
+                                    Clarke</NAME>, at her <NAME STANDARD="Jameson, Hannah Margaret"
+                                    >mother</NAME>&apos;s home in
+                                        <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="Jameson, Journey 91, 98" DBREF="18954">91,
+                                    98</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P><CHILDREN NUMBER="1">The baby, called Bill, was her only
+                                    child.</CHILDREN> Describing the moments just following his
+                                birth, Jameson wrote that <QUOTE DIRECT="Y">[r]estless as I was, my
+                                    life had its fixed centre.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 96" DBREF="18954"
+                                    >96</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEALTH ISSUE="FEMALEBODY">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Jameson had at least one more pregnancy, which she ended with a
+                            self-induced miscarriage. <QUOTE DIRECT="Y">I remember sharply what I
+                                did, but I am not going to tell: I don&apos;t want either to harm
+                                some other young woman, as desperate as I was, who may read this
+                                book, or to pass for insane.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 94" DBREF="18954"
+                                >94</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <HEADING>Living Arrangements</HEADING>
+                    <SHORTPROSE>
+                        <P>After <PLACE><SETTLEMENT>Kettering</SETTLEMENT><REGION
+                                    REG="Northamptonshire"/><GEOG REG="England"/></PLACE>, Jameson
+                            and her small family lived in
+                                    <PLACE><SETTLEMENT>Liverpool</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE>, where Clarke
+                            had taken another posting. When he enlisted in the wartime forces
+                            Jameson and their son became camp-followers for some time, at first in
+                                    <PLACE><SETTLEMENT>Reading</SETTLEMENT><REGION REG="Berkshire"
+                                    /><GEOG REG="England"/></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 98, 105-10" DBREF="18954">98,
+                                    105-10</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Critic <NAME>Margaret B. McDowell</NAME> calls the marriage <QUOTE
+                                DIRECT="Y">ill-considered and violent,</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="DLB 36: 72" DBREF="2921" QTDIN="QTDINYES">36:
+                                    72</BIBCIT></BIBCITS> and notes that the couple lived
+                            emotionally and physically apart for most of it.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <HEADING>World War I</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>As critic <NAME>Joanna Labon</NAME> observes, SJ <QUOTE DIRECT="Y"
+                                >defined herself by war and lived much of her life in angry
+                                opposition to it.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Labon 34"
+                                    DBREF="20141">34</BIBCIT></BIBCITS> Though Jameson undertook
+                            most of her activism during the 1930s and 1940s, her political
+                            development was well under way by the beginning of <TOPIC>World War
+                                I</TOPIC>. She supported the <ORGNAME>Fellowship of
+                                Reconciliation</ORGNAME><RESEARCHNOTE>klh: link to event
+                                #907?</RESEARCHNOTE> and self-identified publicly as a
+                                <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERNO" MEMBERSHIP="MEMBERSHIPNO"
+                                INVOLVEMENT="INVOLVEMENTYES">pacifist</POLITICALAFFILIATION> for
+                            many years after this. However, she records in her autobiography feeling
+                            a lack of respect and sympathy for at least one of the first pacifists
+                            she met, another <PLACE><SETTLEMENT>Liverpool</SETTLEMENT><REGION
+                                    REG="Lancashire"/><GEOG REG="England"/></PLACE>
+                                    schoolmaster.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 88-9" DBREF="18954"
+                                >88-9</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATE>5 January 1917</DATE>
+                        <CHRONPROSE>SJ&apos;s younger brother, <NAME>Harold Jameson</NAME>, was
+                            killed while serving with the <ORGNAME>Royal Flying
+                            Corps</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 102" DBREF="18954">102</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Forging a Career</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>By <DATE VALUE="1918-11-" CERTAINTY="BY">November 1918</DATE> SJ and her
+                            son were living again at <NAME STANDARD="Jameson, Hannah Margaret"
+                                >Hannah Jameson</NAME>&apos;s home in
+                                    <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>. They were, not very unhappily,
+                            without Clarke, who remained in the army and sent his wife occasional,
+                            minor financial support. After an unsuccessful attempt at persuading him
+                            to apply for an advertising job in
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE>, Jameson decided to enquire
+                            about the position herself. <BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 131-3" DBREF="18954"
+                                    >131-3</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATERANGE FROM="1919-12-" TO="1920-09-" EXACT="FROM">December 1919-Autumn
+                            1920</DATERANGE>
+                        <CHRONPROSE>SJ was a <JOB>copywriter</JOB> with the
+                                    <EMPLOYER><ORGNAME>Carlton Agency</ORGNAME></EMPLOYER>, a
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE> advertising firm.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Feinstein i" DBREF="108093">i</BIBCIT>
+                            <BIBCIT PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 136-8, 153" DBREF="18954">136-8,
+                                153</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She chose to build a career of her own not only because her husband was
+                            an unreliable, to her undesirable, partner and father, but also because
+                            of her feelings of <QUOTE DIRECT="Y">ambition, boredom, and
+                                restlessness.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 135" DBREF="18954"
+                                >135</BIBCIT></BIBCITS>
+                            <REMUNERATION>Her starting wage at the agency was four pounds per
+                                week.</REMUNERATION></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="SON">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>She spent half of her earned income on Bill&apos;s boarding at the
+                                home of a Miss Geeson, who ran a morning school in the village of
+                                        <PLACE><SETTLEMENT>Ruswarp</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE> near
+                                        <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE>. Despite her
+                                desire for an active public life, SJ loathed leaving her son in
+                                another&apos;s care and in later years deeply regretted her decision
+                                to be away from him.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 135-41, 149-53" DBREF="18954"
+                                        >135-41, 149-53</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>For some of this early London period she lived in a shared flat in
+                                    <PLACE><SETTLEMENT CURRENT="London">St John&apos;s
+                                    Wood</SETTLEMENT><REGION REG="Middlesex"/><GEOG REG="England"
+                                /></PLACE>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She shared this flat with Elizabeth and John Gleeson. <NAME
+                                STANDARD="Gleeson, Elizabeth">Elizabeth</NAME> was the sister of
+                            writer <NAME>Stephen Graham</NAME>, and <NAME STANDARD="Gleeson, John"
+                                >John</NAME> was a former Eikonoklast. Storm had a close friendship
+                            with Elizabeth, but not with John.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 135-41, 149-53" DBREF="18954"
+                                    >135-41, 149-53</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATERANGE FROM="1919-09-" TO="1921-04-" EXACT="NEITHER">Autumn 1919-Spring
+                            1921</DATERANGE>
+                        <CHRONPROSE>SJ was the <JOB>sub-editor</JOB> of the <TITLE
+                                TITLETYPE="JOURNAL">New Commonwealth</TITLE> journal, a job which
+                            overlapped with her shorter period of copywriting work.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 153-4, 169" DBREF="18954">153-4,
+                                169</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>The journal, formerly called the <TITLE TITLETYPE="JOURNAL">Christian
+                                Commonwealth</TITLE>, had just been purchased by <NAME
+                                STANDARD="Thoresby, Frederick">F. Thoresby</NAME>, who intended to
+                            make it a weekly vehicle for his various socio-political views. Jameson
+                            described him as a theosophist who also held <QUOTE DIRECT="Y">an honest
+                                business man&apos;s vision of a society run on the lines of a good
+                                firm, reasonably generous to its workers.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 154" DBREF="18954"
+                                >154</BIBCIT></BIBCITS> She found these interests and ideals <QUOTE
+                                DIRECT="Y">odd but harmless.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 154" DBREF="18954"
+                                >154</BIBCIT></BIBCITS></P>
+                        <P>Thoresby recruited Jameson after admiring her first published novel,
+                                <TITLE TITLETYPE="MONOGRAPHIC">The Pot Boils</TITLE>
+                                (<DATE>1919</DATE>). <REMUNERATION>As sub-editor she earned fifty
+                                pounds a month: for this, her responsibilities included creating the
+                                journal&apos;s layout as well as contributing articles, essays, and
+                                reviews.</REMUNERATION> One of several turning points in her
+                            approach to her creative and social responsibilities occurred when she
+                            encountered another journal&apos;s dismissive coverage of severely
+                            impoverished children in <PLACE><GEOG>Germany</GEOG></PLACE> and
+                                    <PLACE><GEOG>Austria</GEOG></PLACE>. She recalled that <QUOTE
+                                DIRECT="Y">[f]or the first time in my life I had the sense, horribly
+                                familiar later, of a dark wave of pain, cruelty, [and] fear,
+                                gathering force at the other side of
+                                    <PLACE><GEOG>Europe</GEOG></PLACE> and about to rush
+                                down.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 156"
+                                    DBREF="18954">156</BIBCIT></BIBCITS> Initially she responded to
+                            this by ensuring that news of post-war destitution in Europe received
+                            regular, prominent treatment in the <TITLE TITLETYPE="JOURNAL">New
+                                Commonwealth</TITLE>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>Her husband was demobilized in 1920 and he and SJ again lived
+                                together in <PLACE><SETTLEMENT>London</SETTLEMENT><REGION
+                                        REG="Middlesex"/><GEOG REG="England"/></PLACE>. When he was
+                                unable to find work Jameson gave up her job, urged Thoresby to hire
+                                her husband in her place, and spent some time in
+                                        <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION
+                                        REG="Yorkshire"/><GEOG REG="England"/></PLACE> before
+                                returning to London.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 166-8" DBREF="18954"
+                                        >166-8</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="KLH"
+                        CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATESTRUCT CERTAINTY="C" VALUE="1921-07-">
+                            <SEASON VALUE="1921-07-" CERTAINTY="C">Summer</SEASON>
+                            <YEAR>1921</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>SJ spent some weeks as a <JOB REG="research">researcher</JOB>
+                            for <EMPLOYER><NAME>Margaret Sanger</NAME></EMPLOYER>. She prepared data
+                            on English sexual health for the English edition of one of Sanger&apos;s
+                            books (either <TITLE TITLETYPE="MONOGRAPHIC">What Every Girl Should
+                                Know</TITLE> or <TITLE TITLETYPE="MONOGRAPHIC">The New
+                                Motherhood</TITLE>).</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 171-2" DBREF="18954"
+                                >171-2</BIBCIT>
+                            <BIBCIT PLACEHOLDER="OCLC" DBREF="1709"/>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>In her description of this work Jameson neither explains how she came to
+                            be employed by Sanger nor offers her own perspective on Sanger&apos;s
+                            career. <REMUNERATION>However she calls Sanger <QUOTE DIRECT="Y">a
+                                    generous woman</QUOTE>:<BIBCITS>
+                                    <BIBCIT PLACEHOLDER="Jameson, Journey 172" DBREF="18954"
+                                        >172</BIBCIT>
+                                </BIBCITS> the two had agreed that Jameson would be paid fifty
+                                pounds for her research, but when it took longer than expected
+                                Sanger paid her twice as much.</REMUNERATION></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATERANGE FROM="1923--" TO="1925--" EXACT="BOTH">1923-1925</DATERANGE>
+                        <CHRONPROSE>SJ worked as a <JOB REG="publishing">publishing
+                                representative</JOB> for <EMPLOYER><ORGNAME STANDARD="Knopf">Alfred
+                                    A. Knopf</ORGNAME></EMPLOYER> in
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Feinstein i" DBREF="108093">i</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She was introduced to <NAME STANDARD="Knopf, Alfred">Alfred</NAME> and
+                                <NAME>Blanche Knopf</NAME> by her publisher and friend <NAME>Michael
+                                Sadleir</NAME>.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 188"
+                                    DBREF="18954">188</BIBCIT></BIBCITS> In her autobiography she
+                            comments, <QUOTE DIRECT="Y">I wrote to every well-known author under the
+                                age of fifty. I had a few civil phrases on the end of my pen . . .
+                                my profound admiration for your work . . . should you, at any time,
+                                consider changing your publisher in America, I beg that you will
+                                give me the chance to . . . your reputation, your etc, etc . . .
+                                .</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 195"
+                                    DBREF="18954">195</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <HEADING>Literary Friends and Associates</HEADING>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ moved in various creative circles as she began to write, review, and
+                            undertake other literary work. She first met <NAME>Dora Marsden</NAME>
+                            in <DATE>1913</DATE>: Marsden was editor of the <TITLE
+                                TITLETYPE="JOURNAL">Egoist</TITLE> and Jameson wrote a number of
+                            dramatic reviews for the journal at this time. She commented that <QUOTE
+                                DIRECT="Y">I was not much given to respect in my first youth, but I
+                                knew enough to revere pure intellect when I met
+                                    it.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 77"
+                                    DBREF="18954">77</BIBCIT></BIBCITS> She provided Marsden with
+                            much-needed emotional and practical support during the
+                                    1920s.<BIBCITS><BIBCIT PLACEHOLDER="Garner 165-7" DBREF="11118"
+                                    >165-7</BIBCIT></BIBCITS> As a young woman she also became
+                            friendly with <NAME>Harriet Shaw Weaver</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Lidderdale and Nicholson 90" DBREF="20632"
+                                    >90</BIBCIT><BIBCIT PLACEHOLDER="Jameson, Journey 77-8"
+                                    DBREF="18954">77-8</BIBCIT></BIBCITS></P>
+                        <P><NAME>Michael Sadleir</NAME> first took Jameson to the Thursday evening
+                            salons hosted by <NAME>Naomi Royde-Smith</NAME> at her
+                                        <PLACE><ADDRESS><ADDRLINE>Queen&apos;s
+                                    Gate</ADDRLINE></ADDRESS><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE> home. These
+                            gatherings were attended by <NAME>Rose Macaulay</NAME>, <NAME>Arnold
+                                Bennett</NAME>, <NAME>Edward Marsh</NAME>, and <NAME>Frank
+                                Swinnerton</NAME>. Jameson remained in contact with Macaulay for
+                            many years, and left a vivid and appealing description of her appearance
+                            and demeanour when entertaining her guests.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 160-1" DBREF="18954"
+                                    >160-1</BIBCIT></BIBCITS> Several weeks after Jameson&apos;s
+                            first visit, Royde-Smith teasingly told her that <QUOTE DIRECT="Y">Rose
+                                calls you a most likeable child. I doubt whether you&apos;re either
+                                likeable or a child, in spite of your voice.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 162" DBREF="18954"
+                                    QTDIN="QTDINYES">162</BIBCIT></BIBCITS></P>
+                        <P>SJ greatly admired <NAME STANDARD="De la Mare, Walter">Walter de la
+                                Mare</NAME> and they began to correspond in <DATE>1921</DATE>,
+                            shortly before she published an essay on him in the <TITLE
+                                TITLETYPE="JOURNAL">English Review</TITLE>. She made several visits
+                            to his home at <PLACE><ADDRESS><ADDRLINE>14 Thornsett
+                                    Road</ADDRLINE></ADDRESS>, <SETTLEMENT REG="London">South
+                                    London</SETTLEMENT><REGION REG="Middlesex"/><GEOG REG="England"
+                                /></PLACE> and to his later home near
+                                    <PLACE><SETTLEMENT>Taplow</SETTLEMENT><REGION
+                                    REG="Buckinghamshire"/><GEOG REG="England"
+                                    /></PLACE>.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 164-6"
+                                    DBREF="18954">164-6</BIBCIT></BIBCITS></P>
+                        <P>Jameson met <NAME>Romer Wilson</NAME>, <NAME>Charles Morgan</NAME>, and
+                                <NAME>J. W. N. Sullivan</NAME> through her <ORGNAME>Knopf</ORGNAME>
+                            connections. By about <DATE VALUE="1924--" CERTAINTY="C">1924</DATE> she
+                            and <NAME>Edith Sitwell</NAME> had visited each other&apos;s homes.
+                            Jameson felt that <QUOTE DIRECT="Y">in spite of my respect for her as a
+                                poet,</QUOTE> some resistance towards <QUOTE DIRECT="Y">an
+                                aristocratic insolence she neverthless fell into whenever she or her
+                                brothers were attacked by a plebeian critic.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 201" DBREF="18954"
+                                >201</BIBCIT></BIBCITS> Jameson attended parties held by <NAME>J. D.
+                                Beresford</NAME>; she met <NAME>John Middleton Murry</NAME> at one
+                            of Beresford&apos;s parties and they wrote to each other several times
+                            in <DATE>1923</DATE>. One letter from Murry told Jameson that
+                                <NAME>Katherine Mansfield</NAME> had been very much pleased by
+                            Jameson&apos;s review of one of her short stories. Mansfield also sent
+                            the message that she could offer some financial support (twenty pounds)
+                            to Jameson if necessary. SJ observed <NAME>Violet Hunt</NAME> and
+                                <NAME>May Sinclair</NAME> at other gatherings. <NAME>Amabel
+                                Williams-Ellis</NAME>, <NAME>Noel Streatfeild</NAME>, <NAME
+                                STANDARD="Unwin, Sir Stanley">Stanley Unwin</NAME>, and
+                                <NAME>Richard Hughes</NAME> began friendships with Jameson during
+                            this early period. Jameson was also a friend of both <NAME>Naomi
+                                Mitchison</NAME> and <NAME>Q. D. Leavis</NAME> (undeterred by
+                            Leavis&apos;s quite sharp criticism of Mitchison as a writer), and of
+                                <NAME STANDARD="Tawney, Richard Henry">R. H. Tawney</NAME>, possibly
+                            from a later period than this.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 192-205" DBREF="18954"
+                                    >192-205</BIBCIT><BIBCIT PLACEHOLDER="Montefiore 55"
+                                    DBREF="20142">55</BIBCIT></BIBCITS> Leavis, a woman with few
+                            friends of her own sex and few outside the world of Cambridge, deeply
+                            valued her epistolary friendship with Jameson.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Divorce and Remarriage</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <DIV2>
+                        <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                            RESP="KLH">
+                            <DATE VALUE="1925-01-31" CERTAINTY="BY">31 January 1925</DATE>
+                            <CHRONPROSE>
+                                <DIVORCE>After years of animosity and separation, SJ divorced
+                                        <NAME>Charles Douglas Clarke</NAME> and assumed custody of
+                                    their son.</DIVORCE>
+                            </CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT PLACEHOLDER="DLB 36: 72" DBREF="2921">36: 72</BIBCIT>
+                                <BIBCIT PLACEHOLDER="Berry and Bostridge 361" DBREF="121"
+                                    >361</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>Though the reunion of Jameson and her son was not permanent, they
+                                moved to <PLACE><SETTLEMENT>Weybridge</SETTLEMENT><REGION
+                                        REG="Surrey"/><GEOG REG="England"/></PLACE> at some point in
+                                1924. She began work on her fifth novel, as her
+                                    <ORGNAME>Knopf</ORGNAME> salary did not cover their cost of
+                                        living.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 208-10" DBREF="18954"
+                                        >208-10</BIBCIT></BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <INTIMATERELATIONSHIPS EROTIC="EROTICYES">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She also continued her love affair with ex-soldier <NAME>Guy Patterson
+                                Chapman</NAME>, her future second husband, with whom she had become
+                            involved while they were both married to others.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 208-10" DBREF="18954"
+                                    >208-10</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </INTIMATERELATIONSHIPS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Publishing Work</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATERANGE FROM="1925--" TO="1928--" EXACT="BOTH">1925-1928</DATERANGE>
+                        <CHRONPROSE>SJ was <JOB REG="publishing">co-manager</JOB> of
+                                    <EMPLOYER><ORGNAME STANDARD="Knopf">Alfred A.
+                                Knopf</ORGNAME></EMPLOYER>&apos;s
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE> branch with <NAME
+                                STANDARD="Chapman, Guy Patterson">Guy Patterson Chapman</NAME> (who
+                            became her husband on 1 February 1926).</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>By the time the couple met, Chapman was running his own publishing firm
+                                (<ORGNAME REG="Chapman and Dodd" STANDARD="Guy Chapman">Chapman and
+                                Dodd</ORGNAME>, later <ORGNAME>Guy
+                                    Chapman</ORGNAME>).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Chapman, Survivor 103-13" DBREF="20820"
+                                    >103-13</BIBCIT></BIBCITS>
+                            <REMUNERATION>When Knopf bought out the company and retained Chapman and
+                                Jameson, it was agreed that Jameson would work part-time and at half
+                                of Chapman&apos;s salary. However, she wrote that <QUOTE DIRECT="Y"
+                                    >[i]n the event I worked five full days in the
+                                        office.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 234" DBREF="18954"
+                                        >234</BIBCIT></BIBCITS></REMUNERATION></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>She was once charged by <ORGNAME STANDARD="Knopf">Knopf</ORGNAME> with
+                            the task of attempting to persuade <NAME>Wyndham Lewis</NAME> to keep
+                            them as his American publisher, which she did on a cold, rainy day
+                                <QUOTE DIRECT="Y">as vile as his temper.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 236" DBREF="18954"
+                                >236</BIBCIT></BIBCITS> She called the friendship that she and
+                            Chapman enjoyed with <NAME STANDARD="Thompson, Edward John">Edward
+                                Thompson</NAME> the <QUOTE DIRECT="Y">one pure gain from our two and
+                                a half years&apos; servitude</QUOTE> with Knopf.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 237" DBREF="18954"
+                                >237</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <MARRIAGE>
+                        <DIV2>
+                            <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                RESP="KLH">
+                                <DATE CALENDAR="NEWSTYLE" VALUE="1926-02-01" CERTAINTY="C">1
+                                    February 1926</DATE>
+                                <CHRONPROSE>SJ married <NAME>Guy Patterson Chapman</NAME>, who in
+                                    time became a respected <JOB>author</JOB> and <JOB>historical
+                                        scholar</JOB>.</CHRONPROSE>
+                                <BIBCITS>
+                                    <BIBCIT PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT>
+                                </BIBCITS>
+                            </CHRONSTRUCT>
+                            <SHORTPROSE>
+                                <P>While he <JOB REG="student">studied</JOB> at the <ORGNAME
+                                        STANDARD="London School of Economics and Political Science,, University of London"
+                                        >London School of Economics</ORGNAME>, Jameson supported
+                                    their household, sometimes taking on more commercial work rather
+                                    than devoting herself to further intellectual experiment. In
+                                    their biography of <NAME>Vera Brittain</NAME>, <NAME>Paul
+                                        Berry</NAME> and <NAME>Mark Bostridge</NAME> comment that
+                                        <QUOTE DIRECT="Y">Vera was not the only friend over the
+                                        years to wonder at [Jameson&apos;s] apparent willingness to
+                                        eclipse herself for Chapman&apos;s
+                                            sake.</QUOTE><BIBCITS><BIBCIT
+                                            PLACEHOLDER="Berry and Bostridge 361" DBREF="121"
+                                            >361</BIBCIT></BIBCITS> SJ called her relationship with
+                                    Chapman a <QUOTE DIRECT="Y">happy difficult second
+                                        marriage.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="FC"
+                                            DBREF="107913" QTDIN="QTDINYES"/></BIBCITS></P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MARRIAGE>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Vera Brittain</HEADING>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="KLH">
+                        <DATESTRUCT VALUE="1927-07-">
+                            <SEASON VALUE="1927-07-" CERTAINTY="C">Summer</SEASON>
+                            <YEAR REG="1927--">1927</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>SJ wrote to <NAME>Vera Brittain</NAME>, thereby initiating a
+                            close (but not permanent) friendship.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Berry and Bostridge 360" DBREF="121">360</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Their friendship was sparked by their shared investment in the question
+                            of how women may effectively balance career and family demands. Both
+                            published on this topic, and while Jameson was discussing it in a series
+                            of <TITLE TITLETYPE="JOURNAL">Evening Standard</TITLE> articles she
+                            visited Brittain, then pregnant, at her <PLACE><PLACENAME>Nevern
+                                    Place</PLACENAME><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE> flat. When they
+                            first met in person Brittain was surprised by Jameson&apos;s youth: she
+                            had expected someone older because at this time Jameson was better known
+                            than herself.<BIBCITS><BIBCIT PLACEHOLDER="Berry and Bostridge 360"
+                                    DBREF="121">360</BIBCIT></BIBCITS> They also continued
+                            discussions by letter. Jameson wrote to Brittain on <DATE>8 October
+                                1927</DATE>: <QUOTE DIRECT="Y">I suppose that by good management and
+                                by keeping enough of one&apos;s head and heart out of the career,
+                                one can manage a husband and even the most exacting of careers. I
+                                loathe domesticity myself and I couldn&apos;t even contemplate
+                                    <QUOTE DIRECT="N">marriage as a career.</QUOTE> But add a baby
+                                to the affair, and . . . something has to go, either the career or
+                                the child. . . . You see, it&apos;s neither as easy as my smug
+                                articles in the <TITLE TITLETYPE="JOURNAL">Evening Standard</TITLE>
+                                pretend, nor so simple as the <TITLE TITLETYPE="JOURNAL">Time and
+                                    Tide</TITLE>rs imagine.<BIBCITS><BIBCIT
+                                        PLACEHOLDER="Gorham 211, 304" DBREF="166" QTDIN="QTDINYES"
+                                        >211, 304</BIBCIT></BIBCITS></QUOTE></P>
+                        <P>The two women were friends through the 1930s and their relationship
+                            became increasingly intimate after the death of <NAME>Winifred
+                                Holtby</NAME> on <DATE>29 September 1935</DATE>. Brittain stayed
+                            with Jameson and Chapman the night after Holtby died; Jameson supported
+                            Brittain at Holtby&apos;s funeral; Brittain once wrote that Jameson was
+                            the closest friend she had after Holtby&apos;s death. Brittain was also
+                            supportive of Jameson, offering her financial aid when she needed it and
+                            persuading <NAME>George Brett</NAME> to sign SJ on at <ORGNAME
+                                REG="Macmillan Publishers Limited"
+                                STANDARD="Macmillan Publishers Limited">Macmillan</ORGNAME> after
+                            she quarrelled with her American editor. Just before leaving for an
+                            American lecture tour in <DATE>January 1940</DATE>, Brittain appointed
+                            Jameson guardian to her children. (<NAME
+                                STANDARD="Andrews, Henry Maxwell">Henry Andrews</NAME>,
+                                <NAME>Rebecca West</NAME>&apos;s husband, was another
+                                    guardian.)<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Berry and Bostridge 359-62, 390" DBREF="121"
+                                    >359-62, 390</BIBCIT><BIBCIT PLACEHOLDER="Gorham 211"
+                                    DBREF="166">211</BIBCIT></BIBCITS>
+                            <NAME>Catherine Clay</NAME> gives a chapter to this friendship in <TITLE
+                                TITLETYPE="MONOGRAPHIC">British Women Writers, 1914-1945:
+                                professional work and friendship</TITLE>, 2006.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Politics before World War Two</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <HEADING><TITLE TITLETYPE="MONOGRAPHIC">The Well of Loneliness</TITLE> and
+                        Anti-Censorship</HEADING>
+                    <SHORTPROSE>
+                        <P>In <DATE>November 1928</DATE> SJ was one of many authors (including
+                                <NAME>E. M. Forster</NAME>, <NAME STANDARD="Woolf, Virginia"
+                                >Virginia</NAME> and <NAME>Leonard Woolf</NAME>, and <NAME>Desmond
+                                MacCarthy</NAME>) prepared to testify in <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTNO" WOMAN-GENDERISSUE="GENDERYES"
+                                INVOLVEMENT="INVOLVEMENTYES" REG="anti-censorship"
+                                >defence</POLITICALAFFILIATION> of <NAME>Radclyffe
+                            Hall</NAME>&apos;s lesbian novel <TITLE TITLETYPE="MONOGRAPHIC">The Well
+                                of Loneliness</TITLE>, then being tried on obscenity
+                                    charges.<BIBCITS><BIBCIT PLACEHOLDER="Berry and Bostridge 228"
+                                    DBREF="121">228</BIBCIT></BIBCITS> It is possible that Jameson
+                            became involved in the case through her friend <NAME>Vera
+                                Brittain</NAME>, another ready witness and one of Hall&apos;s most
+                            outspoken, lasting supporters.</P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>Labour Party Activities</HEADING>
+                    <SHORTPROSE>
+                        <P>Remembering her university years, SJ called herself and the other
+                            Eikonoklasts <QUOTE DIRECT="Y"
+                                    ><POLITICALAFFILIATION>socialist</POLITICALAFFILIATION>s of a
+                                sort,</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 65"
+                                    DBREF="18954">65</BIBCIT></BIBCITS> though they disliked
+                                <POLITICALAFFILIATION>Fabian</POLITICALAFFILIATION>ism for its
+                            apparent bureaucracy. Jameson was an active member of the
+                                <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERNO"
+                                MEMBERSHIP="MEMBERSHIPYES">Labour</POLITICALAFFILIATION> Party by
+                                <DATE VALUE="1931--" CERTAINTY="BY">1931</DATE>, when she attended
+                            its conference at <PLACE><SETTLEMENT>Scarborough</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE>. In
+                                <DATE>1933</DATE> she attended the Labour conference in
+                                    <PLACE><SETTLEMENT>Hastings</SETTLEMENT><REGION REG="Sussex"
+                                    /><GEOG REG="England"/></PLACE> as
+                                    <PLACE><SETTLEMENT>Whitby</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>&apos;s first delegate. She was
+                            sometimes assumed to be, but never was, a
+                                <POLITICALAFFILIATION>Communist</POLITICALAFFILIATION>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 65, 270, 321" DBREF="18954">65,
+                                    270, 321</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <HEADING>Berlin</HEADING>
+                    <SHORTPROSE>
+                        <P>SJ travelled frequently throughout her life, in both personal and
+                            professional capacities.</P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATERANGE FROM="1932-02-" TO="1932-03-" EXACT="BOTH">February-March
+                            1932</DATERANGE>
+                        <CHRONPROSE>SJ spent several weeks in
+                                    <PLACE><SETTLEMENT>Berlin</SETTLEMENT><GEOG REG="Germany"
+                                /></PLACE>, where she witnessed events leading up to Germany&apos;s
+                            presidential elections.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 266, 282" DBREF="18954">266,
+                                282</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Here Jameson observed, with local contacts, the nation&apos;s
+                            impoverished, violent, politically-uncertain climate. She deepened her
+                            friendship with <NAME>Lilo Linke</NAME>, a young woman she had first met
+                            at the <ORGNAME>Labour Party</ORGNAME> Conference held in
+                                    <PLACE><SETTLEMENT>Scarborough</SETTLEMENT><REGION
+                                    REG="Yorkshire"/><GEOG REG="England"/></PLACE> in late 1931. In
+                            Berlin, Linke wrote for the <TITLE TITLETYPE="JOURNAL"><FOREIGN
+                                    LANG="de">Deutsche Volkswirt</FOREIGN></TITLE> (which she
+                            described as <QUOTE DIRECT="Y">the Berlin equivalent of the <TITLE
+                                    TITLETYPE="JOURNAL">Economist</TITLE></QUOTE>),<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 272" DBREF="18954"
+                                >272</BIBCIT></BIBCITS> was an active Social Democrat, and lived in
+                            a small flat near the
+                                        <PLACE><ADDRESS><ADDRLINE>Kurf&uuml;rstendamm</ADDRLINE></ADDRESS><SETTLEMENT
+                                    REG="Berlin"/><GEOG REG="Germany"/></PLACE> boarding house where
+                            Jameson stayed. Jameson later wrote an introduction to her book <TITLE
+                                TITLETYPE="MONOGRAPHIC">Tale Without End</TITLE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT></BIBCITS> Again
+                            as a viewer rather than a participant, Jameson attended a memorial
+                            service for First World War dead by the <ORGNAME>Stalhelm</ORGNAME>
+                                (<QUOTE DIRECT="Y">a dull declamatory
+                                    meeting</QUOTE>)<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 267" DBREF="18954"
+                                >267</BIBCIT></BIBCITS> and a Communist rally at the
+                                    <PLACE><PLACENAME>Sportpalast</PLACENAME><SETTLEMENT
+                                    REG="Berlin"/><GEOG REG="Germany"/></PLACE> (<QUOTE DIRECT="Y"
+                                >Why this passion for a Messiah, shared by both
+                                    extremes?</QUOTE>).<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 277" DBREF="18954"
+                                >277</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <HEADING>London</HEADING>
+                    <SHORTPROSE>
+                        <P>The year <DATE>1932</DATE> was a key point in the development of
+                            SJ&apos;s socio-political consciousness: she stated that she began to
+                                <QUOTE DIRECT="Y"><EMPH>construct</EMPH> [her]self</QUOTE> as a
+                            writer-activist at this time.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 301" DBREF="18954"
+                                >301</BIBCIT></BIBCITS></P>
+                        <P>Jameson described the <DATE>1933</DATE>
+                            <ORGNAME REG="Labour Party" STANDARD="Labour Party">Labour</ORGNAME>
+                            Conference at <PLACE><SETTLEMENT>Hastings</SETTLEMENT><REGION
+                                    REG="Sussex"/><GEOG REG="England"/></PLACE> as <QUOTE DIRECT="Y"
+                                >haunted by the ghost of German Social Democracy, in the shape
+                                usually of a young doctor or lawyer, with a pale intelligent face,
+                                and no money. What did these <FOREIGN LANG="fr">revenants</FOREIGN>
+                                hope from their assembled English
+                                <SOCALLED>comrades</SOCALLED>?</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 321" DBREF="18954"
+                                >321</BIBCIT></BIBCITS> Jameson began to associate with refugees in
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                    /><GEOG REG="England"/></PLACE> from about this year forward.
+                            Though she later undertook more formal, concerted refugee work with
+                                <ORGNAME REG="PEN International" STANDARD="PEN International"
+                                >PEN</ORGNAME>, she now hosted some of the first exiles from <NAME
+                                STANDARD="Hitler, Adolf">Hitler</NAME>&apos;s
+                                    Germany.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 321-5"
+                                    DBREF="18954">321-5</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATESTRUCT VALUE="1933-10-">
+                            <SEASON VALUE="1933-10-" CERTAINTY="C">Autumn</SEASON>
+                            <YEAR REG="1933--">1933</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>SJ and <NAME STANDARD="Noel-Baker, Philip J.">Philip
+                                Noel-Baker</NAME> co-ordinated a dinner hosted by <NAME
+                                STANDARD="Cecil, Edgar Algernon Robert Gascoyne-Cecil,,, Viscount"
+                                >Viscount Cecil</NAME> at the <PLACE><PLACENAME>Wellington
+                                    Club</PLACENAME><SETTLEMENT REG="London"/><REGION
+                                    REG="Middlesex"/><GEOG REG="England"/></PLACE>, in order to
+                            marshal well-known authors against war.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 326-7" DBREF="18954"
+                                >326-7</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Guests included <NAME>Rebecca West</NAME> and <NAME>Rose Macaulay</NAME>.
+                            This event led to the publication of the anthology <TITLE
+                                TITLETYPE="MONOGRAPHIC" REG="Challenge to Death">Challenge to Death:
+                                A Symposium on War and Peace</TITLE> (<DATE>1934</DATE>)</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ claims in <TITLE TITLETYPE="MONOGRAPHIC">Journey from the
+                                North</TITLE> that <QUOTE DIRECT="Y">[t]here is no literary society
+                                in <PLACE><SETTLEMENT>London</SETTLEMENT><REGION REG="Middlesex"
+                                        /><GEOG REG="England"/></PLACE>, in the meaning of the
+                                words: groups form and dissolve, like the tiny circular ripple an
+                                insect makes on the surface of a stagnant pond, nothing more
+                                serious.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 314"
+                                    DBREF="18954">314</BIBCIT></BIBCITS> During the 1930s and the
+                            war years most of her friends were leftist politicians, journalists,
+                            historians, and economists. In the early 1930s she began the habit of
+                                <QUOTE DIRECT="Y">record[ing] many thousands of spoken
+                                    words</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 291"
+                                    DBREF="18954">291</BIBCIT></BIBCITS>&mdash;transcribing each
+                            day&apos;s conversations on often intermingled personal, creative, and
+                            political issues. She later destroyed these papers.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <HEADING>Spain</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATERANGE FROM="1935-03-" TO="1935-04-">March-April 1935</DATERANGE>
+                        <CHRONPROSE>SJ and her husband, <NAME>Guy Patterson Chapman</NAME>, spent
+                            about five weeks in <PLACE><GEOG>Spain</GEOG>, staying in a village
+                                north of <SETTLEMENT>Barcelona</SETTLEMENT></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 333" DBREF="18954">333</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>In 1935 SJ&apos;s thoughts were turning even more sharply toward the
+                            fearful certainty of another war: in her autobiography she describes her
+                            awareness of this certainty <QUOTE DIRECT="Y">flicker[ing] continuously,
+                                just below the horizon, a lightning flash, a sudden thinning out of
+                                the clouds, another flash, another.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 333" DBREF="18954"
+                                >333</BIBCIT></BIBCITS> After listening to US journalist
+                                <NAME>Dorothy Thompson</NAME> describe the Night of the Long Knives
+                                (<NAME STANDARD="Hitler, Adolf">Hitler</NAME>&apos;s purge of the
+                                <ORGNAME STANDARD="Sturm Abteilung">SA</ORGNAME>, announced on
+                                <DATE>13 July 1934</DATE>), Jameson became interested in the
+                            apparent compulsion of a dictator, once in power, to destroy his
+                            earliest supporters. She chose to write about this in a novel, which
+                            became <TITLE TITLETYPE="MONOGRAPHIC">In the Second Year</TITLE>,
+                            planned in Spain and begun in <PLACE><GEOG>Norway</GEOG></PLACE> in
+                                <DATE VALUE="1935-06-">June</DATE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 334-5" DBREF="18954"
+                                    >334-5</BIBCIT></BIBCITS></P>
+                        <P>In <TITLE TITLETYPE="MONOGRAPHIC">Authors Take Sides on the Spanish Civil
+                                War</TITLE>, <NAME>Louis Aragon</NAME> notes that Jameson signed
+                            statements <POLITICALAFFILIATION MEMBERSHIP="MEMBERSHIPYES"
+                                REG="Spanish Republican supporter">supporting Spain&apos;s
+                                Republican government</POLITICALAFFILIATION> in <DATERANGE
+                                FROM="1936--" TO="1937--">1936 and 1937</DATERANGE>. Jameson&apos;s
+                            possible connections to Aragon and the Republican movement are not yet
+                                    clear.<BIBCITS><BIBCIT PLACEHOLDER="Labon 39, 45" DBREF="20141"
+                                    >39, 45</BIBCIT></BIBCITS></P>
+                        <P>Still a <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERNO">pacifist</POLITICALAFFILIATION> between
+                            the wars, SJ signed the <ORGNAME>Peace Pledge Union</ORGNAME> in
+                                <DATE>May 1936</DATE>.<RESEARCHNOTE>link to event
+                                #920?</RESEARCHNOTE>
+                            <BIBCITS><BIBCIT PLACEHOLDER="Labon 40" DBREF="20141">40</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Berry and Bostridge 354" DBREF="121"
+                                >354</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+                <DIV2>
+                    <HEADING>PEN International</HEADING>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="KLH"
+                        CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATE VALUE="1938-06-" CERTAINTY="BY">Earlier 1938</DATE>
+                        <CHRONPROSE>SJ became president of the <ORGNAME
+                                REG="Society of Poets,, Essayists,, and Novelists" STANDARD="PEN"
+                                >English Centre of PEN International</ORGNAME>. She held this
+                            position through the Second World War, until 1945.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DLB 36: 72" DBREF="2921">36: 72</BIBCIT>
+                        </BIBCITS>
+                        <SCHOLARNOTE>
+                            <P>The international body had first met in <PLACE><SETTLEMENT
+                                        REG="New York City">New York</SETTLEMENT><REGION
+                                        REG="New York"/><GEOG REG="USA"/></PLACE> on <DATE>13 May
+                                    1924</DATE>, when it was addressed by the founder of the
+                                original, English organization, the writer <NAME>Catharine Amy
+                                    Dawson Scott</NAME>.</P>
+                        </SCHOLARNOTE>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>In <TITLE TITLETYPE="MONOGRAPHIC">Journey from the North</TITLE> Jameson
+                            calls her acceptance of this <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERNO"
+                                MEMBERSHIP="MEMBERSHIPYES" INVOLVEMENT="INVOLVEMENTYES"
+                                REG="anti-Fascist">position</POLITICALAFFILIATION>
+                            <QUOTE DIRECT="Y">one of my more insane blunders</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 425" DBREF="18954"
+                                >425</BIBCIT></BIBCITS> but notes that she could not refuse it,
+                            either when it was first offered or later during the war, because of her
+                            horror at the psychological and social state of Eastern European
+                            refugees. <QUOTE DIRECT="Y">Nothing in me is fiercer, more obsessive,
+                                more nearly involuntary, than my loathing of the cruelty that issued
+                                in <ORGNAME>Auschwitz</ORGNAME>, except the sense that exile is only
+                                the human condition pushed to its furthest
+                                    limit.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 344" DBREF="18954"
+                                >344</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>June 1938</DATE>
+                        <CHRONPROSE>SJ began an extended tour of
+                                    <PLACE><SETTLEMENT>Prague</SETTLEMENT><GEOG
+                                    CURRENT="Czech Republic" REG="Czechoslovakia"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Vienna</SETTLEMENT><GEOG REG="Austria"
+                                /></PLACE>, and <PLACE><SETTLEMENT>Budapest</SETTLEMENT><GEOG
+                                    REG="Hungary"/></PLACE> in her capacity as president of the
+                                <ORGNAME REG="Society of Poets,, Essayists,, and Novelists"
+                                STANDARD="PEN">English Centre of PEN
+                            International</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Labon 41" DBREF="20141">41</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 368" DBREF="18954">368</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>SJ found the <PLACE><SETTLEMENT>Munich</SETTLEMENT><GEOG REG="Germany"
+                                /></PLACE> Agreement of <DATE VALUE="1938-09-29">September
+                                1938</DATE> especially repugnant after observing the last struggles
+                            for safety and independence in these cities. She did not adopt a
+                            militaristic or pro-war stance: in fact, she remained staunchly
+                            anti-war. However, the consequences of failed appeasement strongly
+                            influenced her shift away from <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERNO"
+                                REG="anti-pacifist">pacifism</POLITICALAFFILIATION>. She expressed
+                            her intense disapproval of the Agreement partly by resigning from the
+                                <ORGNAME>Peace Pledge Union</ORGNAME>, though its letterhead and its
+                            journal <TITLE TITLETYPE="JOURNAL">Peace News</TITLE> continued to list
+                            her as a sponsor for some time.<BIBCITS><BIBCIT PLACEHOLDER="Labon 41"
+                                    DBREF="20141">41</BIBCIT><BIBCIT
+                                    PLACEHOLDER="Berry and Bostridge 403" DBREF="121"
+                                >403</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>World War Two</HEADING>
+            <OCCUPATION>
+                <DIV2>
+                    <HEADING>Continuing Political Commitments</HEADING>
+                    <SHORTPROSE>
+                        <P>SJ&apos;s work on behalf of the imprisoned and the exiled required her to
+                            spend an immense amount of time and energy in diverse literary, social,
+                            and political circles. <NAME>Joanna Labon</NAME> asserts that <QUOTE
+                                DIRECT="Y">[u]nder Jameson&apos;s direction, PEN became the
+                                headquarters for an intellectual campaign fought with military
+                                efficiency and astonishing stamina.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Labon 41" DBREF="20141">41</BIBCIT></BIBCITS> Often
+                            functioning on less than three hours of sleep per night, SJ petitioned
+                            institutions in Britain and elsewhere to rescue authors, scholars, and
+                            others persecuted under Fascism. Jameson <QUOTE DIRECT="Y"
+                                    ><SIGNIFICANTACTIVITY
+                                    PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES"
+                                    REG="refugee work">raised money to help them, she applied and
+                                    pushed for visas, and when they got to England she fed them,
+                                    housed them, and washed up after
+                                them</SIGNIFICANTACTIVITY>.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Labon 41" DBREF="20141">41</BIBCIT></BIBCITS> She
+                            took this on with <NAME>Hermon Ould</NAME> (a poet and secretary of PEN
+                            International), while <NAME>E. M. Forster</NAME>, <NAME>H. G.
+                                Wells</NAME>, and many others provided vital contributions to the
+                                    effort.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 425-34"
+                                    DBREF="18954">425-34</BIBCIT></BIBCITS></P>
+                        <P>SJ continued to <JOB REG="writer">write</JOB> (novels, pamphlets, essays)
+                            and accept other public commitments during the war.</P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>3 July 1940</DATE>
+                        <CHRONPROSE>SJ began a brief <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="war volunteer"
+                                >volunteer</SIGNIFICANTACTIVITY> stint with the <ORGNAME>Ministry of
+                                Labour</ORGNAME>, organizing correspondence stored in its Special
+                            Register.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 485" DBREF="18954">485</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>September 1940</DATE>
+                        <CHRONPROSE>The <ORGNAME>Home Office</ORGNAME> appointed the <ORGNAME
+                                REG="English Centre for International PEN" STANDARD="PEN">English
+                                Centre of PEN</ORGNAME> to report on the status of refugee writers
+                            who had been or could be interned. SJ and <NAME>Hermon Ould</NAME>
+                            undertook the bulk of this <SIGNIFICANTACTIVITY
+                                PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG="refugee work"
+                                    ><SIGNIFICANTACTIVITY REG="policy advisor"
+                                    >advisory</SIGNIFICANTACTIVITY> work</SIGNIFICANTACTIVITY>. </CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 497" DBREF="18954">497</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>In her autobiography Jameson also briefly mentions compiling a <JOB
+                                REG="civil servant">report on women in munitions factories</JOB> for
+                            the <ORGNAME>Ministry of Supply</ORGNAME> at this time. She
+                                <SIGNIFICANTACTIVITY REG="radio broadcaster"
+                                >spoke</SIGNIFICANTACTIVITY> on the <ORGNAME
+                                REG="British Broadcasting Corporation" STANDARD="BBC">BBC</ORGNAME>
+                            at least once, in a radio address to the New York branch of <ORGNAME
+                                REG="PEN International,, New York"
+                                STANDARD="PEN International,, New York">PEN</ORGNAME> on <DATE>3
+                                July 1941</DATE>.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 507"
+                                    DBREF="18954">507</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Not only were SJ&apos;s books banned at an early point in <NAME
+                                STANDARD="Hitler, Adolf">Hitler</NAME>&apos;s regime; she was also
+                            named in the Gestapo&apos;s <SOCALLED>Black Book</SOCALLED> of about
+                            1940 for her <POLITICALAFFILIATION ACTIVISM="ACTIVISTYES"
+                                WOMAN-GENDERISSUE="GENDERNO" INVOLVEMENT="INVOLVEMENTYES"
+                                >anti-Nazi</POLITICALAFFILIATION> activities before and during the
+                                    war.<BIBCITS><BIBCIT PLACEHOLDER="DLB 36: 72" DBREF="2921">36:
+                                    72</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <HEADING>Struggles with Family and Friends</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATESTRUCT VALUE="1939-05-">
+                            <SEASON VALUE="1939-05-" CERTAINTY="C">Spring</SEASON>
+                            <YEAR REG="1939--">1939</YEAR>
+                        </DATESTRUCT>
+                        <CHRONPROSE>With World War II looming, SJ and her sister <NAME
+                                STANDARD="Pateman, Dorothy Jameson">Dorothy Pateman</NAME> began to
+                            share <PLACE><PLACENAME>Heathfield</PLACENAME>, a large house at
+                                    <SETTLEMENT REG="Mortimer">Mortimer</SETTLEMENT> in
+                                    <REGION>Berkshire</REGION><GEOG REG="England"/></PLACE>, with
+                            their husbands and Dorothy&apos;s children.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 415, 421" DBREF="18954">415,
+                                421</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Berry and Bostridge 405" DBREF="121">405</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>SJ did not remain solely at Heathfield throughout the war. Like
+                                <NAME>Vera Brittain</NAME>, she took rooms in
+                                    <PLACE><SETTLEMENT>London</SETTLEMENT> in
+                                        <ADDRESS><ADDRLINE>Portland
+                                    Place</ADDRLINE></ADDRESS><REGION REG="Middlesex"/><GEOG
+                                    REG="England"/></PLACE>: while Brittain wote <TITLE
+                                TITLETYPE="MONOGRAPHIC">England&apos;s Hour</TITLE> (published in
+                                <DATE>1941</DATE> and dedicated to Jameson), the two women often
+                            toured the bombed city together. <NAME STANDARD="Chapman, Guy Patterson"
+                                >Chapman</NAME> re-enlisted in <DATE>January 1941</DATE> and when he
+                            was posted to North Wales, Jameson moved with him. She stayed very near
+                                    <PLACE><SETTLEMENT>Portmeirion</SETTLEMENT><REGION
+                                    REG="Merioneth"/><GEOG REG="Wales"/></PLACE>, the community
+                            designed by <NAME>Clough Williams-Ellis</NAME>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 501-4, 537-8" DBREF="18954">501-4,
+                                    537-8</BIBCIT><BIBCIT PLACEHOLDER="Labon 40-1" DBREF="20141"
+                                    >40-1</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>At Portmeirion SJ enjoyed the friendship of both Williams-Ellises, <NAME
+                                STANDARD="Williams-Ellis, Clough">Clough</NAME> and his wife <NAME
+                                STANDARD="Williams-Ellis, Amabel">Amabel</NAME>
+                                (<FOREIGN>n&eacute;e</FOREIGN> Strachey). She later wrote warmly of
+                            her affection for Amabel, though she said that in the early stages of
+                            their acquaintance <QUOTE DIRECT="Y">her elegance, unconscious air of
+                                authority, quick racing mind, a little intimidated a badly-dressed
+                                young woman whose gauche provincialism she either did not notice or
+                                gaily ignored.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 538" DBREF="18954"
+                                >538</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATE>17 September 1940</DATE>
+                        <CHRONPROSE>SJ invited <NAME>Vera Brittain</NAME> live with her and her
+                            sister&apos;s family at <PLACE><PLACENAME>Heathfield</PLACENAME>, the
+                                house they had taken at <SETTLEMENT>Mortimer</SETTLEMENT> in
+                                    <REGION>Berkshire</REGION><GEOG REG="England"/></PLACE>.
+                            Brittain accepted, and stayed about ten weeks.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Berry and Bostridge 405, 556" DBREF="121">405,
+                                556</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>Brittain&apos;s stay was strained by the tense relations between her and
+                            Jameson&apos;s family, with Jameson often caught in the middle of their
+                            arguments. Brittain sent Jameson a letter of gratitude for her efforts
+                            in <DATE VALUE="1940-12-">December</DATE> of that year. After that,
+                            however, their friendship was threatened by other pressures. First they
+                            quarrelled over Jameson&apos;s characterizations in <TITLE
+                                TITLETYPE="ANALYTIC">The Hour of Prague</TITLE>, and then the
+                            writing and publication of her pamphlet <TITLE TITLETYPE="MONOGRAPHIC"
+                                >The End of This War</TITLE>, <DATE>1941</DATE>, prompted an
+                            increasingly hostile series of letters between them. Jameson had only
+                            recently begun to disclose to Brittain her sharp turn away from
+                            pacifism, and in her pamphlet she used an excerpt of one of
+                            Brittain&apos;s letters to illustrate the weaknesses of the pacifist
+                            position. Brittain removed Jameson from her will and, on discovering
+                            this, Jameson effectively ended their relationship: though she had
+                            refused any financial legacy, she had warmly accepted her appointment as
+                            Brittain&apos;s literary executor and guardian of her children. Brittain
+                            attempted a reconciliation in <DATE VALUE="1942-03-" CERTAINTY="C">early
+                                1942</DATE>, but the break proved permanent.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Berry and Bostridge 395-6, 405, 409, 413-18"
+                                    DBREF="121">395-6, 405, 409, 413-18</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <VIOLENCE>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="COMPREHENSIVE1">
+                        <DATE>10 February 1943</DATE>
+                        <CHRONPROSE>SJ&apos;s youngest sister, <NAME
+                                STANDARD="Pateman, Dorothy Jameson">Dorothy Pateman</NAME>, was
+                            killed by a German bomb that hit the <PLACE><PLACENAME>People&apos;s
+                                    Pantry</PLACENAME> at <SETTLEMENT>Reading</SETTLEMENT><REGION
+                                    REG="Berkshire"/><GEOG REG="England"/></PLACE>, where Pateman
+                            had been working with the <ORGNAME>Women&apos;s Voluntary
+                                Service</ORGNAME> (<ORGNAME REG="Women&apos;s Voluntary Service"
+                                STANDARD="Women&apos;s Voluntary Service"
+                            >WVS</ORGNAME>).</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 540, 620" DBREF="18954">540,
+                                620</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </VIOLENCE>
+        </DIV1>
+        <DIV1>
+            <FAMILY>
+                <MEMBER RELATION="SISTER">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>SJ was at work on a novel when her husband delivered the news that
+                                her <NAME STANDARD="Pateman, Dorothy Jameson">sister</NAME> had been
+                                killed. She later remembered, <QUOTE DIRECT="Y">I actually finished
+                                    the sentence I had been writing when he came in: like the body
+                                    of a decapitated hen, my brain went on twitching for several
+                                    minutes.</QUOTE><BIBCITS><BIBCIT
+                                        PLACEHOLDER="Jameson, Journey 541" DBREF="18954"
+                                        >541</BIBCIT></BIBCITS> While Storm focusses mainly on her
+                                    <NAME STANDARD="Jameson, Hannah Margaret">mother</NAME>&apos;s
+                                devastation when dealing with her <NAME STANDARD="Jameson, Harold"
+                                    >brother</NAME>&apos;s death in her autobiography; when writing
+                                of Dorothy&apos;s death she details her own long-lasting grief.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Later Years</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <HEADING>Further Activism</HEADING>
+                    <SHORTPROSE>
+                        <P>SJ remained highly politically engaged as World War II ended. After
+                            stepping down as President of <ORGNAME
+                                REG="Society of Poets,, Essayists,, and Novelists" STANDARD="PEN"
+                                >PEN</ORGNAME>&apos;s English Centre, she sat on the executive board
+                            of PEN International.<BIBCITS><BIBCIT PLACEHOLDER="DLB 36: 72"
+                                    DBREF="2921">36: 72</BIBCIT></BIBCITS> She <POLITICALAFFILIATION
+                                ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERNO"
+                                REG="anti-nuclear">protested</POLITICALAFFILIATION> against the
+                            bombing of <PLACE><SETTLEMENT>Hiroshima</SETTLEMENT><GEOG REG="Japan"
+                                /></PLACE> in a letter to the <TITLE TITLETYPE="JOURNAL">Manchester
+                                Guardian</TITLE>. In her autobiography, as well as several times
+                            expressing her intense horror at the threat of nuclear war, she also
+                            comments that this threat provides an ironic, perhaps delirious outlet
+                            for psychological and creative release. <QUOTE DIRECT="Y">Many people
+                                are competent to tell us what to do to survive. Only the
+                                artist&mdash;a class of persons which includes the man who set a pot
+                                of geraniums outside his hovel in the ruins of Warsaw&mdash;can tell
+                                us how, in what conditions, men can survive as human beings. . . . I
+                                had a feeling of exhilaration, even gaiety. Now that none of us is
+                                safe, we can really laugh, really mock our pedantic teachers, really
+                                        live.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 551"
+                                        DBREF="18954">551</BIBCIT></BIBCITS></QUOTE></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="DECADE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="KLH"
+                        CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATE>August 1945</DATE>
+                        <CHRONPROSE>SJ and three other British citizens travelled to
+                                    <PLACE><SETTLEMENT>Warsaw</SETTLEMENT><GEOG REG="Poland"
+                                /></PLACE> and <PLACE><SETTLEMENT>Cracow</SETTLEMENT><GEOG
+                                    REG="Poland"/></PLACE>, sponsored by the <ORGNAME
+                                REG="Polish Embassy,, London" STANDARD="Polish Embassy,, London"
+                                >Polish Embassy</ORGNAME> in London, to witness conditions in
+                            war-ravaged Poland. In <DATE VALUE="1945-11-">November</DATE> Jameson
+                            visited <PLACE><SETTLEMENT>Prague</SETTLEMENT><GEOG
+                                    CURRENT="Czech Republic" REG="Czechoslovakia"/></PLACE> for the
+                            same purpose.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="DLB 36: 76" DBREF="2921">36: 76</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 555, 566, 582" DBREF="18954">555,
+                                566, 582</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In <PLACE><GEOG REG="Poland">Poland</GEOG></PLACE> SJ delivered messages
+                            from exiles in London, met the Vice-Foreign Minister and the Minister of
+                            Culture (as well as surviving poets, musicians, young scholars, and
+                            others), and toured such institutions as the <ORGNAME
+                                REG="National Museum,, Poland" STANDARD="National Museum,, Poland"
+                                >National Museum</ORGNAME>, now laid waste. In Cracow she watched
+                            documentary films on <ORGNAME>Auschwitz</ORGNAME> and
+                                <ORGNAME>Majdanek</ORGNAME> created by Polish filmmakers. In either
+                            Cracow or Warsaw she saw photographs, taken by German soldiers
+                            themselves, of Nazi street executions, sexual assualt, and other acts of
+                                    violence.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 555-81"
+                                    DBREF="18954">555-81</BIBCIT></BIBCITS></P>
+                        <P>In Prague, Jameson spent time with her longtime friend
+                                <NAME>Ji&rcaron;ina T&uring;mov&aacute;</NAME> and various
+                            politicians and bureaucrats, including <NAME STANDARD="Benes, Edvard"
+                                >Edvard Benes or Ben&ecaron;s</NAME>. Ben&ecaron;s was the former
+                            president of Czechoslovakia whom Jameson came to know at the time of her
+                            first trip to that country. She wrote that <QUOTE DIRECT="Y">I felt for
+                                him an affection . . . I never felt for any other public figure. He
+                                had the failings and weakness of a man of reason who believes that
+                                reason <EMPH>ought</EMPH> to prevail.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 446" DBREF="18954"
+                                >446</BIBCIT></BIBCITS> She also went to <ORGNAME>Pankr&aacute;c
+                                Prison</ORGNAME>, where T&uring;mov&aacute; had been jailed for some
+                            time and where instruments of torture and murder, such as a guillotine,
+                            were concealed from the <ORGNAME REG="Red Cross"
+                                STANDARD="International Committee of the Red Cross">Red
+                                Cross</ORGNAME>. After this Jameson toured
+                                    <PLACE><PLACENAME>Mode&rcaron;any</PLACENAME><GEOG
+                                    CURRENT="Czech Republic" REG="Czechoslovakia"/></PLACE> and
+                                    <PLACE><PLACENAME>Hagibor</PLACENAME><GEOG
+                                    CURRENT="Czech Republic" REG="Czechoslovakia"/></PLACE>
+                            internment camps, where German men, women, and children were held before
+                            trial, further imprisonment, and/or deportation.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 583-9, 595" DBREF="18954">583-9,
+                                    595</BIBCIT></BIBCITS> The last area Jameson saw at Hagibor was
+                            a hospital room reserved for dying infants. Jameson records her
+                            perception of it in her autobiography. <QUOTE DIRECT="Y">I bent over one
+                                of the cots: the tiny face dissolved and for less than a breath I
+                                saw through its soft skull the guillotine in Pankr&aacute;c, the
+                                walls of the little bathroom, the terror of a boy the instant before
+                                he is killed, the decent bodies of women heaped, naked as maggots,
+                                in Ter&eacute;zin and Auschwitz&mdash;the spume of agony flowing
+                                back and forth across Europe. Then I saw only the dying
+                                        baby.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 602"
+                                        DBREF="18954">602</BIBCIT></BIBCITS></QUOTE></P>
+                        <P><POLITICALAFFILIATION ACTIVISM="ACTIVISTYES" WOMAN-GENDERISSUE="GENDERNO"
+                                REG="human rights activist">SJ used her observations from these
+                                trips in various articles</POLITICALAFFILIATION> and at least one
+                            radio broadcast, which she made from Warsaw at the end of her stay in
+                            Poland. It is unclear what organization she broadcast through or to whom
+                            she addressed her talk.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 579-80" DBREF="18954"
+                                    >579-80</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="IMG" CHRONCOLUMN1="NATIONALINTERNATIONAL1" RELEVANCE1="DECADE1">
+                        <DATE>October 1950</DATE>
+                        <CHRONPROSE>
+                            <NAME>Harrison Salisbury</NAME>,
+                                    <PLACE><SETTLEMENT>Moscow</SETTLEMENT><GEOG
+                                    CURRENT="Russian Federation" REG="USSR"/></PLACE> correspondent
+                            for the <TITLE TITLETYPE="JOURNAL">New York Times</TITLE>, told SJ that
+                            she was listed in the Soviet <SOCALLED>Book of
+                            Death</SOCALLED>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 662" DBREF="18954">662</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This hit-list contained <QUOTE DIRECT="Y">the names of all those monsters
+                                and cannibals who openly preach destruction of millions of human
+                                lives and the greatest values of world
+                                    culture.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 662" DBREF="18954"
+                                    QTDIN="QTDINYES">662</BIBCIT></BIBCITS> In her autobiography
+                            Jameson claims that she was <QUOTE DIRECT="Y"
+                                    >delighted</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 662" DBREF="18954"
+                                >662</BIBCIT></BIBCITS> rather than alarmed by this news, as she was
+                            included on the list along with <NAME>Andr&eacute; Malraux</NAME>, whose
+                            writing she respected greatly. </P>
+                    </SHORTPROSE>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH" CHRONCOLUMN1="SOCIALCLIMATE1" RELEVANCE1="DECADE1">
+                        <DATE>1952</DATE>
+                        <CHRONPROSE>SJ was a delegate to the <ORGNAME>UNESCO</ORGNAME> Congress of
+                            the Arts in <PLACE><SETTLEMENT>Venice</SETTLEMENT><GEOG REG="Italy"
+                                /></PLACE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Feinstein i" DBREF="108093">i</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="MOVED">
+                <DIV2>
+                    <HEADING>Later Work and Travel in England and Abroad</HEADING>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATE VALUE="1945-08-" CERTAINTY="AFTER">Later 1945</DATE>
+                        <CHRONPROSE>SJ moved from southern England to
+                                    <PLACE><SETTLEMENT>Leeds</SETTLEMENT><REGION REG="Yorkshire"
+                                    /><GEOG REG="England"/></PLACE>: her husband <NAME>Guy Patterson
+                                Chapman</NAME> had been appointed to a Chair of Modern History at
+                                <ORGNAME REG="University of Leeds" STANDARD="University of Leeds"
+                                >Leeds University</ORGNAME>, where Jameson herself had
+                            studied.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 605" DBREF="18954">605</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Chapman, Survivor 208" DBREF="20820">208</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>She and her husband lived in a hotel for years at Leeds (as Jameson had
+                            done during her early married life), so that she did not have to
+                            undertake the burden of domesticity.<BIBCITS><BIBCIT PLACEHOLDER="ODNB"
+                                    DBREF="29268"/></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="VISITED">
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATE>27 July 1948</DATE>
+                        <CHRONPROSE>SJ and her husband <NAME>Guy Patterson Chapman</NAME> left
+                            England for the <PLACE><SETTLEMENT REG="Pittsburgh"/><REGION
+                                    REG="Pennsylvania"/><GEOG REG="USA">United States</GEOG></PLACE>
+                            to spend a year at the <ORGNAME>University of
+                            Pittsburgh</ORGNAME>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="Jameson, Journey 619-20" DBREF="18954"
+                                >619-20</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <OCCUPATION>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>At <EMPLOYER><ORGNAME STANDARD="University of Pittsburgh"
+                                    >Pittsburgh</ORGNAME></EMPLOYER> Chapman lectured on history
+                            while Jameson <JOB REG="academic">taught</JOB> creative writing. She
+                            also accepted another teaching appointment at a nearby women&apos;s
+                            college (mentioned briefly and unnamed in her autobiography). Her work
+                            week consisted of twenty-two hours of tutoring, plus evaluating her
+                            students&apos; projects. She did not enjoy these responsibilities,
+                            believing not only that creativity cannot be taught but also that
+                            writing ought not to be undertaken as one&apos;s sole
+                                    profession.<BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 631-3"
+                                    DBREF="18954">631-3</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </OCCUPATION>
+        </DIV1>
+        <DIV1>
+            <LOCATION RELATIONTO="TRAVELLED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>Jameson and Chapman travelled extensively within America, visiting
+                                    <PLACE><SETTLEMENT>New York City</SETTLEMENT><REGION
+                                    REG="New York"/><GEOG REG="USA"/></PLACE>,
+                                    <PLACE><SETTLEMENT>Kansas City</SETTLEMENT><REGION
+                                    REG="Missouri"/><GEOG REG="USA"/></PLACE>, and the states of
+                                    <PLACE><REGION>Connecticut</REGION><GEOG REG="USA"/></PLACE>,
+                                    <PLACE><REGION>Vermont</REGION><GEOG REG="USA"/></PLACE>,
+                                    <PLACE><REGION>Massachusetts</REGION><GEOG REG="USA"/></PLACE>,
+                                    <PLACE><REGION>Ohio</REGION><GEOG REG="USA"/></PLACE>, and
+                                    <PLACE><REGION>Texas</REGION><GEOG REG="USA"
+                                    /></PLACE>.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 622-56" DBREF="18954"
+                                    >622-56</BIBCIT></BIBCITS></P>
+                        <P>They were back in the <PLACE><SETTLEMENT REG="Princeton"/><REGION
+                                    REG="New Jersey"/><GEOG REG="USA">United States</GEOG></PLACE>
+                            from <DATERANGE FROM="1957-09-" TO="1957-12-" EXACT="BOTH">September to
+                                December 1957</DATERANGE>, when Chapman accepted a position at
+                                <ORGNAME REG="Princeton University" STANDARD="Princeton University"
+                                >Princeton</ORGNAME>&apos;s Institute for Advanced Studies. In later
+                            years they travelled to <PLACE><GEOG>Italy</GEOG></PLACE>,
+                                    <PLACE><GEOG>Greece</GEOG></PLACE>, and
+                                    <PLACE><GEOG>France</GEOG></PLACE>. Jameson felt a strong
+                            passion for the latter and visited it many times.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 261, 405, 683, 746, 749-51, 773, 791"
+                                    DBREF="18954">261, 405, 683, 746, 749-51, 773,
+                                791</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+            <LOCATION RELATIONTO="LIVED">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>The couple made their last home in
+                                    <PLACE><SETTLEMENT>Cambridge</SETTLEMENT><REGION
+                                    REG="Cambridgeshire"/><GEOG REG="England"
+                                    /></PLACE>.<BIBCITS><BIBCIT PLACEHOLDER="CANR 47" DBREF="1723"
+                                    >47</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </LOCATION>
+        </DIV1>
+        <DIV1>
+            <FRIENDSASSOCIATES>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>In <PLACE><REGION>Ohio</REGION><GEOG REG="USA"/></PLACE> they met
+                            novelist <NAME>Louis Bromfield</NAME>, who was also hosting <NAME
+                                STANDARD="Knopf, Blanche">Blanche</NAME> and <NAME>Alfred
+                                Knopf</NAME>. While in <PLACE><SETTLEMENT>Dallas</SETTLEMENT><REGION
+                                    REG="Texas"/><GEOG REG="USA"/></PLACE> Jameson lunched at the
+                                <TITLE TITLETYPE="JOURNAL">Dallas News</TITLE> building and was
+                            seated opposite <NAME>Dorothy Parker</NAME>, <QUOTE DIRECT="Y">as
+                                terrible as an army with banners, in a Tyrolean
+                                    hat.</QUOTE><BIBCITS><BIBCIT PLACEHOLDER="Jameson, Journey 650"
+                                    DBREF="18954">650</BIBCIT></BIBCITS> On their second American
+                            visit they began a friendship with scholars <NAME
+                                STANDARD="Steiner, Zara">Zara</NAME> and <NAME>George
+                            Steiner</NAME>.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </FRIENDSASSOCIATES>
+        </DIV1>
+        <DIV1>
+            <HEADING>Guy Chapman&apos;s Death</HEADING>
+            <FAMILY>
+                <MEMBER RELATION="HUSBAND">
+                    <CHRONSTRUCT RELEVANCE="COMPREHENSIVE" CHRONCOLUMN="BRITISHWOMENWRITERS"
+                        RESP="KLH">
+                        <DATE>20 June 1972</DATE>
+                        <CHRONPROSE>SJ&apos;s husband, historian <NAME>Guy Patterson Chapman</NAME>,
+                            died in <PLACE><SETTLEMENT>Cambridge</SETTLEMENT><REGION
+                                    REG="Cambridgeshire"/><GEOG REG="England"/></PLACE>, where they
+                            had already lived for some time.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                </MEMBER>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>On Feminism</HEADING>
+            <POLITICS>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ filled her life with family concerns, activism, travel, and
+                            friendships with diverse women and men. Her extensive literary output,
+                            sometimes inspired by her own rich experience, frequently examines
+                            women&apos;s changing domestic and public roles. Though she felt some of
+                            the consequences of limitations placed upon women in her historical
+                            moment, she was not stopped by them: instead, she often assumed her
+                            linked personal, social, and creative commitments in a position of
+                            leadership. Late in life, however, she denied any formal identification
+                            with <POLITICALAFFILIATION WOMAN-GENDERISSUE="GENDERYES"
+                                INVOLVEMENT="INVOLVEMENTYES" REG="feminism"
+                                >feminism</POLITICALAFFILIATION>. At the age of ninety-one, an
+                            interview with <NAME>Janet Watts</NAME> which was published in the
+                                <TITLE TITLETYPE="JOURNAL">Observer Magazine</TITLE> on <DATE>5
+                                September 1982</DATE>, she claimed that she had <QUOTE DIRECT="Y"
+                                >never thought of myself as either male or female. You just got on
+                                with what you had to do.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Labon 42, 47" DBREF="20141" QTDIN="QTDINYES">42,
+                                    47</BIBCIT></BIBCITS> One recent critic provides an alternative
+                            interpretation: that Jameson&apos;s <QUOTE DIRECT="Y">feminism is so
+                                profound that she takes it for granted.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="WWH 8: 82" DBREF="13075" QTDIN="QTDINYES">8:
+                                    82</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </POLITICS>
+        </DIV1>
+        <DIV1>
+            <HEADING>Finances</HEADING>
+            <WEALTH>
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ shaped her personal perspectives and career turns with her finances in
+                            mind, but never placed primary importance on accumulating or retaining
+                            wealth. She spent some of her early years in poverty and, once
+                            published, continued with her creative writing while she took on a
+                            variety of commercial assignments in order to support herself and her
+                            family. She preferred to spend any income she had on herself and loved
+                            ones or to give it to those in greater need, rather than build up any
+                            savings. One of her longtime friends, author and former suffragist
+                                <NAME>I. A. R. Wylie</NAME>, asked Jameson shortly before her own
+                            death how much she had set aside for retirement, and was <QUOTE
+                                DIRECT="Y">sincerely horrified</QUOTE> when Jameson admitted: <QUOTE
+                                DIRECT="Y">Not a penny.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 94" DBREF="18954"
+                                    >94</BIBCIT><BIBCIT PLACEHOLDER="FC" DBREF="107913"
+                            /></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </WEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Health Matters</HEADING>
+            <HEALTH ISSUE="PHYSICAL">
+                <DIV2>
+                    <SHORTPROSE>
+                        <P>SJ&apos;s demanding work, travel, and personal commitments exacted a
+                            serious toll on her health. She contracted diphtheria as a young woman,
+                            probably when she nursed her son through it. Frequently exhausted, she
+                            also had precondition angina and an ulcer during the years leading up to
+                            and through the Second World War.<BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 192, 500, 529" DBREF="18954">192,
+                                    500, 529</BIBCIT></BIBCITS> In <DATE>April 1955</DATE> she
+                            underwent surgery for an unnamed ailment. Because she had <QUOTE
+                                DIRECT="Y">every intention of dying like <NAME>Emily
+                                    Bront&euml;</NAME>, in [her] chair,</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 716" DBREF="18954"
+                                >716</BIBCIT></BIBCITS> Jameson agreed to only a few days in
+                            hospital. However, her operation and recovery were marred by
+                            complications and she remained hospitalized for eight weeks. She
+                            commented that at this point <QUOTE DIRECT="Y">I and my body were
+                                entirely separate.</QUOTE><BIBCITS><BIBCIT
+                                    PLACEHOLDER="Jameson, Journey 685" DBREF="18954"
+                                >685</BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </DIV2>
+            </HEALTH>
+        </DIV1>
+        <DIV1>
+            <HEADING>Death</HEADING>
+            <DEATH>
+                <DIV2>
+                    <CHRONSTRUCT RELEVANCE="SELECTIVE" CHRONCOLUMN="BRITISHWOMENWRITERS" RESP="KLH">
+                        <DATE>30 September 1986</DATE>
+                        <CHRONPROSE>SJ died in <PLACE><SETTLEMENT>Cambridge</SETTLEMENT><REGION
+                                    REG="Cambridgeshire"/><GEOG REG="England"/></PLACE> at the age
+                            of ninety-five; late in her life she had developed
+                                <CAUSE>Alzheimer&apos;s disease</CAUSE>.</CHRONPROSE>
+                        <BIBCITS>
+                            <BIBCIT PLACEHOLDER="CANR 47" DBREF="1723">47</BIBCIT>
+                            <BIBCIT PLACEHOLDER="Labon 45" DBREF="20141">45</BIBCIT>
+                        </BIBCITS>
+                    </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>This trouble had not been apparent in her interview of 1982.</P>
+                    </SHORTPROSE>
+                </DIV2>
+            </DEATH>
+        </DIV1>
+        <WORKSCITED>
+            <SOURCE>Unless otherwise noted, all information is from the FC.</SOURCE>
+            <SOURCE>Jameson, Storm. Journey from the North.</SOURCE>
+            <SOURCE>CANR 47</SOURCE>
+            <SOURCE>DLB 36</SOURCE>
+            <SOURCE>Berry, Paul and Mark Bostridge. Vera Brittain.</SOURCE>
+            <SOURCE>Labon, Joanna. Tracing Storm Jameson.</SOURCE>
+            <SOURCE>Feinstein, Elaine. Introduction. None Turn Back. By Storm Jameson.
+                1984.</SOURCE>
+            <SOURCE>Gorham, Deborah. Vera Brittain: A Feminist Life. 1996.</SOURCE>
+        </WORKSCITED>
+    </DIV0>
+</BIOGRAPHY>
