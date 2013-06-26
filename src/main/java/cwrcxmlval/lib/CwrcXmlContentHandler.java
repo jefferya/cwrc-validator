@@ -1,7 +1,9 @@
 package cwrcxmlval.lib;
 
 import java.util.Stack;
+import javax.xml.XMLConstants;
 import org.xml.sax.Attributes;
+import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -15,20 +17,21 @@ public class CwrcXmlContentHandler extends DefaultHandler{
     
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        super.startElement(uri, localName, qName, attributes);
-        
         String name = localName;
         String id = null;
         int total = attributes.getLength();
         
         for(int index = 0; index < total; ++index){
-            if(attributes.getLocalName(index).toUpperCase().equals("ID")){
+            String attr = attributes.getLocalName(index);
+            if(attr.toUpperCase().equals("ID")){
                 id = attributes.getValue(index);
-                break;
             }
         }
         
-        path.push(new CwrcPath(name, id));
+        CwrcPath cwrcPath = new CwrcPath(name, id);
+        path.push(cwrcPath);
+        
+        super.startElement(uri, localName, qName, attributes);
     }
 
     @Override

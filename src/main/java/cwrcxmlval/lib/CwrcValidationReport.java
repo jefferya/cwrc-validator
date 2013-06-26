@@ -1,5 +1,7 @@
 package cwrcxmlval.lib;
 
+import java.io.BufferedReader;
+import java.io.Reader;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;

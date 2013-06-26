@@ -61,7 +61,7 @@ public class CwrcXmlValidator {
             // =====================
             URL schemaLocation = new URL(schemaUrl);
             Schema schema = factory.newSchema(schemaLocation);
-
+            
             // 3. Get a validator from the schema
             // =================================
             //Validator validator = schema.newValidator();
@@ -72,7 +72,6 @@ public class CwrcXmlValidator {
             SAXParserFactory parserFactory = SAXParserFactory.newInstance();
             parserFactory.setValidating(false);
             parserFactory.setNamespaceAware(true);
-            
             parserFactory.setSchema(schema);
             
             SAXParser parser = parserFactory.newSAXParser();
@@ -80,7 +79,7 @@ public class CwrcXmlValidator {
             XMLReader reader = parser.getXMLReader();
             reader.setErrorHandler(error_handler);
             reader.setContentHandler(content_handler);
-
+            
             // 4. Validate the document
             // ========================
             reader.parse(new InputSource(document));

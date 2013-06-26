@@ -1,5 +1,6 @@
 package cwrcxmlval.lib;
 
+import cwrcxmlval.lib.CwrcXmlContentHandler.CwrcPath;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -27,6 +28,11 @@ public class CwrcXmlErrorHandler extends DefaultHandler {
     public void error(SAXParseException e) throws SAXException {
         CwrcXmlContentHandler.CwrcPath parent = contentHandler.getLastParent();
 
+        // Check message for xmlns error
+        if(e.getMessage().startsWith("attribute \"xmlns\" not allowed here;")){
+            return;
+        }
+        
         myErrorReport.addValidationError(CwrcValidationReport.TYPE_ERROR, e,
                 parent != null ? parent.getName() : null, parent != null ? parent.getId() : null,
                 contentHandler.getPath());
