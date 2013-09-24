@@ -1,7 +1,6 @@
 package cwrcxmlval.lib;
 
-import java.io.BufferedReader;
-import java.io.Reader;
+import cwrcxmlval.lib.CwrcXmlContentHandler.CwrcPath;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -63,7 +62,7 @@ public class CwrcValidationReport {
         return element;
     }
 
-    public void addValidationError(String type, SAXParseException e, String parent, String parentId, String path) throws SAXException {
+    public void addValidationError(String type, SAXParseException e, CwrcPath element, String path) throws SAXException {
         Element entry = myReport.createElement(type);
 
         //Adding line number
@@ -76,9 +75,12 @@ public class CwrcValidationReport {
         entry.appendChild(this.createElementWithTextNode("message", e.getMessage()));
 
         // Adding the parent elements id
-        if (parent != null) {
-            entry.appendChild(this.createElementWithTextNode("parent", parent));
-            entry.appendChild(this.createElementWithTextNode("parentId", parentId));
+        if (element != null) {
+            entry.appendChild(this.createElementWithTextNode("element", element.getName()));
+            
+            if(element.getId() != null){
+                entry.appendChild(this.createElementWithTextNode("elementId", element.getId()));
+            }
         }
 
         if (path != null) {

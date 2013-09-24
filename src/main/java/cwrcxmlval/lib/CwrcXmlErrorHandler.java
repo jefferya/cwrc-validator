@@ -1,6 +1,5 @@
 package cwrcxmlval.lib;
 
-import cwrcxmlval.lib.CwrcXmlContentHandler.CwrcPath;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -17,34 +16,28 @@ public class CwrcXmlErrorHandler extends DefaultHandler {
 
     @Override
     public void warning(SAXParseException e) throws SAXException {
-        CwrcXmlContentHandler.CwrcPath parent = contentHandler.getLastParent();
+        CwrcXmlContentHandler.CwrcPath element = contentHandler.getElement(e);
 
-        myErrorReport.addValidationError(CwrcValidationReport.TYPE_WARNING, e,
-                parent != null ? parent.getName() : null, parent != null ? parent.getId() : null,
-                contentHandler.getPath());
+        myErrorReport.addValidationError(CwrcValidationReport.TYPE_WARNING, e, element, contentHandler.getPath(element));
     }
 
     @Override
     public void error(SAXParseException e) throws SAXException {
-        CwrcXmlContentHandler.CwrcPath parent = contentHandler.getLastParent();
-
+        CwrcXmlContentHandler.CwrcPath element = contentHandler.getElement(e);
+ 
         // Check message for xmlns error
         if(e.getMessage().startsWith("attribute \"xmlns\" not allowed here;")){
             return;
         }
         
-        myErrorReport.addValidationError(CwrcValidationReport.TYPE_ERROR, e,
-                parent != null ? parent.getName() : null, parent != null ? parent.getId() : null,
-                contentHandler.getPath());
+        myErrorReport.addValidationError(CwrcValidationReport.TYPE_WARNING, e, element, contentHandler.getPath(element));
     }
 
     @Override
     public void fatalError(SAXParseException e) throws SAXException {
-        CwrcXmlContentHandler.CwrcPath parent = contentHandler.getLastParent();
+        CwrcXmlContentHandler.CwrcPath element = contentHandler.getElement(e);
 
-        myErrorReport.addValidationError(CwrcValidationReport.TYPE_ERROR, e,
-                parent != null ? parent.getName() : null, parent != null ? parent.getId() : null,
-                contentHandler.getPath());
+        myErrorReport.addValidationError(CwrcValidationReport.TYPE_WARNING, e, element, contentHandler.getPath(element));
 
         throw new SAXException("A fatal error occurred.");
     }

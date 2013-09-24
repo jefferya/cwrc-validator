@@ -7,7 +7,6 @@ import java.net.URL;
 import javax.xml.XMLConstants;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
 
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -41,6 +40,11 @@ public class CwrcXmlValidator {
         CwrcValidationReport error_report = new CwrcValidationReport();
         CwrcXmlContentHandler content_handler = new CwrcXmlContentHandler();
         CwrcXmlErrorHandler error_handler = new CwrcXmlErrorHandler(error_report, content_handler);
+        
+        CwrcXmlInputStream data = new CwrcXmlInputStream(document);
+        content_handler.setReader(data);
+        
+        //content_handler.setReader(document);
         
         try {
             // 1. Specify you want a factory for RELAX NG
@@ -80,9 +84,11 @@ public class CwrcXmlValidator {
             reader.setErrorHandler(error_handler);
             reader.setContentHandler(content_handler);
             
+            
+            
             // 4. Validate the document
             // ========================
-            reader.parse(new InputSource(document));
+            reader.parse(new InputSource(data));
 
         } catch (MalformedURLException e) {
             error_report.addGeneralError(CwrcValidationReport.TYPE_ERROR, e.getMessage());
