@@ -26,7 +26,7 @@ public class CwrcXmlErrorHandler extends DefaultHandler {
         CwrcXmlContentHandler.CwrcPath element = contentHandler.getElement(e);
  
         // Check message for xmlns error
-        if(e.getMessage().startsWith("attribute \"xmlns\" not allowed here;")){
+        if(e.getMessage().matches("attribute \"xmlns.*\" not allowed here;.*")){
             return;
         }
         
