@@ -17,6 +17,7 @@ Install
 
 * compile: mvn compile
 * build distribution: mvn war:war
+* deploy in an Apache Tomcat instance (e.g. rename war file, if wanted, and copy to $TOMCAT_HOME/webapps directory)
 
 --
 Test/help page:
