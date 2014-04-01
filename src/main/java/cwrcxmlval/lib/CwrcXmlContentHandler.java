@@ -97,9 +97,9 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             if(var > 0){
                 element = test.substring(0, var);
                 
-                if(element.startsWith("/")){
+                /*if(element.startsWith("/")){
                     element = element.substring(1);
-                }
+                }*/
             }
             
             // Find the element ID.
@@ -146,7 +146,7 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             builder.append("/");
         }
 
-        if (lastPath != null) {
+        if (lastPath != null && !lastPath.name.startsWith("/")) {            
             builder.append(lastPath.name);
 
             if (lastPath.id != null) {
