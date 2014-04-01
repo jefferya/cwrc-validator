@@ -1,8 +1,6 @@
 package cwrcxmlval.lib;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -84,6 +82,16 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             String test = lastElement.substring(index + 1);
             String element = test;
             int var = test.indexOf(' ');
+            
+            // Remove closing triangular bracket
+            int check = test.indexOf('>');
+            if(var < 0){
+                if(check > -1){
+                    var = check;
+                }
+            }else if(check > -1 && check < var){
+                var = check;
+            }
             
             // Find the element name.
             if(var > 0){
