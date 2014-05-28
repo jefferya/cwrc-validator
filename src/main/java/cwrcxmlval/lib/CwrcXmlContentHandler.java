@@ -1,6 +1,9 @@
 package cwrcxmlval.lib;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,7 +46,10 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             }
         }
 
-        CwrcPath cwrcPath = new CwrcPath(name, id);
+        CwrcPath cwrcPath = path.peek();
+        cwrcPath.pushElement(localName);
+                
+        cwrcPath = new CwrcPath(name, id);
         path.push(cwrcPath);
 
         super.startElement(uri, localName, qName, attributes);
@@ -133,7 +139,8 @@ public class CwrcXmlContentHandler extends DefaultHandler {
 
     public String getPath(CwrcPath lastPath) {
         StringBuilder builder = new StringBuilder();
-
+        Map<String,Integer> elementList = new HashMap<String,Integer>();
+        
         for (CwrcPath parent : path) {
             builder.append(parent.name);
 
@@ -141,9 +148,18 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 builder.append("[id=\"");
                 builder.append(parent.getId());
                 builder.append("\"]");
+            }else if(elementList.containsKey(parent.name)){
+                Integer value = elementList.get(parent.name);
+                
+                if(value > 0){
+                    builder.append("[");
+                    builder.append(value.toString());
+                    builder.append("]");
+                }
             }
 
             builder.append("/");
+            elementList = parent.getElementList();
         }
 
         if (lastPath != null && !lastPath.name.startsWith("/")) {            
@@ -153,6 +169,14 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 builder.append("[id=\"");
                 builder.append(lastPath.getId());
                 builder.append("\"]");
+            }else if(elementList.containsKey(lastPath.name)){
+                Integer value = elementList.get(lastPath.name);
+                
+                if(value > 0){
+                    builder.append("[");
+                    builder.append(value.toString());
+                    builder.append("]");
+                }
             }
         }
 
@@ -163,6 +187,7 @@ public class CwrcXmlContentHandler extends DefaultHandler {
 
         private String name, id;
         private Attributes attributes;
+        private Map<String, Integer> elementList = new HashMap<String, Integer>();
 
         public CwrcPath(String name, String id) {
             this.name = name;
@@ -176,6 +201,23 @@ public class CwrcXmlContentHandler extends DefaultHandler {
 
         public String getId() {
             return id;
+        }
+        
+        public Map<String, Integer> getElementList(){
+            return Collections.unmodifiableMap(elementList);
+        }
+        
+        public int pushElement(String elementName){
+            if(elementList.containsKey(elementName)){
+                Integer value = elementList.get(elementName);
+                ++value;
+                elementList.put(elementName, value);
+                return value;
+            }else{
+                elementList.put(elementName, 0);
+            }
+            
+            return 0;
         }
     }
 }
