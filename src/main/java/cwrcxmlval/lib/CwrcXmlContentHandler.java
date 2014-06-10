@@ -2,6 +2,7 @@ package cwrcxmlval.lib;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -46,8 +47,13 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             }
         }
 
-        CwrcPath cwrcPath = path.peek();
-        cwrcPath.pushElement(localName);
+        CwrcPath cwrcPath = null;
+        try{
+            cwrcPath = path.peek();
+            cwrcPath.pushElement(localName);
+        }catch(EmptyStackException ex){
+            
+        }
                 
         cwrcPath = new CwrcPath(name, id);
         path.push(cwrcPath);
@@ -151,7 +157,7 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             }else if(elementList.containsKey(parent.name)){
                 Integer value = elementList.get(parent.name);
                 
-                if(value > 0){
+                if(value > -1){
                     builder.append("[");
                     builder.append(value.toString());
                     builder.append("]");
@@ -169,10 +175,15 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 builder.append("[id=\"");
                 builder.append(lastPath.getId());
                 builder.append("\"]");
-            }else if(elementList.containsKey(lastPath.name)){
-                Integer value = elementList.get(lastPath.name);
+            }else {
+                Integer value = 0;
                 
-                if(value > 0){
+                if(elementList.containsKey(lastPath.name)){
+                    value = elementList.get(lastPath.name);
+                    value = value + 1;
+                }
+                
+                if(value > -1){
                     builder.append("[");
                     builder.append(value.toString());
                     builder.append("]");
