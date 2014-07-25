@@ -72,7 +72,7 @@
                                             }
                                             in.close();
                                         } catch (UnknownHostException ex) {
-                                            out.println("Unknown Hose Exception: " + ex.getMessage());
+                                            out.println("Unknown Host Exception: " + ex.getMessage());
                                         }
                                     %>
    				</textarea><br />

@@ -168,7 +168,7 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             elementList = parent.getElementList();
         }
 
-        if (lastPath != null && !lastPath.name.startsWith("/")) {            
+        if (lastPath != null && !lastPath.name.startsWith("/")) {  
             builder.append(lastPath.name);
 
             if (lastPath.id != null) {
@@ -185,10 +185,12 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 
                 if(value > -1){
                     builder.append("[");
-                    builder.append(value.toString());
+                    builder.append(value + 1);
                     builder.append("]");
                 }
             }
+        }else{
+            builder.deleteCharAt(builder.length() - 1);
         }
 
         return builder.toString();
