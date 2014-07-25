@@ -144,7 +144,7 @@ public class CwrcXmlContentHandler extends DefaultHandler {
     }
 
     public String getPath(CwrcPath lastPath) {
-        StringBuilder builder = new StringBuilder();
+        StringBuilder builder = new StringBuilder("/");
         Map<String,Integer> elementList = new HashMap<String,Integer>();
         
         for (CwrcPath parent : path) {
@@ -159,7 +159,7 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 
                 if(value > -1){
                     builder.append("[");
-                    builder.append(value.toString());
+                    builder.append(value + 1);
                     builder.append("]");
                 }
             }

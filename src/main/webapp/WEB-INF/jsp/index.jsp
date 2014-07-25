@@ -1,3 +1,4 @@
+<%@page import="java.net.UnknownHostException"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
    <%@page contentType="text/html" pageEncoding="UTF-8"%>
    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -61,14 +62,19 @@
    				Schema Type: <input type="text" name="type" value = "<% out.print(type);%>" style="width:100px;"/> <br />
    				Document Content: <br/ >
    				<textarea name="content" style="width:100%;height:480px">
-   					<% 
-   						java.net.URL url = new java.net.URL(document_url);
-   						java.io.BufferedReader in = new java.io.BufferedReader(new java.io.InputStreamReader(url.openStream()));
-   						String inputLine;
-   						while ((inputLine = in.readLine()) != null)
-   							out.println(inputLine);
-   						in.close();   					
-   					%>
+                                    <%
+                                        try {
+                                            java.net.URL url = new java.net.URL(document_url);
+                                            java.io.BufferedReader in = new java.io.BufferedReader(new java.io.InputStreamReader(url.openStream()));
+                                            String inputLine;
+                                            while ((inputLine = in.readLine()) != null) {
+                                                out.println(inputLine);
+                                            }
+                                            in.close();
+                                        } catch (UnknownHostException ex) {
+                                            out.println("Unknown Hose Exception: " + ex.getMessage());
+                                        }
+                                    %>
    				</textarea><br />
    				<input type="submit" />
    			</form>
