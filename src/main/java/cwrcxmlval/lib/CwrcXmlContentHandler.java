@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.util.StringUtils;
 import org.xml.sax.Attributes;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
@@ -145,36 +146,39 @@ public class CwrcXmlContentHandler extends DefaultHandler {
 
     public String getPath(CwrcPath lastPath) {
         StringBuilder builder = new StringBuilder("/");
+        StringBuilder elementString = null;
         Map<String,Integer> elementList = new HashMap<String,Integer>();
         
         for (CwrcPath parent : path) {
-            builder.append(parent.name);
+            elementString = new StringBuilder(parent.name);
+            
 
             if (parent.id != null) {
-                builder.append("[id=\"");
-                builder.append(parent.getId());
-                builder.append("\"]");
+                elementString.append("[id=\"");
+                elementString.append(parent.getId());
+                elementString.append("\"]");
             }else if(elementList.containsKey(parent.name)){
                 Integer value = elementList.get(parent.name);
                 
                 if(value > -1){
-                    builder.append("[");
-                    builder.append(value + 1);
-                    builder.append("]");
+                    elementString.append("[");
+                    elementString.append(value + 1);
+                    elementString.append("]");
                 }
             }
 
+            builder.append(elementString);
             builder.append("/");
             elementList = parent.getElementList();
         }
 
-        if (lastPath != null && !lastPath.name.startsWith("/")) {  
-            builder.append(lastPath.name);
+        if (lastPath != null && !lastPath.name.startsWith("/")) { 
+            StringBuilder lastString = new StringBuilder(lastPath.name);
 
             if (lastPath.id != null) {
-                builder.append("[id=\"");
-                builder.append(lastPath.getId());
-                builder.append("\"]");
+                lastString.append("[id=\"");
+                lastString.append(lastPath.getId());
+                lastString.append("\"]");
             }else {
                 Integer value = 0;
                 
@@ -184,10 +188,16 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 }
                 
                 if(value > -1){
-                    builder.append("[");
-                    builder.append(value + 1);
-                    builder.append("]");
+                    lastString.append("[");
+                    lastString.append(value + 1);
+                    lastString.append("]");
                 }
+            }
+            
+            if(lastString.toString().compareTo(elementString.toString()) != 0){
+                builder.append(lastString);
+            }else{
+                builder.deleteCharAt(builder.length() - 1);
             }
         }else{
             builder.deleteCharAt(builder.length() - 1);
@@ -231,6 +241,24 @@ public class CwrcXmlContentHandler extends DefaultHandler {
             }
             
             return 0;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if(o instanceof CwrcPath){
+                CwrcPath test = (CwrcPath)o;
+                if(this.name.compareTo(test.name) == 0){
+                    if(this.id != null){
+                        if(test.id != null && this.id.compareTo(test.id) == 0){
+                            return true;
+                        }
+                    }else if(test.id == null){
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
         }
     }
 }
