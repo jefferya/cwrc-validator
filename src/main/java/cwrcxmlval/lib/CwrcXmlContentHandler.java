@@ -194,7 +194,10 @@ public class CwrcXmlContentHandler extends DefaultHandler {
                 }
             }
             
-            if(lastString.toString().compareTo(elementString.toString()) != 0){
+            // JCA & MRB: 2015-01-20
+            // added lastString and elementString to statement below as a workaround for the
+            // Java null pointer exception error that was being thrown
+            if(lastString != null && elementString != null && lastString.toString().compareTo(elementString.toString()) != 0){
                 builder.append(lastString);
             }else{
                 builder.deleteCharAt(builder.length() - 1);
