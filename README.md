@@ -30,9 +30,9 @@ API endpoint:
 * [tomcat URL]/[webapp directory]/validate.html
 
 * POST request following parameters
-** sch: schema url (e.g., http://cwrc.ca/schemas/tei_all.rng)
-** type: type of schema (e.g, RNG_XML - Relax-NG)
-** content: {XML document contents}
+  * sch: schema url (e.g., http://cwrc.ca/schemas/tei_all.rng)
+  * type: type of schema (e.g, RNG_XML - Relax-NG)
+  * content: {XML document contents}
 
 * note: without the proper API call parameters this url will return a
 "request sent by the client was syntactically incorrect" HTTP 400
