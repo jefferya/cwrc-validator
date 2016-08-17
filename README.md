@@ -37,3 +37,6 @@ API endpoint:
 * note: without the proper API call parameters this url will return a
 "request sent by the client was syntactically incorrect" HTTP 400
 error
+
+--
+Note: Compatibility: if the .war file is exploded in Tomcat 1.6 with java 1.8.91 or higher you may receive the following error: "org.apache.jasper.JasperException: Unable to compile class for JSP: An error occurred at line: 1 in the generated java file. The type java.io.ObjectInputStream cannot be resolved. It is indirectly referenced from required .class files"
