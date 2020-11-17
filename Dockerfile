@@ -5,8 +5,7 @@
 
 
 ######## Stage #1: build
-
-FROM maven:3-jdk-13 AS build_stage
+FROM maven:3.6-openjdk-11 AS build_stage
 
 ARG APP_SRC=/app
 
@@ -20,8 +19,7 @@ RUN mvn compile && mvn package war:war
 
 
 ######## stage #2 Tomcat
-
-FROM tomcat:9 AS tomcat_stage
+FROM tomcat:9.0-jdk11-openjdk AS tomcat_stage
 
 ARG APP_SRC=/app
 
