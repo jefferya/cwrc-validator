@@ -10,11 +10,15 @@ FROM maven:3.6-openjdk-11 AS build_stage
 ARG APP_SRC=/app
 
 # copy git repo into the image build
-COPY . ${APP_SRC} 
+RUN mkdir -p ${APP_SRC}
+COPY pom.xml ${APP_SRC}/
 
 # Run Maven to build Tomcat WAR file
 WORKDIR ${APP_SRC}
 RUN mvn dependency:go-offline
+
+# copy git repo into the image build
+COPY . ${APP_SRC} 
 RUN mvn compile && mvn package war:war
 
 
