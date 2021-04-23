@@ -29,7 +29,7 @@ public class CwrcXmlValidator {
     }
 
     public Document ValidateDocContent(String schemaUrl, String documentContent, String schemaType) {
-        documentContent = CharMatcher.WHITESPACE.trimFrom(documentContent);
+        documentContent = CharMatcher.whitespace().trimFrom(documentContent);
         //StringReader reader = new StringReader(documentContent);
         //StreamSource document = new StreamSource(reader);
         StringReader document = new StringReader(documentContent);
