@@ -40,3 +40,9 @@ error
 
 --
 Note: Compatibility: if the .war file is exploded in Tomcat 1.6 with java 1.8.91 or higher you may receive the following error: "org.apache.jasper.JasperException: Unable to compile class for JSP: An error occurred at line: 1 in the generated java file. The type java.io.ObjectInputStream cannot be resolved. It is indirectly referenced from required .class files"
+
+--
+
+Changelog
+
+* 2021-04-23: update guava
