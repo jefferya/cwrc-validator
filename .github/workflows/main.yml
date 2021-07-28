@@ -34,6 +34,10 @@ jobs:
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
+            type=match,pattern=(master|main),group=1,suffix=-latest
+            type=match,pattern=(dev)(elopment),group=1,suffix=-latest
+            type=match,pattern=(next),group=1,prefix=dev-
+            type=edge,branch=$repo.default_branch
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
