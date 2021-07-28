@@ -31,11 +31,11 @@ jobs:
             ${{ github.repository }}
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=match,pattern=(master|main),group=1,suffix=-latest
-            type=match,pattern=(dev)(elopment),group=1,suffix=-latest
             type=match,pattern=(next),group=1,prefix=dev-
-            type=match,pattern=.*,group=0,prefix=dev-,value=master-latest
-            type=match,pattern=,group=0,prefix=dev-
+            type=match,pattern=master,group=0,prefix=latest
+            type=match,pattern=(dev)elopment,group=1,suffix=latest
+#            type=match,pattern=(master|main),group=1,suffix=-latest
+#            type=match,pattern=(dev)(elopment),group=1,suffix=-latest
 #            type=semver,pattern={{version}}
 #            type=semver,pattern={{major}}.{{minor}}
 #            type=semver,pattern={{major}}
