@@ -27,8 +27,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            name/app
-            ghcr.io/username/app
+            jefferya/cwrc-validator
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
@@ -57,6 +56,6 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: jefferya/cwrc-validator:delete 
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
