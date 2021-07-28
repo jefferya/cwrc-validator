@@ -34,10 +34,11 @@ jobs:
             type=match,pattern=(master|main),group=1,suffix=-latest
             type=match,pattern=(dev)(elopment),group=1,suffix=-latest
             type=match,pattern=(next),group=1,prefix=dev-
-            type=edge, suffix=-edge
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+            type=match,pattern=.*,group=0,prefix=dev-,value=master-latest
+            type=match,pattern=,group=0,prefix=dev-
+#            type=semver,pattern={{version}}
+#            type=semver,pattern={{major}}.{{minor}}
+#            type=semver,pattern={{major}}
 #            type=ref,event=branch
 #            type=ref,event=pr
 #            type=sha
