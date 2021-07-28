@@ -31,20 +31,20 @@ jobs:
             ${{ github.repository }}
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=match,pattern=(next),group=1,prefix=dev-
-            type=match,pattern=master,group=0,prefix=latest
-            type=match,pattern=(dev)elopment,group=1,suffix=latest
-            type=match,pattern=,group=0,suffix=-latest
-
-#            type=match,pattern=(master|main),group=1,suffix=-latest
-#            type=match,pattern=(dev)(elopment),group=1,suffix=-latest
-#            type=semver,pattern={{version}}
-#            type=semver,pattern={{major}}.{{minor}}
-#            type=semver,pattern={{major}}
-#            type=ref,event=branch
-#            type=ref,event=pr
-#            type=sha
-#      -
+#            type=match,pattern=(next),group=1,prefix=dev-
+#            type=match,pattern=master,group=0,prefix=latest
+#            type=match,pattern=(dev)elopment,group=1,suffix=latest
+#            type=match,pattern=.*,group=0,suffix=-latest
+            type=raw,value=latest
+            type=ref,event=branch
+            type=ref,event=pr
+            type=match,pattern=(master|main),group=1,suffix=-latest
+            type=match,pattern=(dev)(elopment),group=1,suffix=-latest
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha
+      -
 #        name: Set up QEMU
 #        uses: docker/setup-qemu-action@v1
 #      -
