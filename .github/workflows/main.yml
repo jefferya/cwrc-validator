@@ -31,10 +31,6 @@ jobs:
             ${{ github.repository }}
           # generate Docker tags based on the following events/attributes
           tags: |
-#            type=match,pattern=(next),group=1,prefix=dev-
-#            type=match,pattern=master,group=0,prefix=latest
-#            type=match,pattern=(dev)elopment,group=1,suffix=latest
-#            type=match,pattern=.*,group=0,suffix=-latest
             type=raw,value=latest
             type=ref,event=branch
             type=ref,event=pr
